@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-serif text-gray-900 bg-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans;
+  }
+}
+
+@layer components {
+  .segment-row {
+    @apply border-b border-gray-200 transition-colors duration-200;
+  }
+
+  .segment-row.hovered {
+    @apply bg-amber-50;
+  }
+
+  .segment-inline {
+    @apply inline transition-colors duration-150;
+  }
+
+  .token {
+    @apply cursor-pointer transition-colors inline;
+    white-space: pre-wrap;
+  }
+
+  .token:hover {
+    @apply bg-blue-100 rounded-sm;
+  }
+
+  .segment-marker {
+    @apply text-gray-500 font-mono text-sm mr-2;
+  }
+
+  .language-block {
+    @apply text-justify;
+  }
+}
