@@ -1,0 +1,20 @@
+{
+  "workId": "meditations",
+  "title": "Meditations on First Philosophy",
+  "author": "René Descartes",
+  "parts": [
+    {
+      "id": "preface",
+      "title": "Preface to the Reader",
+      "pageStart": 1,
+      "pageEnd": 1
+    }
+  ],
+  "totalPages": 1,
+  "availableLanguages": [
+    "fr",
+    "la",
+    "ua-from-fr",
+    "ua-from-la"
+  ]
+}
