@@ -186,6 +186,7 @@ export default function VerbatimText({
           <div
             key={pIndex}
             className={paragraph.newLine && pIndex > 0 ? 'mt-4' : ''}
+            style={{ textIndent: paragraph.newLine ? '1.5em' : '0' }}
           >
             {lineElements}
           </div>

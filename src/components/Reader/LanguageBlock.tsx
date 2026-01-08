@@ -65,13 +65,16 @@ export default function LanguageBlock({
             onHoverSegment={onHoverSegment}
           />
         ) : (
-          // Translation: render segment-based flow
-          <SegmentFlow
-            lang={lang}
-            segments={segments}
-            hoveredSegmentId={hoveredSegmentId}
-            onHoverSegment={onHoverSegment}
-          />
+          // Translation: render segment-based flow with paragraph structure
+          rawPageData ? (
+            <SegmentFlow
+              lang={lang}
+              segments={segments}
+              paragraphs={rawPageData.paragraphs}
+              hoveredSegmentId={hoveredSegmentId}
+              onHoverSegment={onHoverSegment}
+            />
+          ) : null
         )}
       </div>
     </div>

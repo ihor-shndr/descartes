@@ -4,7 +4,13 @@
 
 A web-based multilingual reading interface for Descartes' "Meditations on First Philosophy" that displays parallel translations with segment-level alignment, cross-language hover highlighting, and paginated navigation.
 
-**Tech Stack:** React 18, TypeScript, Vite, Tailwind CSS
+**Tech Stack:**
+- React 18 (UI framework)
+- TypeScript (type safety)
+- Vite (build tool)
+- Tailwind CSS (styling)
+- Zustand (state management)
+- React Router (routing)
 
 ---
 
@@ -27,8 +33,10 @@ The grid displays up to 4 language blocks. Flow direction is configurable via se
 *Rationale: Top-to-bottom may not show full text on smaller screens; left-to-right allows viewing complete source and translation side-by-side.*
 
 **Source Text Constraints:**
-- Source languages (Latin, French) have a fixed max-width
-- Prevents justified text from becoming too sparse
+- Source languages (Latin, French) have a fixed max-width (`max-w-md` = 28rem ≈ 448px)
+- Centered within their grid cell
+- Prevents justified text from becoming too sparse or creating large word gaps
+- Ensures optimal line length for readability (typically 50-75 characters per line)
 
 ### 2. Settings Sidebar
 
@@ -79,7 +87,7 @@ public/texts/
 | `pages` | Array | Collection of page objects |
 | `pageNumber` | Number | Sequential page identifier (1, 2, 3, etc.) |
 | `paragraphs` | Array | Collection of paragraph objects within the page |
-| `newLine` | Boolean | `true` = paragraph starts with indentation (space), `false` = continuation |
+| `newLine` | Boolean | `true` = new paragraph with first-line indentation (1.5em), `false` = continuation of previous paragraph |
 | `lines` | Array | Array of text strings containing content |
 
 **Language-Specific Formatting:**
@@ -93,9 +101,34 @@ public/texts/
 
 **Rule:** Source languages (Latin, French) preserve original line breaks verbatim. Ukrainian translations flow as single blocks.
 
+**Key Difference:**
+- **Layout**: Both use justified book-style typography
+- **Line Breaking**: Source languages preserve original lines; Ukrainian flows continuously
+
 **Rendering Approach:**
-- **Source languages (la, fr):** Render original lines verbatim line-by-line as they appear in JSON. Segment markers are inline with hoverable spans wrapping each segment's text. Fixed max-width container.
-- **Translations (la-ua, fr-ua):** Render as flowing text, segment by segment, without original line structure.
+
+**Source Languages (Latin, French):**
+- Render original lines verbatim line-by-line as they appear in JSON
+- Fixed max-width container (`max-w-md` / ~28rem) with centered alignment
+- Segment markers are inline with hoverable spans wrapping each segment's text
+- **Typography:**
+  - Font: Serif (Crimson Text)
+  - Alignment: Fully justified (edge-to-edge)
+  - Last line of each paragraph: Left-aligned (not stretched)
+  - This creates traditional book typography
+- Each line is a separate div, but only the final line of each paragraph is left-aligned
+
+**Translations (Ukrainian):**
+- Render as flowing text, segment by segment, without original line structure
+- Full-width container (no max-width constraint)
+- Segment markers displayed as superscripts before each segment
+- **Typography:**
+  - Font: Sans-serif (Inter, system-ui)
+  - Alignment: **Fully justified** (edge-to-edge) like a book page
+  - Text flows naturally and wraps as needed (no fixed line breaks)
+  - Last line of paragraph naturally left-aligned by browser
+- Segments flow inline with spaces preserved between them
+- Creates book-like appearance but with continuous flowing text
 
 **Special Markers in Text:**
 - Reference numbers: `(1)`, `(2)`, `(6a)`, `(7a)` - segment identifiers for alignment
@@ -110,19 +143,30 @@ public/texts/
 - Markers appear inline within the text
 - Segments can have letter suffixes (6a, 7a) for sub-divisions
 - All languages use the same segment IDs for alignment
+- Supports both Latin 'a' and Cyrillic 'а' in markers (normalized to Latin)
 
-**Alignment Logic:**
+**Segment Parsing:**
 1. Parse reference markers from all language files
 2. Extract text between markers as segments
-3. Match segments across languages by ID
-4. Display aligned segments in grid layout
+3. **Important:** Do NOT trim spaces from segment boundaries
+   - Preserves natural spacing between segments
+   - Only trim leading space from the very first segment
+4. Match segments across languages by ID
+5. Display aligned segments in grid layout
 
 **Natural Sorting:**
 - Segments sort numerically then alphabetically: 1, 2, 6, 6a, 7, 7a, 8, 10, 10a, 11
 
 **Handling Missing Segments:**
-- If a segment exists in one language but not another, show placeholder or skip
+- If a segment exists in one language but not another, skip rendering it
+- Log warning to console for debugging
+- Continue rendering available segments
 - Maintain visual alignment across languages
+
+**Rendering:**
+- **Source languages:** Segments are embedded within justified lines, hoverable inline
+- **Translations:** Each segment renders as `<sup>(N)</sup><span>text</span>` flowing inline
+- All segments within same language block share hover state for cross-language highlighting
 
 ### 5. Interactive Features
 
@@ -149,10 +193,28 @@ public/texts/
 - Visual hover feedback for segments
 - Centered content with generous margins
 
-**Text Flow:**
-- Latin/French: Preserve line breaks as in original, fixed max-width
-- Ukrainian: Flow as continuous paragraph
-- Segment markers displayed inline as superscript
+**Typography & Text Flow:**
+
+Both source and translation languages use **book-style justified typography** for a cohesive reading experience. The key difference is in line breaking:
+
+**Source Languages (Latin, French):**
+- Font: Serif (Crimson Text) for classical readability
+- Alignment: **Fully justified** with last line of each paragraph left-aligned
+- Layout: Fixed max-width container (28rem), centered
+- Line breaks: **Preserved exactly as in original source** (each line from JSON rendered separately)
+- Paragraphs: First-line indentation (1.5em) when `newLine: true`
+- Segment markers: Inline superscript markers like `⁽¹⁾` within justified text
+- Creates traditional book page with original formatting intact
+
+**Translations (Ukrainian):**
+- Font: Sans-serif (Inter) for modern readability
+- Alignment: **Fully justified** with natural last line left-aligned
+- Layout: Full-width, no max-width constraint
+- Line breaks: **Not preserved** - text flows continuously as single paragraph
+- Paragraphs: First-line indentation (1.5em) when `newLine: true`, vertical spacing between paragraphs
+- Segment markers: Superscript markers like `⁽¹⁾` at the start of each segment
+- Spacing: Preserved between segments (no trimming)
+- Creates book page appearance with modern flowing text layout
 
 ---
 
@@ -186,19 +248,23 @@ public/texts/
 
 ## Success Criteria
 
-- [ ] JSON files loaded from texts folder
-- [ ] 2x2 grid layout with configurable flow direction
-- [ ] Settings sidebar with gear icon toggle
-- [ ] Language selection via 2x2 visual checkbox grid
-- [ ] Segments aligned by reference markers
-- [ ] Cross-language hover highlighting
-- [ ] Pagination by page number
-- [ ] Latin/French preserve line breaks with max-width constraint
-- [ ] Ukrainian flows as single block
-- [ ] Segment markers displayed as superscript
-- [ ] Natural sorting of segments
-- [ ] URL state for page navigation
-- [ ] localStorage persistence for settings
+- [x] JSON files loaded from texts folder at app startup
+- [x] 2x2 grid layout with configurable flow direction (top-to-bottom / left-to-right)
+- [x] Settings sidebar with gear icon toggle (slide-in from right)
+- [x] Language selection via 2x2 visual checkbox grid
+- [x] Segments aligned by reference markers across all languages
+- [x] Cross-language hover highlighting with smooth transitions
+- [x] Pagination by page number with prev/next navigation
+- [x] Latin/French preserve line breaks with justified alignment and max-width constraint
+- [x] Ukrainian flows as single block with sans-serif font
+- [x] Segment markers displayed as superscript
+- [x] Natural sorting of segments (1, 2, 6, 6a, 7, 7a, etc.)
+- [x] URL state for page navigation (?page=N)
+- [x] localStorage persistence for settings (languages, flow direction, page number)
+- [x] Text spacing preserved between segments (no trimming bugs)
+- [x] Last line of paragraphs left-aligned (not justified)
+- [x] Error boundary for graceful error handling
+- [x] All texts loaded once at startup (no lazy loading per page)
 
 ---
 

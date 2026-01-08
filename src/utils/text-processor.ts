@@ -36,10 +36,8 @@ export function processPageData(
       const preserveLineBreaks = isSourceLanguage(lang);
       languageTexts[lang] = joinPageText(page, preserveLineBreaks);
 
-      // Store raw page data for verbatim rendering (source languages)
-      if (isSourceLanguage(lang)) {
-        rawPages[lang] = { paragraphs: page.paragraphs };
-      }
+      // Store raw page data for all languages (needed for paragraph structure)
+      rawPages[lang] = { paragraphs: page.paragraphs };
     } else {
       console.warn(`Missing page ${pageNumber} for language ${lang}`);
     }
