@@ -1,4 +1,4 @@
-import { TextData, PageData } from '../types/page';
+import { TextData, PageData, RawPageData } from '../types/text';
 import { alignSegments, joinPageText, isSourceLanguage } from '../utils/segment-parser';
 
 /**
@@ -102,12 +102,15 @@ export async function fetchPage(pageNumber: number): Promise<PageData> {
 
   // Get page from each language and join text
   const languageTexts: Record<string, string> = {};
+  const rawPages: Record<string, RawPageData> = {};
 
   for (const [lang, data] of Object.entries(allData)) {
     const page = data.pages.find(p => p.pageNumber === pageNumber);
     if (page) {
       const preserveLineBreaks = isSourceLanguage(lang);
       languageTexts[lang] = joinPageText(page, preserveLineBreaks);
+      // Store raw page data for source languages (verbatim rendering)
+      rawPages[lang] = { paragraphs: page.paragraphs };
     }
   }
 
@@ -118,7 +121,8 @@ export async function fetchPage(pageNumber: number): Promise<PageData> {
     pageNumber,
     totalPages: getTotalPages(allData),
     availableLanguages,
-    segments
+    segments,
+    rawPages
   };
 
   pageCache.set(cacheKey, pageData);

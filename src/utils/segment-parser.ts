@@ -1,4 +1,4 @@
-import { Page, Segment } from '../types/page';
+import { Page, Segment } from '../types/text';
 
 /**
  * Regex to match segment markers like (1), (2), (6a), (6а), (7a), etc.
@@ -29,9 +29,13 @@ export function parseSegmentsFromText(text: string): ParsedSegment[] {
     const id = normalizeSegmentId(match[1]);
     const startIndex = match.index! + match[0].length;
     const endIndex = nextMatch ? nextMatch.index! : text.length;
-    const content = text.slice(startIndex, endIndex).trim();
 
-    segments.push({ id, marker: `(${id})`, text: content });
+    // Don't trim - preserves spaces between segments
+    const content = text.slice(startIndex, endIndex);
+    // Only trim leading space if it's the very start of the text
+    const trimmedContent = i === 0 ? content.trimStart() : content;
+
+    segments.push({ id, marker: `(${id})`, text: trimmedContent });
   }
 
   return segments;

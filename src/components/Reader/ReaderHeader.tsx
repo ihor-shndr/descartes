@@ -1,4 +1,5 @@
 import Pagination from '../Controls/Pagination';
+import SettingsToggle from '../Controls/SettingsToggle';
 
 interface ReaderHeaderProps {
   page: number;
@@ -18,11 +19,14 @@ export default function ReaderHeader({ page, totalPages, onPageChange }: ReaderH
             <p className="text-sm text-gray-600 mt-1">René Descartes</p>
           </div>
 
-          <Pagination
-            currentPage={page}
-            totalPages={totalPages}
-            onPageChange={onPageChange}
-          />
+          <div className="flex items-center gap-4">
+            <Pagination
+              currentPage={page}
+              totalPages={totalPages}
+              onPageChange={onPageChange}
+            />
+            <SettingsToggle />
+          </div>
         </div>
       </div>
     </header>

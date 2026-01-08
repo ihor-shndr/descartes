@@ -8,7 +8,8 @@ export default {
     extend: {
       fontFamily: {
         serif: ['Crimson Text', 'Georgia', 'serif'],
-        sans: ['Inter', 'system-ui', 'sans-serif']
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['Courier Prime', 'Courier New', 'monospace']
       }
     },
   },

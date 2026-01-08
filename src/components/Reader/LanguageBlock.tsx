@@ -1,28 +1,43 @@
-import { Segment } from '../../types/page';
+import { Segment, RawPageData } from '../../types/text';
 import { getDisplayName, shouldPreserveLineBreaks } from '../../utils/language-codes';
+import VerbatimText from './VerbatimText';
+import SegmentFlow from './SegmentFlow';
 
 interface LanguageBlockProps {
   lang: string;
   segments: Segment[];
+  rawPageData?: RawPageData;
   hoveredSegmentId: string | null;
   onHoverSegment: (id: string | null) => void;
 }
 
+/**
+ * Simplified Language Block component
+ * Renders a single language with appropriate formatting
+ * - Source languages (la, fr): VerbatimText with preserved line breaks
+ * - Translations (la-ua, fr-ua): SegmentFlow with flowing text
+ */
 export default function LanguageBlock({
   lang,
   segments,
+  rawPageData,
   hoveredSegmentId,
   onHoverSegment
 }: LanguageBlockProps) {
-  // Check if this language has any content
-  const hasContent = segments.some(seg => seg.texts[lang]);
-
-  if (!hasContent) {
-    return null; // Don't render empty language blocks
-  }
-
   const displayName = getDisplayName(lang);
   const preserveLineBreaks = shouldPreserveLineBreaks(lang);
+
+  // Check if this language has any content
+  const hasContent = preserveLineBreaks
+    ? rawPageData && rawPageData.paragraphs.length > 0
+    : segments.some((seg) => seg.texts[lang]);
+
+  if (!hasContent) {
+    return null;
+  }
+
+  // Determine if this is a source language (for max-width constraint)
+  const isSourceLang = lang === 'la' || lang === 'fr';
 
   return (
     <div className="language-block mb-8 max-w-full">
@@ -33,36 +48,31 @@ export default function LanguageBlock({
         </h2>
       </div>
 
-      {/* Flowing paragraph text */}
+      {/* Text content */}
       <div
-        className={`text-base leading-loose break-words ${preserveLineBreaks ? 'whitespace-pre-wrap' : ''}`}
-        style={{ overflowWrap: 'anywhere' }}
+        className={`text-base leading-relaxed ${
+          preserveLineBreaks
+            ? `font-serif ${isSourceLang ? 'max-w-md mx-auto' : ''}`
+            : 'font-sans'
+        }`}
+        style={{ fontFamily: preserveLineBreaks ? undefined : 'Inter, system-ui, -apple-system, sans-serif' }}
       >
-        {segments.map((segment) => {
-          const text = segment.texts[lang];
-
-          if (!text) return null;
-
-          const isHovered = hoveredSegmentId === segment.id;
-
-          return (
-            <span
-              key={segment.id}
-              id={`seg-${segment.id}-${lang}`}
-              className={`segment-inline transition-colors duration-200 px-1 py-0.5 rounded ${isHovered ? 'bg-yellow-200' : ''}`}
-              onMouseEnter={() => onHoverSegment(segment.id)}
-              onMouseLeave={() => onHoverSegment(null)}
-            >
-              {/* Segment marker as superscript */}
-              <sup className="text-xs text-gray-500 mr-0.5">
-                {segment.marker}
-              </sup>
-              {/* Segment text */}
-              <span>{text}</span>
-              {' '}
-            </span>
-          );
-        })}
+        {preserveLineBreaks && rawPageData ? (
+          // Source language: render verbatim with inline hoverable segments
+          <VerbatimText
+            paragraphs={rawPageData.paragraphs}
+            hoveredSegmentId={hoveredSegmentId}
+            onHoverSegment={onHoverSegment}
+          />
+        ) : (
+          // Translation: render segment-based flow
+          <SegmentFlow
+            lang={lang}
+            segments={segments}
+            hoveredSegmentId={hoveredSegmentId}
+            onHoverSegment={onHoverSegment}
+          />
+        )}
       </div>
     </div>
   );

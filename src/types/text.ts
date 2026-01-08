@@ -31,6 +31,13 @@ export interface Segment {
 }
 
 /**
+ * Raw page data for source languages (preserves original lines)
+ */
+export interface RawPageData {
+  paragraphs: Paragraph[];
+}
+
+/**
  * Processed page data for rendering
  */
 export interface PageData {
@@ -38,6 +45,8 @@ export interface PageData {
   totalPages: number;
   availableLanguages: string[];
   segments: Segment[];
+  // Raw page data per language for verbatim rendering (source languages)
+  rawPages: Record<string, RawPageData>;
 }
 
 /**
