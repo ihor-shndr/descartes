@@ -15,6 +15,19 @@ export interface ProcessedPageData {
 }
 
 /**
+ * Calculate the maximum line length for a page (used for dynamic width)
+ */
+function calculateMaxLineLength(paragraphs: any[]): number {
+  let max = 0;
+  for (const paragraph of paragraphs) {
+    for (const line of paragraph.lines) {
+      max = Math.max(max, line.length);
+    }
+  }
+  return max;
+}
+
+/**
  * Process page data for rendering
  * Handles missing segments and languages properly
  *
@@ -36,8 +49,16 @@ export function processPageData(
       const preserveLineBreaks = isSourceLanguage(lang);
       languageTexts[lang] = joinPageText(page, preserveLineBreaks);
 
+      // Calculate max line length for source languages
+      const maxLineLength = isSourceLanguage(lang) 
+        ? calculateMaxLineLength(page.paragraphs)
+        : undefined;
+
       // Store raw page data for all languages (needed for paragraph structure)
-      rawPages[lang] = { paragraphs: page.paragraphs };
+      rawPages[lang] = { 
+        paragraphs: page.paragraphs,
+        maxLineLength
+      };
     } else {
       console.warn(`Missing page ${pageNumber} for language ${lang}`);
     }

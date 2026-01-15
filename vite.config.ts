@@ -1,10 +1,11 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
 import path from 'path';
 
 export default defineConfig({
-  plugins: [react()],
-  base: '/descartes/',
+  plugins: [react(), tailwindcss()],
+  base: '/descartes/descartes/',
   build: {
     outDir: 'docs'
   },

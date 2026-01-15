@@ -1,10 +1,9 @@
-import { Page, Segment } from '../types/text';
+import { Page, Segment, isNewParagraph } from '../types/text';
 
 /**
- * Regex to match segment markers like (1), (2), (6a), (6а), (7a), etc.
- * Supports both Latin 'a' and Cyrillic 'а'
+ * Regex to match segment markers like (1), (2), (6a), (7a), etc.
  */
-const SEGMENT_REGEX = /\((\d+[a-zа-я]?)\)/g;
+const SEGMENT_REGEX = /\((\d+[a-z]?)\)/g;
 
 /**
  * Parsed segment from a single language
@@ -26,7 +25,7 @@ export function parseSegmentsFromText(text: string): ParsedSegment[] {
     const match = matches[i];
     const nextMatch = matches[i + 1];
 
-    const id = normalizeSegmentId(match[1]);
+    const id = match[1];
     const startIndex = match.index! + match[0].length;
     const endIndex = nextMatch ? nextMatch.index! : text.length;
 
@@ -42,13 +41,6 @@ export function parseSegmentsFromText(text: string): ParsedSegment[] {
 }
 
 /**
- * Normalize segment ID (convert Cyrillic 'а' to Latin 'a')
- */
-function normalizeSegmentId(id: string): string {
-  return id.replace(/а/g, 'a'); // Cyrillic а -> Latin a
-}
-
-/**
  * Join page paragraphs into text string
  * @param page - The page data
  * @param preserveLineBreaks - If true, join with newlines (for source languages)
@@ -60,8 +52,8 @@ export function joinPageText(page: Page | undefined, preserveLineBreaks: boolean
     const lineJoiner = preserveLineBreaks ? '\n' : ' ';
     const paragraphText = paragraph.lines.join(lineJoiner);
 
-    // Add paragraph separator for new paragraphs (except first)
-    if (index > 0 && paragraph.newLine) {
+    // Add paragraph separator for new paragraphs (detected by leading space)
+    if (index > 0 && isNewParagraph(paragraph)) {
       return preserveLineBreaks ? `\n\n${paragraphText}` : `\n\n${paragraphText}`;
     }
     return paragraphText;

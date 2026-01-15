@@ -1,44 +1,27 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  body {
-    @apply font-serif text-gray-900 bg-white;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-sans;
-  }
+@theme {
+  --font-serif: "Crimson Text", "PT Serif", serif;
+  --font-sans: "Inter", sans-serif;
 }
 
 @layer components {
-  .segment-row {
-    @apply border-b border-gray-200 transition-colors duration-200;
+  .justified-text {
+    text-align: justify;
+    text-align-last: left;
+    hyphens: auto;
   }
 
-  .segment-row.hovered {
-    @apply bg-amber-50;
+  /* For Latin lines: each line is its own block, so justify fully */
+  .justified-line {
+    text-align: justify;
+    text-align-last: justify;
+    text-justify: inter-word;
   }
 
-  .segment-inline {
-    @apply inline transition-colors duration-150;
-  }
-
-  .token {
-    @apply cursor-pointer transition-colors inline;
-    white-space: pre-wrap;
-  }
-
-  .token:hover {
-    @apply bg-blue-100 rounded-sm;
-  }
-
-  .segment-marker {
-    @apply text-gray-500 font-mono text-sm mr-2;
-  }
-
-  .language-block {
-    @apply text-justify;
+  /* Last line of paragraph (before indent or end) - don't stretch */
+  .justified-line-last {
+    text-align: left;
+    text-align-last: left;
   }
 }

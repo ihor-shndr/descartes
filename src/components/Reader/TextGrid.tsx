@@ -1,14 +1,12 @@
 import { LanguageCode, FlowDirection } from '../../types/store';
 import { GridCell } from '../../types/store';
-import LanguageBlock from './LanguageBlock';
+import { LanguageBlock } from './LanguageBlock';
 import { ProcessedPageData } from '../../utils/text-processor';
 
 interface TextGridProps {
   flowDirection: FlowDirection;
   selectedLanguages: LanguageCode[];
   pageData: ProcessedPageData;
-  hoveredSegmentId: string | null;
-  onHoverSegment: (id: string | null) => void;
 }
 
 /**
@@ -20,29 +18,29 @@ interface TextGridProps {
 export default function TextGrid({
   flowDirection,
   selectedLanguages,
-  pageData,
-  hoveredSegmentId,
-  onHoverSegment
+  pageData
 }: TextGridProps) {
   const grid = computeGridLayout(selectedLanguages, flowDirection);
 
   return (
-    <div className="max-w-7xl mx-auto px-8 py-8">
-      <div className="grid grid-cols-2 gap-8">
+    <div className="w-full px-8 py-8">
+      <div className="grid grid-cols-2 gap-8 items-start">
         {grid.map((cell, index) => {
           if (!cell.lang) {
-            // Empty cell
-            return <div key={index} />;
+            // Empty cell - render placeholder but don't show content
+            return <div key={index} className="min-h-[400px]" />;
+          }
+
+          const rawPage = pageData.rawPages[cell.lang];
+          if (!rawPage) {
+            return <div key={index} className="min-h-[400px]" />;
           }
 
           return (
             <LanguageBlock
               key={cell.lang}
-              lang={cell.lang}
-              segments={pageData.segments}
-              rawPageData={pageData.rawPages[cell.lang]}
-              hoveredSegmentId={hoveredSegmentId}
-              onHoverSegment={onHoverSegment}
+              language={cell.lang}
+              paragraphs={rawPage.paragraphs}
             />
           );
         })}

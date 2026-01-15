@@ -1,5 +1,6 @@
-import { Navigate, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import ErrorBoundary from './components/ErrorBoundary'
+import Home from './components/Home'
 import Reader from './components/Reader/Reader'
 
 function App() {
@@ -7,8 +8,8 @@ function App() {
     <ErrorBoundary>
       <div className="min-h-screen bg-white">
         <Routes>
-          <Route path="/" element={<Navigate to="/read?page=1" replace />} />
-          <Route path="/read" element={<Reader />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/descartes/meditations" element={<Reader />} />
         </Routes>
       </div>
     </ErrorBoundary>

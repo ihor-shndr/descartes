@@ -1,9 +1,17 @@
 /**
  * Paragraph in the source JSON format
+ * New paragraph is detected by leading space in first line
  */
 export interface Paragraph {
-  newLine: boolean;  // true = new paragraph, false = continuation
-  lines: string[];   // Array of text lines
+  type?: 'h1' | 'h2' | 'h3';  // Optional heading type
+  lines: string[];      // Array of text lines
+}
+
+/**
+ * Check if a paragraph is a new paragraph (first line starts with space)
+ */
+export function isNewParagraph(paragraph: Paragraph): boolean {
+  return paragraph.lines.length > 0 && paragraph.lines[0].startsWith(' ');
 }
 
 /**
@@ -35,6 +43,7 @@ export interface Segment {
  */
 export interface RawPageData {
   paragraphs: Paragraph[];
+  maxLineLength?: number;  // Longest line length in characters (for dynamic width)
 }
 
 /**
@@ -49,17 +58,4 @@ export interface PageData {
   rawPages: Record<string, RawPageData>;
 }
 
-/**
- * Language code with metadata
- */
 export type LanguageCode = 'la' | 'la-ua' | 'fr' | 'fr-ua';
-
-/**
- * Language configuration
- */
-export interface LanguageConfig {
-  code: LanguageCode;
-  name: string;
-  preserveLineBreaks: boolean;  // true for source languages (la, fr)
-  isTranslation: boolean;       // true for Ukrainian translations
-}

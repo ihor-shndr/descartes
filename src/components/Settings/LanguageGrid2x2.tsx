@@ -1,15 +1,6 @@
 import { useAppStore } from '../../store/app-store';
 import { LanguageCode } from '../../types/store';
-
-/**
- * Language labels for display
- */
-const LABELS: Record<LanguageCode, string> = {
-  la: 'Latin',
-  'la-ua': 'Ukrainian (from Latin)',
-  fr: 'French',
-  'fr-ua': 'Ukrainian (from French)'
-};
+import { getDisplayName } from '../../utils/language-codes';
 
 /**
  * 2x2 visual checkbox grid for language selection
@@ -55,7 +46,7 @@ export default function LanguageGrid2x2() {
                 onChange={() => toggleLanguage(lang)}
                 className="mt-0.5 w-4 h-4 text-blue-600 rounded"
               />
-              <span className="ml-2 text-sm font-medium">{LABELS[lang]}</span>
+              <span className="ml-2 text-sm font-medium">{getDisplayName(lang)}</span>
             </label>
           );
         })}

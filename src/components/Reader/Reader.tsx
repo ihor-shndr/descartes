@@ -20,12 +20,10 @@ export default function Reader() {
     totalPages,
     selectedLanguages,
     flowDirection,
-    hoveredSegmentId,
     loading,
     error,
     loadAllTexts,
-    setCurrentPage,
-    setHoveredSegment
+    setCurrentPage
   } = useAppStore();
 
   // Load all texts on mount
@@ -48,6 +46,8 @@ export default function Reader() {
   const handlePageChange = (newPage: number) => {
     setCurrentPage(newPage);
     setSearchParams({ page: String(newPage) });
+    // Reset scroll position to top on page change
+    window.scrollTo(0, 0);
   };
 
   // Loading state
@@ -101,8 +101,6 @@ export default function Reader() {
         flowDirection={flowDirection}
         selectedLanguages={selectedLanguages}
         pageData={pageData}
-        hoveredSegmentId={hoveredSegmentId}
-        onHoverSegment={setHoveredSegment}
       />
     </div>
   );

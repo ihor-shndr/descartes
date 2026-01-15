@@ -20,9 +20,9 @@
 
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["src-gemini-version/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src-gemini-version"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

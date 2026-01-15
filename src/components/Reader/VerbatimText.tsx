@@ -1,197 +1,143 @@
-import React from 'react';
 import { Paragraph } from '../../types/text';
-
-/**
- * Regex to match segment markers
- */
-const SEGMENT_REGEX = /\((\d+[a-zа-я]?)\)/g;
-
-/**
- * Normalize segment ID (convert Cyrillic 'а' to Latin 'a')
- */
-function normalizeSegmentId(id: string): string {
-  return id.replace(/а/g, 'a');
-}
-
-/**
- * Parsed part of a line
- */
-interface ParsedPart {
-  type: 'text' | 'marker';
-  content: string;
-  segmentId: string | null;
-}
-
-/**
- * Parse a line into segments, tracking continuation from previous segment
- */
-function parseLineWithContinuation(
-  line: string,
-  continuationSegmentId: string | null
-): { parts: ParsedPart[]; lastSegmentId: string | null } {
-  const parts: ParsedPart[] = [];
-  let currentSegmentId = continuationSegmentId;
-  let lastIndex = 0;
-
-  // Reset regex state
-  SEGMENT_REGEX.lastIndex = 0;
-  const matches = [...line.matchAll(SEGMENT_REGEX)];
-
-  for (const match of matches) {
-    const matchIndex = match.index!;
-    const segmentId = normalizeSegmentId(match[1]);
-
-    // Text before this marker belongs to current segment (could be continuation)
-    if (matchIndex > lastIndex) {
-      const textBefore = line.slice(lastIndex, matchIndex);
-      parts.push({
-        type: 'text',
-        content: textBefore,
-        segmentId: currentSegmentId
-      });
-    }
-
-    // The marker itself
-    parts.push({
-      type: 'marker',
-      content: match[0],
-      segmentId: segmentId
-    });
-
-    currentSegmentId = segmentId;
-    lastIndex = matchIndex + match[0].length;
-  }
-
-  // Remaining text after last marker (or entire line if no markers)
-  if (lastIndex < line.length) {
-    parts.push({
-      type: 'text',
-      content: line.slice(lastIndex),
-      segmentId: currentSegmentId
-    });
-  }
-
-  return { parts, lastSegmentId: currentSegmentId };
-}
-
-/**
- * Hoverable segment span
- */
-function SegmentSpan({
-  segmentId,
-  isHovered,
-  onHoverSegment,
-  children
-}: {
-  segmentId: string | null;
-  isHovered: boolean;
-  onHoverSegment: (id: string | null) => void;
-  children: React.ReactNode;
-}) {
-  if (!segmentId) {
-    return <span>{children}</span>;
-  }
-
-  return (
-    <span
-      className={`transition-colors duration-200 ${
-        isHovered ? 'bg-yellow-200' : ''
-      }`}
-      onMouseEnter={() => onHoverSegment(segmentId)}
-      onMouseLeave={() => onHoverSegment(null)}
-    >
-      {children}
-    </span>
-  );
-}
+import { useAppStore } from '../../store/app-store';
+import { SEGMENT_MARKER_REGEX, isSegmentMarker, extractSegmentId, getSourceWidth } from '../../utils/text-constants';
+import { SegmentMarker, HeaderWithMarkers } from '../shared/TextMarkers';
+import clsx from 'clsx';
 
 interface VerbatimTextProps {
-  paragraphs: Paragraph[];
-  hoveredSegmentId: string | null;
-  onHoverSegment: (id: string | null) => void;
+    paragraphs: Paragraph[];
+    language: string;
 }
 
 /**
- * Render verbatim text with original line breaks and hoverable segments
- * Tracks segment continuation across lines
- * Used for source languages (Latin, French)
+ * Renders Latin source text with:
+ * - Fixed width container (60ch) centered in cell
+ * - Line numbers every 5th line
+ * - Preserved line breaks from original 1642 edition
+ * - Inline superscript markers
+ * - Book-style justified text (except last line of paragraphs)
  */
-export default function VerbatimText({
-  paragraphs,
-  hoveredSegmentId,
-  onHoverSegment
-}: VerbatimTextProps) {
-  // Track current segment across all paragraphs and lines
-  let currentSegmentId: string | null = null;
+export function VerbatimText({ paragraphs, language }: VerbatimTextProps) {
+    const hoveredSegmentId = useAppStore((state) => state.hoveredSegmentId);
+    const setHoveredSegment = useAppStore((state) => state.setHoveredSegment);
 
-  return (
-    <>
-      {paragraphs.map((paragraph, pIndex) => {
-        const lineElements = paragraph.lines.map((line, lIndex) => {
-          const { parts, lastSegmentId } = parseLineWithContinuation(
-            line,
-            currentSegmentId
-          );
-          currentSegmentId = lastSegmentId;
+    const containerWidth = getSourceWidth(language);
 
-          // Check if this is the last line of the paragraph
-          const isLastLine = lIndex === paragraph.lines.length - 1;
+    let lineCounter = 0; // Track line numbers across all paragraphs
 
-          return (
+    return (
+        <div className="w-full flex justify-center">
             <div
-              key={`${pIndex}-${lIndex}`}
-              className="text-justify"
-              style={{ textAlignLast: isLastLine ? 'left' : 'justify' }}
+                className="font-serif text-lg leading-relaxed text-stone-800 pl-10"
+                style={{ width: containerWidth, fontFamily: '"Crimson Text", serif' }}
             >
-              {parts.map((part, partIndex) => {
-                if (part.type === 'marker') {
-                  return (
-                    <SegmentSpan
-                      key={`marker-${pIndex}-${lIndex}-${partIndex}`}
-                      segmentId={part.segmentId}
-                      isHovered={hoveredSegmentId === part.segmentId}
-                      onHoverSegment={onHoverSegment}
-                    >
-                      <sup className="text-xs text-gray-500">{part.content}</sup>
-                    </SegmentSpan>
-                  );
-                } else {
-                  // Text part
-                  if (part.segmentId) {
-                    return (
-                      <SegmentSpan
-                        key={`text-${pIndex}-${lIndex}-${partIndex}`}
-                        segmentId={part.segmentId}
-                        isHovered={hoveredSegmentId === part.segmentId}
-                        onHoverSegment={onHoverSegment}
-                      >
-                        {part.content}
-                      </SegmentSpan>
-                    );
-                  } else {
-                    // Text before any segment marker
-                    return (
-                      <span key={`plain-${pIndex}-${lIndex}-${partIndex}`}>
-                        {part.content}
-                      </span>
-                    );
-                  }
-                }
-              })}
-            </div>
-          );
-        });
+                {paragraphs.map((paragraph, pIdx) => {
+                    const isH1 = paragraph.type === 'h1';
+                    const isH2 = paragraph.type === 'h2';
+                    const isH3 = paragraph.type === 'h3';
 
-        return (
-          <div
-            key={pIndex}
-            className={paragraph.newLine && pIndex > 0 ? 'mt-4' : ''}
-            style={{ textIndent: paragraph.newLine ? '1.5em' : '0' }}
-          >
-            {lineElements}
-          </div>
-        );
-      })}
-    </>
-  );
+                    // Headers
+                    if (isH1) {
+                        return (
+                            <div key={pIdx} className="text-center text-3xl font-bold uppercase tracking-widest my-8 max-w-md mx-auto">
+                                {paragraph.lines.join(' ')}
+                            </div>
+                        );
+                    }
+
+                    if (isH2) {
+                        return (
+                            <HeaderWithMarkers
+                                key={pIdx}
+                                lines={paragraph.lines}
+                                className="text-center text-xl italic my-6 max-w-md mx-auto"
+                            />
+                        );
+                    }
+
+                    if (isH3) {
+                        return (
+                            <HeaderWithMarkers
+                                key={pIdx}
+                                lines={paragraph.lines}
+                                className="text-center text-lg my-5 max-w-md mx-auto"
+                            />
+                        );
+                    }
+
+                    // Regular paragraph
+                    return (
+                        <div key={pIdx} className="mb-0 w-full">
+                            {paragraph.lines.map((line, lIdx) => {
+                                lineCounter++;
+                                const showLineNumber = lineCounter % 5 === 0;
+                                const hasLeadingSpace = line.startsWith(' ');
+                                const isNewPara = hasLeadingSpace;
+
+                                // Check if this is the last line of a paragraph:
+                                // - next line starts with space (new paragraph)
+                                // - or this is the last line of the paragraph block
+                                const nextLine = paragraph.lines[lIdx + 1];
+                                const isLastLineOfPara = !nextLine || nextLine.startsWith(' ');
+
+                                const parts = line.split(SEGMENT_MARKER_REGEX);
+
+                                return (
+                                    <div
+                                        key={lIdx}
+                                        className={clsx(
+                                            "relative whitespace-pre-wrap",
+                                            isLastLineOfPara ? "justified-line-last" : "justified-line",
+                                            isNewPara && "indent-[1.5em]"
+                                        )}
+                                    >
+                                        {/* Line number in left margin */}
+                                        {showLineNumber && (
+                                            <span className="absolute -left-8 text-xs text-stone-400 select-none">
+                                                {lineCounter}
+                                            </span>
+                                        )}
+
+                                        {parts.map((part, partIdx) => {
+                                            if (!part) return null;
+                                            
+                                            // Render marker as superscript
+                                            if (isSegmentMarker(part)) {
+                                                const id = extractSegmentId(part);
+                                                return <SegmentMarker key={partIdx} id={id} />;
+                                            }
+
+                                            // Text segment with hover - find which segment this text belongs to
+                                            // by looking for the most recent marker before this part
+                                            let segmentId: string | null = null;
+                                            for (let i = partIdx - 1; i >= 0; i--) {
+                                                if (isSegmentMarker(parts[i])) {
+                                                    segmentId = extractSegmentId(parts[i]);
+                                                    break;
+                                                }
+                                            }
+
+                                            return (
+                                                <span
+                                                    key={partIdx}
+                                                    className={clsx(
+                                                        "transition-colors duration-200 rounded-sm py-0.5 box-decoration-clone",
+                                                        segmentId && hoveredSegmentId === segmentId && "bg-yellow-200"
+                                                    )}
+                                                    onMouseEnter={() => segmentId && setHoveredSegment(segmentId)}
+                                                    onMouseLeave={() => segmentId && setHoveredSegment(null)}
+                                                >
+                                                    {part}
+                                                </span>
+                                            );
+                                        })}
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    );
+                })}
+            </div>
+        </div>
+    );
 }
