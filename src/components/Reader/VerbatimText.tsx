@@ -1,7 +1,7 @@
 import { Paragraph } from '../../types/text';
 import { useAppStore } from '../../store/app-store';
 import { SEGMENT_MARKER_REGEX, isSegmentMarker, extractSegmentId, getSourceWidth } from '../../utils/text-constants';
-import { SegmentMarker, HeaderWithMarkers } from '../shared/TextMarkers';
+import { SegmentMarker } from '../SegmentMarker';
 import clsx from 'clsx';
 
 interface VerbatimTextProps {
@@ -48,21 +48,17 @@ export function VerbatimText({ paragraphs, language }: VerbatimTextProps) {
 
                     if (isH2) {
                         return (
-                            <HeaderWithMarkers
-                                key={pIdx}
-                                lines={paragraph.lines}
-                                className="text-center text-xl italic my-6 max-w-md mx-auto"
-                            />
+                            <div key={pIdx} className="text-center text-xl italic my-6 max-w-md mx-auto">
+                                {paragraph.lines.join(' ')}
+                            </div>
                         );
                     }
 
                     if (isH3) {
                         return (
-                            <HeaderWithMarkers
-                                key={pIdx}
-                                lines={paragraph.lines}
-                                className="text-center text-lg my-5 max-w-md mx-auto"
-                            />
+                            <div key={pIdx} className="text-center text-lg my-5 max-w-md mx-auto">
+                                {paragraph.lines.join(' ')}
+                            </div>
                         );
                     }
 

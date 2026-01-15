@@ -1,7 +1,7 @@
 import { Paragraph } from '../../types/text';
 import { useAppStore } from '../../store/app-store';
 import { SEGMENT_MARKER_REGEX, isSegmentMarker, extractSegmentId } from '../../utils/text-constants';
-import { SegmentMarker, HeaderWithMarkers } from '../shared/TextMarkers';
+import { SegmentMarker } from '../SegmentMarker';
 import clsx from 'clsx';
 
 interface SegmentFlowProps {
@@ -30,14 +30,15 @@ export function SegmentFlow({ paragraphs }: SegmentFlowProps) {
                 // Headers
                 if (isH1 || isH2 || isH3) {
                     return (
-                        <HeaderWithMarkers
+                        <div
                             key={pIdx}
-                            lines={paragraph.lines}
                             className={clsx(
                                 "text-center max-w-md mx-auto",
                                 isH1 ? "text-3xl font-bold uppercase tracking-widest my-8" : isH2 ? "text-xl italic my-6" : "text-lg my-5"
                             )}
-                        />
+                        >
+                            {paragraph.lines.join(' ')}
+                        </div>
                     );
                 }
 

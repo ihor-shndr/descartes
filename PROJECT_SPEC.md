@@ -119,7 +119,7 @@ Text contains numbered reference markers for cross-language alignment:
 | Type | Rendering | Container Width | Alignment | Example |
 |------|-----------|----------------|-----------|---------|
 | `h1` | Large, bold | ~50% (narrower than text) | Center | "MEDITATION V" |
-| `h2` | Italic, may contain segment markers | ~50% (narrower than text) | Center | "(1)On the essence of material things..." |
+| `h2` | Italic | ~50% (narrower than text) | Center | "On the essence of material things..." |
 | `h3` | Smaller heading | ~50% (narrower than text) | Center | "Subheading text..." |
 | Omitted (default) | Regular paragraph | Fixed for originals, full for Ukrainian | Justified | Body text |
 
@@ -128,7 +128,7 @@ Text contains numbered reference markers for cross-language alignment:
 - Narrow container (~50% width) keeps headers visually distinct from body text
 - Headers can wrap/flow across multiple lines in any language
 - All header types (h1, h2, h3) are center-aligned
-- h2 and h3 may contain segment markers (e.g., "(1)"), h1 never does
+- Headers never contain segment markers - only regular paragraph text is segmented
 - Omitting `type` → treated as regular paragraph
 
 **Special characters:** `*` and `|` are scholarly notation markers rendered as plain text.
