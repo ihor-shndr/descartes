@@ -17,6 +17,7 @@ export function SegmentMarker({ id }: SegmentMarkerProps) {
 
   return (
     <sup
+      data-segment-id={id}
       className={clsx(
         "text-xs text-stone-500 font-normal select-none mx-0.5 transition-colors duration-200 rounded-sm py-0.5 cursor-pointer",
         hoveredSegmentId === id && "bg-yellow-200"

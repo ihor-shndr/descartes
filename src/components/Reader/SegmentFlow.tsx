@@ -1,3 +1,4 @@
+import { useRef, useEffect } from 'react';
 import { Paragraph } from '../../types/text';
 import { useAppStore } from '../../store/app-store';
 import { SEGMENT_MARKER_REGEX, isSegmentMarker, extractSegmentId } from '../../utils/text-constants';
@@ -17,11 +18,26 @@ interface SegmentFlowProps {
  * - Justified alignment with proper last-line handling
  */
 export function SegmentFlow({ paragraphs }: SegmentFlowProps) {
+    const containerRef = useRef<HTMLDivElement>(null);
     const hoveredSegmentId = useAppStore((state) => state.hoveredSegmentId);
     const setHoveredSegment = useAppStore((state) => state.setHoveredSegment);
 
+    // Highlight/Scroll feature
+    const highlightedLocation = useAppStore((state) => state.highlightedLocation);
+    const currentPage = useAppStore((state) => state.currentPage);
+
+    useEffect(() => {
+        if (highlightedLocation && highlightedLocation.page === currentPage && highlightedLocation.segment && containerRef.current) {
+            const marker = containerRef.current.querySelector(`[data-segment-id="${highlightedLocation.segment}"]`);
+            if (marker) {
+                marker.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // Optional: Trigger a visual flash here if needed, but the scroll guides the eye
+            }
+        }
+    }, [highlightedLocation, currentPage]);
+
     return (
-        <div className="font-serif text-lg leading-relaxed text-stone-800 w-full" style={{ fontFamily: '"PT Serif", "Crimson Text", serif' }}>
+        <div ref={containerRef} className="font-serif text-lg leading-relaxed text-stone-800 w-full" style={{ fontFamily: '"PT Serif", "Crimson Text", serif' }}>
             {paragraphs.map((paragraph, pIdx) => {
                 const isH1 = paragraph.type === 'h1';
                 const isH2 = paragraph.type === 'h2';

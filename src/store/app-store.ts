@@ -23,6 +23,12 @@ interface AppStore {
   loading: boolean;
   error: string | null;
 
+  // Index Feature
+  indexModalOpen: boolean;
+  // Index Feature
+  indexModalOpen: boolean;
+  highlightedLocation: { page: number; line: number; segment?: string } | null;
+
   // Actions
   loadAllTexts: () => Promise<void>;
   setCurrentPage: (page: number) => void;
@@ -30,6 +36,12 @@ interface AppStore {
   setFlowDirection: (dir: FlowDirection) => void;
   toggleSettingsSidebar: () => void;
   setHoveredSegment: (id: string | null) => void;
+
+  // Index Actions
+  toggleIndexModal: (isOpen?: boolean) => void;
+  // Index Actions
+  toggleIndexModal: (isOpen?: boolean) => void;
+  navigateToLocation: (page: number, line: number, segment?: string) => void;
 }
 
 /**
@@ -49,6 +61,8 @@ export const useAppStore = create<AppStore>()(
       hoveredSegmentId: null,
       loading: false,
       error: null,
+      indexModalOpen: false,
+      highlightedLocation: null,
 
       // Actions
       loadAllTexts: async () => {
@@ -92,7 +106,22 @@ export const useAppStore = create<AppStore>()(
           settingsSidebarOpen: !state.settingsSidebarOpen
         })),
 
-      setHoveredSegment: (id) => set({ hoveredSegmentId: id })
+      setHoveredSegment: (id) => set({ hoveredSegmentId: id }),
+
+      toggleIndexModal: (isOpen) =>
+        set((state) => ({
+          indexModalOpen: isOpen !== undefined ? isOpen : !state.indexModalOpen
+        })),
+
+      navigateToLocation: (page, line, segment) => {
+        const { totalPages } = get();
+        const validPage = Math.max(1, Math.min(page, totalPages || 1));
+        set({
+          currentPage: validPage,
+          highlightedLocation: { page: validPage, line, segment },
+          indexModalOpen: false // Close index when navigating
+        });
+      }
     }),
     {
       name: 'descartes-reader', // localStorage key

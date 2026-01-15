@@ -1,3 +1,4 @@
+import { useRef, useEffect } from 'react';
 import { Paragraph } from '../../types/text';
 import { useAppStore } from '../../store/app-store';
 import { SEGMENT_MARKER_REGEX, isSegmentMarker, extractSegmentId, getSourceWidth } from '../../utils/text-constants';
@@ -20,6 +21,22 @@ interface VerbatimTextProps {
 export function VerbatimText({ paragraphs, language }: VerbatimTextProps) {
     const hoveredSegmentId = useAppStore((state) => state.hoveredSegmentId);
     const setHoveredSegment = useAppStore((state) => state.setHoveredSegment);
+
+    // Highlight feature
+    const highlightedLocation = useAppStore((state) => state.highlightedLocation);
+    const currentPage = useAppStore((state) => state.currentPage);
+
+    // Check if we should scroll to a line on this page
+    const shouldScroll = highlightedLocation && highlightedLocation.page === currentPage;
+
+    useEffect(() => {
+        if (shouldScroll && highlightedLocation?.line) {
+            const element = document.getElementById(`line-${highlightedLocation.line}`);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+    }, [shouldScroll, highlightedLocation]);
 
     const containerWidth = getSourceWidth(language);
 
@@ -82,10 +99,13 @@ export function VerbatimText({ paragraphs, language }: VerbatimTextProps) {
                                 return (
                                     <div
                                         key={lIdx}
+                                        id={`line-${lineCounter}`} // For scrolling
                                         className={clsx(
-                                            "relative whitespace-pre-wrap",
+                                            "relative whitespace-pre-wrap transition-colors duration-1000", // Smooth highlight fade?
                                             isLastLineOfPara ? "justified-line-last" : "justified-line",
-                                            isNewPara && "indent-[1.5em]"
+                                            isNewPara && "indent-[1.5em]",
+                                            // Apply highlight if matching
+                                            shouldScroll && highlightedLocation?.line === lineCounter && "bg-yellow-100 shadow-sm"
                                         )}
                                     >
                                         {/* Line number in left margin */}
@@ -97,7 +117,7 @@ export function VerbatimText({ paragraphs, language }: VerbatimTextProps) {
 
                                         {parts.map((part, partIdx) => {
                                             if (!part) return null;
-                                            
+
                                             // Render marker as superscript and update current segment
                                             if (isSegmentMarker(part)) {
                                                 const id = extractSegmentId(part);

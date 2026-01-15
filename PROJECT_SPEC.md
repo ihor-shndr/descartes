@@ -339,9 +339,47 @@ All settings saved to localStorage:
 
 ---
 
-## 7. State Management
+## 7. Term Index
 
-### 7.1 Zustand Store
+### 7.1 Overview
+
+A searchable index of philosophical terms allows users to locate key concepts in Latin and French texts and jump to their occurrences.
+
+### 7.2 Data Structure
+
+Index data is loaded from `public/meditations/index.json`.
+
+**Structure:**
+- **Latin Terms:** List of terms found in the Latin source.
+- **French Terms:** List of terms found in the French translation.
+
+**Term Entry:**
+- **Term:** The word/phrase itself.
+- **Count:** Total number of occurrences.
+- **Translations:** Corresponding terms in other languages (e.g., Latin → French/Ukrainian).
+- **Occurrences:** List of locations (Section, Page, Line numbers).
+
+### 7.3 Interface
+
+- **Access:** "Book" or "Index" icon in the Reader Header.
+- **Modal:** Opens as an overlay/modal to preserve context.
+- **Search:** Filter terms by text input.
+- **Tabs:** Toggle between "Latin Terms" and "French Terms" lists.
+
+### 7.4 Navigation Interaction
+
+When a user clicks on an occurrence link (e.g., `SC 1: 7`):
+
+1. **Close Modal:** The index overlay closes.
+2. **Navigate:** The reader switches to the specified `pageNumber`.
+3. **Scroll:** The viewport automatically scrolls the target line into view (centered).
+4. **Highlight:** The target line is temporarily highlighted (e.g., yellow background) to draw attention.
+
+---
+
+## 8. State Management
+
+### 8.1 Zustand Store
 
 Single source of truth for all application state:
 
@@ -364,13 +402,13 @@ interface AppStore {
 }
 ```
 
-### 7.2 Data Loading
+### 8.2 Data Loading
 
 All 4 JSON files are loaded once at app startup. No lazy loading per page.
 
 ---
 
-## 8. Component Architecture
+## 9. Component Architecture
 
 ```
 App
@@ -390,7 +428,7 @@ App
 
 ---
 
-## 9. Error Handling
+## 10. Error Handling
 
 - React ErrorBoundary catches rendering errors
 - Network errors displayed to user with retry option
@@ -399,7 +437,7 @@ App
 
 ---
 
-## 10. Success Criteria
+## 11. Success Criteria
 
 ### Core
 - [ ] All 4 JSON files load at startup
