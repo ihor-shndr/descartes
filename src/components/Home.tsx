@@ -20,7 +20,7 @@ export default function Home() {
         {AUTHORS.map((author) => (
           <div key={author.name} className="flex gap-8">
             <img
-              src="/descartes/descartes/descartes.jpg"
+              src="/descartes/descartes.jpg"
               alt={author.name}
               className="w-32 h-40 object-cover grayscale opacity-80"
             />

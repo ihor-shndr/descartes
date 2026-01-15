@@ -4,10 +4,10 @@ import { TextData, LanguageCode } from '../types/text';
  * Mapping of language codes to their JSON file paths
  */
 const LANGUAGE_FILES: Record<LanguageCode, string> = {
-  'la': '/descartes/descartes/meditations/la.json',
-  'la-ua': '/descartes/descartes/meditations/la-ua.json',
-  'fr': '/descartes/descartes/meditations/fr.json',
-  'fr-ua': '/descartes/descartes/meditations/fr-ua.json'
+  'la': '/descartes/meditations/la.json',
+  'la-ua': '/descartes/meditations/la-ua.json',
+  'fr': '/descartes/meditations/fr.json',
+  'fr-ua': '/descartes/meditations/fr-ua.json'
 };
 
 /**
