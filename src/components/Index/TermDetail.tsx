@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { TermEntry, Occurrence, LineRef } from '../../types/termIndex';
+import { TermEntry, Occurrence } from '../../types/termIndex';
 import { useAppStore } from '../../store/app-store';
 
 interface TermDetailProps {

@@ -3,6 +3,7 @@ import { persist } from 'zustand/middleware';
 import { TextData, LanguageCode } from '../types/text';
 import { FlowDirection } from '../types/store';
 import { loadAllTexts } from '../services/text-loader';
+import { findSegmentIdForLine } from '../utils/text-lookup';
 
 /**
  * Application store interface
@@ -25,8 +26,6 @@ interface AppStore {
 
   // Index Feature
   indexModalOpen: boolean;
-  // Index Feature
-  indexModalOpen: boolean;
   highlightedLocation: { page: number; line: number; segment?: string } | null;
 
   // Actions
@@ -37,8 +36,6 @@ interface AppStore {
   toggleSettingsSidebar: () => void;
   setHoveredSegment: (id: string | null) => void;
 
-  // Index Actions
-  toggleIndexModal: (isOpen?: boolean) => void;
   // Index Actions
   toggleIndexModal: (isOpen?: boolean) => void;
   navigateToLocation: (page: number, line: number, segment?: string) => void;
@@ -114,11 +111,20 @@ export const useAppStore = create<AppStore>()(
         })),
 
       navigateToLocation: (page, line, segment) => {
-        const { totalPages } = get();
+        const { totalPages, allTexts } = get();
         const validPage = Math.max(1, Math.min(page, totalPages || 1));
+
+        let targetSegment = segment;
+
+        // If no segment provided (e.g. Latin term), try to find it from the line number
+        if (!targetSegment && allTexts && allTexts['la']) {
+          // Looking up in Latin text assuming the index line numbers refer to Latin source lines
+          targetSegment = findSegmentIdForLine(allTexts['la'], validPage, line);
+        }
+
         set({
           currentPage: validPage,
-          highlightedLocation: { page: validPage, line, segment },
+          highlightedLocation: { page: validPage, line, segment: targetSegment },
           indexModalOpen: false // Close index when navigating
         });
       }

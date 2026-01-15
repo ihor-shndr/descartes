@@ -134,7 +134,10 @@ export function VerbatimText({ paragraphs, language }: VerbatimTextProps) {
                                                     key={partIdx}
                                                     className={clsx(
                                                         "transition-colors duration-200 rounded-sm py-0.5 box-decoration-clone",
-                                                        segmentId && hoveredSegmentId === segmentId && "bg-yellow-200"
+                                                        segmentId && (
+                                                            hoveredSegmentId === segmentId ||
+                                                            (shouldScroll && highlightedLocation?.segment === segmentId)
+                                                        ) && "bg-yellow-200"
                                                     )}
                                                     onMouseEnter={() => segmentId && setHoveredSegment(segmentId)}
                                                     onMouseLeave={() => segmentId && setHoveredSegment(null)}
