@@ -24,6 +24,7 @@ export function VerbatimText({ paragraphs, language }: VerbatimTextProps) {
     const containerWidth = getSourceWidth(language);
 
     let lineCounter = 0; // Track line numbers across all paragraphs
+    let currentSegmentId: string | null = null; // Track segment ID across paragraphs and lines
 
     return (
         <div className="w-full flex justify-center">
@@ -101,21 +102,16 @@ export function VerbatimText({ paragraphs, language }: VerbatimTextProps) {
                                         {parts.map((part, partIdx) => {
                                             if (!part) return null;
                                             
-                                            // Render marker as superscript
+                                            // Render marker as superscript and update current segment
                                             if (isSegmentMarker(part)) {
                                                 const id = extractSegmentId(part);
+                                                currentSegmentId = id; // Update segment ID for subsequent text
                                                 return <SegmentMarker key={partIdx} id={id} />;
                                             }
 
-                                            // Text segment with hover - find which segment this text belongs to
-                                            // by looking for the most recent marker before this part
-                                            let segmentId: string | null = null;
-                                            for (let i = partIdx - 1; i >= 0; i--) {
-                                                if (isSegmentMarker(parts[i])) {
-                                                    segmentId = extractSegmentId(parts[i]);
-                                                    break;
-                                                }
-                                            }
+                                            // Text segment with hover - use current segment ID from marker tracking
+                                            // This allows hover to work across line breaks in Latin text
+                                            const segmentId = currentSegmentId;
 
                                             return (
                                                 <span
