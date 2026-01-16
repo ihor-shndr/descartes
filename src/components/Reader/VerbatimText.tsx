@@ -3,21 +3,13 @@ import { Paragraph } from '../../types/text';
 import { useAppStore } from '../../store/app-store';
 import { SEGMENT_MARKER_REGEX, isSegmentMarker, extractSegmentId, getSourceWidth } from '../../utils/text-rendering';
 import { SegmentMarker } from '../SegmentMarker';
+import { ParagraphHeading, isHeading } from './ParagraphHeading';
 import clsx from 'clsx';
 
 interface VerbatimTextProps {
     paragraphs: Paragraph[];
     language: string;
 }
-
-/**
- * Heading styles mapping
- */
-const HEADING_STYLES = {
-    h1: 'text-center text-3xl font-bold uppercase tracking-widest my-8 max-w-md mx-auto',
-    h2: 'text-center text-xl italic my-6 max-w-md mx-auto',
-    h3: 'text-center text-lg my-5 max-w-md mx-auto'
-} as const;
 
 /**
  * Renders Latin source text with:
@@ -60,12 +52,8 @@ export function VerbatimText({ paragraphs, language }: VerbatimTextProps) {
             >
                 {paragraphs.map((paragraph, pIdx) => {
                     // Headers
-                    if (paragraph.type && HEADING_STYLES[paragraph.type]) {
-                        return (
-                            <div key={pIdx} className={HEADING_STYLES[paragraph.type]}>
-                                {paragraph.lines.join(' ')}
-                            </div>
-                        );
+                    if (isHeading(paragraph.type)) {
+                        return <ParagraphHeading key={pIdx} paragraph={paragraph} />;
                     }
 
                     // Regular paragraph

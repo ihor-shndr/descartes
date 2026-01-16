@@ -3,21 +3,22 @@ import { Paragraph } from '../../types/text';
 import { useAppStore } from '../../store/app-store';
 import { SEGMENT_MARKER_REGEX, isSegmentMarker, extractSegmentId } from '../../utils/text-rendering';
 import { SegmentMarker } from '../SegmentMarker';
+import { ParagraphHeading, isHeading } from './ParagraphHeading';
 import clsx from 'clsx';
 
-interface SegmentFlowProps {
+interface FlowingTextProps {
     paragraphs: Paragraph[];
 }
 
 /**
- * Renders Ukrainian translation text with:
+ * Renders translation text with continuous flowing layout:
  * - Continuous flowing text (lines join with spaces)
  * - Serif font (PT Serif for Cyrillic support)
  * - Superscript markers before each segment
  * - Full container width
  * - Justified alignment with proper last-line handling
  */
-export function SegmentFlow({ paragraphs }: SegmentFlowProps) {
+export function FlowingText({ paragraphs }: FlowingTextProps) {
     const containerRef = useRef<HTMLDivElement>(null);
     const hoveredSegmentId = useAppStore((state) => state.hoveredSegmentId);
     const setHoveredSegment = useAppStore((state) => state.setHoveredSegment);
@@ -42,23 +43,9 @@ export function SegmentFlow({ paragraphs }: SegmentFlowProps) {
                 let currentSegmentId: string | null = null;
 
                 return paragraphs.map((paragraph, pIdx) => {
-                    const isH1 = paragraph.type === 'h1';
-                    const isH2 = paragraph.type === 'h2';
-                    const isH3 = paragraph.type === 'h3';
-
                     // Headers
-                    if (isH1 || isH2 || isH3) {
-                        return (
-                            <div
-                                key={pIdx}
-                                className={clsx(
-                                    "text-center max-w-md mx-auto",
-                                    isH1 ? "text-3xl font-bold uppercase tracking-widest my-8" : isH2 ? "text-xl italic my-6" : "text-lg my-5"
-                                )}
-                            >
-                                {paragraph.lines.join(' ')}
-                            </div>
-                        );
+                    if (isHeading(paragraph.type)) {
+                        return <ParagraphHeading key={pIdx} paragraph={paragraph} />;
                     }
 
                     // Split into sub-paragraphs based on leading spaces

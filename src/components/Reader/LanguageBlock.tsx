@@ -1,6 +1,6 @@
 import { Paragraph } from '../../types/text';
 import { VerbatimText } from './VerbatimText';
-import { SegmentFlow } from './SegmentFlow';
+import { FlowingText } from './FlowingText';
 import { getLanguageLabel, usesVerbatimLayout } from '../../utils/language-utils';
 import clsx from 'clsx';
 
@@ -14,8 +14,8 @@ export function LanguageBlock({ language, paragraphs, className }: LanguageBlock
     const isSource = usesVerbatimLayout(language);
 
     return (
-        <div className={clsx("flex flex-col h-full bg-white shadow-sm border border-stone-200 rounded-sm overflow-hidden", className)}>
-            <div className="bg-stone-100 border-b border-stone-200 px-4 py-1 text-xs font-bold text-stone-500 uppercase tracking-wider sticky top-0 z-10">
+        <div className={clsx("flex flex-col h-full shadow-sm border border-stone-200 rounded-sm overflow-hidden", className)}>
+            <div className="bg-stone-100 border-b border-stone-200 px-4 py-1 text-xs font-bold text-stone-500 uppercase tracking-wider sticky top-0">
                 {getLanguageLabel(language)}
             </div>
             <div className="flex-1 overflow-auto p-8 custom-scrollbar relative overflow-x-auto">
@@ -23,7 +23,7 @@ export function LanguageBlock({ language, paragraphs, className }: LanguageBlock
                     {isSource ? (
                         <VerbatimText paragraphs={paragraphs} language={language} />
                     ) : (
-                        <SegmentFlow paragraphs={paragraphs} />
+                        <FlowingText paragraphs={paragraphs} />
                     )}
                 </div>
             </div>
