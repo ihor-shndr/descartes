@@ -16,16 +16,23 @@ export const IndexModal: React.FC = () => {
     useEffect(() => {
         if (indexModalOpen && !data && !loading) {
             setLoading(true);
-            fetch('/descartes/meditations/index.json')
-                .then(async res => {
-                    if (!res.ok) {
-                        console.error(`Index load failed: ${res.status} ${res.statusText}`);
-                        throw new Error(`Failed to load index: ${res.status}`);
-                    }
+
+            // Fetch both index files in parallel
+            Promise.all([
+                fetch('/descartes/meditations/index/la.json').then(res => {
+                    if (!res.ok) throw new Error(`Failed to load Latin index: ${res.status}`);
+                    return res.json();
+                }),
+                fetch('/descartes/meditations/index/fr.json').then(res => {
+                    if (!res.ok) throw new Error(`Failed to load French index: ${res.status}`);
                     return res.json();
                 })
-                .then(json => {
-                    setData(json);
+            ])
+                .then(([latinData, frenchData]) => {
+                    setData({
+                        latin: latinData,
+                        french: frenchData
+                    });
                     setLoading(false);
                 })
                 .catch(err => {

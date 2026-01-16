@@ -1,0 +1,1948 @@
+[
+        {
+            "id": "anima",
+            "term": "anima",
+            "count": 11,
+            "translations": {
+                "fr": [
+                    {
+                        "term": "âme [10] / PL [1]",
+                        "count": 0
+                    }
+                ],
+                "ua": [
+                    {
+                        "term": "душа [11]",
+                        "count": 0
+                    }
+                ]
+            },
+            "occurrences": [
+                {
+                    "section": "SC",
+                    "page": 1,
+                    "lines": [
+                        {
+                            "line": 7
+                        },
+                        {
+                            "line": 10
+                        }
+                    ]
+                },
+                {
+                    "section": "SC",
+                    "page": 2,
+                    "lines": [
+                        {
+                            "line": 31
+                        }
+                    ]
+                },
+                {
+                    "section": "SC",
+                    "page": 6,
+                    "lines": [
+                        {
+                            "line": 15
+                        }
+                    ]
+                },
+                {
+                    "section": "PL*",
+                    "page": 8,
+                    "lines": [
+                        {
+                            "line": 5
+                        }
+                    ]
+                },
+                {
+                    "section": "SY",
+                    "page": 12,
+                    "lines": [
+                        {
+                            "line": 16
+                        }
+                    ]
+                },
+                {
+                    "section": "SY",
+                    "page": 13,
+                    "lines": [
+                        {
+                            "line": 17
+                        }
+                    ]
+                },
+                {
+                    "section": "I",
+                    "page": 17,
+                    "lines": [
+                        {
+                            "line": 0,
+                            "isTitle": true
+                        }
+                    ]
+                },
+                {
+                    "section": "II",
+                    "page": 26,
+                    "lines": [
+                        {
+                            "line": 7
+                        },
+                        {
+                            "line": 8
+                        }
+                    ]
+                },
+                {
+                    "section": "II",
+                    "page": 27,
+                    "lines": [
+                        {
+                            "line": 2
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "animus",
+            "term": "animus",
+            "count": 6,
+            "translations": {
+                "fr": [
+                    {
+                        "term": "esprit [5] / TL [1]",
+                        "count": 0
+                    }
+                ],
+                "ua": [
+                    {
+                        "term": "найвищий рівень душіІ [4], духІІ [1], умІІІ [1]",
+                        "count": 0
+                    }
+                ]
+            },
+            "occurrences": [
+                {
+                    "section": "SC",
+                    "page": 6,
+                    "lines": [
+                        {
+                            "line": 9
+                        }
+                    ]
+                },
+                {
+                    "section": "SY",
+                    "page": 14,
+                    "lines": [
+                        {
+                            "line": 20
+                        }
+                    ]
+                },
+                {
+                    "section": "II",
+                    "page": 27,
+                    "lines": [
+                        {
+                            "line": 14
+                        }
+                    ]
+                },
+                {
+                    "section": "VI",
+                    "page": 73,
+                    "lines": [
+                        {
+                            "line": 1
+                        },
+                        {
+                            "line": 3
+                        }
+                    ]
+                },
+                {
+                    "section": "VI",
+                    "page": 76,
+                    "lines": [
+                        {
+                            "line": 7
+                        }
+                    ]
+                },
+                {
+                    "section": "PL*",
+                    "page": 9,
+                    "lines": [
+                        {
+                            "line": 14
+                        },
+                        {
+                            "line": 24
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "comprehensio",
+            "term": "comprehensio",
+            "count": 2,
+            "translations": {
+                "fr": [
+                    {
+                        "term": "conception1 [1], perception2 [1]",
+                        "count": 0
+                    }
+                ],
+                "ua": [
+                    {
+                        "term": "осягнення [2]",
+                        "count": 0
+                    }
+                ]
+            },
+            "occurrences": []
+        },
+        {
+            "id": "incomprehensibilis",
+            "term": "incomprehensibilis",
+            "count": 2,
+            "translations": {
+                "fr": [
+                    {
+                        "term": "incompréhensible [1] / PL [1]",
+                        "count": 0
+                    }
+                ],
+                "ua": [
+                    {
+                        "term": "неосягненний [2]",
+                        "count": 0
+                    }
+                ]
+            },
+            "occurrences": [
+                {
+                    "section": "PL*",
+                    "page": 9,
+                    "lines": [
+                        {
+                            "line": 16
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "conceptus",
+            "term": "conceptus",
+            "count": 6,
+            "translations": {
+                "fr": [
+                    {
+                        "term": "conception1 [4], concept2 [2]",
+                        "count": 0
+                    }
+                ],
+                "ua": [
+                    {
+                        "term": "концепт [6]",
+                        "count": 0
+                    }
+                ]
+            },
+            "occurrences": [
+                {
+                    "section": "SY",
+                    "page": 13,
+                    "lines": [
+                        {
+                            "line": 18
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "concipere",
+            "term": "concipere",
+            "count": 8,
+            "translations": {
+                "fr": [
+                    {
+                        "term": "concevoir1 [7], avoir les notions2 [1]",
+                        "count": 0
+                    }
+                ],
+                "ua": [
+                    {
+                        "term": "збагати, збагнути [8]",
+                        "count": 0
+                    }
+                ]
+            },
+            "occurrences": [
+                {
+                    "section": "SY",
+                    "page": 13,
+                    "lines": [
+                        {
+                            "line": 15
+                        },
+                        {
+                            "line": 17
+                        },
+                        {
+                            "line": 21
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "evidentissimus(-me)",
+            "term": "evidentissimus(-me)",
+            "count": 8,
+            "translations": {
+                "fr": [
+                    {
+                        "term": "évidemment1 [2], avec le plus d’évidence et de certitude2 [1], avec une évidence très grande3 [1], les plus évident4 [1], plus évident5 [1], très évidemment5 [1], très évident6 [1]",
+                        "count": 0
+                    }
+                ],
+                "ua": [
+                    {
+                        "term": "найочевиднішийІ [4], якнайочевиднішеІІ [4]",
+                        "count": 0
+                    }
+                ]
+            },
+            "occurrences": [
+                {
+                    "section": "SC",
+                    "page": 4,
+                    "lines": [
+                        {
+                            "line": 77
+                        }
+                    ]
+                },
+                {
+                    "section": "SY",
+                    "page": 16,
+                    "lines": [
+                        {
+                            "line": 46
+                        }
+                    ]
+                },
+                {
+                    "section": "II",
+                    "page": 25,
+                    "lines": [
+                        {
+                            "line": 518
+                        }
+                    ]
+                },
+                {
+                    "section": "V",
+                    "page": 69,
+                    "lines": [
+                        {
+                            "line": 27
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "evidens",
+            "term": "evidens",
+            "count": 16,
+            "translations": {
+                "fr": [
+                    {
+                        "term": "évidence1 [6], évidemment2 [3], claire et évidente3 [1], clairement et distinctement4 [1], nettement5 [1], netteté6 [1], très évident7 [1] / PL [1], FM [1]",
+                        "count": 0
+                    }
+                ],
+                "ua": [
+                    {
+                        "term": "очевидний [5], очевидністьII [5], очевидніший(-ше)ІІІ [4], очевидноІV [2]",
+                        "count": 0
+                    }
+                ]
+            },
+            "occurrences": [
+                {
+                    "section": "SC",
+                    "page": 4,
+                    "lines": [
+                        {
+                            "line": 13
+                        }
+                    ]
+                },
+                {
+                    "section": "PL*",
+                    "page": 10,
+                    "lines": [
+                        {
+                            "line": 11
+                        }
+                    ]
+                },
+                {
+                    "section": "II",
+                    "page": 28,
+                    "lines": [
+                        {
+                            "line": 513
+                        },
+                        {
+                            "line": 14
+                        }
+                    ]
+                },
+                {
+                    "section": "II",
+                    "page": 29,
+                    "lines": [
+                        {
+                            "line": 6
+                        }
+                    ]
+                },
+                {
+                    "section": "II",
+                    "page": 32,
+                    "lines": [
+                        {
+                            "line": 16
+                        }
+                    ]
+                },
+                {
+                    "section": "II",
+                    "page": 33,
+                    "lines": [
+                        {
+                            "line": 66
+                        }
+                    ]
+                },
+                {
+                    "section": "IV",
+                    "page": 53,
+                    "lines": [
+                        {
+                            "line": 16
+                        }
+                    ]
+                },
+                {
+                    "section": "IV",
+                    "page": 58,
+                    "lines": [
+                        {
+                            "line": 21
+                        },
+                        {
+                            "line": 228
+                        }
+                    ]
+                },
+                {
+                    "section": "V",
+                    "page": 61,
+                    "lines": [
+                        {
+                            "line": 328
+                        }
+                    ]
+                },
+                {
+                    "section": "V",
+                    "page": 65,
+                    "lines": [
+                        {
+                            "line": 414
+                        }
+                    ]
+                },
+                {
+                    "section": "V",
+                    "page": 71,
+                    "lines": [
+                        {
+                            "line": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "evidentia",
+            "term": "evidentia",
+            "count": 1,
+            "translations": {
+                "fr": [
+                    {
+                        "term": "évidence [1]",
+                        "count": 0
+                    }
+                ],
+                "ua": [
+                    {
+                        "term": "очевидність [1]",
+                        "count": 0
+                    }
+                ]
+            },
+            "occurrences": [
+                {
+                    "section": "SC",
+                    "page": 4,
+                    "lines": [
+                        {
+                            "line": 24
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "ingenium",
+            "term": "ingenium",
+            "count": 8,
+            "translations": {
+                "fr": [
+                    {
+                        "term": "esprit [6] / PL [2]",
+                        "count": 0
+                    }
+                ],
+                "ua": [
+                    {
+                        "term": "розум [8]",
+                        "count": 0
+                    }
+                ]
+            },
+            "occurrences": [
+                {
+                    "section": "SC",
+                    "page": 4,
+                    "lines": [
+                        {
+                            "line": 9
+                        }
+                    ]
+                },
+                {
+                    "section": "SC",
+                    "page": 5,
+                    "lines": [
+                        {
+                            "line": 9
+                        }
+                    ]
+                },
+                {
+                    "section": "SC",
+                    "page": 6,
+                    "lines": [
+                        {
+                            "line": 10
+                        }
+                    ]
+                },
+                {
+                    "section": "PL*",
+                    "page": 7,
+                    "lines": [
+                        {
+                            "line": 12
+                        }
+                    ]
+                },
+                {
+                    "section": "PL*",
+                    "page": 10,
+                    "lines": [
+                        {
+                            "line": 15
+                        }
+                    ]
+                },
+                {
+                    "section": "SY",
+                    "page": 12,
+                    "lines": [
+                        {
+                            "line": 16
+                        }
+                    ]
+                },
+                {
+                    "section": "IV",
+                    "page": 52,
+                    "lines": [
+                        {
+                            "line": 15
+                        }
+                    ]
+                },
+                {
+                    "section": "IV",
+                    "page": 53,
+                    "lines": [
+                        {
+                            "line": 17
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "intellectio",
+            "term": "intellectio",
+            "count": 7,
+            "translations": {
+                "fr": [
+                    {
+                        "term": "intellection [4], action de l’entendement2 [1], intelligence3 [1], pensée4 [1]",
+                        "count": 0
+                    }
+                ],
+                "ua": [
+                    {
+                        "term": "інтелекція [7]",
+                        "count": 0
+                    }
+                ]
+            },
+            "occurrences": [
+                {
+                    "section": "SY",
+                    "page": 15,
+                    "lines": [
+                        {
+                            "line": 220
+                        }
+                    ]
+                },
+                {
+                    "section": "VI",
+                    "page": 72,
+                    "lines": [
+                        {
+                            "line": 5
+                        }
+                    ]
+                },
+                {
+                    "section": "VI",
+                    "page": 73,
+                    "lines": [
+                        {
+                            "line": 4
+                        },
+                        {
+                            "line": 15
+                        }
+                    ]
+                },
+                {
+                    "section": "VI",
+                    "page": 78,
+                    "lines": [
+                        {
+                            "line": 25
+                        }
+                    ]
+                },
+                {
+                    "section": "VI",
+                    "page": 79,
+                    "lines": [
+                        {
+                            "line": 35
+                        },
+                        {
+                            "line": 413
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "intellectus",
+            "term": "intellectus",
+            "count": 25,
+            "translations": {
+                "fr": [
+                    {
+                        "term": "entendement [17], esprit4 [3], faculté d’entendre3 [1], je4 [1] / PL [2]; FM [1]",
+                        "count": 0
+                    }
+                ],
+                "ua": [
+                    {
+                        "term": "інтелект [25]",
+                        "count": 0
+                    }
+                ]
+            },
+            "occurrences": [
+                {
+                    "section": "PL*",
+                    "page": 8,
+                    "lines": [
+                        {
+                            "line": 21
+                        },
+                        {
+                            "line": 24
+                        }
+                    ]
+                },
+                {
+                    "section": "V",
+                    "page": 71,
+                    "lines": [
+                        {
+                            "line": 21
+                        }
+                    ]
+                },
+                {
+                    "section": "VI",
+                    "page": 75,
+                    "lines": [
+                        {
+                            "line": 228
+                        }
+                    ]
+                },
+                {
+                    "section": "VI",
+                    "page": 81,
+                    "lines": [
+                        {
+                            "line": 7
+                        }
+                    ]
+                },
+                {
+                    "section": "VI",
+                    "page": 82,
+                    "lines": [
+                        {
+                            "line": 229
+                        }
+                    ]
+                },
+                {
+                    "section": "VI",
+                    "page": 89,
+                    "lines": [
+                        {
+                            "line": 16
+                        }
+                    ]
+                },
+                {
+                    "section": "VI",
+                    "page": 90,
+                    "lines": [
+                        {
+                            "line": 8
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "intelligendi, vis (facultas)",
+            "term": "intelligendi, vis (facultas)",
+            "count": 6,
+            "translations": {
+                "fr": [
+                    {
+                        "term": "faculté de concevoir [3], intelligence2 [1], puissance de concevoir3 [1], puissance d’entendre ou de concevoir4 [1]",
+                        "count": 0
+                    }
+                ],
+                "ua": [
+                    {
+                        "term": "сила розуміти [3], здатність розумітиІІ [2]",
+                        "count": 0
+                    }
+                ]
+            },
+            "occurrences": [
+                {
+                    "section": "VI",
+                    "page": 73,
+                    "lines": [
+                        {
+                            "line": 36
+                        }
+                    ]
+                },
+                {
+                    "section": "VI",
+                    "page": 86,
+                    "lines": [
+                        {
+                            "line": 7
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "intelligere",
+            "term": "intelligere",
+            "count": 83,
+            "translations": {
+                "fr": [
+                    {
+                        "term": "concevoir [38], connaître2 [13], entendre3 [12], comprendre4 [3], reconnaître5",
+                        "count": 0
+                    }
+                ],
+                "ua": [
+                    {
+                        "term": "[3], entendre et concevoir6 [2], avoir l’intelligence7 [1], comprendre et",
+                        "count": 0
+                    }
+                ]
+            },
+            "occurrences": [
+                {
+                    "section": "SC",
+                    "page": 1,
+                    "lines": [
+                        {
+                            "line": 24
+                        }
+                    ]
+                },
+                {
+                    "section": "SC",
+                    "page": 3,
+                    "lines": [
+                        {
+                            "line": 315
+                        }
+                    ]
+                },
+                {
+                    "section": "SC",
+                    "page": 4,
+                    "lines": [
+                        {
+                            "line": 823
+                        }
+                    ]
+                },
+                {
+                    "section": "SC",
+                    "page": 5,
+                    "lines": [
+                        {
+                            "line": 34
+                        }
+                    ]
+                },
+                {
+                    "section": "SC",
+                    "page": 6,
+                    "lines": [
+                        {
+                            "line": 711
+                        }
+                    ]
+                },
+                {
+                    "section": "PL*",
+                    "page": 9,
+                    "lines": [
+                        {
+                            "line": 3
+                        }
+                    ]
+                },
+                {
+                    "section": "SY",
+                    "page": 13,
+                    "lines": [
+                        {
+                            "line": 11
+                        },
+                        {
+                            "line": 20
+                        }
+                    ]
+                },
+                {
+                    "section": "SY",
+                    "page": 4,
+                    "lines": [
+                        {
+                            "line": 12
+                        }
+                    ]
+                },
+                {
+                    "section": "SY",
+                    "page": 15,
+                    "lines": [
+                        {
+                            "line": 36
+                        }
+                    ]
+                },
+                {
+                    "section": "V",
+                    "page": 65,
+                    "lines": [
+                        {
+                            "line": 223
+                        }
+                    ]
+                },
+                {
+                    "section": "V",
+                    "page": 68,
+                    "lines": [
+                        {
+                            "line": 7
+                        },
+                        {
+                            "line": 510
+                        },
+                        {
+                            "line": 16
+                        }
+                    ]
+                },
+                {
+                    "section": "V",
+                    "page": 70,
+                    "lines": [
+                        {
+                            "line": 511
+                        },
+                        {
+                            "line": 223
+                        }
+                    ]
+                },
+                {
+                    "section": "VI",
+                    "page": 72,
+                    "lines": [
+                        {
+                            "line": 7
+                        },
+                        {
+                            "line": 11
+                        },
+                        {
+                            "line": 12
+                        },
+                        {
+                            "line": 24
+                        }
+                    ]
+                },
+                {
+                    "section": "VI",
+                    "page": 73,
+                    "lines": [
+                        {
+                            "line": 2
+                        },
+                        {
+                            "line": 6
+                        },
+                        {
+                            "line": 10
+                        },
+                        {
+                            "line": 15
+                        },
+                        {
+                            "line": 0
+                        },
+                        {
+                            "line": 20
+                        }
+                    ]
+                },
+                {
+                    "section": "VI",
+                    "page": 76,
+                    "lines": [
+                        {
+                            "line": 414
+                        }
+                    ]
+                },
+                {
+                    "section": "VI",
+                    "page": 78,
+                    "lines": [
+                        {
+                            "line": 3
+                        },
+                        {
+                            "line": 5
+                        },
+                        {
+                            "line": 24
+                        }
+                    ]
+                },
+                {
+                    "section": "VI",
+                    "page": 79,
+                    "lines": []
+                }
+            ]
+        },
+        {
+            "id": "intellectualis",
+            "term": "intellectualis",
+            "count": 2,
+            "translations": {
+                "fr": [
+                    {
+                        "term": "intellectuel [1] / FM [1]",
+                        "count": 0
+                    }
+                ],
+                "ua": [
+                    {
+                        "term": "інтелектуальний [1], наділений інтелектомІІ [1]",
+                        "count": 0
+                    }
+                ]
+            },
+            "occurrences": [
+                {
+                    "section": "SY",
+                    "page": 12,
+                    "lines": [
+                        {
+                            "line": 15
+                        }
+                    ]
+                },
+                {
+                    "section": "V",
+                    "page": 71,
+                    "lines": [
+                        {
+                            "line": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "intelligibilis",
+            "term": "intelligibilis",
+            "count": 1,
+            "translations": {
+                "fr": [
+                    {
+                        "term": "intelligible [1]",
+                        "count": 0
+                    }
+                ],
+                "ua": [
+                    {
+                        "term": "інтеліґібельний [1]",
+                        "count": 0
+                    }
+                ]
+            },
+            "occurrences": []
+        },
+        {
+            "id": "intueri",
+            "term": "intueri",
+            "count": 7,
+            "translations": {
+                "fr": [
+                    {
+                        "term": "considérer [3], regarder2 [2], concevoir3 [1], crois connaître4 [1]",
+                        "count": 0
+                    }
+                ],
+                "ua": [
+                    {
+                        "term": "прозиратиІ [6], зрітиІІ [1]",
+                        "count": 0
+                    }
+                ]
+            },
+            "occurrences": [
+                {
+                    "section": "SC",
+                    "page": 2,
+                    "lines": [
+                        {
+                            "line": 25
+                        }
+                    ]
+                },
+                {
+                    "section": "V",
+                    "page": 66,
+                    "lines": [
+                        {
+                            "line": 98
+                        }
+                    ]
+                },
+                {
+                    "section": "VI",
+                    "page": 79,
+                    "lines": [
+                        {
+                            "line": 82
+                        },
+                        {
+                            "line": 23
+                        }
+                    ]
+                },
+                {
+                    "section": "VI",
+                    "page": 88,
+                    "lines": [
+                        {
+                            "line": 19
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "manifeste",
+            "term": "manifeste",
+            "count": 3,
+            "translations": {
+                "fr": [
+                    {
+                        "term": "явно [3]",
+                        "count": 0
+                    }
+                ],
+                "ua": [
+                    {
+                        "term": "ІІІ [2] 45: 26; 53: 214",
+                        "count": 0
+                    }
+                ]
+            },
+            "occurrences": []
+        },
+        {
+            "id": "mens",
+            "term": "mens",
+            "count": 101,
+            "translations": {
+                "fr": [
+                    {
+                        "term": "esprit [76], âme2 [10], entendement3 [1], moi4 [1], notions5 [1], pensée6 [1 + 1 PN],",
+                        "count": 0
+                    }
+                ],
+                "ua": [
+                    {
+                        "term": "sens (bon)7 [1], tout le monde8 [1] / PL [7], FM [1]",
+                        "count": 0
+                    }
+                ]
+            },
+            "occurrences": [
+                {
+                    "section": "SC",
+                    "page": 2,
+                    "lines": [
+                        {
+                            "line": 28
+                        }
+                    ]
+                },
+                {
+                    "section": "SC",
+                    "page": 3,
+                    "lines": [
+                        {
+                            "line": 210
+                        }
+                    ]
+                },
+                {
+                    "section": "SC",
+                    "page": 4,
+                    "lines": [
+                        {
+                            "line": 28
+                        }
+                    ]
+                },
+                {
+                    "section": "SC",
+                    "page": 5,
+                    "lines": [
+                        {
+                            "line": 814
+                        },
+                        {
+                            "line": 229
+                        }
+                    ]
+                },
+                {
+                    "section": "SC",
+                    "page": 6,
+                    "lines": [
+                        {
+                            "line": 5
+                        }
+                    ]
+                },
+                {
+                    "section": "PL",
+                    "page": 7,
+                    "lines": [
+                        {
+                            "line": 1
+                        },
+                        {
+                            "line": 20
+                        }
+                    ]
+                },
+                {
+                    "section": "PL",
+                    "page": 9,
+                    "lines": [
+                        {
+                            "line": 12
+                        },
+                        {
+                            "line": 15
+                        },
+                        {
+                            "line": 21
+                        },
+                        {
+                            "line": 25
+                        }
+                    ]
+                },
+                {
+                    "section": "PL",
+                    "page": 10,
+                    "lines": [
+                        {
+                            "line": 20
+                        }
+                    ]
+                },
+                {
+                    "section": "SY",
+                    "page": 12,
+                    "lines": [
+                        {
+                            "line": 17
+                        },
+                        {
+                            "line": 110
+                        }
+                    ]
+                },
+                {
+                    "section": "SY",
+                    "page": 13,
+                    "lines": [
+                        {
+                            "line": 117
+                        },
+                        {
+                            "line": 121
+                        },
+                        {
+                            "line": 122
+                        },
+                        {
+                            "line": 227
+                        },
+                        {
+                            "line": 229
+                        }
+                    ]
+                },
+                {
+                    "section": "SY",
+                    "page": 14,
+                    "lines": [
+                        {
+                            "line": 29
+                        },
+                        {
+                            "line": 213
+                        },
+                        {
+                            "line": 116
+                        },
+                        {
+                            "line": 128
+                        }
+                    ]
+                },
+                {
+                    "section": "SY",
+                    "page": 15,
+                    "lines": [
+                        {
+                            "line": 221
+                        }
+                    ]
+                },
+                {
+                    "section": "I",
+                    "page": 17,
+                    "lines": [
+                        {
+                            "line": 113
+                        }
+                    ]
+                },
+                {
+                    "section": "I",
+                    "page": 21,
+                    "lines": [
+                        {
+                            "line": 11
+                        }
+                    ]
+                },
+                {
+                    "section": "I",
+                    "page": 23,
+                    "lines": [
+                        {
+                            "line": 19
+                        }
+                    ]
+                },
+                {
+                    "section": "II",
+                    "page": 23,
+                    "lines": [
+                        {
+                            "line": 120
+                        }
+                    ]
+                },
+                {
+                    "section": "II",
+                    "page": 25,
+                    "lines": [
+                        {
+                            "line": 14
+                        }
+                    ]
+                },
+                {
+                    "section": "II",
+                    "page": 26,
+                    "lines": [
+                        {
+                            "line": 513
+                        }
+                    ]
+                },
+                {
+                    "section": "II",
+                    "page": 27,
+                    "lines": [
+                        {
+                            "line": 114
+                        }
+                    ]
+                },
+                {
+                    "section": "II",
+                    "page": 28,
+                    "lines": [
+                        {
+                            "line": 117
+                        }
+                    ]
+                },
+                {
+                    "section": "II",
+                    "page": 29,
+                    "lines": [
+                        {
+                            "line": 129
+                        }
+                    ]
+                },
+                {
+                    "section": "II",
+                    "page": 31,
+                    "lines": [
+                        {
+                            "line": 317
+                        },
+                        {
+                            "line": 120
+                        }
+                    ]
+                },
+                {
+                    "section": "III",
+                    "page": 35,
+                    "lines": [
+                        {
+                            "line": 121
+                        }
+                    ]
+                },
+                {
+                    "section": "III",
+                    "page": 36,
+                    "lines": [
+                        {
+                            "line": 16
+                        },
+                        {
+                            "line": 0
+                        }
+                    ]
+                },
+                {
+                    "section": "III",
+                    "page": 47,
+                    "lines": [
+                        {
+                            "line": 127
+                        }
+                    ]
+                },
+                {
+                    "section": "III",
+                    "page": 50,
+                    "lines": [
+                        {
+                            "line": 130
+                        }
+                    ]
+                },
+                {
+                    "section": "III",
+                    "page": 51,
+                    "lines": [
+                        {
+                            "line": 423
+                        }
+                    ]
+                },
+                {
+                    "section": "IV",
+                    "page": 52,
+                    "lines": [
+                        {
+                            "line": 123
+                        }
+                    ]
+                },
+                {
+                    "section": "IV",
+                    "page": 53,
+                    "lines": [
+                        {
+                            "line": 12
+                        },
+                        {
+                            "line": 16
+                        }
+                    ]
+                },
+                {
+                    "section": "V",
+                    "page": 63,
+                    "lines": [
+                        {
+                            "line": 15
+                        }
+                    ]
+                },
+                {
+                    "section": "V",
+                    "page": 64,
+                    "lines": [
+                        {
+                            "line": 65
+                        },
+                        {
+                            "line": 117
+                        }
+                    ]
+                },
+                {
+                    "section": "V",
+                    "page": 65,
+                    "lines": [
+                        {
+                            "line": 17
+                        }
+                    ]
+                },
+                {
+                    "section": "V",
+                    "page": 67,
+                    "lines": [
+                        {
+                            "line": 122
+                        }
+                    ]
+                },
+                {
+                    "section": "V",
+                    "page": 69,
+                    "lines": [
+                        {
+                            "line": 119
+                        }
+                    ]
+                },
+                {
+                    "section": "V",
+                    "page": 70,
+                    "lines": [
+                        {
+                            "line": 0
+                        }
+                    ]
+                },
+                {
+                    "section": "V",
+                    "page": 71,
+                    "lines": [
+                        {
+                            "line": 211
+                        }
+                    ]
+                },
+                {
+                    "section": "VI",
+                    "page": 72,
+                    "lines": [
+                        {
+                            "line": 19
+                        },
+                        {
+                            "line": 127
+                        }
+                    ]
+                },
+                {
+                    "section": "VI",
+                    "page": 73,
+                    "lines": [
+                        {
+                            "line": 17
+                        },
+                        {
+                            "line": 111
+                        },
+                        {
+                            "line": 115
+                        }
+                    ]
+                },
+                {
+                    "section": "VI",
+                    "page": 75,
+                    "lines": [
+                        {
+                            "line": 122
+                        }
+                    ]
+                },
+                {
+                    "section": "VI",
+                    "page": 81,
+                    "lines": [
+                        {
+                            "line": 113
+                        },
+                        {
+                            "line": 225
+                        }
+                    ]
+                },
+                {
+                    "section": "VI",
+                    "page": 82,
+                    "lines": [
+                        {
+                            "line": 118
+                        },
+                        {
+                            "line": 124
+                        }
+                    ]
+                },
+                {
+                    "section": "VI",
+                    "page": 83,
+                    "lines": [
+                        {
+                            "line": 11
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "perceptio",
+            "term": "perceptio",
+            "count": 21,
+            "translations": {
+                "fr": [
+                    {
+                        "term": "perception [6], perception, ou bien l’action par laquelle on l’aperçoit2 [1],",
+                        "count": 0
+                    }
+                ],
+                "ua": [
+                    {
+                        "term": "connaissance3 [3], notion4 [2], notion ou la connaissance5 [1], conception6",
+                        "count": 0
+                    }
+                ]
+            },
+            "occurrences": [
+                {
+                    "section": "PL*",
+                    "page": 8,
+                    "lines": [
+                        {
+                            "line": 8
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "percipere",
+            "term": "percipere",
+            "count": 63,
+            "translations": {
+                "fr": [
+                    {
+                        "term": "concevoir1 [32], apercevoir2 [5], connaître3 [5], recevoir4 [5], reconnaître5 [4],",
+                        "count": 0
+                    }
+                ],
+                "ua": [
+                    {
+                        "term": "entendre6 [2], avoir la notion7 [1], comprendre8 [1], croir comprendre10 [1],",
+                        "count": 0
+                    }
+                ]
+            },
+            "occurrences": [
+                {
+                    "section": "SC",
+                    "page": 4,
+                    "lines": [
+                        {
+                            "line": 626
+                        }
+                    ]
+                },
+                {
+                    "section": "PL*",
+                    "page": 8,
+                    "lines": [
+                        {
+                            "line": 1
+                        }
+                    ]
+                },
+                {
+                    "section": "PL*",
+                    "page": 10,
+                    "lines": [
+                        {
+                            "line": 1
+                        }
+                    ]
+                },
+                {
+                    "section": "SY",
+                    "page": 15,
+                    "lines": [
+                        {
+                            "line": 4
+                        }
+                    ]
+                },
+                {
+                    "section": "V",
+                    "page": 63,
+                    "lines": [
+                        {
+                            "line": 25
+                        }
+                    ]
+                },
+                {
+                    "section": "V",
+                    "page": 65,
+                    "lines": [
+                        {
+                            "line": 9
+                        },
+                        {
+                            "line": 518
+                        }
+                    ]
+                },
+                {
+                    "section": "V",
+                    "page": 68,
+                    "lines": [
+                        {
+                            "line": 319
+                        },
+                        {
+                            "line": 23
+                        },
+                        {
+                            "line": 24
+                        }
+                    ]
+                },
+                {
+                    "section": "V",
+                    "page": 69,
+                    "lines": [
+                        {
+                            "line": 11
+                        },
+                        {
+                            "line": 817
+                        },
+                        {
+                            "line": 0
+                        }
+                    ]
+                },
+                {
+                    "section": "V",
+                    "page": 70,
+                    "lines": [
+                        {
+                            "line": 96
+                        },
+                        {
+                            "line": 510
+                        },
+                        {
+                            "line": 13
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "perspicuitas",
+            "term": "perspicuitas",
+            "count": 1,
+            "translations": {
+                "fr": [
+                    {
+                        "term": "clarté et évidence [1]",
+                        "count": 0
+                    }
+                ],
+                "ua": [
+                    {
+                        "term": "прозорість [1]",
+                        "count": 0
+                    }
+                ]
+            },
+            "occurrences": [
+                {
+                    "section": "SC",
+                    "page": 5,
+                    "lines": [
+                        {
+                            "line": 30
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "perspicacitas",
+            "term": "perspicacitas",
+            "count": 1,
+            "translations": {
+                "fr": [
+                    {
+                        "term": "connaissance [1]",
+                        "count": 0
+                    }
+                ],
+                "ua": [
+                    {
+                        "term": "проникливість [1]",
+                        "count": 0
+                    }
+                ]
+            },
+            "occurrences": [
+                {
+                    "section": "SC",
+                    "page": 5,
+                    "lines": [
+                        {
+                            "line": 18
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "perspicere",
+            "term": "perspicere",
+            "count": 5,
+            "translations": {
+                "fr": [
+                    {
+                        "term": "comprendre [2], decouvrir2 [2], assez examiner3 [1]",
+                        "count": 0
+                    }
+                ],
+                "ua": [
+                    {
+                        "term": "проникати [5]",
+                        "count": 0
+                    }
+                ]
+            },
+            "occurrences": []
+        },
+        {
+            "id": "perspicue",
+            "term": "perspicue",
+            "count": 5,
+            "translations": {
+                "fr": [
+                    {
+                        "term": "clairement1 [2], avec une clarté3 [1], claire et évidente5 [1], exact9 [1]",
+                        "count": 0
+                    }
+                ],
+                "ua": [
+                    {
+                        "term": "проникливоІ [2], явноІІ [2], прозоро ІV [1]",
+                        "count": 0
+                    }
+                ]
+            },
+            "occurrences": [
+                {
+                    "section": "SC",
+                    "page": 3,
+                    "lines": [
+                        {
+                            "line": 920
+                        }
+                    ]
+                },
+                {
+                    "section": "V",
+                    "page": 70,
+                    "lines": [
+                        {
+                            "line": 22
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "perspectus, perspicuus",
+            "term": "perspectus, perspicuus",
+            "count": 6,
+            "translations": {
+                "fr": [
+                    {
+                        "term": "apparent [1], bien claire et bien évidente2 [1], claire et nette3 [1], évidemment4 [1],",
+                        "count": 0
+                    }
+                ],
+                "ua": [
+                    {
+                        "term": "évident5 [1], manifeste6 [1]",
+                        "count": 0
+                    }
+                ]
+            },
+            "occurrences": [
+                {
+                    "section": "SY",
+                    "page": 13,
+                    "lines": [
+                        {
+                            "line": 38
+                        }
+                    ]
+                },
+                {
+                    "section": "SY",
+                    "page": 16,
+                    "lines": [
+                        {
+                            "line": 54
+                        }
+                    ]
+                },
+                {
+                    "section": "V",
+                    "page": 66,
+                    "lines": [
+                        {
+                            "line": 63
+                        }
+                    ]
+                }
+            ]
+        }
+    ]

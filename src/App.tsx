@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
 import ErrorBoundary from './components/ErrorBoundary'
-import Home from './components/Home'
-import Reader from './components/Reader/Reader'
+import Home from './pages/Home'
+import Reader from './pages/Reader'
 import { IndexModal } from './components/Index/IndexModal'
 
 function App() {

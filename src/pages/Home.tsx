@@ -22,12 +22,12 @@ export default function Home() {
             <img
               src="/descartes/descartes.jpg"
               alt={author.name}
-              className="w-32 h-40 object-cover grayscale opacity-80"
+              className="w-40 object-cover opacity-80"
             />
             <div>
               <h1 className="text-2xl font-serif mb-1">{author.name}</h1>
               <p className="text-stone-400 text-sm mb-6">{author.years}</p>
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 {author.texts.map((text) => (
                   <li key={text.title} className="font-serif">
                     {text.link ? (

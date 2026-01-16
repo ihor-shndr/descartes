@@ -1,0 +1,3319 @@
+[
+    {
+        "id": "âme",
+        "term": "âme",
+        "count": 25,
+        "translations": {
+            "la": [
+                {
+                    "term": "mens [12], anima2 [9] / TL [4]",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "душа [25]",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": [
+            {
+                "section": "SC",
+                "page": 1,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "6a"
+                    }
+                ]
+            },
+            {
+                "section": "SC",
+                "page": 1,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "8"
+                    }
+                ]
+            },
+            {
+                "section": "SC",
+                "page": 2,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "31"
+                    }
+                ]
+            },
+            {
+                "section": "SC",
+                "page": 3,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "10"
+                    }
+                ]
+            },
+            {
+                "section": "SC",
+                "page": 5,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "28"
+                    }
+                ]
+            },
+            {
+                "section": "SC",
+                "page": 6,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "14"
+                    }
+                ]
+            },
+            {
+                "section": "SY",
+                "page": 12,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "16"
+                    }
+                ]
+            },
+            {
+                "section": "SY",
+                "page": 13,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "5a"
+                    }
+                ]
+            },
+            {
+                "section": "SY",
+                "page": 13,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "20"
+                    }
+                ]
+            },
+            {
+                "section": "SY",
+                "page": 13,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "21"
+                    }
+                ]
+            },
+            {
+                "section": "SY",
+                "page": 13,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "26"
+                    }
+                ]
+            },
+            {
+                "section": "SY",
+                "page": 13,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "29"
+                    }
+                ]
+            },
+            {
+                "section": "SY",
+                "page": 14,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "9"
+                    }
+                ]
+            },
+            {
+                "section": "SY",
+                "page": 14,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "13"
+                    }
+                ]
+            },
+            {
+                "section": "SY",
+                "page": 14,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "16"
+                    }
+                ]
+            },
+            {
+                "section": "SY",
+                "page": 15,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "21a"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 26,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "7"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 26,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "8"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 27,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "2"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 71,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "11"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 78,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "19"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 81,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "24a"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 85,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "22"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 86,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "14"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "apercevoir",
+        "term": "apercevoir",
+        "count": 15,
+        "translations": {
+            "la": [
+                {
+                    "term": "percipere [5], advertere2 [2], videre3 [2], animadvertere4 [1], aspicere5 [1],",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "comprehendere6 [1], respicere7 [1], usurpare8 [1] / TL [1]",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": [
+            {
+                "section": "II",
+                "page": 28,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "12"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 64,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "3"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 74,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "4"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 80,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "5"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 81,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "7"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 81,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "8"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 90,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "2"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 90,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "5"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "GT",
+        "term": "GT",
+        "count": 1,
+        "translations": {
+            "la": [
+                {
+                    "term": "sa perception, ou bien l’action par laquelle on l’aperçoit",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "TL [1]",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": []
+    },
+    {
+        "id": "comprendre (être comprise)",
+        "term": "comprendre (être comprise)",
+        "count": 18,
+        "translations": {
+            "la": [
+                {
+                    "term": "comprehendere [7], intelligere2 [5], percipere3 [3], apprehendere4 [1], percpicere5 [2]",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "осягати [18]",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": [
+            {
+                "section": "II",
+                "page": 30,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "3"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 32,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "11"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 55,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "15"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 55,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "18"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 60,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "14"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 60,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "24"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 69,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "16a"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 70,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "2"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 70,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "6"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 70,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "15"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 76,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "13a"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "GT",
+        "term": "GT",
+        "count": 1,
+        "translations": {
+            "la": [
+                {
+                    "term": "sont comprises et entendues",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "TL [1]",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": []
+    },
+    {
+        "id": "concevoir",
+        "term": "concevoir",
+        "count": 115,
+        "translations": {
+            "la": [
+                {
+                    "term": "intelligere [44], percipere2 [32], cogitare3 [11], concipere4 [7], apprehendere5 [2],",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "habere6 [2], judicare7 [2], agnoscere8 [1], cognoscere9 [1], comprehendere10",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": [
+            {
+                "section": "SY",
+                "page": 13,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "10"
+                    }
+                ]
+            },
+            {
+                "section": "SY",
+                "page": 14,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "12"
+                    }
+                ]
+            },
+            {
+                "section": "SY",
+                "page": 15,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "3a"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 24,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "11"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 25,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "12"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 28,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "17"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 28,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "21"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 28,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "25"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 30,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "29a"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 31,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "6a"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 56,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "15a"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 57,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "2"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 57,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "13"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 58,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "17a"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 58,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "17a"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 58,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "18"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 58,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "18"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 58,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "29a"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 59,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "28"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 63,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "23"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 65,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "2a"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 65,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "8a"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 65,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "11"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 65,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "26"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 66,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "6a"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 66,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "16a"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 66,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "12"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 66,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "14"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 71,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "15"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 71,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "18"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 71,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "19"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 72,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "7"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 72,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "11"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "intelligere",
+        "term": "intelligere",
+        "count": 1,
+        "translations": {
+            "la": [
+                {
+                    "term": "збагати [1]",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "II [1] 34 (4)",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": []
+    },
+    {
+        "id": "praeconcepta",
+        "term": "praeconcepta",
+        "count": 1,
+        "translations": {
+            "la": [
+                {
+                    "term": "збагати [1]",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "II [1] 36 (8)",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": []
+    },
+    {
+        "id": "intelligere",
+        "term": "intelligere",
+        "count": 1,
+        "translations": {
+            "la": [
+                {
+                    "term": "збагати [1]",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "IV [1] 58 (17)",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": []
+    },
+    {
+        "id": "concept",
+        "term": "concept",
+        "count": 2,
+        "translations": {
+            "la": [
+                {
+                    "term": "conceptus [2]",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "концепт [2]",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": []
+    },
+    {
+        "id": "conception",
+        "term": "conception",
+        "count": 7,
+        "translations": {
+            "la": [
+                {
+                    "term": "conceptus [4], perceptio3 [2], comprehensio3 [1]",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "концепія [6], збаганняІІ [1]",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": [
+            {
+                "section": "SY",
+                "page": 13,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "7"
+                    }
+                ]
+            },
+            {
+                "section": "SY",
+                "page": 13,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "13"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 62,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "15"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 62,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "19"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "TL",
+        "term": "TL",
+        "count": 1,
+        "translations": {
+            "la": [
+                {
+                    "term": "концепція [1]",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "VI [1] 72 (5)",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": []
+    },
+    {
+        "id": "TL",
+        "term": "TL",
+        "count": 1,
+        "translations": {
+            "la": [
+                {
+                    "term": "чиста концепція [1]",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "VI [1] 73 (3)",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": []
+    },
+    {
+        "id": "entendement",
+        "term": "entendement",
+        "count": 21,
+        "translations": {
+            "la": [
+                {
+                    "term": "intellectus [18], ego2 [1], intellectio3 [1], mens4 [1]",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "здатність розуміти [21]",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": [
+            {
+                "section": "SY",
+                "page": 15,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "20"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 27,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "13a"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 31,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "17"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 56,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "14a"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 56,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "18a"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 57,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "24"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 58,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "21"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 59,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "1"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 59,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "16"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 60,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "4"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 60,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "13"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 81,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "17"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 89,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "16"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 90,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "8"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "GT",
+        "term": "GT",
+        "count": 1,
+        "translations": {
+            "la": [
+                {
+                    "term": "l’entendement ou l’esprit",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "TL [1]",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": [
+            {
+                "section": "II",
+                "page": 31,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "19a"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "entendre",
+        "term": "entendre",
+        "count": 15,
+        "translations": {
+            "la": [
+                {
+                    "term": "intelligere [11], percipere2 [1], capere3 [1], intellectus4 [1] / TL [1]",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "розуміти [14], розумінняІІ [1]",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": [
+            {
+                "section": "SC",
+                "page": 3,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "15"
+                    }
+                ]
+            },
+            {
+                "section": "SC",
+                "page": 4,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "14"
+                    }
+                ]
+            },
+            {
+                "section": "SC",
+                "page": 4,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "26"
+                    }
+                ]
+            },
+            {
+                "section": "SC",
+                "page": 5,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "4"
+                    }
+                ]
+            },
+            {
+                "section": "SY",
+                "page": 14,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "24"
+                    }
+                ]
+            },
+            {
+                "section": "SY",
+                "page": 15,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "6"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 26,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "14a"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 29,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "4a"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 34,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "1a"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 58,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "22a"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 80,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "22"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 80,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "24"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 82,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "13"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 85,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "15a"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "intelligere",
+        "term": "intelligere",
+        "count": 1,
+        "translations": {
+            "la": [
+                {
+                    "term": "розуміти [1]",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "SС [1] 4 (23)",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": []
+    },
+    {
+        "id": "TL",
+        "term": "TL",
+        "count": 1,
+        "translations": {
+            "la": [
+                {
+                    "term": "розуміти [1]",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "II [1] 28 (25)",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": []
+    },
+    {
+        "id": "TL",
+        "term": "TL",
+        "count": 1,
+        "translations": {
+            "la": [
+                {
+                    "term": "розуміти [1]",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "IV [1] 58 (17)",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": []
+    },
+    {
+        "id": "TL",
+        "term": "TL",
+        "count": 3,
+        "translations": {
+            "la": [
+                {
+                    "term": "мати намір [2], збиратисяII [1]",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "SY [1] 15 TL(10)",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": [
+            {
+                "section": "II",
+                "page": 30,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "5"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 82,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "18"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "esprit",
+        "term": "esprit",
+        "count": 129,
+        "translations": {
+            "la": [
+                {
+                    "term": "mens [73 + 2PN], ego2 [9 + 3PN], ingenium, ingeniosi3 [7]; animus4 [5],",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "intellectus5 [3], cogitatio6 [2]; attentus7 [1] / TL [24]",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": [
+            {
+                "section": "SC",
+                "page": 2,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "21"
+                    }
+                ]
+            },
+            {
+                "section": "SC",
+                "page": 2,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "26a"
+                    }
+                ]
+            },
+            {
+                "section": "SC",
+                "page": 3,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "7"
+                    }
+                ]
+            },
+            {
+                "section": "SC",
+                "page": 4,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "8a"
+                    }
+                ]
+            },
+            {
+                "section": "SC",
+                "page": 4,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "22"
+                    }
+                ]
+            },
+            {
+                "section": "SC",
+                "page": 4,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "28"
+                    }
+                ]
+            },
+            {
+                "section": "SC",
+                "page": 5,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "8"
+                    }
+                ]
+            },
+            {
+                "section": "SC",
+                "page": 5,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "11a"
+                    }
+                ]
+            },
+            {
+                "section": "SC",
+                "page": 6,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "5"
+                    }
+                ]
+            },
+            {
+                "section": "SY",
+                "page": 12,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "5"
+                    }
+                ]
+            },
+            {
+                "section": "SY",
+                "page": 12,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "10"
+                    }
+                ]
+            },
+            {
+                "section": "SY",
+                "page": 13,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "17"
+                    }
+                ]
+            },
+            {
+                "section": "SY",
+                "page": 13,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "20"
+                    }
+                ]
+            },
+            {
+                "section": "SY",
+                "page": 14,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "16"
+                    }
+                ]
+            },
+            {
+                "section": "SY",
+                "page": 14,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "20"
+                    }
+                ]
+            },
+            {
+                "section": "SY",
+                "page": 14,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "28"
+                    }
+                ]
+            },
+            {
+                "section": "SY",
+                "page": 16,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "7"
+                    }
+                ]
+            },
+            {
+                "section": "I",
+                "page": 17,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "13"
+                    }
+                ]
+            },
+            {
+                "section": "I",
+                "page": 21,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "1"
+                    }
+                ]
+            },
+            {
+                "section": "I",
+                "page": 22,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "4"
+                    }
+                ]
+            },
+            {
+                "section": "I",
+                "page": 23,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "7"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 23,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "20"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 23,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "22"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 24,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "16a"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 24,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "22a"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 25,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "3a"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 25,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "12"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 25,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "31"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 27,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "1"
+                    }
+                ]
+            },
+            {
+                "section": "III",
+                "page": 35,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "21"
+                    }
+                ]
+            },
+            {
+                "section": "III",
+                "page": 36,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "5"
+                    }
+                ]
+            },
+            {
+                "section": "III",
+                "page": 36,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "30"
+                    }
+                ]
+            },
+            {
+                "section": "III",
+                "page": 37,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "8"
+                    }
+                ]
+            },
+            {
+                "section": "III",
+                "page": 38,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "7"
+                    }
+                ]
+            },
+            {
+                "section": "III",
+                "page": 39,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "18"
+                    }
+                ]
+            },
+            {
+                "section": "III",
+                "page": 41,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "17"
+                    }
+                ]
+            },
+            {
+                "section": "III",
+                "page": 41,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "19"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 52,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "23a"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 53,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "1"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 53,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "5"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 53,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "11"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 53,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "16"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 53,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "22"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 53,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "27"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 59,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "6"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 63,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "4"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 64,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "4"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 64,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "17"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 64,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "25a"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 64,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "28"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 65,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "7"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 65,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "28"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 67,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "22"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 69,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "4a"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 72,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "8"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 72,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "14"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 72,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "26"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 72,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "28"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 73,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "2a"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 73,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "6a"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 73,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "9"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 73,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "11"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 73,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "15"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 74,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "7"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "évidence",
+        "term": "évidence",
+        "count": 11,
+        "translations": {
+            "la": [
+                {
+                    "term": "evidentius [3], evidens2 [2], evidentissime3 [2], aperta esse4 [1]; evidentia5 [1],",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "perspicuitas6 [1] / TL [1]",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": [
+            {
+                "section": "SC",
+                "page": 4,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "13"
+                    }
+                ]
+            },
+            {
+                "section": "SC",
+                "page": 4,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "23a"
+                    }
+                ]
+            },
+            {
+                "section": "SC",
+                "page": 5,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "30"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 53,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "25"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 70,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "6"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 71,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "1"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "évident (très évident)",
+        "term": "évident (très évident)",
+        "count": 18,
+        "translations": {
+            "la": [
+                {
+                    "term": "patere [4], evidentissimus2 [3], clarus3 [2], evidens4 [2], manifestum5 [2],",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "perspicuus6 [2], perspectus7 [1], plane8 [1] / TL [1]",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": [
+            {
+                "section": "SC",
+                "page": 4,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "6"
+                    }
+                ]
+            },
+            {
+                "section": "SC",
+                "page": 4,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "17"
+                    }
+                ]
+            },
+            {
+                "section": "SC",
+                "page": 16,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "4"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 25,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "17a"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 29,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "4a"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 31,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "18a"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 32,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "22"
+                    }
+                ]
+            },
+            {
+                "section": "III",
+                "page": 40,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "11"
+                    }
+                ]
+            },
+            {
+                "section": "III",
+                "page": 49,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "23c"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 52,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "6a"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 59,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "29"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 59,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "31a"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 61,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "28a"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 65,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "4"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 69,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "2a"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 70,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "18"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 79,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "2"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "intellection",
+        "term": "intellection",
+        "count": 4,
+        "translations": {
+            "la": [
+                {
+                    "term": "intellectio [4]",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "інтелекція [4]",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": [
+            {
+                "section": "VI",
+                "page": 72,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "5"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 73,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "3"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 73,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "14"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 78,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "25a"
+                    }
+                ]
+            },
+            {
+                "section": "SC",
+                "page": 6,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "11"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 55,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "15"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 60,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "11a"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 61,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "12"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 79,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "4a"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 73,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "6"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 86,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "7"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "GT",
+        "term": "GT",
+        "count": 2,
+        "translations": {
+            "la": [
+                {
+                    "term": "puissance d’entendre ou de concevoir",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "vim intelligendi [1] / TL [1]",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": []
+    },
+    {
+        "id": "intellectus",
+        "term": "intellectus",
+        "count": 1,
+        "translations": {
+            "la": [
+                {
+                    "term": "здатність розуміти [1]",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "ІII [1] 34 (1a)",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": []
+    },
+    {
+        "id": "GT",
+        "term": "GT",
+        "count": 2,
+        "translations": {
+            "la": [
+                {
+                    "term": "puissance d’entendre ou de concevoir",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "TL [2]",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": []
+    },
+    {
+        "id": "manifeste",
+        "term": "manifeste",
+        "count": 10,
+        "translations": {
+            "la": [
+                {
+                    "term": "manifestum [5], manifestissimus2 [1], apertus3 [2], perspicuous4 [1], planus5 [1]",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "явне [10]",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": [
+            {
+                "section": "SC",
+                "page": 2,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "25"
+                    }
+                ]
+            },
+            {
+                "section": "III",
+                "page": 35,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "16"
+                    }
+                ]
+            },
+            {
+                "section": "III",
+                "page": 36,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "7"
+                    }
+                ]
+            },
+            {
+                "section": "III",
+                "page": 40,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "21"
+                    }
+                ]
+            },
+            {
+                "section": "III",
+                "page": 50,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "7"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 66,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "2"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 69,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "7"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 72,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "4"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 79,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "23"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 88,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "19"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "manifestement",
+        "term": "manifestement",
+        "count": 5,
+        "translations": {
+            "la": [
+                {
+                    "term": "manifeste [2], plane2 [1], aperte3 [1], obvius4 [1]",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "явно [5]",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": [
+            {
+                "section": "I",
+                "page": 18,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "6a"
+                    }
+                ]
+            },
+            {
+                "section": "I",
+                "page": 18,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "20"
+                    }
+                ]
+            },
+            {
+                "section": "III",
+                "page": 45,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "26"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 66,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "7"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 68,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "24"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "pensée",
+        "term": "pensée",
+        "count": 52,
+        "translations": {
+            "la": [
+                {
+                    "term": "cogitatio [31 + 2 PN], ego2 [6]; cogitare3 [2]; cognitio4 [1]; intellectio5 [1];",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "meditatio6 [1]; mens7 [1]; opinio8 [1 PN] / TL [6]",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": [
+            {
+                "section": "I",
+                "page": 19,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "19"
+                    }
+                ]
+            },
+            {
+                "section": "I",
+                "page": 20,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "12"
+                    }
+                ]
+            },
+            {
+                "section": "I",
+                "page": 21,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "30a"
+                    }
+                ]
+            },
+            {
+                "section": "I",
+                "page": 22,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "4"
+                    }
+                ]
+            },
+            {
+                "section": "I",
+                "page": 22,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "14"
+                    }
+                ]
+            },
+            {
+                "section": "I",
+                "page": 23,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "4"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 24,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "22"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 25,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "20"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 25,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "31"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 27,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "7a"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 29,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "3"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 29,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "10"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 29,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "21"
+                    }
+                ]
+            },
+            {
+                "section": "II",
+                "page": 34,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "4"
+                    }
+                ]
+            },
+            {
+                "section": "III",
+                "page": 34,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "13"
+                    }
+                ]
+            },
+            {
+                "section": "III",
+                "page": 35,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "21"
+                    }
+                ]
+            },
+            {
+                "section": "III",
+                "page": 36,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "8"
+                    }
+                ]
+            },
+            {
+                "section": "III",
+                "page": 36,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "30a"
+                    }
+                ]
+            },
+            {
+                "section": "III",
+                "page": 37,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "3"
+                    }
+                ]
+            },
+            {
+                "section": "III",
+                "page": 37,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "11"
+                    }
+                ]
+            },
+            {
+                "section": "III",
+                "page": 37,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "25"
+                    }
+                ]
+            },
+            {
+                "section": "III",
+                "page": 38,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "2"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 53,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "3"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 54,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "13"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 55,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "14a"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 58,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "1"
+                    }
+                ]
+            },
+            {
+                "section": "IV",
+                "page": 62,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "3"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 63,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "14"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 64,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "5"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 64,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "7"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 64,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "12"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 65,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "16a"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 66,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "21"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 67,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "5"
+                    }
+                ]
+            },
+            {
+                "section": "V",
+                "page": 67,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "7"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 75,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "6"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 75,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "9"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 76,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "16"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 79,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "12"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 85,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "11"
+                    }
+                ]
+            },
+            {
+                "section": "VI",
+                "page": 86,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "11"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "perception",
+        "term": "perception",
+        "count": 8,
+        "translations": {
+            "la": [
+                {
+                    "term": "perceptio [6], comprehensio2 [1], sensus3 [1]",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "сприйняття [8]",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": []
+    },
+    {
+        "id": "GT",
+        "term": "GT",
+        "count": 1,
+        "translations": {
+            "la": [
+                {
+                    "term": "ces sentiments ou perceptions des sens",
+                    "count": 0
+                }
+            ],
+            "ua": [
+                {
+                    "term": "perceptio [1]",
+                    "count": 0
+                }
+            ]
+        },
+        "occurrences": [
+            {
+                "section": "VI",
+                "page": 83,
+                "lines": [
+                    {
+                        "line": 0,
+                        "segment": "15"
+                    }
+                ]
+            }
+        ]
+    }
+]

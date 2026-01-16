@@ -23,10 +23,15 @@ Designed for scholars, students, and readers who want to engage with Descartes' 
 
 ```
 public/descartes/meditations/
-  la.json       # Latin source text
-  la-ua.json    # Ukrainian translation from Latin
-  fr.json       # French source text
-  fr-ua.json    # Ukrainian translation from French
+  text/
+    la.json       # Latin source text
+    la-ua.json    # Ukrainian translation from Latin
+    fr.json       # French source text
+    fr-ua.json    # Ukrainian translation from French
+  index/
+    la.json       # Latin index terms
+    fr.json       # French index terms
+
 ```
 
 ### 1.2 JSON Structure
@@ -347,11 +352,11 @@ A searchable index of philosophical terms allows users to locate key concepts in
 
 ### 7.2 Data Structure
 
-Index data is loaded from `public/meditations/index.json`.
+Index data is loaded from `public/meditations/index/la.json` and `public/meditations/index/fr.json`.
 
 **Structure:**
-- **Latin Terms:** List of terms found in the Latin source.
-- **French Terms:** List of terms found in the French translation.
+- **Latin Terms:** List of terms found in the Latin source (`la.json`).
+- **French Terms:** List of terms found in the French translation (`fr.json`).
 
 **Term Entry:**
 - **Term:** The word/phrase itself.
@@ -406,27 +411,6 @@ interface AppStore {
 
 All 4 JSON files are loaded once at app startup. No lazy loading per page.
 
----
-
-## 9. Component Architecture
-
-```
-App
-├── ErrorBoundary
-└── Reader
-    ├── ReaderHeader
-    │   ├── Pagination
-    │   └── SettingsToggle (gear icon)
-    ├── SettingsSidebar
-    │   ├── FlowDirectionToggle
-    │   └── LanguageGrid2x2
-    └── TextGrid (2x2 layout)
-        └── LanguageBlock (x4)
-            ├── VerbatimText (source languages)
-            └── SegmentFlow (translations)
-```
-
----
 
 ## 10. Error Handling
 

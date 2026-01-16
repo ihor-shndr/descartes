@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { useAppStore } from '../../store/app-store';
-import { processPageData } from '../../utils/text-processor';
-import ReaderHeader from './ReaderHeader';
-import SettingsSidebar from '../Settings/SettingsSidebar';
-import TextGrid from './TextGrid';
+import { useAppStore } from '../store/app-store';
+import { processPageData } from '../utils/text-processor';
+import ReaderHeader from '../components/Reader/ReaderHeader';
+import SettingsSidebar from '../components/Settings/SettingsSidebar';
+import TextGrid from '../components/Reader/TextGrid';
 
 /**
  * Main Reader component - orchestrates the entire reading interface
