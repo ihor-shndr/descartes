@@ -1,5 +1,5 @@
 /**
- * Shared constants for text rendering
+ * Text rendering utilities for segments and layout
  */
 
 /**
@@ -8,8 +8,7 @@
 export const SEGMENT_MARKER_REGEX = /(\(\d+[a-zа-я]?\))/gi;
 
 /**
- * Fixed width for Latin source language
- * Only Latin uses fixed width; French and Ukrainian use full container width
+ * Fixed width for Latin source language (only Latin uses VerbatimText with fixed width)
  */
 const LATIN_WIDTH = '60ch';
 
@@ -25,14 +24,6 @@ export function isSegmentMarker(text: string): boolean {
  */
 export function extractSegmentId(marker: string): string {
   return marker.slice(1, -1);
-}
-
-/**
- * Check if a language code requires verbatim rendering (only Latin)
- * French flows like Ukrainian translations
- */
-export function isSourceLanguage(code: string): boolean {
-  return code === 'la';
 }
 
 /**

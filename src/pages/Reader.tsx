@@ -18,8 +18,7 @@ export default function Reader() {
     allTexts,
     currentPage,
     totalPages,
-    selectedLanguages,
-    flowDirection,
+    languageLayout,
     loading,
     error,
     loadAllTexts,
@@ -76,8 +75,8 @@ export default function Reader() {
     return null;
   }
 
-  // Process current page
-  const pageData = processPageData(allTexts, currentPage);
+  // Process current page with language layout
+  const pageData = processPageData(allTexts, currentPage, languageLayout);
 
   if (!pageData) {
     return (
@@ -88,7 +87,7 @@ export default function Reader() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       <ReaderHeader
         page={currentPage}
         totalPages={totalPages}
@@ -97,11 +96,7 @@ export default function Reader() {
 
       <SettingsSidebar />
 
-      <TextGrid
-        flowDirection={flowDirection}
-        selectedLanguages={selectedLanguages}
-        pageData={pageData}
-      />
+      <TextGrid pageData={pageData} />
     </div>
   );
 }

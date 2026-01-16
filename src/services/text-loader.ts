@@ -1,14 +1,5 @@
-import { TextData, LanguageCode } from '../types/text';
-
-/**
- * Mapping of language codes to their JSON file paths
- */
-const LANGUAGE_FILES: Record<LanguageCode, string> = {
-  'la': '/descartes/meditations/text/la.json',
-  'la-ua': '/descartes/meditations/text/la-ua.json',
-  'fr': '/descartes/meditations/text/fr.json',
-  'fr-ua': '/descartes/meditations/text/fr-ua.json'
-};
+import { TextData } from '../types/text';
+import { AVAILABLE_LANGUAGES, LanguageCode } from '../constants/languages';
 
 /**
  * Load all language files at once
@@ -19,15 +10,15 @@ export async function loadAllTexts(): Promise<Record<LanguageCode, TextData>> {
   const results: Partial<Record<LanguageCode, TextData>> = {};
 
   await Promise.all(
-    Object.entries(LANGUAGE_FILES).map(async ([lang, path]) => {
+    AVAILABLE_LANGUAGES.map(async ({ code, path }) => {
       try {
         const response = await fetch(path);
         if (!response.ok) {
-          throw new Error(`Failed to load ${lang}: ${response.statusText}`);
+          throw new Error(`Failed to load ${code}: ${response.statusText}`);
         }
-        results[lang as LanguageCode] = await response.json();
+        results[code] = await response.json();
       } catch (error) {
-        console.error(`Error loading ${lang}:`, error);
+        console.error(`Error loading ${code}:`, error);
       }
     })
   );

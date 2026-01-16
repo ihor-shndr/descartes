@@ -1,6 +1,6 @@
 
 import { Paragraph, TextData } from '../types/text';
-import { extractSegmentId, isSegmentMarker, SEGMENT_MARKER_REGEX } from './text-constants';
+import { extractSegmentId, isSegmentMarker, SEGMENT_MARKER_REGEX } from './text-rendering';
 
 /**
  * Finds the segment ID active at a specific line on a specific page

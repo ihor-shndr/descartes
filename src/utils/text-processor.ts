@@ -1,17 +1,26 @@
 import {
   TextData,
   Segment,
-  RawPageData
+  Paragraph
 } from '../types/text';
-import { joinPageText, alignSegments, isSourceLanguage } from './segment-parser';
+import { joinPageText, alignSegments } from './segment-parser';
+import { isSourceLanguage, LanguageCode } from '../constants/languages';
+
+/**
+ * Single language block ready for rendering
+ */
+export interface LanguagePageBlock {
+  code: LanguageCode;
+  paragraphs: Paragraph[];
+  maxLineLength?: number;
+}
 
 /**
  * Processed page data ready for rendering
  */
 export interface ProcessedPageData {
-  segments: Segment[];
-  rawPages: Record<string, RawPageData>;
-  availableLanguages: string[];
+  languageBlocks: LanguagePageBlock[];  // Ordered array of language blocks (already validated)
+  segments: Segment[];  // For index/lookup features
 }
 
 /**
@@ -29,18 +38,20 @@ function calculateMaxLineLength(paragraphs: any[]): number {
 
 /**
  * Process page data for rendering
- * Handles missing segments and languages properly
+ * Returns pre-validated, ordered language blocks ready to display
  *
  * @param allTexts - All loaded language texts
  * @param pageNumber - Page number to process
+ * @param languageLayout - Ordered array of language codes to display
  * @returns Processed page data or null if page doesn't exist
  */
 export function processPageData(
   allTexts: Record<string, TextData>,
-  pageNumber: number
+  pageNumber: number,
+  languageLayout: LanguageCode[]
 ): ProcessedPageData | null {
   const languageTexts: Record<string, string> = {};
-  const rawPages: Record<string, RawPageData> = {};
+  const pagesByLang: Record<string, { paragraphs: Paragraph[]; maxLineLength?: number }> = {};
 
   // Extract page data from each language
   for (const [lang, data] of Object.entries(allTexts)) {
@@ -50,12 +61,11 @@ export function processPageData(
       languageTexts[lang] = joinPageText(page, preserveLineBreaks);
 
       // Calculate max line length for source languages
-      const maxLineLength = isSourceLanguage(lang) 
+      const maxLineLength = isSourceLanguage(lang)
         ? calculateMaxLineLength(page.paragraphs)
         : undefined;
 
-      // Store raw page data for all languages (needed for paragraph structure)
-      rawPages[lang] = { 
+      pagesByLang[lang] = {
         paragraphs: page.paragraphs,
         maxLineLength
       };
@@ -69,7 +79,16 @@ export function processPageData(
     return null;
   }
 
-  // Align segments across all languages
+  // Build ordered language blocks (only include languages that have data)
+  const languageBlocks: LanguagePageBlock[] = languageLayout
+    .filter(code => pagesByLang[code])  // Only include languages with data for this page
+    .map(code => ({
+      code,
+      paragraphs: pagesByLang[code].paragraphs,
+      maxLineLength: pagesByLang[code].maxLineLength
+    }));
+
+  // Align segments across all languages (for index/lookup features)
   const segments = alignSegments(languageTexts);
 
   // Validate segments (warn about missing text)
@@ -82,8 +101,7 @@ export function processPageData(
   });
 
   return {
-    segments: validSegments,
-    rawPages,
-    availableLanguages: Object.keys(languageTexts)
+    languageBlocks,
+    segments: validSegments
   };
 }

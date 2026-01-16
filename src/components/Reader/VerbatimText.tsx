@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react';
 import { Paragraph } from '../../types/text';
 import { useAppStore } from '../../store/app-store';
-import { SEGMENT_MARKER_REGEX, isSegmentMarker, extractSegmentId, getSourceWidth } from '../../utils/text-constants';
+import { SEGMENT_MARKER_REGEX, isSegmentMarker, extractSegmentId, getSourceWidth } from '../../utils/text-rendering';
 import { SegmentMarker } from '../SegmentMarker';
 import clsx from 'clsx';
 

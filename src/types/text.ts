@@ -8,13 +8,6 @@ export interface Paragraph {
 }
 
 /**
- * Check if a paragraph is a new paragraph (first line starts with space)
- */
-export function isNewParagraph(paragraph: Paragraph): boolean {
-  return paragraph.lines.length > 0 && paragraph.lines[0].startsWith(' ');
-}
-
-/**
  * Page in the source JSON format
  */
 export interface Page {
@@ -38,24 +31,5 @@ export interface Segment {
   texts: Record<string, string>;  // { la: "...", "la-ua": "..." }
 }
 
-/**
- * Raw page data for source languages (preserves original lines)
- */
-export interface RawPageData {
-  paragraphs: Paragraph[];
-  maxLineLength?: number;  // Longest line length in characters (for dynamic width)
-}
 
-/**
- * Processed page data for rendering
- */
-export interface PageData {
-  pageNumber: number;
-  totalPages: number;
-  availableLanguages: string[];
-  segments: Segment[];
-  // Raw page data per language for verbatim rendering (source languages)
-  rawPages: Record<string, RawPageData>;
-}
 
-export type LanguageCode = 'la' | 'la-ua' | 'fr' | 'fr-ua';

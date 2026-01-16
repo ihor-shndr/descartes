@@ -1,9 +1,17 @@
-import { Page, Segment, isNewParagraph } from '../types/text';
+import { Page, Paragraph, Segment } from '../types/text';
+import { isSourceLanguage } from '../constants/languages';
 
 /**
  * Regex to match segment markers like (1), (2), (6a), (7a), etc.
  */
 const SEGMENT_REGEX = /\((\d+[a-z]?)\)/g;
+
+/**
+ * Check if a paragraph is a new paragraph (first line starts with space)
+ */
+function isNewParagraph(paragraph: Paragraph): boolean {
+  return paragraph.lines.length > 0 && paragraph.lines[0].startsWith(' ');
+}
 
 /**
  * Parsed segment from a single language
@@ -113,18 +121,4 @@ export function alignSegments(
       texts
     };
   });
-}
-
-/**
- * Check if a language code is a source language (preserves line breaks)
- */
-export function isSourceLanguage(lang: string): boolean {
-  return lang === 'la' || lang === 'fr';
-}
-
-/**
- * Check if a language code is a Ukrainian translation
- */
-export function isUkrainianTranslation(lang: string): boolean {
-  return lang.endsWith('-ua') || lang.startsWith('ua-');
 }

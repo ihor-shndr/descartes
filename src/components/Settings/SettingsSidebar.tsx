@@ -1,10 +1,9 @@
 import { useAppStore } from '../../store/app-store';
-import FlowDirectionToggle from './FlowDirectionToggle';
-import LanguageGrid2x2 from './LanguageGrid2x2';
+import DraggableLanguageGrid from './DraggableLanguageGrid';
 
 /**
  * Settings sidebar that slides in from the right
- * Contains flow direction toggle and language selection grid
+ * Contains draggable grid for language layout
  */
 export default function SettingsSidebar() {
   const settingsSidebarOpen = useAppStore((state) => state.settingsSidebarOpen);
@@ -54,8 +53,7 @@ export default function SettingsSidebar() {
           </div>
 
           {/* Settings content */}
-          <FlowDirectionToggle />
-          <LanguageGrid2x2 />
+          <DraggableLanguageGrid />
         </div>
       </div>
     </>

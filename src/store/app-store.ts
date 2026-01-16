@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { TextData, LanguageCode } from '../types/text';
-import { FlowDirection } from '../types/store';
+import { TextData } from '../types/text';
+import { LanguageCode, AVAILABLE_LANGUAGES } from '../constants/languages';
 import { loadAllTexts } from '../services/text-loader';
 import { findSegmentIdForLine } from '../utils/text-lookup';
 
@@ -15,8 +15,8 @@ interface AppStore {
   totalPages: number;
 
   // Settings (persisted)
-  selectedLanguages: LanguageCode[];
-  flowDirection: FlowDirection;
+  // Fixed array of 4 slots: [TL, TR, BL, BR]
+  languageLayout: LanguageCode[];
   settingsSidebarOpen: boolean;
 
   // UI State
@@ -31,8 +31,7 @@ interface AppStore {
   // Actions
   loadAllTexts: () => Promise<void>;
   setCurrentPage: (page: number) => void;
-  toggleLanguage: (lang: LanguageCode) => void;
-  setFlowDirection: (dir: FlowDirection) => void;
+  updateLanguageLayout: (layout: LanguageCode[]) => void;
   toggleSettingsSidebar: () => void;
   setHoveredSegment: (id: string | null) => void;
 
@@ -52,8 +51,7 @@ export const useAppStore = create<AppStore>()(
       allTexts: null,
       currentPage: 1,
       totalPages: 0,
-      selectedLanguages: ['la', 'la-ua'], // Default: Latin + Ukrainian from Latin
-      flowDirection: 'top-to-bottom',
+      languageLayout: [...AVAILABLE_LANGUAGES.map(l => l.code)] as LanguageCode[],
       settingsSidebarOpen: false,
       hoveredSegmentId: null,
       loading: false,
@@ -82,21 +80,7 @@ export const useAppStore = create<AppStore>()(
         set({ currentPage: validPage });
       },
 
-      toggleLanguage: (lang) => {
-        const { selectedLanguages } = get();
-        if (selectedLanguages.includes(lang)) {
-          // Don't remove if it's the only selected language
-          if (selectedLanguages.length > 1) {
-            set({
-              selectedLanguages: selectedLanguages.filter((l) => l !== lang)
-            });
-          }
-        } else {
-          set({ selectedLanguages: [...selectedLanguages, lang] });
-        }
-      },
-
-      setFlowDirection: (dir) => set({ flowDirection: dir }),
+      updateLanguageLayout: (layout) => set({ languageLayout: layout }),
 
       toggleSettingsSidebar: () =>
         set((state) => ({
@@ -133,8 +117,7 @@ export const useAppStore = create<AppStore>()(
       name: 'descartes-reader', // localStorage key
       // Only persist these fields
       partialize: (state) => ({
-        selectedLanguages: state.selectedLanguages,
-        flowDirection: state.flowDirection,
+        languageLayout: state.languageLayout,
         currentPage: state.currentPage
       })
     }
