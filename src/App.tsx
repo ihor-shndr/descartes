@@ -7,7 +7,7 @@ import { IndexModal } from './components/Index/IndexModal'
 function App() {
   return (
     <ErrorBoundary>
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/descartes/meditations" element={<Reader />} />

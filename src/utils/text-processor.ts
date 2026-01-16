@@ -34,7 +34,7 @@ export function processPageData(
   allTexts: Record<string, TextData>,
   pageNumber: number,
   languageLayout: LanguageCode[]
-): ProcessedPageData | null {
+): ProcessedPageData {
   const languageTexts: Record<string, string> = {};
   const pagesByLang: Record<string, { paragraphs: Paragraph[]; maxLineLength?: number }> = {};
 

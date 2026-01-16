@@ -78,14 +78,6 @@ export default function Reader() {
   // Process current page with language layout
   const pageData = processPageData(allTexts, currentPage, languageLayout);
 
-  if (!pageData) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-lg text-gray-600">Page {currentPage} not found</div>
-      </div>
-    );
-  }
-
   return (
     <div className="min-h-screen">
       <ReaderHeader
