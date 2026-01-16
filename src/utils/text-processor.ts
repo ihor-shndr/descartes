@@ -1,27 +1,12 @@
 import {
   TextData,
-  Segment,
-  Paragraph
+  Paragraph,
+  LanguagePageBlock,
+  ProcessedPageData
 } from '../types/text';
 import { joinPageText, alignSegments } from './segment-parser';
-import { isSourceLanguage, LanguageCode } from '../constants/languages';
-
-/**
- * Single language block ready for rendering
- */
-export interface LanguagePageBlock {
-  code: LanguageCode;
-  paragraphs: Paragraph[];
-  maxLineLength?: number;
-}
-
-/**
- * Processed page data ready for rendering
- */
-export interface ProcessedPageData {
-  languageBlocks: LanguagePageBlock[];  // Ordered array of language blocks (already validated)
-  segments: Segment[];  // For index/lookup features
-}
+import { LanguageCode } from '../constants/languages';
+import { preservesLineBreaks } from './language-utils';
 
 /**
  * Calculate the maximum line length for a page (used for dynamic width)
@@ -57,11 +42,11 @@ export function processPageData(
   for (const [lang, data] of Object.entries(allTexts)) {
     const page = data.pages.find((p) => p.pageNumber === pageNumber);
     if (page) {
-      const preserveLineBreaks = isSourceLanguage(lang);
-      languageTexts[lang] = joinPageText(page, preserveLineBreaks);
+      const shouldPreserveLineBreaks = preservesLineBreaks(lang);
+      languageTexts[lang] = joinPageText(page, shouldPreserveLineBreaks);
 
-      // Calculate max line length for source languages
-      const maxLineLength = isSourceLanguage(lang)
+      // Calculate max line length for languages that preserve line breaks
+      const maxLineLength = preservesLineBreaks(lang)
         ? calculateMaxLineLength(page.paragraphs)
         : undefined;
 
@@ -72,11 +57,6 @@ export function processPageData(
     } else {
       console.warn(`Missing page ${pageNumber} for language ${lang}`);
     }
-  }
-
-  // No data available for this page
-  if (Object.keys(languageTexts).length === 0) {
-    return null;
   }
 
   // Build ordered language blocks (only include languages that have data)
@@ -91,17 +71,8 @@ export function processPageData(
   // Align segments across all languages (for index/lookup features)
   const segments = alignSegments(languageTexts);
 
-  // Validate segments (warn about missing text)
-  const validSegments = segments.filter((seg) => {
-    if (Object.keys(seg.texts).length === 0) {
-      console.warn(`Segment ${seg.id} has no text in any language`);
-      return false;
-    }
-    return true;
-  });
-
   return {
     languageBlocks,
-    segments: validSegments
+    segments: segments
   };
 }

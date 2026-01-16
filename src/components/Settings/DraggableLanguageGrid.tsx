@@ -2,7 +2,8 @@ import { DndContext, closestCenter, DragEndEvent } from '@dnd-kit/core';
 import { arrayMove, SortableContext, useSortable, rectSortingStrategy } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
 import { useAppStore } from '../../store/app-store';
-import { AVAILABLE_LANGUAGES, LanguageCode, getLanguageLabel } from '../../constants/languages';
+import { AVAILABLE_LANGUAGES, LanguageCode } from '../../constants/languages';
+import { getLanguageLabel } from '../../utils/language-utils';
 import { GripVertical } from 'lucide-react';
 
 function SortableItem({ id, code }: { id: string; code: string }) {

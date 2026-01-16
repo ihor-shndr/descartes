@@ -23,9 +23,5 @@ export async function loadAllTexts(): Promise<Record<LanguageCode, TextData>> {
     })
   );
 
-  if (Object.keys(results).length === 0) {
-    throw new Error('No language files could be loaded');
-  }
-
   return results as Record<LanguageCode, TextData>;
 }

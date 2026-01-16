@@ -1,5 +1,5 @@
 import { LanguageBlock } from './LanguageBlock';
-import { ProcessedPageData } from '../../utils/text-processor';
+import { ProcessedPageData } from '../../types/text';
 
 interface TextGridProps {
   pageData: ProcessedPageData;

@@ -11,34 +11,3 @@ export const AVAILABLE_LANGUAGES = [
 ] as const;
 
 export type LanguageCode = typeof AVAILABLE_LANGUAGES[number]['code'];
-
-/**
- * Get display name for a language code
- */
-export function getLanguageLabel(code: string): string {
-    const lang = AVAILABLE_LANGUAGES.find(l => l.code === code);
-    return lang?.label || code.toUpperCase();
-}
-
-/**
- * Check if language uses verbatim layout (preserves exact line breaks and spacing)
- * Currently only Latin uses VerbatimText component
- */
-export function usesVerbatimLayout(code: string): boolean {
-    return code === 'la';
-}
-
-/**
- * Check if language is a source text (not a translation)
- * Both Latin and French preserve line breaks during processing
- */
-export function isSourceLanguage(code: string): boolean {
-    return code === 'la' || code === 'fr';
-}
-
-/**
- * Check if language is a Ukrainian translation
- */
-export function isUkrainianTranslation(code: string): boolean {
-    return code.endsWith('-ua') || code.startsWith('ua-');
-}

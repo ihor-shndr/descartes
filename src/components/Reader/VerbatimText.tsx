@@ -11,6 +11,15 @@ interface VerbatimTextProps {
 }
 
 /**
+ * Heading styles mapping
+ */
+const HEADING_STYLES = {
+    h1: 'text-center text-3xl font-bold uppercase tracking-widest my-8 max-w-md mx-auto',
+    h2: 'text-center text-xl italic my-6 max-w-md mx-auto',
+    h3: 'text-center text-lg my-5 max-w-md mx-auto'
+} as const;
+
+/**
  * Renders Latin source text with:
  * - Fixed width container (60ch) centered in cell
  * - Line numbers every 5th line
@@ -50,30 +59,10 @@ export function VerbatimText({ paragraphs, language }: VerbatimTextProps) {
                 style={{ width: containerWidth, fontFamily: '"Crimson Text", serif' }}
             >
                 {paragraphs.map((paragraph, pIdx) => {
-                    const isH1 = paragraph.type === 'h1';
-                    const isH2 = paragraph.type === 'h2';
-                    const isH3 = paragraph.type === 'h3';
-
                     // Headers
-                    if (isH1) {
+                    if (paragraph.type && HEADING_STYLES[paragraph.type]) {
                         return (
-                            <div key={pIdx} className="text-center text-3xl font-bold uppercase tracking-widest my-8 max-w-md mx-auto">
-                                {paragraph.lines.join(' ')}
-                            </div>
-                        );
-                    }
-
-                    if (isH2) {
-                        return (
-                            <div key={pIdx} className="text-center text-xl italic my-6 max-w-md mx-auto">
-                                {paragraph.lines.join(' ')}
-                            </div>
-                        );
-                    }
-
-                    if (isH3) {
-                        return (
-                            <div key={pIdx} className="text-center text-lg my-5 max-w-md mx-auto">
+                            <div key={pIdx} className={HEADING_STYLES[paragraph.type]}>
                                 {paragraph.lines.join(' ')}
                             </div>
                         );

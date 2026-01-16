@@ -31,5 +31,19 @@ export interface Segment {
   texts: Record<string, string>;  // { la: "...", "la-ua": "..." }
 }
 
+/**
+ * Single language block ready for rendering
+ */
+export interface LanguagePageBlock {
+  code: string;
+  paragraphs: Paragraph[];
+  maxLineLength?: number;
+}
 
-
+/**
+ * Processed page data ready for rendering
+ */
+export interface ProcessedPageData {
+  languageBlocks: LanguagePageBlock[];  // Ordered array of language blocks (already validated)
+  segments: Segment[];  // For index/lookup features
+}

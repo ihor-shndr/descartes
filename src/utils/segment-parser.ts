@@ -1,5 +1,4 @@
 import { Page, Paragraph, Segment } from '../types/text';
-import { isSourceLanguage } from '../constants/languages';
 
 /**
  * Regex to match segment markers like (1), (2), (6a), (7a), etc.
