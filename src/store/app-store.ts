@@ -64,8 +64,11 @@ export const useAppStore = create<AppStore>()(
         set({ loading: true, error: null });
         try {
           const texts = await loadAllTexts();
+          // Find the maximum page number across all languages (not the count)
           const totalPages = Math.max(
-            ...Object.values(texts).map((t) => t.pages.length)
+            ...Object.values(texts).flatMap((t) =>
+              t.pages.map(p => p.pageNumber)
+            )
           );
           set({ allTexts: texts, totalPages, loading: false });
         } catch (error) {

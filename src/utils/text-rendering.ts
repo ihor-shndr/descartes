@@ -10,7 +10,7 @@ export const SEGMENT_MARKER_REGEX = /(\(\d+[a-zа-я]?\))/gi;
 /**
  * Fixed width for Latin source language (only Latin uses VerbatimText with fixed width)
  */
-const LATIN_WIDTH = '60ch';
+const LATIN_WIDTH = '55ch';
 
 /**
  * Check if a string matches segment marker pattern
