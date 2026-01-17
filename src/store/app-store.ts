@@ -2,8 +2,14 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { TextData } from '../types/text';
 import { LanguageCode, AVAILABLE_LANGUAGES } from '../constants/languages';
-import { loadAllTexts } from '../services/text-loader';
+import { loadAllTexts, loadIndexData as fetchIndexData } from '../services/text-loader';
 import { findSegmentsForLine } from '../utils/text-lookup';
+import { IndexData } from '../types/termIndex';
+
+interface IndexFilter {
+  termIds: string[];
+  sourceLine?: number;
+}
 
 /**
  * Application store interface
@@ -26,6 +32,12 @@ interface AppStore {
 
   // Index Feature
   indexModalOpen: boolean;
+  indexData: IndexData | null;
+  indexLoading: boolean;
+  indexError: string | null;
+  indexFilter: IndexFilter | null;
+  showIndexHighlights: boolean;
+
   /**
    * Highlighted location from index navigation.
    * - `line`: The Latin line number (used for verbatim Latin view)
@@ -44,7 +56,10 @@ interface AppStore {
   setHoveredSegment: (id: string | null) => void;
 
   // Index Actions
+  loadIndexData: () => Promise<void>;
   toggleIndexModal: (isOpen?: boolean) => void;
+  setIndexFilter: (filter: IndexFilter | null) => void;
+  setShowIndexHighlights: (value: boolean) => void;
   navigateToLocation: (page: number, line: number, segment?: string) => void;
   clearHighlight: () => void;
 }
@@ -66,6 +81,11 @@ export const useAppStore = create<AppStore>()(
       loading: false,
       error: null,
       indexModalOpen: false,
+      indexData: null,
+      indexLoading: false,
+      indexError: null,
+      indexFilter: null,
+      showIndexHighlights: false,
       highlightedLocation: null,
 
       // Actions
@@ -102,10 +122,28 @@ export const useAppStore = create<AppStore>()(
 
       setHoveredSegment: (id) => set({ hoveredSegmentId: id }),
 
+      loadIndexData: async () => {
+        const { indexData, indexLoading } = get();
+        if (indexData || indexLoading) return;
+
+        set({ indexLoading: true, indexError: null });
+        try {
+          const data = await fetchIndexData();
+          set({ indexData: data, indexLoading: false });
+        } catch (error) {
+          set({ indexError: (error as Error).message, indexLoading: false });
+        }
+      },
+
       toggleIndexModal: (isOpen) =>
         set((state) => ({
-          indexModalOpen: isOpen !== undefined ? isOpen : !state.indexModalOpen
+          indexModalOpen: isOpen !== undefined ? isOpen : !state.indexModalOpen,
+          indexFilter: isOpen === false ? null : state.indexFilter
         })),
+
+      setIndexFilter: (filter) => set({ indexFilter: filter }),
+
+      setShowIndexHighlights: (value) => set({ showIndexHighlights: value }),
 
       navigateToLocation: (page, line, segment) => {
         const { totalPages, allTexts } = get();
@@ -135,9 +173,9 @@ export const useAppStore = create<AppStore>()(
       // Only persist these fields
       partialize: (state) => ({
         languageLayout: state.languageLayout,
-        currentPage: state.currentPage
+        currentPage: state.currentPage,
+        showIndexHighlights: state.showIndexHighlights
       })
     }
   )
 );
-

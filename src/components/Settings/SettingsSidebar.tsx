@@ -8,6 +8,9 @@ import DraggableLanguageGrid from './DraggableLanguageGrid';
 export default function SettingsSidebar() {
   const settingsSidebarOpen = useAppStore((state) => state.settingsSidebarOpen);
   const toggleSettingsSidebar = useAppStore((state) => state.toggleSettingsSidebar);
+  const showIndexHighlights = useAppStore((state) => state.showIndexHighlights);
+  const setShowIndexHighlights = useAppStore((state) => state.setShowIndexHighlights);
+  const loadIndexData = useAppStore((state) => state.loadIndexData);
 
   return (
     <>
@@ -54,6 +57,28 @@ export default function SettingsSidebar() {
 
           {/* Settings content */}
           <DraggableLanguageGrid />
+
+          <div className="mt-8 space-y-3">
+            <label className="flex items-start space-x-3">
+              <input
+                type="checkbox"
+                className="mt-1 h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                checked={showIndexHighlights}
+                onChange={(e) => {
+                  setShowIndexHighlights(e.target.checked);
+                  if (e.target.checked) {
+                    loadIndexData();
+                  }
+                }}
+              />
+              <div>
+                <div className="text-sm font-semibold text-gray-900">Highlight Latin index lines</div>
+                <p className="text-sm text-gray-600">
+                  Show a marker on Latin lines that contain indexed terms and open the index from that line.
+                </p>
+              </div>
+            </label>
+          </div>
         </div>
       </div>
     </>
