@@ -2,24 +2,12 @@ import {
   TextData,
   Paragraph,
   LanguagePageBlock,
-  ProcessedPageData
+  ProcessedPageData,
+  Page
 } from '../types/text';
 import { joinPageText, alignSegments } from './segment-parser';
 import { LanguageCode } from '../constants/languages';
 import { preservesLineBreaks } from './language-utils';
-
-/**
- * Calculate the maximum line length for a page (used for dynamic width)
- */
-function calculateMaxLineLength(paragraphs: any[]): number {
-  let max = 0;
-  for (const paragraph of paragraphs) {
-    for (const line of paragraph.lines) {
-      max = Math.max(max, line.length);
-    }
-  }
-  return max;
-}
 
 /**
  * Process page data for rendering
@@ -36,27 +24,18 @@ export function processPageData(
   languageLayout: LanguageCode[]
 ): ProcessedPageData {
   const languageTexts: Record<string, string> = {};
-  const pagesByLang: Record<string, { paragraphs: Paragraph[]; maxLineLength?: number }> = {};
+  const pagesByLang: Record<string, Paragraph[]> = {};
 
   // Extract page data from each language
   for (const [lang, data] of Object.entries(allTexts)) {
-    const page = data.pages.find((p) => p.pageNumber === pageNumber);
-    if (page) {
-      const shouldPreserveLineBreaks = preservesLineBreaks(lang);
-      languageTexts[lang] = joinPageText(page, shouldPreserveLineBreaks);
+    const page: Page | undefined = data.pages.find((p) => p.pageNumber === pageNumber);
 
-      // Calculate max line length for languages that preserve line breaks
-      const maxLineLength = preservesLineBreaks(lang)
-        ? calculateMaxLineLength(page.paragraphs)
-        : undefined;
+    // Skip languages that don't have this page
+    if (!page) continue;
 
-      pagesByLang[lang] = {
-        paragraphs: page.paragraphs,
-        maxLineLength
-      };
-    } else {
-      console.warn(`Missing page ${pageNumber} for language ${lang}`);
-    }
+    const shouldPreserveLineBreaks = preservesLineBreaks(lang);
+    languageTexts[lang] = joinPageText(page, shouldPreserveLineBreaks);
+    pagesByLang[lang] = page.paragraphs;
   }
 
   // Build ordered language blocks (only include languages that have data)
@@ -64,8 +43,7 @@ export function processPageData(
     .filter(code => pagesByLang[code])  // Only include languages with data for this page
     .map(code => ({
       code,
-      paragraphs: pagesByLang[code].paragraphs,
-      maxLineLength: pagesByLang[code].maxLineLength
+      paragraphs: pagesByLang[code]
     }));
 
   // Align segments across all languages (for index/lookup features)

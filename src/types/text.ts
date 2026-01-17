@@ -27,7 +27,6 @@ export interface TextData {
  */
 export interface Segment {
   id: string;         // "1", "6a", "7"
-  marker: string;     // "(1)", "(6a)"
   texts: Record<string, string>;  // { la: "...", "la-ua": "..." }
 }
 
@@ -37,7 +36,6 @@ export interface Segment {
 export interface LanguagePageBlock {
   code: string;
   paragraphs: Paragraph[];
-  maxLineLength?: number;
 }
 
 /**

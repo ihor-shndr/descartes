@@ -17,7 +17,6 @@ function isNewParagraph(paragraph: Paragraph): boolean {
  */
 interface ParsedSegment {
   id: string;
-  marker: string;
   text: string;
 }
 
@@ -41,7 +40,7 @@ export function parseSegmentsFromText(text: string): ParsedSegment[] {
     // Only trim leading space if it's the very start of the text
     const trimmedContent = i === 0 ? content.trimStart() : content;
 
-    segments.push({ id, marker: `(${id})`, text: trimmedContent });
+    segments.push({ id, text: trimmedContent });
   }
 
   return segments;
@@ -52,9 +51,7 @@ export function parseSegmentsFromText(text: string): ParsedSegment[] {
  * @param page - The page data
  * @param preserveLineBreaks - If true, join with newlines (for source languages)
  */
-export function joinPageText(page: Page | undefined, preserveLineBreaks: boolean): string {
-  if (!page) return '';
-
+export function joinPageText(page: Page, preserveLineBreaks: boolean): string {
   return page.paragraphs.map((paragraph, index) => {
     const lineJoiner = preserveLineBreaks ? '\n' : ' ';
     const paragraphText = paragraph.lines.join(lineJoiner);
@@ -116,7 +113,6 @@ export function alignSegments(
 
     return {
       id,
-      marker: `(${id})`,
       texts
     };
   });

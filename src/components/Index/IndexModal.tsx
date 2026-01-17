@@ -1,8 +1,8 @@
-
 import React, { useEffect, useState } from 'react';
 import { useAppStore } from '../../store/app-store';
-import { IndexData, TermEntry } from '../../types/termIndex';
+import { IndexData } from '../../types/termIndex';
 import { TermDetail } from './TermDetail';
+import { loadIndexData } from '../../services/text-loader';
 import { X } from 'lucide-react';
 
 export const IndexModal: React.FC = () => {
@@ -16,29 +16,10 @@ export const IndexModal: React.FC = () => {
     useEffect(() => {
         if (indexModalOpen && !data && !loading) {
             setLoading(true);
-
-            // Fetch both index files in parallel
-            Promise.all([
-                fetch('/descartes/meditations/index/la.json').then(res => {
-                    if (!res.ok) throw new Error(`Failed to load Latin index: ${res.status}`);
-                    return res.json();
-                }),
-                fetch('/descartes/meditations/index/fr.json').then(res => {
-                    if (!res.ok) throw new Error(`Failed to load French index: ${res.status}`);
-                    return res.json();
-                })
-            ])
-                .then(([latinData, frenchData]) => {
-                    setData({
-                        latin: latinData,
-                        french: frenchData
-                    });
-                    setLoading(false);
-                })
-                .catch(err => {
-                    console.error("Failed to load index", err);
-                    setLoading(false);
-                });
+            loadIndexData()
+                .then(setData)
+                .catch(err => console.error("Failed to load index", err))
+                .finally(() => setLoading(false));
         }
     }, [indexModalOpen, data, loading]);
 

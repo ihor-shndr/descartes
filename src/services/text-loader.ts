@@ -1,18 +1,17 @@
 import { TextData } from '../types/text';
-import { AVAILABLE_LANGUAGES, LanguageCode } from '../constants/languages';
+import { IndexData, TermEntry } from '../types/termIndex';
+import { AVAILABLE_LANGUAGES, INDEX_LANGUAGES, LanguageCode } from '../constants/languages';
 
 /**
- * Load all language files at once
- * @returns Record of language code to text data
- * @throws Error if no files could be loaded
+ * Load all language text files
  */
 export async function loadAllTexts(): Promise<Record<LanguageCode, TextData>> {
   const results: Partial<Record<LanguageCode, TextData>> = {};
 
   await Promise.all(
-    AVAILABLE_LANGUAGES.map(async ({ code, path }) => {
+    AVAILABLE_LANGUAGES.map(async ({ code, textPath }) => {
       try {
-        const response = await fetch(path);
+        const response = await fetch(textPath);
         if (!response.ok) {
           throw new Error(`Failed to load ${code}: ${response.statusText}`);
         }
@@ -24,4 +23,21 @@ export async function loadAllTexts(): Promise<Record<LanguageCode, TextData>> {
   );
 
   return results as Record<LanguageCode, TextData>;
+}
+
+/**
+ * Load term index data for source languages (Latin and French)
+ */
+export async function loadIndexData(): Promise<IndexData> {
+  const [latinData, frenchData] = await Promise.all(
+    INDEX_LANGUAGES.map(async ({ code, indexPath }) => {
+      const response = await fetch(indexPath);
+      if (!response.ok) {
+        throw new Error(`Failed to load ${code} index: ${response.statusText}`);
+      }
+      return response.json() as Promise<TermEntry[]>;
+    })
+  );
+
+  return { latin: latinData, french: frenchData };
 }

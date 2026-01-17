@@ -1,0 +1,156 @@
+(1)Tam justa causa me impellit ad hoc scriptum vobis
+offerendum, (2)& tam justam etiam vos habituros esse
+confido ad ejus deffensionem suscipiendam, postquam
+instituti mei rationem intelligetis, (4)ut nulla re melius
+illud hic possim commendare, | (5)quаm si quid in eo se-
+quutus sim paucis dicam.
+ *(6)Semper existimavi duas quæstiones, (6а)de Deo & de
+Anima, (7)præcipuas esse ex iis (7а)quæ Philosophiæ potius
+quаm Theologiæ ope sunt demon|strandæ: (8)nam quam-
+vis nobis fidelibus animam humanam cum corpore non
+
+interire, Deumque existere, fide credere sufficiat, (1)certe
+infidelibus nulla religio, nec fere etiam ulla moralis
+virtus, videtur posse persuaderi, (3)nisi prius illis ista duo
+ratione naturali probentur: (4)cumque sæpe in hac vita
+majora vitiis quаm virtutibus præmia proponantur,
+(6)pauci rectum utili præferrent, (6а)si nec Deum timerent,
+(7)nec aliam vitam expectarent. (7а)Et quamvis omnino ve-
+rum sit, (8)Dei existentiam credendam esse, quoniam in
+sacris scripturis docetur, (9)& vice versa credendas sa-
+cras scripturas, (10)quoniam haben|tur a Deo; (10а)quia nempe,
+cum fides sit donum Dei, (11)ille idem qui dat gratiam ad
+reliqua credenda, (12)potest etiam dare, ut ipsum existere
+credamus; (13)non tamen hoc infidelibus proponi potest,
+(14)quia circulum esse ju|dicarent. (14а)Et quidem animadverti
+(15)non modo vos omnes aliosque Theologos affirmare
+(16)Dei existentiam naturali ratione posse probari, (16а)sed &
+ex sacra Scriptura inferri, (17)ejus cognitionem multis,
+quæ de rebus creatis habentur, esse faciliorem, (18)atque
+omnino esse tam facilem, (19)ut qui illam non habent sint
+culpandi. (20)Patet enim Sap. 13 ex his verbis: (20а)Nec his
+debet ignosci. (21)Si enim tantum potuerunt scire, ut pos-
+sent æstimare sæculum, (22)quomodo hujus dominum non
+facilius invenerunt? (23)Et ad Rom. cap. I, dicitur illos
+esse inexcusabiles. (24)Atque ibidem etiam per hæc | verba:
+(25)Quod notum est Dei, manifestum est in illis, (25a)videmur
+admoneri (26)ea omnia quæ de Deo sciri possunt, (26a)ratio-
+nibus non aliunde petitis quаm ab ipsamet nostra
+mente posse ostendi. (28)Quod idcirco quomodo fiat, &
+qua via Deus | facilius & certius quаm res sæculi co-
+gnoscatur, non putavi a me esse alienum inquirere.
+ *(31)Atque quantum ad animam, (31a)etsi multi ejus naturam
+
+non facile investigari posse judicarint, (1)& nonnulli
+etiam dicere ausi sint rationes humanas persuadere
+illam simul cum corpore interire, (3)solaque fide contra-
+rium teneri, (4)quia tamen hos condemnat Concilium
+Lateranense sub Leone 10 habitum, sessione 8, (5)& ex-
+presse mandat Christianis Philosophis ut eorum argu-
+menta dissolvant, (7)& veritatem pro viribus probent,
+(8)hoc etiam aggredi non du|bitavi.
+ *(9)Præterea, quoniam scio plerosque impios non aliam
+ob causam nolle credere Deum esse, (10)mentemque hu-
+manam a corpore distingui, (11)quam quia dicunt hæc
+duo a nemine hactenus potuisse demonstrari: (12)etsi
+nullo modo iis assentiar, (13)sed contra (13a)rationes fere
+|omnes, quæ pro his quæstionibus a magnis viris allatæ
+sunt, (15)cum satis intelliguntur, vim demonstrationis ha-
+bere putem, (16)vixque ullas dari posse mihi persuadeam,
+quæ non prius ab aliquibus aliis fuerint inventæ: (17)ni-
+hil tamen utilius in Philosophia præstare posse exis-
+timo, (19)quаm si semel omnium optimæ studiose quæran-
+tur, (20)tamque accurate & perspicue exponantur, (20a)ut apud
+omnes constet in posterum eas esse demonstrationes.
+(22)Ac denique, quoniam nonnulli quibus (22a)notum est me
+quandam excoluisse Methodum | ad quaslibet difficul-
+tates in scientiis resolvendas, (24)non quidem novam,
+(25)quia nihil est veritate antiquius, (25a)sed qua me sæpe in
+aliis non infœliciter uti viderunt, // 22 fr.; ← / hoc a me summo-
+pere flagitarunt \\: (27)ideoque officii mei esse putavi non-
+nihil hac in re conari.
+
+ *(1)Quicquid autem præstare potui, totum in | hoc Trac-
+tatu continetur. (2)Non quod in eo diversas omnes ra-
+tiones, quæ ad eadem probanda afferri possent, colli-
+gere conatus sim, (4)neque enim hoc videtur operæ pre-
+tium esse, (5)nisi ubi nulla habetur satis certa; (5a)sed pri-
+mas tantum & præcipuas ita prosecutus sum, (6)ut jam
+pro certissimis & evidentissimis demonstrationibus illas
+ausim proponere. (8)Addamque etiam tales esse, (8a)ut non
+putem ullam viam humano ingenio patere, per quam
+meliores inveniri unquam possint: (10)cogit enim me
+cau|sæ necessitas, & gloria Dei, ad quam totum hoc
+refertur, (12)ut hic aliquanto liberius de meis loquar quаm
+mea fert consuetudo. (13)Atqui quantumvis certas & evi-
+dentes illas putem, (14)non tamen ideo mihi persuadeo
+ad omnium captum esse accommodatas: (15)sed, quemad-
+modum in Geometria multæ sunt ab Archimede, | Apol-
+lonio, Pappo, aliisve scriptæ, (17)quæ, etsi pro evidentibus
+etiam ac certis ab omnibus habeantur, (18)quia nempe ni-
+hil plane continent quod seorsim spectatum non sit
+cognitu facillimum, (20)nihilque in quo sequentia cum
+antecedentibus non accurate cohæreant, (21)quia tamen
+longiusculæ sunt, (22)& valde attentum lectorem deside-
+rant, (23)non nisi ab admodum paucis intelliguntur: (23a)ita,
+quamvis eas quibus hic utor, certitudine & evidentia
+Geometricas æquare, vel etiam superare, existi|mem,
+(26)vereor tamen ne a multis satis percipi non possint, (26a)tum
+quia etiam longiusculæ sunt, (27)& aliæ ab aliis pendent,
+(28)tum præcipue quia requirunt mentem a præjudiciis
+plane liberam, (29)& quæ se ipsam a sensuum consortio
+facile subducat. (30)Nec certe plures in mundo Metaphy-
+sicis studiis quаm Geometricis apti reperiuntur. (31)Ac
+
+præterea in eo differentia est, (1)quod in Geometria, cum
+omnibus sit persuasum (2)nihil scribi solere, de quo certa
+demonstratio non habeatur, (3)sæpius in eo peccant im-
+periti, quod falsa approbent, (4)dum ea videri volunt in-
+telligere, (5)quаm quod vera refutent: (5a)contrа vero in
+Philosophia, (6)cum credatur nihil esse de quo non pos-
+sit in utramque partem disputari, (7)pauci veritatem in-
+vestigant, (8)& multo plures, ex eo quod ausint optima
+quacque im|pugnare, famam ingenii aucupantur.
+ *(10)Atque ideo, qualescunque meæ rationes esse possint,
+(11)quia tamen ad Philosophiam spectant, (11a)non spero me
+illarum ope magnum operæ pretium esse facturum, (12)nisi
+me patrocinio vestro adjuvetis. (13)Sed cum tanta inhæ-
+reat omnium mentibus de vestra Facultate opinio,
+(15)tantæque sit authoritatis Sorbonæ nomen, (15a)ut non
+| modo in rebus fidei (16)nulli unquam Societati post sacra
+Concilia tantum creditum sit quаm vestræ, (17)sed etiam
+in humana Philosophia (18)nullibi major perspicacia &
+soliditas, nec ad ferenda judicia major integritas &
+sapientia esse existimetur; (20)non dubito quin, (20a)si tantam
+hujus scripti curam suscipere dignemini, (21)primo qui-
+dem, ut a vobis corrigatur: (22)memor enim, non modo
+humanitatis, sed maxime etiam inscitiæ | meæ, (23)non
+affirmo nullos in eo esse errores; (24)deinde, ut quæ vel
+desunt, vel non satis absoluta sunt, vel majorem expli-
+cationem desiderant, addantur, perficiantur, illustren-
+tur, aut a vobis ipsis, aut saltem a me, postquam a vo-
+bis ero admonitus; (28)ac denique, ut postquam rationes
+in eo contentæ, quibus Deum esse, mentemque a cor-
+pore aliam esse probatur, (30)ad eam perspicuitatem erunt
+perductæ, ad quam ipsas per|duci posse confido, (31)ita
+
+nempe ut pro accuratissimis demonstrationibus ha-
+bendæ sint, (2)hoc ipsum declarare & publice testari ve-
+litis: (3)non dubito, inquam, quin, si hoc fiat, (3a)omnes
+errores, qui de his quæstionibus unquam fuerunt,
+(5)brevi ex hominum mentibus deleantur. (5a)Veritas enim
+ipsa facile efficiet ut reliqui ingeniosi & docti (6)vestro
+judicio subscribant; (7)& autho|ritas, (7a)ut Athei, qui scioli
+magis quаm ingeniosi aut docti esse solent, (8)contradi-
+cendi animum deponant, (9)atque etiam ut forte ratio-
+nes, quas ab omnibus ingenio præditis pro demon-
+strationibus haberi scient, ipsi propugnent, (11)ne non
+intelligere videantur. (12)Ac denique cæteri omnes tot
+testimoniis facile credent, (13)nemoque amplius erit in
+mundo, (14)qui vel Dei existentiam, vel realem humanæ
+animæ a corpore distinctionem ausit in dubium | revo-
+care. (16)Cujus rei quanta esset utilitas, vos ipsi, pro ve-
+stra singulari sapientia, omnium optime æstimare po-
+testis; (18)nec deceret me vobis, (18a)qui maximum Ecclesiæ
+Catholicæ columen semper fuistis, Dei & Religionis
+causam pluribus hic commendare.

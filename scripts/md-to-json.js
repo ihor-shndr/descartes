@@ -1,0 +1,89 @@
+#!/usr/bin/env node
+
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+/**
+ * Converts a markdown file to JSON format where empty lines separate pages
+ * Each line becomes a quoted string in the lines array
+ */
+function convertMdToJson(mdFilePath, outputJsonPath) {
+  // Read the markdown file
+  const content = fs.readFileSync(mdFilePath, 'utf-8');
+  const lines = content.split('\n');
+
+  const pages = [];
+  let currentPageLines = [];
+  let pageNumber = 1;
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+
+    // Empty line marks the end of a page
+    if (line.trim() === '') {
+      if (currentPageLines.length > 0) {
+        // Create a page with the collected lines
+        pages.push({
+          pageNumber: pageNumber++,
+          paragraphs: [
+            {
+              lines: currentPageLines
+            }
+          ]
+        });
+        currentPageLines = [];
+      }
+    } else {
+      // Add line to current page (preserving original formatting)
+      currentPageLines.push(line);
+    }
+  }
+
+  // Add the last page if there are remaining lines
+  if (currentPageLines.length > 0) {
+    pages.push({
+      pageNumber: pageNumber,
+      paragraphs: [
+        {
+          lines: currentPageLines
+        }
+      ]
+    });
+  }
+
+  // Create the final JSON structure
+  const jsonOutput = {
+    pages: pages
+  };
+
+  // Write to output file with pretty formatting
+  fs.writeFileSync(outputJsonPath, JSON.stringify(jsonOutput, null, 4), 'utf-8');
+
+  console.log(`✓ Converted ${mdFilePath} to ${outputJsonPath}`);
+  console.log(`  Total pages: ${pages.length}`);
+}
+
+// Main execution
+const args = process.argv.slice(2);
+
+if (args.length < 1) {
+  console.log('Usage: node md-to-json.js <input.md> [output.json]');
+  console.log('Example: node md-to-json.js public/meditations/text/la.md public/meditations/text/la-converted.json');
+  process.exit(1);
+}
+
+const inputPath = args[0];
+const outputPath = args[1] || inputPath.replace('.md', '-converted.json');
+
+if (!fs.existsSync(inputPath)) {
+  console.error(`Error: Input file not found: ${inputPath}`);
+  process.exit(1);
+}
+
+convertMdToJson(inputPath, outputPath);
+
+export { convertMdToJson };

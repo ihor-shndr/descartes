@@ -32,14 +32,28 @@ export default function Reader() {
     }
   }, [allTexts, loadAllTexts]);
 
-  // Sync URL with store (initialize from URL on mount)
+  // Sync URL with store (bidirectional)
   useEffect(() => {
     const pageParam = searchParams.get('page');
-    const pageNum = pageParam ? parseInt(pageParam, 10) : 1;
-    if (pageNum !== currentPage) {
-      setCurrentPage(pageNum);
+    const urlPage = pageParam ? parseInt(pageParam, 10) : 1;
+
+    // If URL page is different from store, update URL to match store
+    if (urlPage !== currentPage && currentPage > 0) {
+      setSearchParams({ page: String(currentPage) });
     }
-  }, [searchParams, currentPage, setCurrentPage]);
+  }, [currentPage, searchParams, setSearchParams]);
+
+  // Initialize from URL on mount
+  useEffect(() => {
+    const pageParam = searchParams.get('page');
+    if (pageParam) {
+      const pageNum = parseInt(pageParam, 10);
+      if (pageNum !== currentPage) {
+        setCurrentPage(pageNum);
+      }
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // Update URL when page changes
   const handlePageChange = (newPage: number) => {
@@ -74,9 +88,13 @@ export default function Reader() {
   if (!allTexts) {
     return null;
   }
+  
+  console.log(allTexts)
 
   // Process current page with language layout
   const pageData = processPageData(allTexts, currentPage, languageLayout);
+
+  console.log(pageData);
 
   return (
     <div className="min-h-screen">

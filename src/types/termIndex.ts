@@ -7,29 +7,41 @@ export interface TermEntry {
     id: string;
     term: string;
     count: number;
-    translations: {
-        fr?: TranslationRef[];
-        ua?: TranslationRef[];
-        la?: TranslationRef[];
-    };
-    occurrences: Occurrence[];
+    translations: LanguageTranslation[];
+    occurrences: SectionOccurrence[];
 }
 
-export interface TranslationRef {
+export interface LanguageTranslation {
+    language: 'fr' | 'ua' | 'la';
+    terms: TranslationTerm[];
+    specialTerms?: SpecialTerm[];
+}
+
+export interface TranslationTerm {
     term: string;
-    count: number;
+    count: string;
+    modifier?: string;
 }
 
-export interface Occurrence {
+export interface SpecialTerm {
+    term: string;
+    count: string;
+}
+
+export interface SectionOccurrence {
     section: string;
+    count: number;
+    pages: PageOccurrence[];
+}
+
+export interface PageOccurrence {
     page: number;
     lines: LineRef[];
 }
 
 export interface LineRef {
     line: number;
-    segment?: string; // Optional segment ID (e.g., "6a", "24a")
-    isTitle?: boolean;
-    countInLine?: number;
-    note?: string; // For FM, PN etc
+    modifier1?: string;
+    modifier2?: string;
+    modifier3?: string;
 }
