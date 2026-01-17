@@ -69,3 +69,4 @@ nisi ad similitudinem rerum verarum fingi potuerunt;
 (29)ideoque saltem generalia hæc, oculos, caput, manus,
 totumque corpus, (30)res quasdam non imaginarias, sed
 veras existere. (31)Nam sane pictores ipsi, ne tum qui
+

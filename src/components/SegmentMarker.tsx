@@ -18,7 +18,7 @@ export function SegmentMarker({ id }: SegmentMarkerProps) {
 
   const isHighlighted =
     hoveredSegmentId === id ||
-    (highlightedLocation?.segment === id && highlightedLocation.page === currentPage);
+    (highlightedLocation?.segments.includes(id) && highlightedLocation.page === currentPage);
 
   return (
     <sup

@@ -148,21 +148,17 @@ export function ParagraphText({
         [paragraphs, verbatim]
     );
 
-    // Scroll to highlighted location
+    // Scroll to highlighted location - only in verbatim (Latin) view
+    // Since index references are line-based for Latin, we scroll Latin into view
+    // and let the user see translations naturally in their grid position
     useEffect(() => {
-        if (!shouldScroll || !containerRef.current) return;
+        if (!shouldScroll || !containerRef.current || !verbatim) return;
 
-        if (verbatim && highlightedLocation?.line) {
+        if (highlightedLocation?.line) {
             // Latin: scroll to line number
             const element = document.getElementById(`line-${highlightedLocation.line}`);
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
-        } else if (highlightedLocation?.segment) {
-            // Translations: scroll to segment marker
-            const marker = containerRef.current.querySelector(`[data-segment-id="${highlightedLocation.segment}"]`);
-            if (marker) {
-                marker.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
         }
     }, [shouldScroll, highlightedLocation, verbatim]);
@@ -183,8 +179,8 @@ export function ParagraphText({
     return (
         <div
             ref={containerRef}
-            className={"font-serif text-lg leading-relaxed text-stone-800 w-full flex justify-center"
-            }
+            className={"font-serif text-lg leading-relaxed text-stone-800 w-full flex justify-center cursor-default"}
+            onClick={() => useAppStore.getState().clearHighlight()}
         >
             <div
                 className={clsx(

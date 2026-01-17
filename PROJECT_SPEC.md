@@ -377,8 +377,20 @@ When a user clicks on an occurrence link (e.g., `SC 1: 7`):
 
 1. **Close Modal:** The index overlay closes.
 2. **Navigate:** The reader switches to the specified `pageNumber`.
-3. **Scroll:** The viewport automatically scrolls the target line into view (centered).
+3. **Scroll:** The viewport automatically scrolls the Latin text target line into view.
 4. **Highlight:** The target line is temporarily highlighted (e.g., yellow background) to draw attention.
+
+**Note on Index Highlighting:**
+
+The Latin index is **line-based**, not segment-based. When clicking an index link (e.g., page 2, line 28):
+
+- **In Latin (verbatim view):** Highlights just the specified line.
+- **In translations (flowing text):** Highlights all segments that include/intersect with that line. For example:
+  - If line 28 is in the middle of segment `26a`, highlight segment `26a`
+  - If line 28 starts with segment `28`, only highlight `28` (not the previous segment)
+  - If line 28 contains multiple segment markers, highlight all of them
+
+This ensures that clicking a Latin index reference correctly highlights the corresponding text across all languages, accounting for the fact that segments can span multiple lines.
 
 ---
 

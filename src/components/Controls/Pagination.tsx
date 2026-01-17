@@ -18,9 +18,17 @@ export default function Pagination({ currentPage, totalPages, onPageChange }: Pa
         ← Previous
       </button>
 
-      <div className="text-sm font-sans text-gray-700">
-        Page {currentPage} of {totalPages}
-      </div>
+      <select
+        value={currentPage}
+        onChange={(e) => onPageChange(Number(e.target.value))}
+        className="px-3 py-2 rounded bg-gray-100 hover:bg-gray-200 text-sm font-sans text-gray-700 cursor-pointer border-none outline-none focus:ring-2 focus:ring-blue-300"
+      >
+        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+          <option key={page} value={page}>
+            Page {page} of {totalPages}
+          </option>
+        ))}
+      </select>
 
       <button
         onClick={() => onPageChange(currentPage + 1)}

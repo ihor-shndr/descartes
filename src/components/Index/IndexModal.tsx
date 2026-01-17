@@ -32,7 +32,12 @@ export const IndexModal: React.FC = () => {
     );
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
+        <div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 "
+            onMouseDown={(e) => {
+                if (e.target === e.currentTarget) toggleIndexModal(false);
+            }}
+        >
             <div className="bg-white w-full max-w-2xl h-[85vh] rounded-lg shadow-2xl flex flex-col overflow-hidden animate-in fade-in zoom-in duration-200">
 
                 {/* Header */}

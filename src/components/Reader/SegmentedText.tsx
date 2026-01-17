@@ -79,7 +79,7 @@ export function SegmentedText({ text, initialSegmentId, onSegmentIdChange }: Seg
                             "transition-colors duration-200 rounded-sm py-0.5 box-decoration-clone",
                             segmentId && (
                                 hoveredSegmentId === segmentId ||
-                                (highlightedLocation?.segment === segmentId && highlightedLocation.page === currentPage)
+                                (highlightedLocation?.segments.includes(segmentId) && highlightedLocation.page === currentPage)
                             ) && "bg-yellow-200"
                         )}
                         onMouseEnter={() => segmentId && setHoveredSegment(segmentId)}

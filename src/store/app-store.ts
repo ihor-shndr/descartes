@@ -3,7 +3,7 @@ import { persist } from 'zustand/middleware';
 import { TextData } from '../types/text';
 import { LanguageCode, AVAILABLE_LANGUAGES } from '../constants/languages';
 import { loadAllTexts } from '../services/text-loader';
-import { findSegmentIdForLine } from '../utils/text-lookup';
+import { findSegmentsForLine } from '../utils/text-lookup';
 
 /**
  * Application store interface
@@ -26,7 +26,15 @@ interface AppStore {
 
   // Index Feature
   indexModalOpen: boolean;
-  highlightedLocation: { page: number; line: number; segment?: string } | null;
+  /**
+   * Highlighted location from index navigation.
+   * - `line`: The Latin line number (used for verbatim Latin view)
+   * - `segments`: All segments that intersect with this line (used for non-Latin flowing text)
+   * 
+   * Latin index is line-based, not segment-based. A line may be part of a segment
+   * that started earlier, so we highlight all segments that include this line.
+   */
+  highlightedLocation: { page: number; line: number; segments: string[] } | null;
 
   // Actions
   loadAllTexts: () => Promise<void>;
@@ -38,6 +46,7 @@ interface AppStore {
   // Index Actions
   toggleIndexModal: (isOpen?: boolean) => void;
   navigateToLocation: (page: number, line: number, segment?: string) => void;
+  clearHighlight: () => void;
 }
 
 /**
@@ -80,7 +89,8 @@ export const useAppStore = create<AppStore>()(
         const { totalPages } = get();
         // Clamp page to valid range
         const validPage = Math.max(1, Math.min(page, totalPages || 1));
-        set({ currentPage: validPage });
+        // Clear highlight when page changes
+        set({ currentPage: validPage, highlightedLocation: null });
       },
 
       updateLanguageLayout: (layout) => set({ languageLayout: layout }),
@@ -101,20 +111,24 @@ export const useAppStore = create<AppStore>()(
         const { totalPages, allTexts } = get();
         const validPage = Math.max(1, Math.min(page, totalPages || 1));
 
-        let targetSegment = segment;
+        let targetSegments: string[] = [];
 
-        // If no segment provided (e.g. Latin term), try to find it from the line number
-        if (!targetSegment && allTexts && allTexts['la']) {
-          // Looking up in Latin text assuming the index line numbers refer to Latin source lines
-          targetSegment = findSegmentIdForLine(allTexts['la'], validPage, line);
+        if (segment) {
+          // If a specific segment is provided (e.g., from French index), use it directly
+          targetSegments = [segment];
+        } else if (allTexts && allTexts['la']) {
+          // Latin index: line-based reference - find ALL segments that include this line
+          targetSegments = findSegmentsForLine(allTexts['la'], validPage, line);
         }
 
         set({
           currentPage: validPage,
-          highlightedLocation: { page: validPage, line, segment: targetSegment },
+          highlightedLocation: { page: validPage, line, segments: targetSegments },
           indexModalOpen: false // Close index when navigating
         });
-      }
+      },
+
+      clearHighlight: () => set({ highlightedLocation: null })
     }),
     {
       name: 'descartes-reader', // localStorage key
@@ -126,3 +140,4 @@ export const useAppStore = create<AppStore>()(
     }
   )
 );
+
