@@ -232,7 +232,7 @@ If a segment exists in one language but not another:
 ### 4.1 Cross-Language Hover Highlighting
 
 - Hover over any segment → highlight same segment in all displayed languages
-- Visual feedback: Yellow background (`bg-yellow-200`)
+- Visual feedback: configurable highlight color (default gold/yellow)
 - Smooth transition on hover state change
 
 ### 4.2 Pagination
@@ -342,6 +342,11 @@ All settings saved to localStorage:
 - Flow direction
 - Current page number
 
+### 6.5 Index Line Markers & Highlight Color
+
+- Toggle: "Highlight Latin index lines" shows a small marker icon beside Latin lines that contain indexed terms; clicking opens the index modal filtered to that line's terms.
+- Highlight color dropdown: choose the color used for hover and navigation highlights (default gold/yellow).
+
 ---
 
 ## 7. Term Index
@@ -370,6 +375,7 @@ Index data is loaded from `public/meditations/index/la.json` and `public/meditat
 - **Modal:** Opens as an overlay/modal to preserve context.
 - **Search:** Filter terms by text input.
 - **Tabs:** Toggle between "Latin Terms" and "French Terms" lists.
+- **Inline entry point:** When enabled in settings, an icon appears next to Latin lines that contain indexed terms; clicking it opens the index modal pre-filtered to only the terms on that line (search input left empty).
 
 ### 7.4 Navigation Interaction
 

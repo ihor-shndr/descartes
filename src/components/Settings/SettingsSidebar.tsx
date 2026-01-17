@@ -1,5 +1,6 @@
 import { useAppStore } from '../../store/app-store';
 import DraggableLanguageGrid from './DraggableLanguageGrid';
+import { HIGHLIGHT_OPTIONS, HighlightColor } from '../../constants/highlights';
 
 /**
  * Settings sidebar that slides in from the right
@@ -11,6 +12,8 @@ export default function SettingsSidebar() {
   const showIndexHighlights = useAppStore((state) => state.showIndexHighlights);
   const setShowIndexHighlights = useAppStore((state) => state.setShowIndexHighlights);
   const loadIndexData = useAppStore((state) => state.loadIndexData);
+  const highlightColor = useAppStore((state) => state.highlightColor);
+  const setHighlightColor = useAppStore((state) => state.setHighlightColor);
 
   return (
     <>
@@ -78,6 +81,24 @@ export default function SettingsSidebar() {
                 </p>
               </div>
             </label>
+
+            <div className="space-y-1">
+              <div className="text-sm font-semibold text-gray-900">Highlight color</div>
+              <select
+                value={highlightColor}
+                onChange={(e) => setHighlightColor(e.target.value as HighlightColor)}
+                className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                {HIGHLIGHT_OPTIONS.map(option => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+              <p className="text-sm text-gray-600">
+                Applied to hover and navigation highlights.
+              </p>
+            </div>
           </div>
         </div>
       </div>

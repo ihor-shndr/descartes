@@ -7,6 +7,7 @@ import { SegmentedText } from './SegmentedText';
 import clsx from 'clsx';
 import { IndexData } from '../../types/termIndex';
 import { BookOpen } from 'lucide-react';
+import { HIGHLIGHT_COLORS } from '../../constants/highlights';
 
 interface TextUnit {
     text: string;
@@ -168,6 +169,7 @@ export function ParagraphText({
     const setIndexFilter = useAppStore((state) => state.setIndexFilter);
     const toggleIndexModal = useAppStore((state) => state.toggleIndexModal);
     const showIndexHighlights = useAppStore((state) => state.showIndexHighlights);
+    const highlightColor = useAppStore((state) => state.highlightColor);
 
     const shouldScroll = highlightedLocation && highlightedLocation.page === currentPage;
 
@@ -251,13 +253,13 @@ export function ParagraphText({
                                         className={clsx(
                                             verbatim
                                             ? clsx(
-                                                "relative whitespace-pre-wrap transition-colors duration-1000",
-                                                unit.isLastInParagraph ? "justified-line-last" : "justified-line",
-                                                unit.shouldIndent && "indent-[1.5em]",
-                                                shouldScroll && highlightedLocation?.line === unit.lineNumber && "bg-yellow-100 shadow-sm"
-                                            )
-                                            : clsx(
-                                                "mb-4 w-full justified-text",
+                                                    "relative whitespace-pre-wrap transition-colors duration-1000",
+                                                    unit.isLastInParagraph ? "justified-line-last" : "justified-line",
+                                                    unit.shouldIndent && "indent-[1.5em]",
+                                                    shouldScroll && highlightedLocation?.line === unit.lineNumber && `${HIGHLIGHT_COLORS[highlightColor].line} shadow-sm`
+                                                )
+                                                : clsx(
+                                                    "mb-4 w-full justified-text",
                                                 unit.shouldIndent && "indent-[1.5em]"
                                                 )
                                         )}

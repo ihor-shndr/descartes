@@ -2,6 +2,7 @@ import { useAppStore } from '../../store/app-store';
 import { SEGMENT_MARKER_REGEX, isSegmentMarker, extractSegmentId } from '../../utils/text-rendering';
 import { SegmentMarker } from '../SegmentMarker';
 import clsx from 'clsx';
+import { HIGHLIGHT_COLORS } from '../../constants/highlights';
 
 interface SegmentedTextProps {
     text: string;
@@ -53,6 +54,7 @@ export function SegmentedText({ text, initialSegmentId, onSegmentIdChange }: Seg
     const setHoveredSegment = useAppStore((state) => state.setHoveredSegment);
     const highlightedLocation = useAppStore((state) => state.highlightedLocation);
     const currentPage = useAppStore((state) => state.currentPage);
+    const highlightColor = useAppStore((state) => state.highlightColor);
 
     // Pre-compute segment IDs before rendering (pure computation, no side effects)
     const { parts, finalSegmentId } = processText(text, initialSegmentId);
@@ -80,7 +82,7 @@ export function SegmentedText({ text, initialSegmentId, onSegmentIdChange }: Seg
                             segmentId && (
                                 hoveredSegmentId === segmentId ||
                                 (highlightedLocation?.segments.includes(segmentId) && highlightedLocation.page === currentPage)
-                            ) && "bg-yellow-200"
+                            ) && HIGHLIGHT_COLORS[highlightColor].segment
                         )}
                         onMouseEnter={() => segmentId && setHoveredSegment(segmentId)}
                         onMouseLeave={() => segmentId && setHoveredSegment(null)}

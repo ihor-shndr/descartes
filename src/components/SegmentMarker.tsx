@@ -1,5 +1,6 @@
 import { useAppStore } from '../store/app-store';
 import clsx from 'clsx';
+import { HIGHLIGHT_COLORS } from '../constants/highlights';
 
 interface SegmentMarkerProps {
   id: string;
@@ -15,6 +16,7 @@ export function SegmentMarker({ id }: SegmentMarkerProps) {
   const setHoveredSegment = useAppStore((state) => state.setHoveredSegment);
   const highlightedLocation = useAppStore((state) => state.highlightedLocation);
   const currentPage = useAppStore((state) => state.currentPage);
+  const highlightColor = useAppStore((state) => state.highlightColor);
 
   const isHighlighted =
     hoveredSegmentId === id ||
@@ -25,7 +27,7 @@ export function SegmentMarker({ id }: SegmentMarkerProps) {
       data-segment-id={id}
       className={clsx(
         "text-xs text-stone-500 font-normal select-none mx-0.5 transition-colors duration-200 rounded-sm py-0.5 cursor-pointer",
-        isHighlighted && "bg-yellow-200"
+        isHighlighted && HIGHLIGHT_COLORS[highlightColor].segment
       )}
       onMouseEnter={() => setHoveredSegment(id)}
       onMouseLeave={() => setHoveredSegment(null)}
@@ -34,4 +36,3 @@ export function SegmentMarker({ id }: SegmentMarkerProps) {
     </sup>
   );
 }
-

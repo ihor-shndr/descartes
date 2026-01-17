@@ -5,6 +5,7 @@ import { LanguageCode, AVAILABLE_LANGUAGES } from '../constants/languages';
 import { loadAllTexts, loadIndexData as fetchIndexData } from '../services/text-loader';
 import { findSegmentsForLine } from '../utils/text-lookup';
 import { IndexData } from '../types/termIndex';
+import { HighlightColor } from '../constants/highlights';
 
 interface IndexFilter {
   termIds: string[];
@@ -37,6 +38,7 @@ interface AppStore {
   indexError: string | null;
   indexFilter: IndexFilter | null;
   showIndexHighlights: boolean;
+  highlightColor: HighlightColor;
 
   /**
    * Highlighted location from index navigation.
@@ -60,6 +62,7 @@ interface AppStore {
   toggleIndexModal: (isOpen?: boolean) => void;
   setIndexFilter: (filter: IndexFilter | null) => void;
   setShowIndexHighlights: (value: boolean) => void;
+  setHighlightColor: (color: HighlightColor) => void;
   navigateToLocation: (page: number, line: number, segment?: string) => void;
   clearHighlight: () => void;
 }
@@ -86,6 +89,7 @@ export const useAppStore = create<AppStore>()(
       indexError: null,
       indexFilter: null,
       showIndexHighlights: false,
+      highlightColor: 'gold',
       highlightedLocation: null,
 
       // Actions
@@ -144,6 +148,7 @@ export const useAppStore = create<AppStore>()(
       setIndexFilter: (filter) => set({ indexFilter: filter }),
 
       setShowIndexHighlights: (value) => set({ showIndexHighlights: value }),
+      setHighlightColor: (color) => set({ highlightColor: color }),
 
       navigateToLocation: (page, line, segment) => {
         const { totalPages, allTexts } = get();
@@ -174,7 +179,8 @@ export const useAppStore = create<AppStore>()(
       partialize: (state) => ({
         languageLayout: state.languageLayout,
         currentPage: state.currentPage,
-        showIndexHighlights: state.showIndexHighlights
+        showIndexHighlights: state.showIndexHighlights,
+        highlightColor: state.highlightColor
       })
     }
   )
