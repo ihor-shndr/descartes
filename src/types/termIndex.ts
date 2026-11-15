@@ -3,29 +3,35 @@ export interface IndexData {
     french: TermEntry[];
 }
 
+export interface IndexTarget {
+    page: number;
+    line: number;
+    segment?: string;
+}
+
+export interface BookSpan {
+    text: string;
+    italic?: boolean;
+    bold?: boolean;
+    position?: 'sup' | 'sub';
+    target?: IndexTarget;
+}
+
+export interface BookLine {
+    sourcePage: number;
+    spans: BookSpan[];
+    indent?: number;
+}
+
 export interface TermEntry {
     id: string;
     term: string;
-    count: number;
-    translations: LanguageTranslation[];
+    count: number | null;
+    sourcePage: number;
+    bookHeading: BookSpan[];
+    bookLines: BookLine[];
+    bookIntroduction?: BookLine[];
     occurrences: SectionOccurrence[];
-}
-
-export interface LanguageTranslation {
-    language: 'fr' | 'ua' | 'la';
-    terms: TranslationTerm[];
-    specialTerms?: SpecialTerm[];
-}
-
-export interface TranslationTerm {
-    term: string;
-    count: string;
-    modifier?: string;
-}
-
-export interface SpecialTerm {
-    term: string;
-    count: string;
 }
 
 export interface SectionOccurrence {
@@ -41,7 +47,6 @@ export interface PageOccurrence {
 
 export interface LineRef {
     line: number;
-    modifier1?: string;
-    modifier2?: string;
-    modifier3?: string;
+    segment?: string;
+    isTitle?: boolean;
 }

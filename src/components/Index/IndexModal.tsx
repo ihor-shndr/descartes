@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useAppStore } from '../../store/app-store';
-import { TermDetail } from './TermDetail';
+import { BookLines, TermDetail } from './TermDetail';
 import { X } from 'lucide-react';
 
 export const IndexModal: React.FC = () => {
@@ -109,6 +109,12 @@ export const IndexModal: React.FC = () => {
 
                 {/* Content */}
                 <div className="flex-1 overflow-y-auto p-6 bg-white">
+                    {currentList[0]?.bookIntroduction && (
+                        <details key={activeTab} className="mb-6 text-gray-700">
+                            <summary className="cursor-pointer mb-3">Book notation and instructions</summary>
+                            <BookLines lines={currentList[0].bookIntroduction} />
+                        </details>
+                    )}
                     {indexLoading ? (
                         <div className="flex items-center justify-center h-40 text-gray-500">
                             Loading index...

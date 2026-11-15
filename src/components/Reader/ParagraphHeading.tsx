@@ -1,5 +1,9 @@
 import { Paragraph } from '../../types/text';
 import clsx from 'clsx';
+import { SegmentedText } from './SegmentedText';
+import { useAppStore } from '../../store/app-store';
+import { HIGHLIGHT_COLORS } from '../../constants/highlights';
+import { SEGMENT_MARKER_REGEX, extractSegmentId } from '../../utils/text-rendering';
 
 interface ParagraphHeadingProps {
     paragraph: Paragraph;
@@ -27,13 +31,34 @@ export function isHeading(type: string | undefined): type is keyof typeof HEADIN
  * Renders h1, h2, h3 headings with consistent styling
  */
 export function ParagraphHeading({ paragraph, className }: ParagraphHeadingProps) {
+    const highlightedLocation = useAppStore(state => state.highlightedLocation);
+    const currentPage = useAppStore(state => state.currentPage);
+    const highlightColor = useAppStore(state => state.highlightColor);
     if (!isHeading(paragraph.type)) {
         return null;
     }
 
+    const startLine = paragraph.startLine;
+    let segmentId: string | null = null;
     return (
         <div className={clsx(HEADING_STYLES[paragraph.type], className)}>
-            {paragraph.lines.join(' ')}
+            {startLine === undefined ? (
+                <SegmentedText text={paragraph.lines.join(' ')} initialSegmentId={null} />
+            ) : paragraph.lines.map((line, index) => {
+                const initialSegmentId = segmentId;
+                const markers = [...line.matchAll(SEGMENT_MARKER_REGEX)];
+                if (markers.length) segmentId = extractSegmentId(markers[markers.length - 1][0]);
+                const lineNumber = startLine + index;
+                return (
+                    <div key={lineNumber} id={`line-${lineNumber}`} className={clsx(
+                        'relative',
+                        highlightedLocation?.page === currentPage && highlightedLocation.line === lineNumber && HIGHLIGHT_COLORS[highlightColor].line
+                    )}>
+                        {lineNumber % 5 === 0 && <span className="absolute -left-8 text-xs text-stone-400 select-none font-normal">{lineNumber}</span>}
+                        <SegmentedText text={line} initialSegmentId={initialSegmentId} />
+                    </div>
+                );
+            })}
         </div>
     );
 }

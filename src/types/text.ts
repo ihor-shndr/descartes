@@ -4,6 +4,7 @@
  */
 export interface Paragraph {
   type?: 'h1' | 'h2' | 'h3';  // Optional heading type
+  startLine?: number; // Printed Latin line number when headings interrupt sequential body lines
   lines: string[];      // Array of text lines
 }
 

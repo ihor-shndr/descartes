@@ -30,9 +30,14 @@ export function findSegmentsForLine(
 
     // Iterate paragraphs like VerbatimText does
     for (const paragraph of page.paragraphs) {
-        // Skip headers (h1, h2, h3) as they aren't counted in VerbatimText line numbers 
-        if (paragraph.type === 'h1' || paragraph.type === 'h2' || paragraph.type === 'h3') {
+        // Legacy headings have no printed line metadata. Explicitly numbered headings
+        // participate in lookup exactly like their printed body counterparts.
+        if (paragraph.type && paragraph.startLine === undefined) {
             continue;
+        }
+
+        if (paragraph.startLine !== undefined) {
+            lineCounter = paragraph.startLine - 1;
         }
 
         for (const line of paragraph.lines) {

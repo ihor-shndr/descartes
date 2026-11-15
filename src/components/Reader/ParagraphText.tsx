@@ -76,8 +76,15 @@ function preprocessParagraphs(
     let currentSegmentId: string | null = null;
 
     for (const paragraph of paragraphs) {
+        if (preserveLineBreaks && paragraph.startLine !== undefined) {
+            lineCounter = paragraph.startLine - 1;
+        }
         // Skip headers - they're handled separately
         if (isHeading(paragraph.type)) {
+            currentSegmentId = computeFinalSegmentId(paragraph.lines.join(' '), currentSegmentId);
+            if (preserveLineBreaks && paragraph.startLine !== undefined) {
+                lineCounter += paragraph.lines.length;
+            }
             paragraphIndices.push(-1); // Mark as header
             continue;
         }

@@ -58,3 +58,7 @@ npm run build
 - Deep linking to specific segments
 - localStorage persistence of column preferences
 - Minimalist, typography-focused design
+
+## Import remaining text from PDF
+
+See [the batch import guide](scripts/import-pages/README.md) for PDF preparation, one Terra agent per reader page, validation, and merging into the existing text JSON.
