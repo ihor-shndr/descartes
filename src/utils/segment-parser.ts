@@ -9,7 +9,7 @@ const SEGMENT_REGEX = /\((\d+[a-z]?)\)/g;
  * Check if a paragraph is a new paragraph (first line starts with space)
  */
 function isNewParagraph(paragraph: Paragraph): boolean {
-  return paragraph.lines.length > 0 && paragraph.lines[0].startsWith(' ');
+  return paragraph.lines.length > 0 && paragraph.lines[0].text.startsWith(' ');
 }
 
 /**
@@ -54,7 +54,7 @@ export function parseSegmentsFromText(text: string): ParsedSegment[] {
 export function joinPageText(page: Page, preserveLineBreaks: boolean): string {
   return page.paragraphs.map((paragraph, index) => {
     const lineJoiner = preserveLineBreaks ? '\n' : ' ';
-    const paragraphText = paragraph.lines.join(lineJoiner);
+    const paragraphText = paragraph.lines.map(line => line.text).join(lineJoiner);
 
     // Add paragraph separator for new paragraphs (detected by leading space)
     if (index > 0 && isNewParagraph(paragraph)) {

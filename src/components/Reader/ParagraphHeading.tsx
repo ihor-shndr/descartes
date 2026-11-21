@@ -45,10 +45,10 @@ export function ParagraphHeading({ paragraph, className, termsBySegment }: Parag
     return (
         <div className={clsx(HEADING_STYLES[paragraph.type], className)}>
             {startLine === undefined ? (
-                <SegmentedText text={paragraph.lines.join(' ')} initialSegmentId={null} termsBySegment={termsBySegment} />
-            ) : paragraph.lines.map((line, index) => {
+                <SegmentedText text={paragraph.lines.map(line => line.text).join(' ')} initialSegmentId={null} termsBySegment={termsBySegment} />
+            ) : paragraph.lines.map(({ text }, index) => {
                 const initialSegmentId = segmentId;
-                const markers = [...line.matchAll(SEGMENT_MARKER_REGEX)];
+                const markers = [...text.matchAll(SEGMENT_MARKER_REGEX)];
                 if (markers.length) segmentId = extractSegmentId(markers[markers.length - 1][0]);
                 const lineNumber = startLine + index;
                 return (
@@ -57,7 +57,7 @@ export function ParagraphHeading({ paragraph, className, termsBySegment }: Parag
                         highlightWholeLine && highlightedLocation?.page === currentPage && highlightedLocation.line === lineNumber && HIGHLIGHT_COLORS[highlightColor].line
                     )}>
                         {lineNumber % 5 === 0 && <span className="absolute -left-8 text-xs text-stone-400 select-none font-normal">{lineNumber}</span>}
-                        <SegmentedText text={line} initialSegmentId={initialSegmentId} termsBySegment={termsBySegment} />
+                        <SegmentedText text={text} initialSegmentId={initialSegmentId} termsBySegment={termsBySegment} />
                     </div>
                 );
             })}

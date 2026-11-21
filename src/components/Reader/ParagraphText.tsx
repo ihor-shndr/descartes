@@ -98,7 +98,7 @@ function preprocessParagraphs(
         }
         // Skip headers - they're handled separately
         if (isHeading(paragraph.type)) {
-            currentSegmentId = computeFinalSegmentId(paragraph.lines.join(' '), currentSegmentId);
+            currentSegmentId = computeFinalSegmentId(paragraph.lines.map(line => line.text).join(' '), currentSegmentId);
             if (preserveLineBreaks && paragraph.startLine !== undefined) {
                 lineCounter += paragraph.lines.length;
             }
@@ -110,14 +110,14 @@ function preprocessParagraphs(
 
         if (preserveLineBreaks) {
             // Each line is its own unit
-            paragraph.lines.forEach((line, idx) => {
+            paragraph.lines.forEach(({ text }, idx) => {
                 lineCounter++;
-                const hasLeadingSpace = line.startsWith(' ');
+                const hasLeadingSpace = text.startsWith(' ');
                 const nextLine = paragraph.lines[idx + 1];
-                const isLastInParagraph = !nextLine || nextLine.startsWith(' ');
+                const isLastInParagraph = !nextLine?.text || nextLine.text.startsWith(' ');
 
                 allUnits.push({
-                    text: line,
+                    text,
                     shouldIndent: hasLeadingSpace,
                     lineNumber: lineCounter,
                     isLastInParagraph,
@@ -125,16 +125,16 @@ function preprocessParagraphs(
                 });
 
                 // Update segment ID for next unit
-                currentSegmentId = computeFinalSegmentId(line, currentSegmentId);
+                currentSegmentId = computeFinalSegmentId(text, currentSegmentId);
             });
         } else {
             // Group lines into sub-paragraphs by leading spaces
             let currentLines: string[] = [];
             let shouldIndent = false;
 
-            paragraph.lines.forEach((line, idx) => {
-                const hasLeadingSpace = line.startsWith(' ');
-                const trimmedLine = line.trimStart();
+            paragraph.lines.forEach(({ text }, idx) => {
+                const hasLeadingSpace = text.startsWith(' ');
+                const trimmedLine = text.trimStart();
 
                 if (hasLeadingSpace && currentLines.length > 0) {
                     // New sub-paragraph - save current and start new

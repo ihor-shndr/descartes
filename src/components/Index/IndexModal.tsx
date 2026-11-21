@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useAppStore } from '../../store/app-store';
-import { BookLines, TermDetail } from './TermDetail';
+import { BookIntroduction, TermDetail } from './TermDetail';
 import { X } from 'lucide-react';
 
 export const IndexModal: React.FC = () => {
@@ -111,9 +111,11 @@ export const IndexModal: React.FC = () => {
                 {/* Content */}
                 <div className="flex-1 overflow-y-auto p-6 bg-white">
                     {currentList[0]?.bookIntroduction && (
-                        <details key={activeTab} className="mb-6 text-gray-700">
-                            <summary className="cursor-pointer mb-3">Позначення та пояснення з книжки</summary>
-                            <BookLines lines={currentList[0].bookIntroduction} />
+                        <details key={activeTab} className="mb-6 rounded-lg border border-stone-200 bg-stone-50 text-stone-700">
+                            <summary className="cursor-pointer px-4 py-3 font-medium">Позначення та пояснення з книжки</summary>
+                            <div className="border-t border-stone-200 px-4 pb-5 pt-3">
+                                <BookIntroduction lines={currentList[0].bookIntroduction} />
+                            </div>
                         </details>
                     )}
                     {indexLoading ? (

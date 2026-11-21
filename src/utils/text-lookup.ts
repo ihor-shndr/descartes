@@ -40,7 +40,7 @@ export function findSegmentsForLine(
             lineCounter = paragraph.startLine - 1;
         }
 
-        for (const line of paragraph.lines) {
+        for (const { text } of paragraph.lines) {
             lineCounter++;
             const isTargetLine = lineCounter === targetLine;
 
@@ -48,7 +48,7 @@ export function findSegmentsForLine(
             const segmentBeforeLine = currentSegmentId;
 
             // Check for segment markers in this line
-            const parts = line.split(SEGMENT_MARKER_REGEX);
+            const parts = text.split(SEGMENT_MARKER_REGEX);
             let lineStartsWithNewSegment = false;
 
             // Check if the line starts with a segment marker (first non-empty part is a marker)

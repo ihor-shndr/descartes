@@ -1,26 +1,32 @@
+export interface TextLine {
+  text: string;
+  // A null bar anchors a margin label to the line itself.
+  editionMarkers?: { bar: number | null; label: string }[];
+}
+
 /**
- * Paragraph in the source JSON format
+ * Paragraph or heading
  * New paragraph is detected by leading space in first line
  */
-export interface Paragraph {
+export interface Paragraph<Line = TextLine> {
   type?: 'h1' | 'h2' | 'h3';  // Optional heading type
   startLine?: number; // Printed Latin line number when headings interrupt sequential body lines
-  lines: string[];      // Array of text lines
+  lines: Line[];
 }
 
 /**
  * Page in the source JSON format
  */
-export interface Page {
+export interface Page<Line = TextLine> {
   pageNumber: number;
-  paragraphs: Paragraph[];
+  paragraphs: Paragraph<Line>[];
 }
 
 /**
  * Source JSON file structure
  */
-export interface TextData {
-  pages: Page[];
+export interface TextData<Line = TextLine> {
+  pages: Page<Line>[];
 }
 
 /**

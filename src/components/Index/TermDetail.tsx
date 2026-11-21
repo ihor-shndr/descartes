@@ -17,7 +17,7 @@ const BookText = ({ spans }: { spans: BookSpan[] }) => {
             const { page, line, segment, printedLine, alignedSegment } = span.target;
             const source = allTexts?.[segment ? 'fr' : 'la']?.pages.find(p => p.pageNumber === page);
             const available = !!source && (!segment || source.paragraphs.some(p =>
-                p.lines.some(text => Array.from(text.matchAll(SEGMENT_MARKER_REGEX))
+                p.lines.some(({ text }) => Array.from(text.matchAll(SEGMENT_MARKER_REGEX))
                     .some(([marker]) => extractSegmentId(marker) === segment))
             ));
             const destination = segment ? `фрагмент ${segment}` : line === 0 ? 'заголовок' : `рядок ${line}`;
@@ -42,6 +42,41 @@ export const BookLines = ({ lines }: { lines: BookLine[] }) => (
         </div>)}
     </div>
 );
+
+export function BookIntroduction({ lines }: { lines: BookLine[] }) {
+    const blocks: { kind: 'heading' | 'paragraph'; spans: BookSpan[]; end: string }[] = [];
+
+    for (const line of lines) {
+        const rawText = line.spans.map(span => span.text).join('');
+        const text = rawText.replace(/\u00ad/g, '').trim();
+        if (!text) continue;
+        const previous = blocks[blocks.length - 1];
+        const heading = line.spans.every(span => span.bold) ||
+            /^(Латинські терміни|Французькі терміни|Таблиця ужитку|Умовні позначення$)/.test(text);
+        const headingContinuation = previous?.kind === 'heading' &&
+            (/^термінології(?:\s|$)/.test(text) || /^в окремих підрозділах(?:\s|$)/.test(text));
+        const startsListItem = /^(?:SC|PL|SY|FM|PN|TL|GT)\s*[*–]/.test(text);
+        const newBlock = !previous || (!headingContinuation && (
+            heading || previous.kind === 'heading' || startsListItem ||
+            (/[.!?:;]$/.test(previous.end) && /^[А-ЯІЇЄҐA-Z0-9]/.test(text))
+        ));
+
+        if (newBlock) blocks.push({ kind: heading ? 'heading' : 'paragraph', spans: [], end: '' });
+        const block = blocks[blocks.length - 1];
+        if (block.spans.length && !/[-\u00ad]$/.test(block.end)) block.spans.push({ text: ' ' });
+        const cleanedSpans = line.spans.map(span => ({ ...span, text: span.text.replace(/\u00ad/g, '') }));
+        cleanedSpans[0].text = cleanedSpans[0].text.trimStart();
+        cleanedSpans[cleanedSpans.length - 1].text = cleanedSpans[cleanedSpans.length - 1].text.trimEnd();
+        block.spans.push(...cleanedSpans);
+        block.end = rawText.trimEnd();
+    }
+
+    return <div className="space-y-4 font-serif text-sm leading-relaxed text-stone-700">
+        {blocks.map((block, index) => block.kind === 'heading'
+            ? <h4 key={index} className="pt-2 font-semibold text-stone-900"><BookText spans={block.spans} /></h4>
+            : <p key={index}><BookText spans={block.spans} /></p>)}
+    </div>;
+}
 
 export const TermDetail = ({ term }: { term: TermEntry }) => (
     <article className="mb-6 pb-4 border-b border-gray-100 last:border-0">
