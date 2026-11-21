@@ -4,16 +4,18 @@ import { SegmentMarker } from '../SegmentMarker';
 import clsx from 'clsx';
 import { HIGHLIGHT_COLORS } from '../../constants/highlights';
 import { BookOpen } from 'lucide-react';
+import { EditionMarker } from '../../types/text';
 
 interface SegmentedTextProps {
     text: string;
     initialSegmentId: string | null;
     onSegmentIdChange?: (id: string | null) => void;
     termsBySegment?: Map<string, string[]>;
+    editionMarkers?: EditionMarker[];
 }
 
 interface ProcessedPart {
-    type: 'marker' | 'text';
+    type: 'marker' | 'text' | 'bar';
     content: string;
     segmentId: string | null;
 }
@@ -23,14 +25,16 @@ interface ProcessedPart {
  * This ensures segment IDs are computed before render, avoiding side effects during render.
  */
 function processText(text: string, initialSegmentId: string | null): { parts: ProcessedPart[]; finalSegmentId: string | null } {
-    const rawParts = text.split(SEGMENT_MARKER_REGEX);
+    const rawParts = text.split(new RegExp(`(${SEGMENT_MARKER_REGEX.source.slice(1, -1)}|\\|)`, 'gi'));
     const parts: ProcessedPart[] = [];
     let currentSegmentId = initialSegmentId;
 
     for (const part of rawParts) {
         if (!part) continue;
 
-        if (isSegmentMarker(part)) {
+        if (part === '|') {
+            parts.push({ type: 'bar', content: part, segmentId: currentSegmentId });
+        } else if (isSegmentMarker(part)) {
             const id = extractSegmentId(part);
             parts.push({ type: 'marker', content: part, segmentId: id });
             currentSegmentId = id; // Update for subsequent text
@@ -51,7 +55,7 @@ function processText(text: string, initialSegmentId: string | null): { parts: Pr
  * - Highlighting on hover
  * - Highlighting on navigation (from index)
  */
-export function SegmentedText({ text, initialSegmentId, onSegmentIdChange, termsBySegment }: SegmentedTextProps) {
+export function SegmentedText({ text, initialSegmentId, onSegmentIdChange, termsBySegment, editionMarkers }: SegmentedTextProps) {
     const hoveredSegmentId = useAppStore((state) => state.hoveredSegmentId);
     const setHoveredSegment = useAppStore((state) => state.setHoveredSegment);
     const highlightedLocation = useAppStore((state) => state.highlightedLocation);
@@ -67,9 +71,21 @@ export function SegmentedText({ text, initialSegmentId, onSegmentIdChange, terms
         onSegmentIdChange(finalSegmentId);
     }
 
+    let barIndex = 0;
+    const renderEditionMarkers = (bar: number | null) => editionMarkers?.filter(marker => marker.bar === bar).map((marker, index) => (
+        <span key={`${marker.label}-${index}`} className={clsx('absolute whitespace-nowrap text-xs font-normal not-italic text-stone-400 select-none', /^[\[<]/.test(marker.label) ? '-right-8' : '-right-16')}>
+            {marker.label}
+        </span>
+    ));
+
     return (
         <>
+            {renderEditionMarkers(null)}
             {parts.map((part, partIdx) => {
+                if (part.type === 'bar') {
+                    const markers = renderEditionMarkers(barIndex++);
+                    return <span key={partIdx}>{part.content}{markers}</span>;
+                }
                 if (part.type === 'marker') {
                     const id = part.segmentId!;
                     const termIds = termsBySegment?.get(id);

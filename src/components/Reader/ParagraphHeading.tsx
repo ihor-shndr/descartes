@@ -9,6 +9,7 @@ interface ParagraphHeadingProps {
     paragraph: Paragraph;
     className?: string;
     termsBySegment?: Map<string, string[]>;
+    showEditionMarkers?: boolean;
 }
 
 /**
@@ -31,7 +32,7 @@ export function isHeading(type: string | undefined): type is keyof typeof HEADIN
  * Shared heading component for VerbatimText and SegmentFlow
  * Renders h1, h2, h3 headings with consistent styling
  */
-export function ParagraphHeading({ paragraph, className, termsBySegment }: ParagraphHeadingProps) {
+export function ParagraphHeading({ paragraph, className, termsBySegment, showEditionMarkers = false }: ParagraphHeadingProps) {
     const highlightedLocation = useAppStore(state => state.highlightedLocation);
     const currentPage = useAppStore(state => state.currentPage);
     const highlightColor = useAppStore(state => state.highlightColor);
@@ -42,11 +43,17 @@ export function ParagraphHeading({ paragraph, className, termsBySegment }: Parag
 
     const startLine = paragraph.startLine;
     let segmentId: string | null = null;
+    let barCount = 0;
+    const joinedMarkers = paragraph.lines.flatMap(line => {
+        const markers = (line.editionMarkers ?? []).map(marker => ({ ...marker, bar: marker.bar === null ? null : marker.bar + barCount }));
+        barCount += (line.text.match(/\|/g) ?? []).length;
+        return markers;
+    });
     return (
-        <div className={clsx(HEADING_STYLES[paragraph.type], className)}>
+        <div className={clsx('relative', HEADING_STYLES[paragraph.type], className)}>
             {startLine === undefined ? (
-                <SegmentedText text={paragraph.lines.map(line => line.text).join(' ')} initialSegmentId={null} termsBySegment={termsBySegment} />
-            ) : paragraph.lines.map(({ text }, index) => {
+                <SegmentedText text={paragraph.lines.map(line => line.text).join(' ')} initialSegmentId={null} termsBySegment={termsBySegment} editionMarkers={showEditionMarkers ? joinedMarkers : undefined} />
+            ) : paragraph.lines.map(({ text, editionMarkers }, index) => {
                 const initialSegmentId = segmentId;
                 const markers = [...text.matchAll(SEGMENT_MARKER_REGEX)];
                 if (markers.length) segmentId = extractSegmentId(markers[markers.length - 1][0]);
@@ -57,7 +64,7 @@ export function ParagraphHeading({ paragraph, className, termsBySegment }: Parag
                         highlightWholeLine && highlightedLocation?.page === currentPage && highlightedLocation.line === lineNumber && HIGHLIGHT_COLORS[highlightColor].line
                     )}>
                         {lineNumber % 5 === 0 && <span className="absolute -left-8 text-xs text-stone-400 select-none font-normal">{lineNumber}</span>}
-                        <SegmentedText text={text} initialSegmentId={initialSegmentId} termsBySegment={termsBySegment} />
+                        <SegmentedText text={text} initialSegmentId={initialSegmentId} termsBySegment={termsBySegment} editionMarkers={showEditionMarkers ? editionMarkers : undefined} />
                     </div>
                 );
             })}

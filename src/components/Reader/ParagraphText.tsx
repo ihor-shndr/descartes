@@ -1,5 +1,5 @@
 import { useRef, useEffect, useMemo } from 'react';
-import { Paragraph } from '../../types/text';
+import { EditionMarker, Paragraph } from '../../types/text';
 import { useAppStore } from '../../store/app-store';
 import { getSourceWidth, SEGMENT_MARKER_REGEX, isSegmentMarker, extractSegmentId } from '../../utils/text-rendering';
 import { ParagraphHeading, isHeading } from './ParagraphHeading';
@@ -15,6 +15,7 @@ interface TextUnit {
     lineNumber?: number;
     isLastInParagraph?: boolean;
     initialSegmentId: string | null; // Pre-computed segment ID for this unit
+    editionMarkers?: EditionMarker[];
 }
 
 interface ParagraphTextProps {
@@ -110,7 +111,7 @@ function preprocessParagraphs(
 
         if (preserveLineBreaks) {
             // Each line is its own unit
-            paragraph.lines.forEach(({ text }, idx) => {
+            paragraph.lines.forEach(({ text, editionMarkers }, idx) => {
                 lineCounter++;
                 const hasLeadingSpace = text.startsWith(' ');
                 const nextLine = paragraph.lines[idx + 1];
@@ -118,6 +119,7 @@ function preprocessParagraphs(
 
                 allUnits.push({
                     text,
+                    editionMarkers,
                     shouldIndent: hasLeadingSpace,
                     lineNumber: lineCounter,
                     isLastInParagraph,
@@ -130,9 +132,11 @@ function preprocessParagraphs(
         } else {
             // Group lines into sub-paragraphs by leading spaces
             let currentLines: string[] = [];
+            let currentMarkers: EditionMarker[] = [];
+            let barCount = 0;
             let shouldIndent = false;
 
-            paragraph.lines.forEach(({ text }, idx) => {
+            paragraph.lines.forEach(({ text, editionMarkers }, idx) => {
                 const hasLeadingSpace = text.startsWith(' ');
                 const trimmedLine = text.trimStart();
 
@@ -141,12 +145,15 @@ function preprocessParagraphs(
                     const text = currentLines.join(' ');
                     allUnits.push({
                         text,
+                        editionMarkers: currentMarkers,
                         shouldIndent,
                         initialSegmentId: currentSegmentId
                     });
                     currentSegmentId = computeFinalSegmentId(text, currentSegmentId);
 
                     currentLines = [trimmedLine];
+                    currentMarkers = [];
+                    barCount = 0;
                     shouldIndent = true;
                 } else {
                     if (currentLines.length === 0 && idx === 0) {
@@ -154,6 +161,10 @@ function preprocessParagraphs(
                     }
                     currentLines.push(trimmedLine);
                 }
+                for (const marker of editionMarkers ?? []) {
+                    currentMarkers.push({ ...marker, bar: marker.bar === null ? null : marker.bar + barCount });
+                }
+                barCount += (text.match(/\|/g) ?? []).length;
             });
 
             // Push last sub-paragraph
@@ -161,6 +172,7 @@ function preprocessParagraphs(
                 const text = currentLines.join(' ');
                 allUnits.push({
                     text,
+                    editionMarkers: currentMarkers,
                     shouldIndent,
                     initialSegmentId: currentSegmentId
                 });
@@ -258,14 +270,14 @@ export function ParagraphText({
         >
             <div
                 className={clsx(
-                    verbatim && "pl-10"
+                    verbatim ? "pl-16 pr-16" : language === 'fr' && "pr-16"
                 )}
-                style={verbatim ? { width: containerWidth } : undefined}
+                style={verbatim ? { width: `calc(${containerWidth} + 6rem)` } : undefined}
             >
                 {paragraphs.map((paragraph, pIdx) => {
                     // Headers
                     if (isHeading(paragraph.type)) {
-                        return <ParagraphHeading key={pIdx} paragraph={paragraph} termsBySegment={termsBySegment} />;
+                        return <ParagraphHeading key={pIdx} paragraph={paragraph} termsBySegment={termsBySegment} showEditionMarkers={language === 'la' || language === 'fr'} />;
                     }
 
                     const units = getUnitsForParagraph(pIdx);
@@ -290,7 +302,7 @@ export function ParagraphText({
                                                     shouldScroll && highlightWholeLine && highlightedLocation?.line === unit.lineNumber && `${HIGHLIGHT_COLORS[highlightColor].line} shadow-sm`
                                                 )
                                                 : clsx(
-                                                    "mb-4 w-full justified-text",
+                                                    "relative mb-4 w-full justified-text",
                                                 unit.shouldIndent && "indent-[1.5em]"
                                                 )
                                         )}
@@ -306,12 +318,13 @@ export function ParagraphText({
                                             text={unit.text}
                                             initialSegmentId={unit.initialSegmentId}
                                             termsBySegment={termsBySegment}
+                                            editionMarkers={language === 'la' || language === 'fr' ? unit.editionMarkers : undefined}
                                         />
 
                                         {isLatinWithHighlights && hasIndexTerms && (
                                             <button
                                                 type="button"
-                                                className="absolute -right-9 top-1/2 -translate-y-1/2 flex h-7 w-7 items-center justify-center rounded-full bg-blue-100 text-blue-700 shadow-sm transition-colors hover:bg-blue-200"
+                                                className="absolute -left-16 top-1/2 -translate-y-1/2 flex h-7 w-7 items-center justify-center rounded-full bg-blue-100 text-blue-700 shadow-sm transition-colors hover:bg-blue-200"
                                                 onClick={(e) => {
                                                     e.stopPropagation();
                                                     setIndexFilter({ language: 'latin', termIds: lineTermIds!, sourceLine: unit.lineNumber! });

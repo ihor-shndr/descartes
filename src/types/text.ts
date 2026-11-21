@@ -1,7 +1,12 @@
+export interface EditionMarker {
+  bar: number | null;
+  label: string;
+}
+
 export interface TextLine {
   text: string;
   // A null bar anchors a margin label to the line itself.
-  editionMarkers?: { bar: number | null; label: string }[];
+  editionMarkers?: EditionMarker[];
 }
 
 /**
