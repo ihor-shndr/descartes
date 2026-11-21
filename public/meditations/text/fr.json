@@ -6,25 +6,33 @@
                 {
                     "type": "h1",
                     "lines": [
-                        "A MESSIEURS"
+                        {
+                            "text": "A MESSIEURS"
+                        }
                     ]
                 },
                 {
                     "type": "h1",
                     "lines": [
-                        "LES DOYEN ET DOCTEURS"
+                        {
+                            "text": "LES DOYEN ET DOCTEURS"
+                        }
                     ]
                 },
                 {
                     "type": "h2",
                     "lines": [
-                        "DE LA SACRÉE FACULTÉ DE THÉOLOGIE"
+                        {
+                            "text": "DE LA SACRÉE FACULTÉ DE THÉOLOGIE"
+                        }
                     ]
                 },
                 {
                     "type": "h2",
                     "lines": [
-                        "De Paris"
+                        {
+                            "text": "De Paris"
+                        }
                     ]
                 },
                 {
@@ -69,7 +77,9 @@
                                 }
                             ]
                         },
-                        " (31)Et pour ce qui regarde l'âme, (31a)quoique plusieurs aient cru"
+                        {
+                            "text": " (31)Et pour ce qui regarde l'âme, (31a)quoique plusieurs aient cru"
+                        }
                     ]
                 }
             ]
@@ -127,7 +137,9 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "de plus il y a encore cette différence (1)que, dans la géométrie chacun étant prévenu de l’opinion, (2)qu’il ne s’y avance rien qui n’ait une démonstration certaine, (3)ceux qui n’y sont pas entièrement versés, pèchent bien plus souvent en approuvant de fausses démonstrations, (4)pour faire croire qu’ils les entendent, (5)qu’en réfutant les véritables. (5a)Il n’en est pas de même dans la philosophie, (6)où, chacun croyant que toutes ses propositions sont problématiques, (7)peu de personnes s’adonnent à la recherche de la vérité; (8)et même beaucoup, se voulant acquérir la réputation de forts esprits, ne s’étudient à autre chose qu’à combattre arrogamment les vérités les plus apparentes."
+                        {
+                            "text": "de plus il y a encore cette différence (1)que, dans la géométrie chacun étant prévenu de l’opinion, (2)qu’il ne s’y avance rien qui n’ait une démonstration certaine, (3)ceux qui n’y sont pas entièrement versés, pèchent bien plus souvent en approuvant de fausses démonstrations, (4)pour faire croire qu’ils les entendent, (5)qu’en réfutant les véritables. (5a)Il n’en est pas de même dans la philosophie, (6)où, chacun croyant que toutes ses propositions sont problématiques, (7)peu de personnes s’adonnent à la recherche de la vérité; (8)et même beaucoup, se voulant acquérir la réputation de forts esprits, ne s’étudient à autre chose qu’à combattre arrogamment les vérités les plus apparentes."
+                        }
                     ]
                 },
                 {
@@ -167,7 +179,9 @@
                 },
                 {
                     "lines": [
-                        " (16)C’est à vous maintenant à juger du fruit qui reviendrait de cette créance, si elle était une fois bien établie, qui voyez les désordres que son doute produit; (18)mais je n’aurais pas ici bonne grâce (18a)de recommander davantage la cause de Dieu et de la Religion, à ceux qui en ont toujours été les plus fermes colonnes."
+                        {
+                            "text": " (16)C’est à vous maintenant à juger du fruit qui reviendrait de cette créance, si elle était une fois bien établie, qui voyez les désordres que son doute produit; (18)mais je n’aurais pas ici bonne grâce (18a)de recommander davantage la cause de Dieu et de la Religion, à ceux qui en ont toujours été les plus fermes colonnes."
+                        }
                     ]
                 }
             ]
@@ -178,18 +192,24 @@
                 {
                     "type": "h1",
                     "lines": [
-                        "ABRÉGÉ"
+                        {
+                            "text": "ABRÉGÉ"
+                        }
                     ]
                 },
                 {
                     "type": "h2",
                     "lines": [
-                        "DES SIX MEDITATIONS SUIVANTES"
+                        {
+                            "text": "DES SIX MEDITATIONS SUIVANTES"
+                        }
                     ]
                 },
                 {
                     "lines": [
-                        " (1)Dans la première, je mets en avant les raisons pour lesquelles (1a)nous pouvons douter généralement de toutes choses, et particulièrement des choses matérielles, (3)au moins tant que nous n’aurons point d’autres fondements dans les sciences, (4)que ceux que nous avons eus jusqu’à présent. (4a)Or, bien que l’utilité d’un doute si genéral ne paraisse pas d’abord, (5)elle est toutefois en cela très grande, qu’il nous délivre de toutes sortes de préjugés, et nous prépare un chemin très facile pour accoutumer notre esprit à se détacher des sens, (8)et enfin, en ce qu’il fait qu’il (8a)n’est pas possible que nous ne puissions plus avoir aucun doute, de ce que nous découvrirons après être véritable."
+                        {
+                            "text": " (1)Dans la première, je mets en avant les raisons pour lesquelles (1a)nous pouvons douter généralement de toutes choses, et particulièrement des choses matérielles, (3)au moins tant que nous n’aurons point d’autres fondements dans les sciences, (4)que ceux que nous avons eus jusqu’à présent. (4a)Or, bien que l’utilité d’un doute si genéral ne paraisse pas d’abord, (5)elle est toutefois en cela très grande, qu’il nous délivre de toutes sortes de préjugés, et nous prépare un chemin très facile pour accoutumer notre esprit à se détacher des sens, (8)et enfin, en ce qu’il fait qu’il (8a)n’est pas possible que nous ne puissions plus avoir aucun doute, de ce que nous découvrirons après être véritable."
+                        }
                     ]
                 },
                 {
@@ -212,7 +232,9 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "qu’ayant tâché (1)de ne rien écrire dans ce traité, dont je n’eusse des démonstrations très exactes, (2)je me suis vu obligé de suivre un ordre (3)semblable à celui dont se servent les géomètres, savoir est, (4)d’avancer toutes les choses desquelles dépend la proposition que l’on cherche, (5)avant que d’en rien conclure. "
+                        {
+                            "text": "qu’ayant tâché (1)de ne rien écrire dans ce traité, dont je n’eusse des démonstrations très exactes, (2)je me suis vu obligé de suivre un ordre (3)semblable à celui dont se servent les géomètres, savoir est, (4)d’avancer toutes les choses desquelles dépend la proposition que l’on cherche, (5)avant que d’en rien conclure. "
+                        }
                     ]
                 },
                 {
@@ -256,7 +278,9 @@
                 },
                 {
                     "lines": [
-                        " (18)Dans la troisième Méditation, il me semble que j’ai expliqué assez au long le principal argument dont je me sers pour prouver l’existence de Dieu. (20)Toutefois, afin que l’esprit du lecteur se pût plus aisément abstraire des sens, (21)je n’ai point voulu me servir en ce lieu-là d’aucunes comparaisons tirées des choses corporelles, (22)si bien que peut-être il y est demeuré beaucoup d’obscurités, (23)lesquelles, comme j’espère, seront entièrement éclaircies dans les réponses que j’ai faites aux objections qui m’ont depuis été proposées. (24)Comme, par exemple, il est assez difficile d’entendre comment l’idée d’un être souverainement parfait, laquelle se trouve en nous, (26)contient tant de réalité objective, c’est-à-dire participe par représentation à tant de degrés d’être et de perfection, (26a)qu’elle doive nécessairement venir d’une cause souverainement parfaite. (27)Mais je l’ai éclairci dans ces réponses, par la comparaison d’une machine fort artificielle, (28)dont l’idée se rencontre dans l’esprit de quelque ouvrier; (29)car, comme l’artifice objectif de cette idée (30)doit avoir quelque cause, (30a)à savoir la science de l’ouvrier, (31)ou de quelque autre duquel il l’ait apprise, (31a)de même"
+                        {
+                            "text": " (18)Dans la troisième Méditation, il me semble que j’ai expliqué assez au long le principal argument dont je me sers pour prouver l’existence de Dieu. (20)Toutefois, afin que l’esprit du lecteur se pût plus aisément abstraire des sens, (21)je n’ai point voulu me servir en ce lieu-là d’aucunes comparaisons tirées des choses corporelles, (22)si bien que peut-être il y est demeuré beaucoup d’obscurités, (23)lesquelles, comme j’espère, seront entièrement éclaircies dans les réponses que j’ai faites aux objections qui m’ont depuis été proposées. (24)Comme, par exemple, il est assez difficile d’entendre comment l’idée d’un être souverainement parfait, laquelle se trouve en nous, (26)contient tant de réalité objective, c’est-à-dire participe par représentation à tant de degrés d’être et de perfection, (26a)qu’elle doive nécessairement venir d’une cause souverainement parfaite. (27)Mais je l’ai éclairci dans ces réponses, par la comparaison d’une machine fort artificielle, (28)dont l’idée se rencontre dans l’esprit de quelque ouvrier; (29)car, comme l’artifice objectif de cette idée (30)doit avoir quelque cause, (30a)à savoir la science de l’ouvrier, (31)ou de quelque autre duquel il l’ait apprise, (31a)de même"
+                        }
                     ]
                 }
             ]
@@ -266,7 +290,9 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "il est impossible que l’idée de Dieu, qui est en nous, (1)n’ait pas Dieu même pour sa cause."
+                        {
+                            "text": "il est impossible que l’idée de Dieu, qui est en nous, (1)n’ait pas Dieu même pour sa cause."
+                        }
                     ]
                 },
                 {
@@ -284,7 +310,9 @@
                 },
                 {
                     "lines": [
-                        " (13)Dans la cinquième, outre que la nature corporelle prise en général y est expliquée, (14)l’existence de Dieu y est encore démontrée par de nouvelles raisons, (15)dans lesquelles toutefois il se peut rencontrer quelques difficultés, (16)mais qui seront résolues dans les réponses aux objections qui m’ont été faites; (17)et aussi on y découvre de quelle sorte il est véritable, (18)que la certitude même des démonstrations géométriques (18a)dépend de la connaissance d’un Dieu."
+                        {
+                            "text": " (13)Dans la cinquième, outre que la nature corporelle prise en général y est expliquée, (14)l’existence de Dieu y est encore démontrée par de nouvelles raisons, (15)dans lesquelles toutefois il se peut rencontrer quelques difficultés, (16)mais qui seront résolues dans les réponses aux objections qui m’ont été faites; (17)et aussi on y découvre de quelle sorte il est véritable, (18)que la certitude même des démonstrations géométriques (18a)dépend de la connaissance d’un Dieu."
+                        }
                     ]
                 },
                 {
@@ -326,37 +354,49 @@
                 {
                     "type": "h2",
                     "lines": [
-                        "MÉDITATIONS"
+                        {
+                            "text": "MÉDITATIONS"
+                        }
                     ]
                 },
                 {
                     "type": "h3",
                     "lines": [
-                        "touchant"
+                        {
+                            "text": "touchant"
+                        }
                     ]
                 },
                 {
                     "type": "h1",
                     "lines": [
-                        "LA PREMIÉRE PHILOSOPHIE"
+                        {
+                            "text": "LA PREMIÉRE PHILOSOPHIE"
+                        }
                     ]
                 },
                 {
                     "type": "h2",
                     "lines": [
-                        "dans lesquelles l’existence de Dieu et la distinction réelle entre l’âme et le corps de l’homme sont démontrées"
+                        {
+                            "text": "dans lesquelles l’existence de Dieu et la distinction réelle entre l’âme et le corps de l’homme sont démontrées"
+                        }
                     ]
                 },
                 {
                     "type": "h2",
                     "lines": [
-                        "Premiére Méditation"
+                        {
+                            "text": "Premiére Méditation"
+                        }
                     ]
                 },
                 {
                     "type": "h3",
                     "lines": [
-                        "Des choses que l’on peut révoquer en doute"
+                        {
+                            "text": "Des choses que l’on peut révoquer en doute"
+                        }
                     ]
                 },
                 {
@@ -374,7 +414,9 @@
                 },
                 {
                     "lines": [
-                        " (13)Maintenant donc que mon esprit est"
+                        {
+                            "text": " (13)Maintenant donc que mon esprit est"
+                        }
                     ]
                 }
             ]
@@ -401,12 +443,16 @@
                 },
                 {
                     "lines": [
-                        " (15)Tout ce que j’ai reçu jusqu’à présent pour le plus vrai et assuré, (16)je l’ai appris des sens, ou par les sens: (16a)or j’ai quelquefois éprouvé que ces sens étaient trompeurs, (17)et il est de la prudence de ne se fier jamais entièrement à ceux (18)qui nous ont une fois trompés."
+                        {
+                            "text": " (15)Tout ce que j’ai reçu jusqu’à présent pour le plus vrai et assuré, (16)je l’ai appris des sens, ou par les sens: (16a)or j’ai quelquefois éprouvé que ces sens étaient trompeurs, (17)et il est de la prudence de ne se fier jamais entièrement à ceux (18)qui nous ont une fois trompés."
+                        }
                     ]
                 },
                 {
                     "lines": [
-                        " (19)Mais, encore que les sens nous trompent quelquefois, touchant les choses peu sensibles et fort éloignées, (20)il s’en rencontre peut-être beaucoup d’autres, (21)desquelles on ne peut pas raisonnablement douter, (21a)quoique nous les connaissions par leur moyen: (22)par exemple, que je sois ici, (22a)assis auprès du feu, (23)vêtu d’une robe de chambre, (23a)ayant ce papier entre les mains, et autres choses de cette nature. (24)Et comment est-ce que je pourrais nier que ces mains et ce corps-ci soient à moi? (26)si ce n’est peut-être que je me compare (26a)à ces insensés,"
+                        {
+                            "text": " (19)Mais, encore que les sens nous trompent quelquefois, touchant les choses peu sensibles et fort éloignées, (20)il s’en rencontre peut-être beaucoup d’autres, (21)desquelles on ne peut pas raisonnablement douter, (21a)quoique nous les connaissions par leur moyen: (22)par exemple, que je sois ici, (22a)assis auprès du feu, (23)vêtu d’une robe de chambre, (23a)ayant ce papier entre les mains, et autres choses de cette nature. (24)Et comment est-ce que je pourrais nier que ces mains et ce corps-ci soient à moi? (26)si ce n’est peut-être que je me compare (26a)à ces insensés,"
+                        }
                     ]
                 }
             ]
@@ -416,7 +462,9 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "(1)de qui le cerveau est tellement troublé et offusqué par les noires vapeurs de la bile, (2)qu’ils assurent constamment qu’ils sont des rois, (3)lorsqu’ils sont très pauvres; (3a)qu’ils sont vêtus d’or et de pourpre, (3b)lorsqu’ils sont tout nus; (4)ou s ’imaginent être des cruches, (4a)ou avoir un corps de verre. (5)Mais quoi? ce sont des fous, (6)et je ne serais pas moins extravagant, (6a)si je me réglais sur leurs exemples."
+                        {
+                            "text": "(1)de qui le cerveau est tellement troublé et offusqué par les noires vapeurs de la bile, (2)qu’ils assurent constamment qu’ils sont des rois, (3)lorsqu’ils sont très pauvres; (3a)qu’ils sont vêtus d’or et de pourpre, (3b)lorsqu’ils sont tout nus; (4)ou s ’imaginent être des cruches, (4a)ou avoir un corps de verre. (5)Mais quoi? ce sont des fous, (6)et je ne serais pas moins extravagant, (6a)si je me réglais sur leurs exemples."
+                        }
                     ]
                 },
                 {
@@ -456,7 +504,9 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "lors même qu’ils s’étudient avec le plus d’artifice à représenter des sirènes et des satyres par des formes bizarres et extraordinaires, ne leur (2)peuvent pas toutefois attribuer des formes et des natures entièrement nouvelles, (3)mais font seulement un certain mélange et composition des membres de divers animaux; (4)ou bien, si peut-être leur imagination est assez extravagante pour inventer quelque chose de si nouveau, (5)que jamais nous n’ayons rien vu de semblable, (6)et qu’ainsi leur ouvrage nous représente une chose purement feinte et absolument fausse, (6a)certes à tout le moins les couleurs dont ils le composent doivent-elles être véritables."
+                        {
+                            "text": "lors même qu’ils s’étudient avec le plus d’artifice à représenter des sirènes et des satyres par des formes bizarres et extraordinaires, ne leur (2)peuvent pas toutefois attribuer des formes et des natures entièrement nouvelles, (3)mais font seulement un certain mélange et composition des membres de divers animaux; (4)ou bien, si peut-être leur imagination est assez extravagante pour inventer quelque chose de si nouveau, (5)que jamais nous n’ayons rien vu de semblable, (6)et qu’ainsi leur ouvrage nous représente une chose purement feinte et absolument fausse, (6a)certes à tout le moins les couleurs dont ils le composent doivent-elles être véritables."
+                        }
                     ]
                 },
                 {
@@ -527,7 +577,9 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "mon jugement sur ces pensées, et que je ne leur donne pas plus de créance, que je ferais à des choses qui me paraîtraient évidemment fausses (1)si je désire trouver quelque chose de constant et d’assuré dans les sciences."
+                        {
+                            "text": "mon jugement sur ces pensées, et que je ne leur donne pas plus de créance, que je ferais à des choses qui me paraîtraient évidemment fausses (1)si je désire trouver quelque chose de constant et d’assuré dans les sciences."
+                        }
                     ]
                 },
                 {
@@ -576,24 +628,32 @@
                 },
                 {
                     "lines": [
-                        " (9)Mais ce dessein est pénible et laborieux, (10)et une certaine paresse m’entraîne insensiblement dans le train de ma vie ordinaire. (11)Et tout de même qu’un esclave qui jouissait dans le sommeil d’une liberté imaginaire, (12)lorsqu’il commence à soupçonner que sa liberté n’est qu’un songe, (13)craint d’être réveillé, (13a)et conspire avec ces illusions agréables pour en être plus longuement abusé, (14)ainsi je retombe insensiblement de moi-même dans mes anciennes opinions, (15)et j’appréhende de me réveiller de cet assoupissement, de peur que les veilles laborieuses qui succéderaient à la tranquillité de ce repos, (16)au lieu de m’apporter quelque jour et quelque lumière dans la connaissance de la vérité, ne fussent pas suffisantes pour éclaircir les ténèbres des difficultés qui viennent d’être agitées."
+                        {
+                            "text": " (9)Mais ce dessein est pénible et laborieux, (10)et une certaine paresse m’entraîne insensiblement dans le train de ma vie ordinaire. (11)Et tout de même qu’un esclave qui jouissait dans le sommeil d’une liberté imaginaire, (12)lorsqu’il commence à soupçonner que sa liberté n’est qu’un songe, (13)craint d’être réveillé, (13a)et conspire avec ces illusions agréables pour en être plus longuement abusé, (14)ainsi je retombe insensiblement de moi-même dans mes anciennes opinions, (15)et j’appréhende de me réveiller de cet assoupissement, de peur que les veilles laborieuses qui succéderaient à la tranquillité de ce repos, (16)au lieu de m’apporter quelque jour et quelque lumière dans la connaissance de la vérité, ne fussent pas suffisantes pour éclaircir les ténèbres des difficultés qui viennent d’être agitées."
+                        }
                     ]
                 },
                 {
                     "type": "h2",
                     "lines": [
-                        "Méditation seconde"
+                        {
+                            "text": "Méditation seconde"
+                        }
                     ]
                 },
                 {
                     "type": "h3",
                     "lines": [
-                        "(20)De la nature de l’esprit humain; et qu’il est plus aisé à connaître que le corps"
+                        {
+                            "text": "(20)De la nature de l’esprit humain; et qu’il est plus aisé à connaître que le corps"
+                        }
                     ]
                 },
                 {
                     "lines": [
-                        " (22)La Méditation que je fis hier m’a rempli l’esprit de tant de doutes, (23)qu’il n’est plus désormais en ma puissance de les oublier. (23a)Et cependant je ne vois pas de quelle façon je les pourrai résoudre; (24)et comme si"
+                        {
+                            "text": " (22)La Méditation que je fis hier m’a rempli l’esprit de tant de doutes, (23)qu’il n’est plus désormais en ma puissance de les oublier. (23a)Et cependant je ne vois pas de quelle façon je les pourrai résoudre; (24)et comme si"
+                        }
                     ]
                 }
             ]
@@ -620,17 +680,23 @@
                 },
                 {
                     "lines": [
-                        " (9)Archimède, pour tirer le globe terrestre de sa place et le transporter en un autre lieu, ne demandait rien qu’un point qui fût fixe et assuré. (11)Ainsi j’aurai droit de concevoir de hautes espérances, (12)si je suis assez heureux pour trouver seulement une chose qui soit certaine et indubitable."
+                        {
+                            "text": " (9)Archimède, pour tirer le globe terrestre de sa place et le transporter en un autre lieu, ne demandait rien qu’un point qui fût fixe et assuré. (11)Ainsi j’aurai droit de concevoir de hautes espérances, (12)si je suis assez heureux pour trouver seulement une chose qui soit certaine et indubitable."
+                        }
                     ]
                 },
                 {
                     "lines": [
-                        " (14)Je suppose donc que toutes les choses que je vois sont fausses; (14a)je me persuade que rien n’a jamais été de tout ce (15)que ma mémoire remplie de mensonges me réprésente; (16)je pense n’avoir aucun sens; (16a)je crois que le corps, la figure, l’étendue, le mouvement et le lieu ne sont que des fictions de mon esprit. (17)Qu’est-ce donc qui pourra être estimé véritable? (18)Peut-être rien autre chose, sinon qu’il n’y a rien au monde de certain."
+                        {
+                            "text": " (14)Je suppose donc que toutes les choses que je vois sont fausses; (14a)je me persuade que rien n’a jamais été de tout ce (15)que ma mémoire remplie de mensonges me réprésente; (16)je pense n’avoir aucun sens; (16a)je crois que le corps, la figure, l’étendue, le mouvement et le lieu ne sont que des fictions de mon esprit. (17)Qu’est-ce donc qui pourra être estimé véritable? (18)Peut-être rien autre chose, sinon qu’il n’y a rien au monde de certain."
+                        }
                     ]
                 },
                 {
                     "lines": [
-                        " (19)Mais que sais-je s’il n’y a point quelque autre chose différente de celles (20)que je viens de juger incertaines, (20a)de laquelle on ne puisse avoir le moindre doute? (21)N’y a-t-il point quelque Dieu, (21a)ou quelque autre puissance, (22)qui me met en l’esprit ces pensées? (23)Cela n’est pas nécessaire; (23a)car peut-être que je suis capable de les produire de moi-même. (24)Moi donc à tout le moins ne suis-je pas quelque chose? (25)Mais j’ai déjà nié (25a)que j’eusse aucun sens ni aucun corps. (26)J’hésite néanmoins, (26a)car que s’ensuit-il"
+                        {
+                            "text": " (19)Mais que sais-je s’il n’y a point quelque autre chose différente de celles (20)que je viens de juger incertaines, (20a)de laquelle on ne puisse avoir le moindre doute? (21)N’y a-t-il point quelque Dieu, (21a)ou quelque autre puissance, (22)qui me met en l’esprit ces pensées? (23)Cela n’est pas nécessaire; (23a)car peut-être que je suis capable de les produire de moi-même. (24)Moi donc à tout le moins ne suis-je pas quelque chose? (25)Mais j’ai déjà nié (25a)que j’eusse aucun sens ni aucun corps. (26)J’hésite néanmoins, (26a)car que s’ensuit-il"
+                        }
                     ]
                 }
             ]
@@ -701,7 +767,9 @@
                 },
                 {
                     "lines": [
-                        " (24)Mais moi, qui suis-je, maintenant que je suppose qu’il y a quelqu’un qui est extrêmement puissant (25)et, si je l’ose dire, malicieux et rusé, (25a)qui emploie toutes ses forces et toute son industrie à me tromper? (26)Puis-je m’assurer (27)d’avoir la moindre de toutes les choses (28)que j’ai attribuées ci-dessus à la nature corporelle?"
+                        {
+                            "text": " (24)Mais moi, qui suis-je, maintenant que je suppose qu’il y a quelqu’un qui est extrêmement puissant (25)et, si je l’ose dire, malicieux et rusé, (25a)qui emploie toutes ses forces et toute son industrie à me tromper? (26)Puis-je m’assurer (27)d’avoir la moindre de toutes les choses (28)que j’ai attribuées ci-dessus à la nature corporelle?"
+                        }
                     ]
                 }
             ]
@@ -759,7 +827,9 @@
                 },
                 {
                     "lines": [
-                        " (20)Mais qu’est-ce donc que je suis? (20a)Une chose qui pense. (20b)Qu’est-ce qu’une chose qui pense? (21)C’est-à-dire une chose qui doute, qui conçoit, qui affirme, qui nie, qui veut, (22)qui ne veut pas, qui imagine aussi, et qui sent. (23)Certes ce n’est pas peu (23a)si toutes ces choses appartiennent à ma nature. (24)Mais pourquoi n’y appartiendraient-elles pas? (24a)Ne suis-je pas encore ce même qui doute presque de tout, (25)qui néanmoins entends et conçois certaines choses, (26)qui assure et affirme celles-là seules être véritables, (26a)qui nie toutes les autres, (27)qui veux et désire d’en connaître davantage, qui ne veux pas être trompé, (27a)qui imagine beaucoup de choses, même quelquefois en dépit que j’en aie, (28)et qui en sens aussi beaucoup, comme par l’entremise des organes du corps? (29)Y a-t-il rien de tout cela qui ne soit"
+                        {
+                            "text": " (20)Mais qu’est-ce donc que je suis? (20a)Une chose qui pense. (20b)Qu’est-ce qu’une chose qui pense? (21)C’est-à-dire une chose qui doute, qui conçoit, qui affirme, qui nie, qui veut, (22)qui ne veut pas, qui imagine aussi, et qui sent. (23)Certes ce n’est pas peu (23a)si toutes ces choses appartiennent à ma nature. (24)Mais pourquoi n’y appartiendraient-elles pas? (24a)Ne suis-je pas encore ce même qui doute presque de tout, (25)qui néanmoins entends et conçois certaines choses, (26)qui assure et affirme celles-là seules être véritables, (26a)qui nie toutes les autres, (27)qui veux et désire d’en connaître davantage, qui ne veux pas être trompé, (27a)qui imagine beaucoup de choses, même quelquefois en dépit que j’en aie, (28)et qui en sens aussi beaucoup, comme par l’entremise des organes du corps? (29)Y a-t-il rien de tout cela qui ne soit"
+                        }
                     ]
                 }
             ]
@@ -786,7 +856,9 @@
                 },
                 {
                     "lines": [
-                        " (20)Mais je ne me puis empêcher de croire (21)que les choses corporelles, dont les images se forment par ma pensée, (22)et qui tombent sous le sens, (23)ne soient plus distinctement connues que cette je ne sais quelle partie de moi-même (24)qui ne tombe point sous l’imagination: (24a)quoiqu’en effet ce soit une chose bien étrange, (25)que des choses que je trouve douteuses et éloignées, (26)soient plus clairement et plus facilement connues de moi, que celles qui sont véritables et certaines, et qui appartiennent à ma propre nature. (28)Mais je vois bien ce que c’est: (28a)mon esprit se plaît de s’égarer, et ne se peut encore contenir dans les justes bornes de la vérité. (30)Relâchons-lui donc encore une fois la"
+                        {
+                            "text": " (20)Mais je ne me puis empêcher de croire (21)que les choses corporelles, dont les images se forment par ma pensée, (22)et qui tombent sous le sens, (23)ne soient plus distinctement connues que cette je ne sais quelle partie de moi-même (24)qui ne tombe point sous l’imagination: (24a)quoiqu’en effet ce soit une chose bien étrange, (25)que des choses que je trouve douteuses et éloignées, (26)soient plus clairement et plus facilement connues de moi, que celles qui sont véritables et certaines, et qui appartiennent à ma propre nature. (28)Mais je vois bien ce que c’est: (28a)mon esprit se plaît de s’égarer, et ne se peut encore contenir dans les justes bornes de la vérité. (30)Relâchons-lui donc encore une fois la"
+                        }
                     ]
                 }
             ]
@@ -809,7 +881,9 @@
                 },
                 {
                     "lines": [
-                        " (3)Commençons par la considération des choses (3a)les plus communes, et que nous croyons comprendre le plus distinctement, (4)à savoir les corps que nous touchons et que nous voyons. (5)Je n’entends pas parler des corps en général, (6)car ces notions générales sont d’ordinaire plus confuses, (7)mais de quelqu’un en particulier. (8)Prenons pour exemple ce morceau de cire (8a)qui vient d’être tiré de la ruche: (9)il n’a pas encore perdu la douceur du miel qu’il contenait, (10)il retient encore quelque chose de l’odeur des fleurs dont il a été recueilli; (11)sa couleur, sa figure, sa grandeur, sont apparentes; (12)il est dur, il est froid, on le touche, (12a)et si vous le frappez, il rendra quelque son. (13)Enfin toutes les choses qui peuvent distinctement faire connaître un corps, se rencontrent en celui-ci."
+                        {
+                            "text": " (3)Commençons par la considération des choses (3a)les plus communes, et que nous croyons comprendre le plus distinctement, (4)à savoir les corps que nous touchons et que nous voyons. (5)Je n’entends pas parler des corps en général, (6)car ces notions générales sont d’ordinaire plus confuses, (7)mais de quelqu’un en particulier. (8)Prenons pour exemple ce morceau de cire (8a)qui vient d’être tiré de la ruche: (9)il n’a pas encore perdu la douceur du miel qu’il contenait, (10)il retient encore quelque chose de l’odeur des fleurs dont il a été recueilli; (11)sa couleur, sa figure, sa grandeur, sont apparentes; (12)il est dur, il est froid, on le touche, (12a)et si vous le frappez, il rendra quelque son. (13)Enfin toutes les choses qui peuvent distinctement faire connaître un corps, se rencontrent en celui-ci."
+                        }
                     ]
                 },
                 {
@@ -836,7 +910,9 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "(1)et éloignant toutes les choses qui n’appartiennent point à la cire, (2)voyons ce qui reste. (2a)Certes il ne demeure rien que quelque chose d’étendu, de flexible et de muable. (3)Or qu’est-ce que cela: flexible et muable? (4)N’est-ce pas que j’imagine que cette cire (5)étant ronde est capable de devenir carrée, et de passer du carré en une figure triangulaire? (6)Non certes, ce n’est pas cela, (6a)puisque je la conçois capable de recevoir une infinité de semblables changements, (8)et je ne saurais néanmoins parcourir cette infinité par mon imagination, (9)et par conséquent cette conception que j’ai de la cire ne s’accomplit pas par la faculté d’imaginer."
+                        {
+                            "text": "(1)et éloignant toutes les choses qui n’appartiennent point à la cire, (2)voyons ce qui reste. (2a)Certes il ne demeure rien que quelque chose d’étendu, de flexible et de muable. (3)Or qu’est-ce que cela: flexible et muable? (4)N’est-ce pas que j’imagine que cette cire (5)étant ronde est capable de devenir carrée, et de passer du carré en une figure triangulaire? (6)Non certes, ce n’est pas cela, (6a)puisque je la conçois capable de recevoir une infinité de semblables changements, (8)et je ne saurais néanmoins parcourir cette infinité par mon imagination, (9)et par conséquent cette conception que j’ai de la cire ne s’accomplit pas par la faculté d’imaginer."
+                        }
                     ]
                 },
                 {
@@ -858,7 +934,9 @@
                 },
                 {
                     "lines": [
-                        " (29)Cependant je ne me saurais trop étonner quand je considère combien mon esprit a de faiblesse, et de pente qui le porte insensiblement dans l’erreur. (30)Car encore que sans parler je considère tout cela en moi-même,"
+                        {
+                            "text": " (29)Cependant je ne me saurais trop étonner quand je considère combien mon esprit a de faiblesse, et de pente qui le porte insensiblement dans l’erreur. (30)Car encore que sans parler je considère tout cela en moi-même,"
+                        }
                     ]
                 }
             ]
@@ -916,12 +994,16 @@
                 },
                 {
                     "lines": [
-                        " (19)Or si la notion ou la connaissance de la cire semble être plus nette et plus distincte, après qu’elle (20)a été découverte non seulement par la vue ou par l’attouchement, mais encore par beaucoup d’autres causes, (21)avec combien plus d’évidence, de distinction et de netteté, (22)me dois-je connaître moi-même, (23)puisque toutes les raisons qui servent à connaître et concevoir la nature de la cire, ou de quelque autre corps, (25)prouvent beaucoup plus facilement et plus évidemment la nature de mon esprit? (26)Et il se rencontre encore tant d’autres choses en l’esprit même, (27)qui peuvent contribuer à l’éclaircissement de sa nature, (28)que celles qui dépendent du corps, comme celles-ci, (28a)ne méritent quasi pas d’être nombrées."
+                        {
+                            "text": " (19)Or si la notion ou la connaissance de la cire semble être plus nette et plus distincte, après qu’elle (20)a été découverte non seulement par la vue ou par l’attouchement, mais encore par beaucoup d’autres causes, (21)avec combien plus d’évidence, de distinction et de netteté, (22)me dois-je connaître moi-même, (23)puisque toutes les raisons qui servent à connaître et concevoir la nature de la cire, ou de quelque autre corps, (25)prouvent beaucoup plus facilement et plus évidemment la nature de mon esprit? (26)Et il se rencontre encore tant d’autres choses en l’esprit même, (27)qui peuvent contribuer à l’éclaircissement de sa nature, (28)que celles qui dépendent du corps, comme celles-ci, (28a)ne méritent quasi pas d’être nombrées."
+                        }
                     ]
                 },
                 {
                     "lines": [
-                        " (30)Mais enfin me voici insensiblement (30a)revenu où"
+                        {
+                            "text": " (30)Mais enfin me voici insensiblement (30a)revenu où"
+                        }
                     ]
                 }
             ]
@@ -963,7 +1045,9 @@
                 {
                     "type": "h2",
                     "lines": [
-                        "De Dieu; qu’il existe"
+                        {
+                            "text": "De Dieu; qu’il existe"
+                        }
                     ]
                 },
                 {
@@ -986,12 +1070,16 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "qu’elles sont des façons de penser, résident et se rencontrent certainement en moi. (3)Et dans ce peu que je viens de dire, (3a)je crois avoir rapporté tout ce que je sais véritablement, (3b)ou du moins tout ce que jusques ici j’ai remarqué que je savais."
+                        {
+                            "text": "qu’elles sont des façons de penser, résident et se rencontrent certainement en moi. (3)Et dans ce peu que je viens de dire, (3a)je crois avoir rapporté tout ce que je sais véritablement, (3b)ou du moins tout ce que jusques ici j’ai remarqué que je savais."
+                        }
                     ]
                 },
                 {
                     "lines": [
-                        " (4)Maintenant je considérerai plus exactement (5)si peut-être il ne se retrouve point en moi d’autres connaissances (6)que je n’aie pas encore aperçues. (6a)Je suis certain que je suis une chose qui pense; (7)mais ne sais-je donc pas aussi (7a)ce qui est requis pour me rendre certain de quelque chose? (8)Dans cette première connaissance, il ne se rencontre rien (9)qu’une claire et distincte perception (10)de ce que je connais; (10a)laquelle de vrai ne serait pas suffisante (11)pour m’assurer qu’elle est vraie, (11a)s ’il pouvait jamais arriver (12)qu’une chose que je concevrais ainsi clairement et distinctement se trouvât fausse. (13)Et partant il me semble que déjà (14)je puis établir pour règle générale, (14a)que toutes les choses que nous concevons fort clairement et fort distinctement, sont toutes vraies."
+                        {
+                            "text": " (4)Maintenant je considérerai plus exactement (5)si peut-être il ne se retrouve point en moi d’autres connaissances (6)que je n’aie pas encore aperçues. (6a)Je suis certain que je suis une chose qui pense; (7)mais ne sais-je donc pas aussi (7a)ce qui est requis pour me rendre certain de quelque chose? (8)Dans cette première connaissance, il ne se rencontre rien (9)qu’une claire et distincte perception (10)de ce que je connais; (10a)laquelle de vrai ne serait pas suffisante (11)pour m’assurer qu’elle est vraie, (11a)s ’il pouvait jamais arriver (12)qu’une chose que je concevrais ainsi clairement et distinctement se trouvât fausse. (13)Et partant il me semble que déjà (14)je puis établir pour règle générale, (14a)que toutes les choses que nous concevons fort clairement et fort distinctement, sont toutes vraies."
+                        }
                     ]
                 },
                 {
@@ -1013,7 +1101,9 @@
                 },
                 {
                     "lines": [
-                        " (30)Mais lorsque je considérais quelque chose de fort"
+                        {
+                            "text": " (30)Mais lorsque je considérais quelque chose de fort"
+                        }
                     ]
                 }
             ]
@@ -1058,22 +1148,30 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "mes pensées en certains genres, (1)et que je considère dans lesquels de ces genres il y a proprement de la vérité ou de l’erreur."
+                        {
+                            "text": "mes pensées en certains genres, (1)et que je considère dans lesquels de ces genres il y a proprement de la vérité ou de l’erreur."
+                        }
                     ]
                 },
                 {
                     "lines": [
-                        " (3)Entre mes pensées, quelques-unes sont comme les images des choses, (4)et c ’est à celles-là seules que convient proprement le nom d’ idée: (5)comme lorsque je me représente un homme, ou une chimère, ou le ciel, ou un ange, ou Dieu même. (6)D’autres, outre cela, ont quelques autres formes: (7)comme, lorsque je veux, que je crains, que j’affirme ou que je nie, (8)je conçois bien alors quelque chose comme le sujet de l’action de mon esprit, (9)mais j’ajoute aussi quelque autre chose par cette action à l’idée que j’ai de cette chose-là; (11)et de ce genre de pensées, les unes sont appelées volontés ou affections, et les autres jugements."
+                        {
+                            "text": " (3)Entre mes pensées, quelques-unes sont comme les images des choses, (4)et c ’est à celles-là seules que convient proprement le nom d’ idée: (5)comme lorsque je me représente un homme, ou une chimère, ou le ciel, ou un ange, ou Dieu même. (6)D’autres, outre cela, ont quelques autres formes: (7)comme, lorsque je veux, que je crains, que j’affirme ou que je nie, (8)je conçois bien alors quelque chose comme le sujet de l’action de mon esprit, (9)mais j’ajoute aussi quelque autre chose par cette action à l’idée que j’ai de cette chose-là; (11)et de ce genre de pensées, les unes sont appelées volontés ou affections, et les autres jugements."
+                        }
                     ]
                 },
                 {
                     "lines": [
-                        " (13)Maintenant, pour ce qui concerne les idées, (13a)si on les considère seulement en elles-mêmes, (14)et qu’on ne les rapporte point à quelque autre chose, (14a)elles ne peuvent, à proprement parler, être fausses; (15)car soit que j’imagine une chèvre ou une chimère, (16)il n’est pas moins vrai que j’imagine l’une que l’autre."
+                        {
+                            "text": " (13)Maintenant, pour ce qui concerne les idées, (13a)si on les considère seulement en elles-mêmes, (14)et qu’on ne les rapporte point à quelque autre chose, (14a)elles ne peuvent, à proprement parler, être fausses; (15)car soit que j’imagine une chèvre ou une chimère, (16)il n’est pas moins vrai que j’imagine l’une que l’autre."
+                        }
                     ]
                 },
                 {
                     "lines": [
-                        " (17)Il ne faut pas craindre aussi qu’il se puisse rencontrer de la fausseté dans les affections ou volontés; (18)car encore que je puisse désirer des choses mauvaises, ou même qui ne furent jamais, (19)toutefois il n’est pas pour cela moins vrai que je les désire."
+                        {
+                            "text": " (17)Il ne faut pas craindre aussi qu’il se puisse rencontrer de la fausseté dans les affections ou volontés; (18)car encore que je puisse désirer des choses mauvaises, ou même qui ne furent jamais, (19)toutefois il n’est pas pour cela moins vrai que je les désire."
+                        }
                     ]
                 },
                 {
@@ -1091,7 +1189,9 @@
                 },
                 {
                     "lines": [
-                        " (29)Or de ces idées les unes me semblent étre nées avec moi, les autres être étrangères et venir de dehors,"
+                        {
+                            "text": " (29)Or de ces idées les unes me semblent étre nées avec moi, les autres être étrangères et venir de dehors,"
+                        }
                     ]
                 }
             ]
@@ -1118,12 +1218,16 @@
                 },
                 {
                     "lines": [
-                        " (14)La première de ces raisons est qu’il me semble que cela m’est enseigné par la nature; (15)et la seconde, que j’expérimente en moi-même que ces idées ne dépendent point de ma volonté; (16)car souvent elles se présentent à moi malgré moi, (17)comme maintenant, soit que je le veuille, soit que je ne le veuille pas, (17a)je sens de la chaleur, et pour cette cause je me persuade que ce sentiment ou bien cette idée de la chaleur (18)est produite en moi par une chose différente de moi, à savoir par la chaleur du feu auprès duquel je me rencontre. (20)Et je ne vois rien qui me semble plus raisonnable, (20a)que de juger que cette chose étrangère (21)envoie et imprime en moi sa ressemblance plutôt qu’aucune autre chose."
+                        {
+                            "text": " (14)La première de ces raisons est qu’il me semble que cela m’est enseigné par la nature; (15)et la seconde, que j’expérimente en moi-même que ces idées ne dépendent point de ma volonté; (16)car souvent elles se présentent à moi malgré moi, (17)comme maintenant, soit que je le veuille, soit que je ne le veuille pas, (17a)je sens de la chaleur, et pour cette cause je me persuade que ce sentiment ou bien cette idée de la chaleur (18)est produite en moi par une chose différente de moi, à savoir par la chaleur du feu auprès duquel je me rencontre. (20)Et je ne vois rien qui me semble plus raisonnable, (20a)que de juger que cette chose étrangère (21)envoie et imprime en moi sa ressemblance plutôt qu’aucune autre chose."
+                        }
                     ]
                 },
                 {
                     "lines": [
-                        " (23)Maintenant il faut que je voie si ces raisons sont assez fortes et convaincantes. (23a)Quand je dis qu’il me semble que cela m’est enseigné par la nature, (24)j’entends seulement par ce mot de nature une certaine inclination qui me porte à croire cette chose, (26)et non pas une lumière naturelle qui me fasse connaitre qu’elle est vraie. (27)Or ces deux choses diffèrent beaucoup entre elles; (27a)car je ne saurais rien révoquer en doute de ce que la lumière naturelle me fait voir être vrai, ainsi qu’elle m’a tantôt fait voir que, de ce que je doutais, je pouvais conclure que j’étais. (30)Et je n’ai en moi aucune autre faculté, ou puissance, pour distinguer le vrai du faux, (31)qui me puisse enseigner que ce que cette lumière"
+                        {
+                            "text": " (23)Maintenant il faut que je voie si ces raisons sont assez fortes et convaincantes. (23a)Quand je dis qu’il me semble que cela m’est enseigné par la nature, (24)j’entends seulement par ce mot de nature une certaine inclination qui me porte à croire cette chose, (26)et non pas une lumière naturelle qui me fasse connaitre qu’elle est vraie. (27)Or ces deux choses diffèrent beaucoup entre elles; (27a)car je ne saurais rien révoquer en doute de ce que la lumière naturelle me fait voir être vrai, ainsi qu’elle m’a tantôt fait voir que, de ce que je doutais, je pouvais conclure que j’étais. (30)Et je n’ai en moi aucune autre faculté, ou puissance, pour distinguer le vrai du faux, (31)qui me puisse enseigner que ce que cette lumière"
+                        }
                     ]
                 }
             ]
@@ -1163,7 +1267,9 @@
                 },
                 {
                     "lines": [
-                        " (30)Tout cela me fait assez connaître (30a)que jusques à cette heure ce n’a point été"
+                        {
+                            "text": " (30)Tout cela me fait assez connaître (30a)que jusques à cette heure ce n’a point été"
+                        }
                     ]
                 }
             ]
@@ -1173,7 +1279,9 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "par un jugement certain et prémédité, (1)mais seulement par une aveugle et téméraire impulsion, (1a)que j’ai cru qu’il y avait des choses hors de moi, et différentes de mon être, (2)qui, par les organes de mes sens, ou par quelque autre moyen que ce puisse être, envoyaient en moi leurs idées ou images, et y imprimaient leurs ressemblances."
+                        {
+                            "text": "par un jugement certain et prémédité, (1)mais seulement par une aveugle et téméraire impulsion, (1a)que j’ai cru qu’il y avait des choses hors de moi, et différentes de mon être, (2)qui, par les organes de mes sens, ou par quelque autre moyen que ce puisse être, envoyaient en moi leurs idées ou images, et y imprimaient leurs ressemblances."
+                        }
                     ]
                 },
                 {
@@ -1195,12 +1303,16 @@
                 },
                 {
                     "lines": [
-                        " (21)Maintenant, c’est une chose manifeste par la lumière naturelle, (21a)qu’il doit y avoir pour le moins autant de réalité dans la cause efficiente et totale (23)que dans son effet: (23a)car d’où est-ce que l’effet peut tirer sa réalité (25)sinon de sa cause? (25a)et comment cette cause la lui pourrait-elle communiquer, (26)si elle ne l’avait en elle-même?"
+                        {
+                            "text": " (21)Maintenant, c’est une chose manifeste par la lumière naturelle, (21a)qu’il doit y avoir pour le moins autant de réalité dans la cause efficiente et totale (23)que dans son effet: (23a)car d’où est-ce que l’effet peut tirer sa réalité (25)sinon de sa cause? (25a)et comment cette cause la lui pourrait-elle communiquer, (26)si elle ne l’avait en elle-même?"
+                        }
                     ]
                 },
                 {
                     "lines": [
-                        " (26a)Et de là il suit, (26b)non seulement que le néant ne saurait produire aucune chose, (27)mais aussi que ce qui est plus parfait, (28)c’est-à-dire qui contient en soi plus de"
+                        {
+                            "text": " (26a)Et de là il suit, (26b)non seulement que le néant ne saurait produire aucune chose, (27)mais aussi que ce qui est plus parfait, (28)c’est-à-dire qui contient en soi plus de"
+                        }
                     ]
                 }
             ]
@@ -1236,7 +1348,9 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "quoique la réalité que je considère dans ces idées soit seulement objective, (2)ni penser qu’il suffit que cette réalité se rencontre objectivement dans leurs causes; (3)car, tout ainsi que cette manière d’être objectivement appartient aux idées, de leur propre nature, (4)de même aussi la manière ou la façon d’être formellement appartient aux causes de ces idées (5)(à tout le moins aux premières et principales) de leur propre nature. (6)Et encore qu’il puisse arriver qu’une idée donne la naissance à une autre idée, (7)cela ne peut pas toutefois être à l’infini, (8)mais il faut à la fin parvenir à une première idée, (9)dont la cause soit comme un patron ou un original, (9a)dans lequel toute la réalité ou perfection soit contenue formellement et en effet, (10)qui se rencontre seulement objectivement ou par représentation dans ces idées. (11)En sorte que la lumière naturelle me fait connaître évidemment, (12)que les idées sont en moi comme des tableaux, ou des images, (13)qui peuvent à la vérité (13a)facilement déchoir de la perfection des choses dont elles ont été tirées, (14)mais qui ne peuvent jamais rien contenir de plus grand ou de plus parfait."
+                        {
+                            "text": "quoique la réalité que je considère dans ces idées soit seulement objective, (2)ni penser qu’il suffit que cette réalité se rencontre objectivement dans leurs causes; (3)car, tout ainsi que cette manière d’être objectivement appartient aux idées, de leur propre nature, (4)de même aussi la manière ou la façon d’être formellement appartient aux causes de ces idées (5)(à tout le moins aux premières et principales) de leur propre nature. (6)Et encore qu’il puisse arriver qu’une idée donne la naissance à une autre idée, (7)cela ne peut pas toutefois être à l’infini, (8)mais il faut à la fin parvenir à une première idée, (9)dont la cause soit comme un patron ou un original, (9a)dans lequel toute la réalité ou perfection soit contenue formellement et en effet, (10)qui se rencontre seulement objectivement ou par représentation dans ces idées. (11)En sorte que la lumière naturelle me fait connaître évidemment, (12)que les idées sont en moi comme des tableaux, ou des images, (13)qui peuvent à la vérité (13a)facilement déchoir de la perfection des choses dont elles ont été tirées, (14)mais qui ne peuvent jamais rien contenir de plus grand ou de plus parfait."
+                        }
                     ]
                 },
                 {
@@ -1258,7 +1372,9 @@
                 },
                 {
                     "lines": [
-                        " (29)Or entre ces idées, (29a)outre celle qui me représente à moi-même, (30)de laquelle il ne peut y avoir ici aucune"
+                        {
+                            "text": " (29)Or entre ces idées, (29a)outre celle qui me représente à moi-même, (30)de laquelle il ne peut y avoir ici aucune"
+                        }
                     ]
                 }
             ]
@@ -1321,7 +1437,9 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "en moi les idées de la durée et du nombre, (1)lesquelles, par après, je puis transférer à toutes les autres choses que je voudrai. (2)Pour ce qui est des autres qualités (3)dont les idées des choses corporelles sont composées, (4)à savoir, l’étendue, la figure, la situation, et le mouvement de lieu, (4a)il est vrai qu’elles ne sont point formellement en moi, puisque je ne suis qu’une chose qui pense; (6)mais parce que ce sont seulement de certains modes de la substance, et comme les vêtements sous lesquels la substance corporelle nous paraît, (7)et que je suis aussi moi-même une substance, (7a)il semble qu’elles puissent être contenues en moi éminemment."
+                        {
+                            "text": "en moi les idées de la durée et du nombre, (1)lesquelles, par après, je puis transférer à toutes les autres choses que je voudrai. (2)Pour ce qui est des autres qualités (3)dont les idées des choses corporelles sont composées, (4)à savoir, l’étendue, la figure, la situation, et le mouvement de lieu, (4a)il est vrai qu’elles ne sont point formellement en moi, puisque je ne suis qu’une chose qui pense; (6)mais parce que ce sont seulement de certains modes de la substance, et comme les vêtements sous lesquels la substance corporelle nous paraît, (7)et que je suis aussi moi-même une substance, (7a)il semble qu’elles puissent être contenues en moi éminemment."
+                        }
                     ]
                 },
                 {
@@ -1343,7 +1461,9 @@
                 },
                 {
                     "lines": [
-                        " (23)Et je ne me dois pas imaginer (23a)que je ne conçois pas l’infini par une véritable idée, (24)mais seulement par la négation de ce qui est fini, (24a)de même que je comprends le repos et les ténèbres (25)par la négation du mouvement et de la lumière: (26)puisque au contraire je vois manifestement (26a)qu’il se rencontre plus de réalité dans la substance infinie (27)que dans la substance finie, (27a)et partant que j’ai en quelque façon premièrement en moi (28)la notion de l’infini, que du fini, (29)c’est-à-dire de Dieu, que de moi-même. (30)Car comment serait-il possible que je pusse connaître (30a)que je doute et que je désire,"
+                        {
+                            "text": " (23)Et je ne me dois pas imaginer (23a)que je ne conçois pas l’infini par une véritable idée, (24)mais seulement par la négation de ce qui est fini, (24a)de même que je comprends le repos et les ténèbres (25)par la négation du mouvement et de la lumière: (26)puisque au contraire je vois manifestement (26a)qu’il se rencontre plus de réalité dans la substance infinie (27)que dans la substance finie, (27a)et partant que j’ai en quelque façon premièrement en moi (28)la notion de l’infini, que du fini, (29)c’est-à-dire de Dieu, que de moi-même. (30)Car comment serait-il possible que je pusse connaître (30a)que je doute et que je désire,"
+                        }
                     ]
                 }
             ]
@@ -1353,7 +1473,9 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "(1)c’est-à-dire qu’il me manque quelque chose (1a)et que je ne suis pas tout parfait, (2)si je n’avais en moi aucune idée d’un être plus parfait que le mien, (3)par la comparaison duquel je connaîtrais les défauts de ma nature?"
+                        {
+                            "text": "(1)c’est-à-dire qu’il me manque quelque chose (1a)et que je ne suis pas tout parfait, (2)si je n’avais en moi aucune idée d’un être plus parfait que le mien, (3)par la comparaison duquel je connaîtrais les défauts de ma nature?"
+                        }
                     ]
                 },
                 {
@@ -1371,12 +1493,16 @@
                 },
                 {
                     "lines": [
-                        " (11)L’idée, dis-je, de cet être souverainement parfait et infini est entièrement vraie; (12)car, encore que peut-être l’on puisse feindre (13)qu’un tel être n’existe point, (13a)on ne peut pas feindre néanmoins (14)que son idée ne me représente rien de réel, (14a)comme j’ai tantôt dit de l’idée du froid."
+                        {
+                            "text": " (11)L’idée, dis-je, de cet être souverainement parfait et infini est entièrement vraie; (12)car, encore que peut-être l’on puisse feindre (13)qu’un tel être n’existe point, (13a)on ne peut pas feindre néanmoins (14)que son idée ne me représente rien de réel, (14a)comme j’ai tantôt dit de l’idée du froid."
+                        }
                     ]
                 },
                 {
                     "lines": [
-                        " (15)Cette même idée est aussi fort claire et fort distincte, (16)puisque tout ce que mon esprit conçoit clairement et distinctement (17)de réel et de vrai, (17a)et qui contient en soi quelque perfection, (18)est contenu et renfermé tout entier dans cette idée."
+                        {
+                            "text": " (15)Cette même idée est aussi fort claire et fort distincte, (16)puisque tout ce que mon esprit conçoit clairement et distinctement (17)de réel et de vrai, (17a)et qui contient en soi quelque perfection, (18)est contenu et renfermé tout entier dans cette idée."
+                        }
                     ]
                 },
                 {
@@ -1398,7 +1524,9 @@
                 },
                 {
                     "lines": [
-                        " (29)Mais peut-être aussi que je suis quelque chose de plus (29a)que je ne m’imagine, (30)et que toutes les perfections que j’attribue à la nature d’un Dieu, (30a)sont en quelque façon en moi en puissance, (31)quoiqu’elles ne se produisent"
+                        {
+                            "text": " (29)Mais peut-être aussi que je suis quelque chose de plus (29a)que je ne m’imagine, (30)et que toutes les perfections que j’attribue à la nature d’un Dieu, (30a)sont en quelque façon en moi en puissance, (31)quoiqu’elles ne se produisent"
+                        }
                     ]
                 }
             ]
@@ -1425,7 +1553,9 @@
                 },
                 {
                     "lines": [
-                        " (24)Et certes je ne vois rien en tout ce que je viens de dire, (24a)qui ne soit très aisé à connaître par la lumière naturelle à tous ceux qui voudront y penser soigneusement; (26)mais lorsque je relâche quelque chose de mon attention, (26a)mon esprit se trouvant obscurci et comme aveuglé par les images des choses sensibles, (27)ne se ressouvient pas facilement de la raison (28)pourquoi l’idée que j’ai d’un être plus parfait que le mien, (28a)doit nécessairement avoir été mise en moi par un être (29)qui soit en effet plus parfait. (29a)C’est pourquoi je veux ici passer outre,"
+                        {
+                            "text": " (24)Et certes je ne vois rien en tout ce que je viens de dire, (24a)qui ne soit très aisé à connaître par la lumière naturelle à tous ceux qui voudront y penser soigneusement; (26)mais lorsque je relâche quelque chose de mon attention, (26a)mon esprit se trouvant obscurci et comme aveuglé par les images des choses sensibles, (27)ne se ressouvient pas facilement de la raison (28)pourquoi l’idée que j’ai d’un être plus parfait que le mien, (28a)doit nécessairement avoir été mise en moi par un être (29)qui soit en effet plus parfait. (29a)C’est pourquoi je veux ici passer outre,"
+                        }
                     ]
                 }
             ]
@@ -1448,7 +1578,9 @@
                 },
                 {
                     "lines": [
-                        " (7)Or, si j’étais indépendant de tout autre, et que je fusse moi-même l’auteur de mon être, (7a)certes je ne douterais d’aucune chose, (7b)je ne concevrais plus de désirs, (8)et enfin il ne me manquerait aucune perfection; (8a)car je me serais donné à moi-même toutes celles dont j’ai en moi quelque idée, (10)et ainsi je serais Dieu."
+                        {
+                            "text": " (7)Or, si j’étais indépendant de tout autre, et que je fusse moi-même l’auteur de mon être, (7a)certes je ne douterais d’aucune chose, (7b)je ne concevrais plus de désirs, (8)et enfin il ne me manquerait aucune perfection; (8a)car je me serais donné à moi-même toutes celles dont j’ai en moi quelque idée, (10)et ainsi je serais Dieu."
+                        }
                     ]
                 },
                 {
@@ -1484,7 +1616,9 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "être divisé en une infinité de parties, (1)chacune desquelles ne dépend en aucune façon des autres; (2)et ainsi, de ce qu’un peu auparavant j’ai été, (3)il ne s’ensuit pas que je doive maintenant être, (3a)si ce n’est qu’en ce moment quelque cause me produise et me crée, pour ainsi dire, derechef, (4)c’est-à-dire me conserve."
+                        {
+                            "text": "être divisé en une infinité de parties, (1)chacune desquelles ne dépend en aucune façon des autres; (2)et ainsi, de ce qu’un peu auparavant j’ai été, (3)il ne s’ensuit pas que je doive maintenant être, (3a)si ce n’est qu’en ce moment quelque cause me produise et me crée, pour ainsi dire, derechef, (4)c’est-à-dire me conserve."
+                        }
                     ]
                 },
                 {
@@ -1546,7 +1680,9 @@
                 },
                 {
                     "lines": [
-                        " (25)Pour ce qui regarde mes parents, desquels il semble que je tire ma naissance, (25a)encore que tout ce que j’en ai jamais pu croire soit véritable, (26)cela ne fait pas toutefois que ce soit eux qui me conservent, (27)ni qui m’aient fait et produit en tant que je suis une chose qui pense, (28)puisqu’ils ont seulement mis quelques dispositions dans cette matière, (29)en laquelle je juge que moi, c’est-à-dire mon esprit, lequel seul je prends maintenant pour moi-même,"
+                        {
+                            "text": " (25)Pour ce qui regarde mes parents, desquels il semble que je tire ma naissance, (25a)encore que tout ce que j’en ai jamais pu croire soit véritable, (26)cela ne fait pas toutefois que ce soit eux qui me conservent, (27)ni qui m’aient fait et produit en tant que je suis une chose qui pense, (28)puisqu’ils ont seulement mis quelques dispositions dans cette matière, (29)en laquelle je juge que moi, c’est-à-dire mon esprit, lequel seul je prends maintenant pour moi-même,"
+                        }
                     ]
                 }
             ]
@@ -1556,7 +1692,9 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "se trouve renfermé; (1)et partant il ne peut y avoir ici à leur égard aucune difficulté, (2)mais il faut nécessairement conclure que, (2a)de cela seul que j’existe, (3)et que l’idée d’un être souverainement parfait (4)(c’est-à-dire de Dieu) est en moi, (4a)l’existence de Dieu est très évidemment démontrée."
+                        {
+                            "text": "se trouve renfermé; (1)et partant il ne peut y avoir ici à leur égard aucune difficulté, (2)mais il faut nécessairement conclure que, (2a)de cela seul que j’existe, (3)et que l’idée d’un être souverainement parfait (4)(c’est-à-dire de Dieu) est en moi, (4a)l’existence de Dieu est très évidemment démontrée."
+                        }
                     ]
                 },
                 {
@@ -1578,7 +1716,9 @@
                 },
                 {
                     "lines": [
-                        " (15)Et certes on ne doit pas trouver étrange (15a)que Dieu, en me créant, (15b)ait mis en moi cette idée (16)pour être comme la marque de l’ouvrier empreinte sur son ouvrage; (17)et il n’est pas aussi nécessaire (17a)que cette marque soit quelque chose de différent de ce même ouvrage. (18)Mais de cela seul que Dieu m’a créé, (19)il est fort croyable (19a)qu’il m’a en quelque façon produit à son image et semblance, (21)et que je conçois cette ressemblance (dans laquelle l’idée de Dieu se trouve contenue) (22)par la même faculté (22a)par laquelle je me conçois moi-même; (23)c’est-à-dire que, lorsque je fais réflexion sur moi, (24)non seulement je connais que je suis une chose imparfaite, incomplète, et dépendante d’autrui, (25)qui tend et qui aspire sans cesse à quelque chose de meilleur et de plus grand que je ne suis, (26)mais je connais aussi, en même temps, (27)que celui duquel je dépends, (27a)possède en soi toutes ces grandes choses auxquelles j’aspire, et dont je trouve en moi les idées, non pas indéfiniment et seulement en puissance, mais qu’il en jouit en effet, actuellement et infiniment (29)et, ainsi qu’il est Dieu. (29a)Et toute la force de l’argument dont j’ai ici usé pour prouver l’existence de Dieu consiste en ce (30)que je reconnais qu’il ne serait pas possible"
+                        {
+                            "text": " (15)Et certes on ne doit pas trouver étrange (15a)que Dieu, en me créant, (15b)ait mis en moi cette idée (16)pour être comme la marque de l’ouvrier empreinte sur son ouvrage; (17)et il n’est pas aussi nécessaire (17a)que cette marque soit quelque chose de différent de ce même ouvrage. (18)Mais de cela seul que Dieu m’a créé, (19)il est fort croyable (19a)qu’il m’a en quelque façon produit à son image et semblance, (21)et que je conçois cette ressemblance (dans laquelle l’idée de Dieu se trouve contenue) (22)par la même faculté (22a)par laquelle je me conçois moi-même; (23)c’est-à-dire que, lorsque je fais réflexion sur moi, (24)non seulement je connais que je suis une chose imparfaite, incomplète, et dépendante d’autrui, (25)qui tend et qui aspire sans cesse à quelque chose de meilleur et de plus grand que je ne suis, (26)mais je connais aussi, en même temps, (27)que celui duquel je dépends, (27a)possède en soi toutes ces grandes choses auxquelles j’aspire, et dont je trouve en moi les idées, non pas indéfiniment et seulement en puissance, mais qu’il en jouit en effet, actuellement et infiniment (29)et, ainsi qu’il est Dieu. (29a)Et toute la force de l’argument dont j’ai ici usé pour prouver l’existence de Dieu consiste en ce (30)que je reconnais qu’il ne serait pas possible"
+                        }
                     ]
                 }
             ]
@@ -1601,12 +1741,16 @@
                 },
                 {
                     "lines": [
-                        " (6a)D’où il est assez évident (7)qu’il ne peut être trompeur, (7a)puisque la lumière naturelle nous enseigne que la tromperie dépend nécessairement de quelque défaut."
+                        {
+                            "text": " (6a)D’où il est assez évident (7)qu’il ne peut être trompeur, (7a)puisque la lumière naturelle nous enseigne que la tromperie dépend nécessairement de quelque défaut."
+                        }
                     ]
                 },
                 {
                     "lines": [
-                        " (10)Mais, auparavant que j’examine cela plus soigneusement, (10a)et que je passe à la considération des autres vérités que l’on en peut recueillir, (12)il me semble très à propos de m’arrêter quelque temps à la contemplation de ce Dieu tout parfait, (13)de peser tout à loisir ses merveilleux attributs, (13a)de considérer, d’admirer et d’adorer l’incomparable beauté de cette immense lumière, au moins autant que la force de mon esprit, qui en demeure en quelque sorte ébloui, me le pourra permettre."
+                        {
+                            "text": " (10)Mais, auparavant que j’examine cela plus soigneusement, (10a)et que je passe à la considération des autres vérités que l’on en peut recueillir, (12)il me semble très à propos de m’arrêter quelque temps à la contemplation de ce Dieu tout parfait, (13)de peser tout à loisir ses merveilleux attributs, (13a)de considérer, d’admirer et d’adorer l’incomparable beauté de cette immense lumière, au moins autant que la force de mon esprit, qui en demeure en quelque sorte ébloui, me le pourra permettre."
+                        }
                     ]
                 },
                 {
@@ -1625,18 +1769,24 @@
                 {
                     "type": "h1",
                     "lines": [
-                        "Méditation quatrième"
+                        {
+                            "text": "Méditation quatrième"
+                        }
                     ]
                 },
                 {
                     "type": "h2",
                     "lines": [
-                        "Du vrai et du faux"
+                        {
+                            "text": "Du vrai et du faux"
+                        }
                     ]
                 },
                 {
                     "lines": [
-                        " (23)Je me suis tellement accoutumé ces jours passés (23a)à détacher mon esprit des sens, (24)et j’ai si exactement remarqué"
+                        {
+                            "text": " (23)Je me suis tellement accoutumé ces jours passés (23a)à détacher mon esprit des sens, (24)et j’ai si exactement remarqué"
+                        }
                     ]
                 }
             ]
@@ -1646,7 +1796,9 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "qu’il y a fort peu de choses que l’on connaisse avec certitude touchant les choses corporelles, (1)qu’il y en a beaucoup plus qui nous sont connues touchant l’esprit humain, et beaucoup plus encore de Dieu même, (3)que maintenant je détournerai sans aucune difficulté ma pensée de la considération des choses sensibles ou imaginables, pour la porter à celles qui, étant dégagées de toute matière, sont purement intelligibles."
+                        {
+                            "text": "qu’il y a fort peu de choses que l’on connaisse avec certitude touchant les choses corporelles, (1)qu’il y en a beaucoup plus qui nous sont connues touchant l’esprit humain, et beaucoup plus encore de Dieu même, (3)que maintenant je détournerai sans aucune difficulté ma pensée de la considération des choses sensibles ou imaginables, pour la porter à celles qui, étant dégagées de toute matière, sont purement intelligibles."
+                        }
                     ]
                 },
                 {
@@ -1708,7 +1860,9 @@
                 },
                 {
                     "lines": [
-                        " (31)Toutefois cela ne me satisfait pas encore tout à fait; (31a)car"
+                        {
+                            "text": " (31)Toutefois cela ne me satisfait pas encore tout à fait; (31a)car"
+                        }
                     ]
                 }
             ]
@@ -1744,7 +1898,9 @@
                 },
                 {
                     "lines": [
-                        " (27)De plus il me tombe encore en l’esprit, (27a)qu’on ne doit pas considérer une seule créature séparément, lorsqu’on recherche si les ouvrages de Dieu sont parfaits, mais généralement toutes les créatures ensemble. (30)Car la même chose qui pourrait peut-être avec quelque sorte de raison sembler fort"
+                        {
+                            "text": " (27)De plus il me tombe encore en l’esprit, (27a)qu’on ne doit pas considérer une seule créature séparément, lorsqu’on recherche si les ouvrages de Dieu sont parfaits, mais généralement toutes les créatures ensemble. (30)Car la même chose qui pourrait peut-être avec quelque sorte de raison sembler fort"
+                        }
                     ]
                 }
             ]
@@ -1824,7 +1980,9 @@
                 },
                 {
                     "lines": [
-                        " (14)De tout ceci je reconnais (14a)que ni la puissance de vouloir, laquelle j’ai reçue de Dieu, n’est point d’elle-même la cause de mes erreurs, (16)car elle est très ample et très parfaite en son espèce; (17)ni aussi la puissance d’entendre ou de concevoir: (17a)car ne concevant rien que par le moyen de cette puissance que Dieu m’a donnée pour concevoir, (18)sans doute que tout ce que je conçois, je le conçois comme il faut, (19)et il n’est pas possible qu’en cela je me trompe. (20)D’ou est-ce donc que naissent mes erreurs? (20a)C’est à savoir, de cela seul que, (21)la volonté étant beaucoup plus ample et plus étendue que l’entendement, (22)je ne la contiens pas dans les mêmes limites, (22a)mais que je l’étends aussi aux choses que je n’entends pas; (23)auxquelles étant de soi indifférente, (24)elle s’égare fort aisément, et choisit le mal pour le bien, ou le faux pour le vrai. (24a)Ce qui fait que je me trompe et que je pèche."
+                        {
+                            "text": " (14)De tout ceci je reconnais (14a)que ni la puissance de vouloir, laquelle j’ai reçue de Dieu, n’est point d’elle-même la cause de mes erreurs, (16)car elle est très ample et très parfaite en son espèce; (17)ni aussi la puissance d’entendre ou de concevoir: (17a)car ne concevant rien que par le moyen de cette puissance que Dieu m’a donnée pour concevoir, (18)sans doute que tout ce que je conçois, je le conçois comme il faut, (19)et il n’est pas possible qu’en cela je me trompe. (20)D’ou est-ce donc que naissent mes erreurs? (20a)C’est à savoir, de cela seul que, (21)la volonté étant beaucoup plus ample et plus étendue que l’entendement, (22)je ne la contiens pas dans les mêmes limites, (22a)mais que je l’étends aussi aux choses que je n’entends pas; (23)auxquelles étant de soi indifférente, (24)elle s’égare fort aisément, et choisit le mal pour le bien, ou le faux pour le vrai. (24a)Ce qui fait que je me trompe et que je pèche."
+                        }
                     ]
                 },
                 {
@@ -1860,7 +2018,9 @@
                 },
                 {
                     "lines": [
-                        " (15)Et cette indifférence ne s’étend pas seulement aux choses (16)dont l’entendement n’a aucune connaissance, (17)mais généralement aussi à toutes celles (17a)qu’il ne découvre pas avec une parfaite clarté, au moment (18)que la volonté en délibère; (19)car, pour probables que soient les conjectures qui me rendent enclin à juger quelque chose, (20)la seule connaissance que j’ai que ce ne sont que des conjectures, (21)et non des raisons certaines et indubitables, (22)suffit pour me donner occasion de juger le contraire. (23)Ce que j’ai suffisamment expérimenté ces jours passés (24)lorsque j’ai posé pour faux tout ce que j’avais tenu auparavant pour très véritable, pour cela seul que j’ai remarqué que l’on en pouvait douter en quelque sorte."
+                        {
+                            "text": " (15)Et cette indifférence ne s’étend pas seulement aux choses (16)dont l’entendement n’a aucune connaissance, (17)mais généralement aussi à toutes celles (17a)qu’il ne découvre pas avec une parfaite clarté, au moment (18)que la volonté en délibère; (19)car, pour probables que soient les conjectures qui me rendent enclin à juger quelque chose, (20)la seule connaissance que j’ai que ce ne sont que des conjectures, (21)et non des raisons certaines et indubitables, (22)suffit pour me donner occasion de juger le contraire. (23)Ce que j’ai suffisamment expérimenté ces jours passés (24)lorsque j’ai posé pour faux tout ce que j’avais tenu auparavant pour très véritable, pour cela seul que j’ai remarqué que l’on en pouvait douter en quelque sorte."
+                        }
                     ]
                 },
                 {
@@ -1905,7 +2065,9 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "de l’erreur et du péché, (1)elle n’a besoin d’aucun concours de Dieu, (2)puisque ce n’est pas une chose ou un être, (2a)et que, si on la rapporte à Dieu comme à sa cause, elle ne doit pas être nommée privation, mais seulement négation, selon la signification qu’on donne à ces mots dans l’École."
+                        {
+                            "text": "de l’erreur et du péché, (1)elle n’a besoin d’aucun concours de Dieu, (2)puisque ce n’est pas une chose ou un être, (2a)et que, si on la rapporte à Dieu comme à sa cause, elle ne doit pas être nommée privation, mais seulement négation, selon la signification qu’on donne à ces mots dans l’École."
+                        }
                     ]
                 },
                 {
@@ -1945,7 +2107,9 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "retenir fermement (1)la résolution de ne jamais donner mon jugement sur les choses dont la vérité ne m’est pas clairement connue. (2)Car quoique je remarque cette faiblesse en ma nature, (3)que je ne puis attacher continuellement mon esprit à une même pensée, (4)je puis toutefois, par une méditation attentive et souvent réitérée, me l’imprimer si fortement en la mémoire, (4a)que je ne manque jamais de m’en ressouvenir, toutes les fois que j’en aurai besoin, (6)et acquérir de cette façon l’habitude de ne point faillir. (8)Et, d’autant que c’est en cela que consiste la plus grande et principale perfection de l’homme, (9)j’estime n’avoir pas peu gagné par cette Méditation, (10)que d’avoir découvert la cause des faussetés et des erreurs."
+                        {
+                            "text": "retenir fermement (1)la résolution de ne jamais donner mon jugement sur les choses dont la vérité ne m’est pas clairement connue. (2)Car quoique je remarque cette faiblesse en ma nature, (3)que je ne puis attacher continuellement mon esprit à une même pensée, (4)je puis toutefois, par une méditation attentive et souvent réitérée, me l’imprimer si fortement en la mémoire, (4a)que je ne manque jamais de m’en ressouvenir, toutes les fois que j’en aurai besoin, (6)et acquérir de cette façon l’habitude de ne point faillir. (8)Et, d’autant que c’est en cela que consiste la plus grande et principale perfection de l’homme, (9)j’estime n’avoir pas peu gagné par cette Méditation, (10)que d’avoir découvert la cause des faussetés et des erreurs."
+                        }
                     ]
                 },
                 {
@@ -1967,7 +2131,9 @@
                 },
                 {
                     "lines": [
-                        " (20)Au reste je n’ai pas seulement appris aujourd’hui ce que je dois éviter pour ne plus faillir (21)mais aussi ce que je dois faire pour parvenir à la connaissance de la vérité. (22)Car certainement j’y parviendrai, (22a)si j’arrête suffisamment mon attention sur toutes les choses que je concevrai parfaitement, (24)et si je les sépare des autres que je ne comprends qu’avec confusion et obscurité. (25)A quoi dorénavant je prendrai soigneusement garde."
+                        {
+                            "text": " (20)Au reste je n’ai pas seulement appris aujourd’hui ce que je dois éviter pour ne plus faillir (21)mais aussi ce que je dois faire pour parvenir à la connaissance de la vérité. (22)Car certainement j’y parviendrai, (22a)si j’arrête suffisamment mon attention sur toutes les choses que je concevrai parfaitement, (24)et si je les sépare des autres que je ne comprends qu’avec confusion et obscurité. (25)A quoi dorénavant je prendrai soigneusement garde."
+                        }
                     ]
                 }
             ]
@@ -1992,12 +2158,16 @@
                 {
                     "type": "h2",
                     "lines": [
-                        "De l’essence des choses matérielles; et, derechef de Dieu, qu’il existe"
+                        {
+                            "text": "De l’essence des choses matérielles; et, derechef de Dieu, qu’il existe"
+                        }
                     ]
                 },
                 {
                     "lines": [
-                        " (4)Il me reste beaucoup d’autres choses à examiner, touchant les attributs de Dieu, et touchant ma propre nature, c’est-à-dire celle de mon esprit: (5)mais j’en reprendrai peut-être une autre fois la recherche. (6)Maintenant (après avoir remarqué ce qu’il faut faire ou éviter pour parvenir à la connaissance de la vérité), ce que j’ai principalement à faire, (8)est d’essayer de sortir et de me débarrasser de tous les doutes où je suis tombé ces jours passés, (10)et voir si l’on ne peut rien connaître de certain touchant les choses matérielles."
+                        {
+                            "text": " (4)Il me reste beaucoup d’autres choses à examiner, touchant les attributs de Dieu, et touchant ma propre nature, c’est-à-dire celle de mon esprit: (5)mais j’en reprendrai peut-être une autre fois la recherche. (6)Maintenant (après avoir remarqué ce qu’il faut faire ou éviter pour parvenir à la connaissance de la vérité), ce que j’ai principalement à faire, (8)est d’essayer de sortir et de me débarrasser de tous les doutes où je suis tombé ces jours passés, (10)et voir si l’on ne peut rien connaître de certain touchant les choses matérielles."
+                        }
                     ]
                 },
                 {
@@ -2015,7 +2185,9 @@
                 },
                 {
                     "lines": [
-                        " (16)En premier lieu, j’imagine distinctement cette quantité (16a)que les philosophes appellent vulgairement la quantité continue, (17)ou bien l’extension en longueur, largeur et profondeur, qui est en cette quantité, ou plutôt en la chose à qui on l’attribue. (19)De plus, je puis nombrer en elle plusieurs diverses parties, (19a)et attribuer à chacune de ces parties toutes sortes de grandeurs, de figures, de situations, et de mouvements; et enfin, je puis assigner à chacun de ces mouvements toutes sortes de durées."
+                        {
+                            "text": " (16)En premier lieu, j’imagine distinctement cette quantité (16a)que les philosophes appellent vulgairement la quantité continue, (17)ou bien l’extension en longueur, largeur et profondeur, qui est en cette quantité, ou plutôt en la chose à qui on l’attribue. (19)De plus, je puis nombrer en elle plusieurs diverses parties, (19a)et attribuer à chacune de ces parties toutes sortes de grandeurs, de figures, de situations, et de mouvements; et enfin, je puis assigner à chacun de ces mouvements toutes sortes de durées."
+                        }
                     ]
                 },
                 {
@@ -2038,7 +2210,9 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "et s’accorde si bien avec ma nature, (1)que lorsque je commence à les découvrir, (2)il ne me semble pas que j’apprenne rien de nouveau, (2a)mais plutôt que je me ressouviens de ce que je savais déjà auparavant, (3)c’est-à-dire que j’aperçois des choses (4)qui étaient déjà dans mon esprit, (5)quoi que je n’eusse pas encore tourné ma pensée vers elles."
+                        {
+                            "text": "et s’accorde si bien avec ma nature, (1)que lorsque je commence à les découvrir, (2)il ne me semble pas que j’apprenne rien de nouveau, (2a)mais plutôt que je me ressouviens de ce que je savais déjà auparavant, (3)c’est-à-dire que j’aperçois des choses (4)qui étaient déjà dans mon esprit, (5)quoi que je n’eusse pas encore tourné ma pensée vers elles."
+                        }
                     ]
                 },
                 {
@@ -2056,7 +2230,9 @@
                 },
                 {
                     "lines": [
-                        " (25)Et je n’ai que faire ici de m’objecter, (25a)que peut-être cette idée du triangle est venue en mon esprit par l’entremise de mes sens, (27)parce que j’ai vu quelquefois des corps de figure triangulaire; (28)car je puis former en mon esprit une infinité d’autres figures, (29)dont on ne peut avoir le moindre soupçon (30)que jamais elles me soient tombées sous les sens, (30a)et je ne"
+                        {
+                            "text": " (25)Et je n’ai que faire ici de m’objecter, (25a)que peut-être cette idée du triangle est venue en mon esprit par l’entremise de mes sens, (27)parce que j’ai vu quelquefois des corps de figure triangulaire; (28)car je puis former en mon esprit une infinité d’autres figures, (29)dont on ne peut avoir le moindre soupçon (30)que jamais elles me soient tombées sous les sens, (30a)et je ne"
+                        }
                     ]
                 }
             ]
@@ -2101,7 +2277,9 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "(1)que j’ai estimé jusques ici toutes les vérités des mathématiques, qui ne regardent que les nombres et les figures: (2)bien qu’à la vérité cela ne paraisse pas d’abord entièrement manifeste, (3)mais semble avoir quelque apparence de sophisme. (4)Car, ayant accoutumé dans toutes les autres choses de faire distinction entre l’existence et l’essence, (5)je me persuade aisément (6)que l’existence peut être séparée de l’essence de Dieu, (6a)et qu’ainsi on peut concevoir Dieu comme n’étant pas actuellement. (7)Mais néanmoins, lorsque j’y pense avec plus d’attention, je trouve manifestement (8)que l’existence ne peut non plus être séparée de l’essence de Dieu, (9)que de l’essence d’un triangle rectiligne (10)la grandeur de ses trois angles égaux à deux droits, (11)ou bien de l’ idée d’une montagne l’ idée d’une vallée; (12)en sorte qu’il n’y a pas moins de répugnance de concevoir un Dieu (12a)(c’est-à-dire un être souverainement parfait) (13)auquel manque l’existence (13a)(c’est-à-dire auquel manque quelque perfection), (14)que de concevoir une montagne qui n’ait point de vallée."
+                        {
+                            "text": "(1)que j’ai estimé jusques ici toutes les vérités des mathématiques, qui ne regardent que les nombres et les figures: (2)bien qu’à la vérité cela ne paraisse pas d’abord entièrement manifeste, (3)mais semble avoir quelque apparence de sophisme. (4)Car, ayant accoutumé dans toutes les autres choses de faire distinction entre l’existence et l’essence, (5)je me persuade aisément (6)que l’existence peut être séparée de l’essence de Dieu, (6a)et qu’ainsi on peut concevoir Dieu comme n’étant pas actuellement. (7)Mais néanmoins, lorsque j’y pense avec plus d’attention, je trouve manifestement (8)que l’existence ne peut non plus être séparée de l’essence de Dieu, (9)que de l’essence d’un triangle rectiligne (10)la grandeur de ses trois angles égaux à deux droits, (11)ou bien de l’ idée d’une montagne l’ idée d’une vallée; (12)en sorte qu’il n’y a pas moins de répugnance de concevoir un Dieu (12a)(c’est-à-dire un être souverainement parfait) (13)auquel manque l’existence (13a)(c’est-à-dire auquel manque quelque perfection), (14)que de concevoir une montagne qui n’ait point de vallée."
+                        }
                     ]
                 },
                 {
@@ -2163,12 +2341,16 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "servent à conclure que ses trois angles ne sont pas plus grands que deux droits, (2)encore que peut-être je ne considère pas alors cela en particulier. (3)Mais quand j’examine quelles figures sont capables d’être inscrites dans le cercle, (4)il n’est en aucune façon nécessaire que je pense (4a)que toutes les figures de quatre côtés sont de ce nombre; (5) au contraire, je ne puis pas même feindre que cela soit, (6) tant que je ne voudrai rien recevoir en ma pensée, (6a)que ce que je pourrai concevoir clairement et distinctement. (7)Et par conséquent il y a une grande différence (8)entre les fausses suppositions, comme est celle-ci, (8a)et les véritables idées qui sont nées avec moi, (9)dont la première et principale est celle de Dieu."
+                        {
+                            "text": "servent à conclure que ses trois angles ne sont pas plus grands que deux droits, (2)encore que peut-être je ne considère pas alors cela en particulier. (3)Mais quand j’examine quelles figures sont capables d’être inscrites dans le cercle, (4)il n’est en aucune façon nécessaire que je pense (4a)que toutes les figures de quatre côtés sont de ce nombre; (5) au contraire, je ne puis pas même feindre que cela soit, (6) tant que je ne voudrai rien recevoir en ma pensée, (6a)que ce que je pourrai concevoir clairement et distinctement. (7)Et par conséquent il y a une grande différence (8)entre les fausses suppositions, comme est celle-ci, (8a)et les véritables idées qui sont nées avec moi, (9)dont la première et principale est celle de Dieu."
+                        }
                     ]
                 },
                 {
                     "lines": [
-                        " (10)Car en effet je reconnais en plusieurs façons que cette idée (10a)n’est point quelque chose de feint ou d’inventé, (11)dépendant seulement de ma pensée, (11a)mais que c’est l’image d’une vraie et immuable nature. (12)Premièrement, à cause que je ne saurais concevoir autre chose (13)que Dieu seul, à l’essence de laquelle l’existence appartienne avec nécessité. (15)Puis aussi, parce qu’il ne m’est pas possible de concevoir deux ou plusieurs Dieux de même façon. (16)Et, posé qu’il y en ait un maintenant qui existe, (17)je vois clairement qu’il est nécessaire (17a)qu’il ait été auparavant de toute éternité, (18)et qu’il soit éternellement à l’avenir. (18a)Et enfin, parce que je connais une infinité d’autres choses en Dieu, (19)desquelles je ne puis rien diminuer ni changer."
+                        {
+                            "text": " (10)Car en effet je reconnais en plusieurs façons que cette idée (10a)n’est point quelque chose de feint ou d’inventé, (11)dépendant seulement de ma pensée, (11a)mais que c’est l’image d’une vraie et immuable nature. (12)Premièrement, à cause que je ne saurais concevoir autre chose (13)que Dieu seul, à l’essence de laquelle l’existence appartienne avec nécessité. (15)Puis aussi, parce qu’il ne m’est pas possible de concevoir deux ou plusieurs Dieux de même façon. (16)Et, posé qu’il y en ait un maintenant qui existe, (17)je vois clairement qu’il est nécessaire (17a)qu’il ait été auparavant de toute éternité, (18)et qu’il soit éternellement à l’avenir. (18a)Et enfin, parce que je connais une infinité d’autres choses en Dieu, (19)desquelles je ne puis rien diminuer ni changer."
+                        }
                     ]
                 },
                 {
@@ -2217,12 +2399,16 @@
                 },
                 {
                     "lines": [
-                        " (16)Car encore que je sois d’une telle nature, (16a)que, dès aussitôt que je comprends quelque chose fort clairement et fort distinctement, (17)je suis naturellement porté à la croire vraie; (18)néanmoins, parce que je suis aussi d’une telle nature, (18a)que je ne puis pas avoir l’esprit toujours attaché à une même chose, (20)et que souvent je me ressouviens d’avoir jugé une chose être vraie; (21)lorsque je cesse de considérer les raisons qui m’ont oblige à la juger telle, (22)il peut arriver pendant ce temps-là que d’autres raisons se présentent à moi, lesquelles (23)me feraient aisément changer d’opinion, si j’ignorais qu’il y eût un Dieu. (24)Et ainsi je n’aurais jamais une vraie et certaine science d’aucune chose que ce soit, mais seulement de vagues et inconstantes opinions."
+                        {
+                            "text": " (16)Car encore que je sois d’une telle nature, (16a)que, dès aussitôt que je comprends quelque chose fort clairement et fort distinctement, (17)je suis naturellement porté à la croire vraie; (18)néanmoins, parce que je suis aussi d’une telle nature, (18a)que je ne puis pas avoir l’esprit toujours attaché à une même chose, (20)et que souvent je me ressouviens d’avoir jugé une chose être vraie; (21)lorsque je cesse de considérer les raisons qui m’ont oblige à la juger telle, (22)il peut arriver pendant ce temps-là que d’autres raisons se présentent à moi, lesquelles (23)me feraient aisément changer d’opinion, si j’ignorais qu’il y eût un Dieu. (24)Et ainsi je n’aurais jamais une vraie et certaine science d’aucune chose que ce soit, mais seulement de vagues et inconstantes opinions."
+                        }
                     ]
                 },
                 {
                     "lines": [
-                        " (26)Comme, par exemple, lorsque je considère la nature du triangle, (27)je connais évidemment, moi qui suis un peu versé dans la géométrie, (29)que ses trois angles sont égaux à deux droits, (30)et il ne m’est pas possible de ne le point croire, (30a)pendant que"
+                        {
+                            "text": " (26)Comme, par exemple, lorsque je considère la nature du triangle, (27)je connais évidemment, moi qui suis un peu versé dans la géométrie, (29)que ses trois angles sont égaux à deux droits, (30)et il ne m’est pas possible de ne le point croire, (30a)pendant que"
+                        }
                     ]
                 }
             ]
@@ -2267,7 +2453,9 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "même je dormirais, (1)tout ce qui se présente à mon esprit avec évidence, (2)est absolument véritable. (3)Et ainsi je reconnais très clairement (3a)que la certitude et la vérité de toute science dépend de la seule connaissance du vrai Dieu: (4)en sorte qu’avant que je le connusse, (5)je ne pouvais savoir parfaitement aucune autre chose. (6)Et à présent que je le connais, j’ai le moyen d’acquérir une science parfaite touchant une infinité de choses, non seulement de celles qui sont en lui, mais aussi de celles qui appartiennent à la nature corporelle, en tant qu’elle peut servir d’objet aux démonstrations des géomètres, lesquels n’ont point d’égard à son existence. |"
+                        {
+                            "text": "même je dormirais, (1)tout ce qui se présente à mon esprit avec évidence, (2)est absolument véritable. (3)Et ainsi je reconnais très clairement (3a)que la certitude et la vérité de toute science dépend de la seule connaissance du vrai Dieu: (4)en sorte qu’avant que je le connusse, (5)je ne pouvais savoir parfaitement aucune autre chose. (6)Et à présent que je le connais, j’ai le moyen d’acquérir une science parfaite touchant une infinité de choses, non seulement de celles qui sont en lui, mais aussi de celles qui appartiennent à la nature corporelle, en tant qu’elle peut servir d’objet aux démonstrations des géomètres, lesquels n’ont point d’égard à son existence. |"
+                        }
                     ]
                 },
                 {
@@ -2291,7 +2479,9 @@
                 {
                     "type": "h2",
                     "lines": [
-                        "(11)De l’existence des choses matérielles, et de la réelle distinction entre l’âme et le corps de l’homme"
+                        {
+                            "text": "(11)De l’existence des choses matérielles, et de la réelle distinction entre l’âme et le corps de l’homme"
+                        }
                     ]
                 },
                 {
@@ -2314,7 +2504,9 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "(1)je trouve qu’elle n’est autre chose (1a)qu’une certaine application de la faculté qui connaît, (2)au corps qui lui est intimement présent, (3)et partant qui existe."
+                        {
+                            "text": "(1)je trouve qu’elle n’est autre chose (1a)qu’une certaine application de la faculté qui connaît, (2)au corps qui lui est intimement présent, (3)et partant qui existe."
+                        }
                     ]
                 },
                 {
@@ -2336,7 +2528,9 @@
                 },
                 {
                     "lines": [
-                        " (23)Que s’il est question de considérer un pentagone, (24)il est bien vrai que je puis concevoir sa figure, (24a)aussi bien que celle d’un chiliogone, (25)sans le secours de l’imagination; (25a)mais je la puis aussi imaginer (26)en appliquant l’attention de mon esprit (27)à chacun de ses cinq côtés, et tout ensemble à l’aire, ou à l’espace qu’ils renferment. (28)Ainsi je connais clairement que"
+                        {
+                            "text": " (23)Que s’il est question de considérer un pentagone, (24)il est bien vrai que je puis concevoir sa figure, (24a)aussi bien que celle d’un chiliogone, (25)sans le secours de l’imagination; (25a)mais je la puis aussi imaginer (26)en appliquant l’attention de mon esprit (27)à chacun de ses cinq côtés, et tout ensemble à l’aire, ou à l’espace qu’ils renferment. (28)Ainsi je connais clairement que"
+                        }
                     ]
                 }
             ]
@@ -2346,7 +2540,9 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "j’ai besoin d’une particulière contention d’esprit pour imaginer, (2)de laquelle je ne me sers point pour concevoir; (2a)et cette particulière contention d’esprit (3)montre évidemment la différence qui est entre l’imagination et l’intellection ou conception pure."
+                        {
+                            "text": "j’ai besoin d’une particulière contention d’esprit pour imaginer, (2)de laquelle je ne me sers point pour concevoir; (2a)et cette particulière contention d’esprit (3)montre évidemment la différence qui est entre l’imagination et l’intellection ou conception pure."
+                        }
                     ]
                 },
                 {
@@ -2386,12 +2582,16 @@
                 },
                 {
                     "lines": [
-                        " (11)Et premièrement je rappellerai dans ma mémoire quelles sont les choses (12)que j’ai ci-devant tenues pour vraies, comme les ayant reçues par les sens, (13)et sur quels fondements ma créance était appuyée. (13a)Et après, j’examinerai les raisons qui m’ont obligé depuis à les révoquer en doute. (15)Et enfin je considérerai ce que j’en dois maintenant croire."
+                        {
+                            "text": " (11)Et premièrement je rappellerai dans ma mémoire quelles sont les choses (12)que j’ai ci-devant tenues pour vraies, comme les ayant reçues par les sens, (13)et sur quels fondements ma créance était appuyée. (13a)Et après, j’examinerai les raisons qui m’ont obligé depuis à les révoquer en doute. (15)Et enfin je considérerai ce que j’en dois maintenant croire."
+                        }
                     ]
                 },
                 {
                     "lines": [
-                        " (17)Premièrement donc j’ai senti que j’avais une tête, des mains, des pieds, (18)et tous les autres membres dont est composé ce corps (19)que je considérais comme une partie de moi-même, ou peut-être aussi comme le tout. (20)De plus j’ai senti que ce corps était placé entre beaucoup d’autres, (21)desquels il était capable de recevoir diverses commodités et incommodités, (22)et je remarquais ces commodités par un certain sentiment de plaisir ou de volupté, et ces incommodités par un sentiment de douleur. (23)Et outre ce plaisir et cette douleur, (24)je ressentais aussi en moi la faim, la soif, et d’autres semblables appétits, (25)comme aussi de certaines inclinations corporelles (26)vers la joie, la tristesse, la colère, et autres semblables passions. (27)Et au dehors, outre l’extension, les figures,"
+                        {
+                            "text": " (17)Premièrement donc j’ai senti que j’avais une tête, des mains, des pieds, (18)et tous les autres membres dont est composé ce corps (19)que je considérais comme une partie de moi-même, ou peut-être aussi comme le tout. (20)De plus j’ai senti que ce corps était placé entre beaucoup d’autres, (21)desquels il était capable de recevoir diverses commodités et incommodités, (22)et je remarquais ces commodités par un certain sentiment de plaisir ou de volupté, et ces incommodités par un sentiment de douleur. (23)Et outre ce plaisir et cette douleur, (24)je ressentais aussi en moi la faim, la soif, et d’autres semblables appétits, (25)comme aussi de certaines inclinations corporelles (26)vers la joie, la tristesse, la colère, et autres semblables passions. (27)Et au dehors, outre l’extension, les figures,"
+                        }
                     ]
                 }
             ]
@@ -2414,7 +2614,9 @@
                 },
                 {
                     "lines": [
-                        " (5)Et certes, considérant les idées de toutes ces qualités (6)qui se présentaient à ma pensée, (7)et lesquelles seules je sentais proprement et immédiatement, (8)// 5 l.; ← / ce n’était pas sans raison \\\\ que je croyais sentir des choses entièrement différentes de ma pensée, (9)à savoir des corps d’où procédaient ces idées. (10)Car j’expérimentais qu’elles se présentaient à elle, sans que mon consentement y fût requis, (11)en sorte que je ne pouvais sentir aucun objet, (12)quelque volonté que j’en eusse, (12a)s’il ne se trouvait présent à l’organe d’un de mes sens; (13)et il n’était nullement en mon pouvoir de ne le pas sentir, lorsqu’il s’y trouvait présent."
+                        {
+                            "text": " (5)Et certes, considérant les idées de toutes ces qualités (6)qui se présentaient à ma pensée, (7)et lesquelles seules je sentais proprement et immédiatement, (8)// 5 l.; ← / ce n’était pas sans raison \\\\ que je croyais sentir des choses entièrement différentes de ma pensée, (9)à savoir des corps d’où procédaient ces idées. (10)Car j’expérimentais qu’elles se présentaient à elle, sans que mon consentement y fût requis, (11)en sorte que je ne pouvais sentir aucun objet, (12)quelque volonté que j’en eusse, (12a)s’il ne se trouvait présent à l’organe d’un de mes sens; (13)et il n’était nullement en mon pouvoir de ne le pas sentir, lorsqu’il s’y trouvait présent."
+                        }
                     ]
                 },
                 {
@@ -2436,12 +2638,16 @@
                 },
                 {
                     "lines": [
-                        " (23)Et parce que je me ressouvenais aussi (23a)que je m’étais plutôt servi des sens que de la raison, (24)et que je reconnaissais que les idées que je formais de moi-même n’étaient pas si expresses, (26)que celles que je recevais par les sens, (26a)et même qu’elles étaient le plus souvent composées des parties de celles-ci, (27)je me persuadais aisément (28)que je n’avais aucune idée dans mon esprit, (28a)qui n’eût passé auparavant par mes sens."
+                        {
+                            "text": " (23)Et parce que je me ressouvenais aussi (23a)que je m’étais plutôt servi des sens que de la raison, (24)et que je reconnaissais que les idées que je formais de moi-même n’étaient pas si expresses, (26)que celles que je recevais par les sens, (26a)et même qu’elles étaient le plus souvent composées des parties de celles-ci, (27)je me persuadais aisément (28)que je n’avais aucune idée dans mon esprit, (28a)qui n’eût passé auparavant par mes sens."
+                        }
                     ]
                 },
                 {
                     "lines": [
-                        " (29)Ce n’était pas aussi sans quelque raison (30)que je croyais que ce corps (lequel par un certain droit particulier"
+                        {
+                            "text": " (29)Ce n’était pas aussi sans quelque raison (30)que je croyais que ce corps (lequel par un certain droit particulier"
+                        }
                     ]
                 }
             ]
@@ -2451,7 +2657,9 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "j’appelais mien) m’appartenait plus proprement et plus étroitement que pas un autre. (2)Car en effet je n’en pouvais jamais être séparé comme des autres corps; (3)je ressentais en lui et pour lui tous mes appétits et toutes mes affections; (4)et enfin // 5 l.; → / j’étais touché \\\\ des sentiments de plaisir et de douleur en ses parties, (5)et non pas en celles des autres corps qui en sont séparés."
+                        {
+                            "text": "j’appelais mien) m’appartenait plus proprement et plus étroitement que pas un autre. (2)Car en effet je n’en pouvais jamais être séparé comme des autres corps; (3)je ressentais en lui et pour lui tous mes appétits et toutes mes affections; (4)et enfin // 5 l.; → / j’étais touché \\\\ des sentiments de plaisir et de douleur en ses parties, (5)et non pas en celles des autres corps qui en sont séparés."
+                        }
                     ]
                 },
                 {
@@ -2500,7 +2708,9 @@
                 },
                 {
                     "lines": [
-                        " (7)Et à ces raisons de douter j’en ai encore ajouté depuis peu deux autres fort générales. (8)La première est que je n’ai jamais rien cru sentir étant éveillé, (9)que je ne puisse aussi quelquefois croire sentir quand je dors; (11)et comme je ne crois pas que les choses qu’il me semble que je sens en dormant, procèdent (12)de quelques objets hors de moi, (13)je ne voyais pas pourquoi je devais plutôt avoir cette créance touchant celles (14)qu’il me semble que je sens étant éveillé. (14a)Et la seconde, que, ne connaissant pas encore, ou plutôt feignant de ne pas connaître l’auteur de mon être, (16)je ne voyais rien qui pût empêcher que je n’eusse été fait tel par la nature, (17)que je me trompasse même dans les choses (18)qui me paraissaient les plus véritables. (18a)Et pour les raisons qui m’avaient ci-devant persuadé la vérité des choses sensibles, (20)je n’avais pas beaucoup de peine à y répondre. (21)Car la nature semblant me porter à beaucoup de choses (21a)dont la raison me détournait, (22)je ne croyais pas me devoir confier beaucoup aux enseignements de cette nature. (23)Et quoique les idées que je reçois par les sens ne dépendent pas de ma volonté, (24)je ne pensais pas que l’on dût pour cela conclure (25)qu’elles procédaient de choses différentes de moi, (26)puisque peut-être il se peut rencontrer en moi quelque faculté (27)(bien qu’elle m’ait été jusques ici inconnue), (27a)qui en soit la cause, et qui les produise."
+                        {
+                            "text": " (7)Et à ces raisons de douter j’en ai encore ajouté depuis peu deux autres fort générales. (8)La première est que je n’ai jamais rien cru sentir étant éveillé, (9)que je ne puisse aussi quelquefois croire sentir quand je dors; (11)et comme je ne crois pas que les choses qu’il me semble que je sens en dormant, procèdent (12)de quelques objets hors de moi, (13)je ne voyais pas pourquoi je devais plutôt avoir cette créance touchant celles (14)qu’il me semble que je sens étant éveillé. (14a)Et la seconde, que, ne connaissant pas encore, ou plutôt feignant de ne pas connaître l’auteur de mon être, (16)je ne voyais rien qui pût empêcher que je n’eusse été fait tel par la nature, (17)que je me trompasse même dans les choses (18)qui me paraissaient les plus véritables. (18a)Et pour les raisons qui m’avaient ci-devant persuadé la vérité des choses sensibles, (20)je n’avais pas beaucoup de peine à y répondre. (21)Car la nature semblant me porter à beaucoup de choses (21a)dont la raison me détournait, (22)je ne croyais pas me devoir confier beaucoup aux enseignements de cette nature. (23)Et quoique les idées que je reçois par les sens ne dépendent pas de ma volonté, (24)je ne pensais pas que l’on dût pour cela conclure (25)qu’elles procédaient de choses différentes de moi, (26)puisque peut-être il se peut rencontrer en moi quelque faculté (27)(bien qu’elle m’ait été jusques ici inconnue), (27a)qui en soit la cause, et qui les produise."
+                        }
                     ]
                 },
                 {
@@ -2523,7 +2733,9 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "(1)mais je ne pense pas aussi que je les doive toutes généralement révoquer en doute."
+                        {
+                            "text": "(1)mais je ne pense pas aussi que je les doive toutes généralement révoquer en doute."
+                        }
                     ]
                 },
                 {
@@ -2545,12 +2757,16 @@
                 },
                 {
                     "lines": [
-                        " (21)Davantage, je trouve en moi des facultés de penser toutes particulières, et distinctes de moi, (22)à savoir les facultés d’imaginer et de sentir, (23)sans lesquelles je puis bien me concevoir clairement et distinctement tout entier, (24)mais non pas elles sans moi, (25)c’est-à-dire sans une substance intelligente à qui elles soient attachées. (25a)Car dans la notion que nous avons de ces facultés, ou (pour me servir des termes de l’École) dans leur concept formel, elles enferment quelque sorte d’intellection: (27)d’où je conçois qu’elles sont distinctes de moi, comme les figures, les mouvements, et les autres modes ou accidents des corps, le sont des corps mêmes qui les soutiennent."
+                        {
+                            "text": " (21)Davantage, je trouve en moi des facultés de penser toutes particulières, et distinctes de moi, (22)à savoir les facultés d’imaginer et de sentir, (23)sans lesquelles je puis bien me concevoir clairement et distinctement tout entier, (24)mais non pas elles sans moi, (25)c’est-à-dire sans une substance intelligente à qui elles soient attachées. (25a)Car dans la notion que nous avons de ces facultés, ou (pour me servir des termes de l’École) dans leur concept formel, elles enferment quelque sorte d’intellection: (27)d’où je conçois qu’elles sont distinctes de moi, comme les figures, les mouvements, et les autres modes ou accidents des corps, le sont des corps mêmes qui les soutiennent."
+                        }
                     ]
                 },
                 {
                     "lines": [
-                        " (28)Je reconnais aussi en moi quelques autres facultés (28a)comme celles de changer de lieu, de se mettre en plusieurs postures, et autres semblables, (30)qui ne peuvent être conçues, non plus que les précédentes,"
+                        {
+                            "text": " (28)Je reconnais aussi en moi quelques autres facultés (28a)comme celles de changer de lieu, de se mettre en plusieurs postures, et autres semblables, (30)qui ne peuvent être conçues, non plus que les précédentes,"
+                        }
                     ]
                 }
             ]
@@ -2595,7 +2811,9 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "une très grande inclination à croire (1)qu’elles me sont envoyées ou qu’elles partent des choses corporelles, (2)je ne vois pas comment on pourrait l’excuser de tromperie, (3)si en effet ces idées partaient ou étaient produites par d’autres causes que par des choses corporelles. (4)Et partant il faut confesser qu’il y a des choses corporelles qui existent."
+                        {
+                            "text": "une très grande inclination à croire (1)qu’elles me sont envoyées ou qu’elles partent des choses corporelles, (2)je ne vois pas comment on pourrait l’excuser de tromperie, (3)si en effet ces idées partaient ou étaient produites par d’autres causes que par des choses corporelles. (4)Et partant il faut confesser qu’il y a des choses corporelles qui existent."
+                        }
                     ]
                 },
                 {
@@ -2617,12 +2835,16 @@
                 },
                 {
                     "lines": [
-                        " 20)Et premièrement il n’y a point de doute (20a)que tout ce que la nature m’enseigne (21)contient quelque vérité. (21a)Car par la nature, considérée en général, (22)je n’entends maintenant autre chose que Dieu même, ou bien l’ordre et la disposition que Dieu a établie dans les choses créées. (24)Et par ma nature en particulier, je n’entends autre chose (25)que la complexion ou l’assemblage de toutes les choses (25a)que Dieu m’a données."
+                        {
+                            "text": " 20)Et premièrement il n’y a point de doute (20a)que tout ce que la nature m’enseigne (21)contient quelque vérité. (21a)Car par la nature, considérée en général, (22)je n’entends maintenant autre chose que Dieu même, ou bien l’ordre et la disposition que Dieu a établie dans les choses créées. (24)Et par ma nature en particulier, je n’entends autre chose (25)que la complexion ou l’assemblage de toutes les choses (25a)que Dieu m’a données."
+                        }
                     ]
                 },
                 {
                     "lines": [
-                        " (27)Or il n’y a rien que cette nature m’enseigne plus expressément, ni plus sensiblement, (28)sinon que j’ai un corps (28a)qui est mal disposé quand je sens de la douleur, (29)qui a besoin de manger ou de boire, (29a)quand j’ai les sentiments de la faim ou de la soif, etc. (30)Et partant je ne dois aucunement douter (31) qu’il n’y ait en cela quelque vérité."
+                        {
+                            "text": " (27)Or il n’y a rien que cette nature m’enseigne plus expressément, ni plus sensiblement, (28)sinon que j’ai un corps (28a)qui est mal disposé quand je sens de la douleur, (29)qui a besoin de manger ou de boire, (29a)quand j’ai les sentiments de la faim ou de la soif, etc. (30)Et partant je ne dois aucunement douter (31) qu’il n’y ait en cela quelque vérité."
+                        }
                     ]
                 }
             ]
@@ -2707,7 +2929,9 @@
                 },
                 {
                     "lines": [
-                        " (2)Ainsi, quoiqu’une étoile ne fasse pas plus d’impression en mon oeil que le feu d’un petit flambeau, (3)il n’y a toutefois en moi aucune faculté réelle ou naturelle, qui me porte à croire (4)qu’elle n’est pas plus grande que ce feu, (5)mais je l’ai jugé ainsi dès mes premières années sans aucun raisonnable fondement. (6)Et quoiqu’en approchant du feu je sente de la chaleur, (7)et même que m’en approchant un peu trop près (8)je ressente de la douleur, (8a)il n’y a toutefois aucune raison qui me puisse persuader (9)qu’il y a dans le feu quelque chose de semblable à cette chaleur, (9a)non plus qu’à cette douleur; (10)mais seulement j’ai raison de croire qu’il y a quelque chose en lui, quelle qu’elle puisse être, (11)qui excite en moi ces sentiments de chaleur ou de douleur."
+                        {
+                            "text": " (2)Ainsi, quoiqu’une étoile ne fasse pas plus d’impression en mon oeil que le feu d’un petit flambeau, (3)il n’y a toutefois en moi aucune faculté réelle ou naturelle, qui me porte à croire (4)qu’elle n’est pas plus grande que ce feu, (5)mais je l’ai jugé ainsi dès mes premières années sans aucun raisonnable fondement. (6)Et quoiqu’en approchant du feu je sente de la chaleur, (7)et même que m’en approchant un peu trop près (8)je ressente de la douleur, (8a)il n’y a toutefois aucune raison qui me puisse persuader (9)qu’il y a dans le feu quelque chose de semblable à cette chaleur, (9a)non plus qu’à cette douleur; (10)mais seulement j’ai raison de croire qu’il y a quelque chose en lui, quelle qu’elle puisse être, (11)qui excite en moi ces sentiments de chaleur ou de douleur."
+                        }
                     ]
                 },
                 {
@@ -2725,7 +2949,9 @@
                 },
                 {
                     "lines": [
-                        " (24)Mais j’ai déjà ci-devant assez examiné comment, (24a)nonobstant la souveraine bonté de Dieu, (25)il arrive qu’il y ait de la fausseté dans les jugements que je fais en cette sorte. (26)Il se présente seulement encore ici une difficulte touchant les choses (26a)que la nature m’enseigne devoir être suivies ou évitées, (28)et aussi touchant les sentiments intérieurs qu’elle a mis en moi; (28a)car il me semble y avoir quelquefois remarqué de l’erreur, et ainsi que je suis directement trompé par ma nature. (29)Comme, par exemple, le goût agréable de quelque viande, en laquelle on aura mêlé du poison, peut m’inviter à prendre ce poison, et ainsi me tromper."
+                        {
+                            "text": " (24)Mais j’ai déjà ci-devant assez examiné comment, (24a)nonobstant la souveraine bonté de Dieu, (25)il arrive qu’il y ait de la fausseté dans les jugements que je fais en cette sorte. (26)Il se présente seulement encore ici une difficulte touchant les choses (26a)que la nature m’enseigne devoir être suivies ou évitées, (28)et aussi touchant les sentiments intérieurs qu’elle a mis en moi; (28a)car il me semble y avoir quelquefois remarqué de l’erreur, et ainsi que je suis directement trompé par ma nature. (29)Comme, par exemple, le goût agréable de quelque viande, en laquelle on aura mêlé du poison, peut m’inviter à prendre ce poison, et ainsi me tromper."
+                        }
                     ]
                 }
             ]
@@ -2787,12 +3013,16 @@
                 },
                 {
                     "lines": [
-                        " (18)Mais certes, quoique, au regard du corps hydropique, (19)ce ne soit qu’une dénomination extérieure, (19a)lorsqu’on dit que sa nature est corrompue, (20)en ce que, sans avoir besoin de boire, il ne laisse pas d’avoir le gosier sec et aride; (21)toutefois, au regard de tout le composé, (22)c’est-à-dire de l’esprit ou de l’âme unie à ce corps, (23)ce n’est pas une pure dénomination, (23a)mais bien une véritable erreur de nature, en ce qu’il a soif, lorsqu’il lui est très nuisible de boire; (25)et partant, il reste encore à examiner (25a)comment la bonté de Dieu n’empêche pas (26) que la nature de l’homme, prise de cette sorte, soit fautive et trompeuse."
+                        {
+                            "text": " (18)Mais certes, quoique, au regard du corps hydropique, (19)ce ne soit qu’une dénomination extérieure, (19a)lorsqu’on dit que sa nature est corrompue, (20)en ce que, sans avoir besoin de boire, il ne laisse pas d’avoir le gosier sec et aride; (21)toutefois, au regard de tout le composé, (22)c’est-à-dire de l’esprit ou de l’âme unie à ce corps, (23)ce n’est pas une pure dénomination, (23a)mais bien une véritable erreur de nature, en ce qu’il a soif, lorsqu’il lui est très nuisible de boire; (25)et partant, il reste encore à examiner (25a)comment la bonté de Dieu n’empêche pas (26) que la nature de l’homme, prise de cette sorte, soit fautive et trompeuse."
+                        }
                     ]
                 },
                 {
                     "lines": [
-                        " (28)Pour commencer donc cet examen, je remarque ici, premièrement, (28a)qu’il y a une grande différence entre l’esprit et le corps, (29)en ce que le corps, de sa nature, est toujours divisible, (30)et que l’esprit est entièrement"
+                        {
+                            "text": " (28)Pour commencer donc cet examen, je remarque ici, premièrement, (28a)qu’il y a une grande différence entre l’esprit et le corps, (29)en ce que le corps, de sa nature, est toujours divisible, (30)et que l’esprit est entièrement"
+                        }
                     ]
                 }
             ]
@@ -2846,7 +3076,9 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "dans la corde A B C D qui est toute tendue, si l’on vient à tirer et remuer la dernière partie D, (1)la première A ne sera pas remuée d’une autre façon, (2)qu’on la pourrait aussi faire mouvoir, (2a)si on tirait une des parties moyennes, B ou C, (3)et que la dernière D demeurât cependant immobile. (4) Et en même façon, quand je ressens de la douleur au pied, (5)la physique m’apprend que ce sentiment se communique par le moyen des nerfs dispersés dans le pied, (6)qui se trouvant étendus comme des cordes depuis là jusqu’au cerveau, (7)lorsqu’ils sont tirés dans le pied, (7a)tirent aussi en même temps l’endroit du cerveau d’où ils viennent et auquel ils aboutissent, (9)et y excitent un certain mouvement, que la nature a institué (10)pour faire sentir de la douleur à l’esprit, comme si cette douleur était dans le pied. (11)Mais parce que ces nerfs doivent passer par la jambe, par la cuisse, par les reins, par le dos et par le col, (12)pour s’étendre depuis le pied jusqu’au cerveau, (13)il peut arriver qu’encore bien que leurs extrémités qui sont dans le pied ne soient point remuées, (14)mais seulement quelques-unes de leurs parties qui passent par les reins ou par le col, (15)cela néanmoins excite les mêmes mouvements dans le cerveau, (16)qui pourraient y être excités par une blessure reçue dans le pied, (16a)en suite de quoi il sera nécessaire que l’esprit ressente dans le pied la même douleur que s’il y avait reçu une blessure. (17)Et il faut juger le semblable de toutes les autres perceptions de nos sens."
+                        {
+                            "text": "dans la corde A B C D qui est toute tendue, si l’on vient à tirer et remuer la dernière partie D, (1)la première A ne sera pas remuée d’une autre façon, (2)qu’on la pourrait aussi faire mouvoir, (2a)si on tirait une des parties moyennes, B ou C, (3)et que la dernière D demeurât cependant immobile. (4) Et en même façon, quand je ressens de la douleur au pied, (5)la physique m’apprend que ce sentiment se communique par le moyen des nerfs dispersés dans le pied, (6)qui se trouvant étendus comme des cordes depuis là jusqu’au cerveau, (7)lorsqu’ils sont tirés dans le pied, (7a)tirent aussi en même temps l’endroit du cerveau d’où ils viennent et auquel ils aboutissent, (9)et y excitent un certain mouvement, que la nature a institué (10)pour faire sentir de la douleur à l’esprit, comme si cette douleur était dans le pied. (11)Mais parce que ces nerfs doivent passer par la jambe, par la cuisse, par les reins, par le dos et par le col, (12)pour s’étendre depuis le pied jusqu’au cerveau, (13)il peut arriver qu’encore bien que leurs extrémités qui sont dans le pied ne soient point remuées, (14)mais seulement quelques-unes de leurs parties qui passent par les reins ou par le col, (15)cela néanmoins excite les mêmes mouvements dans le cerveau, (16)qui pourraient y être excités par une blessure reçue dans le pied, (16a)en suite de quoi il sera nécessaire que l’esprit ressente dans le pied la même douleur que s’il y avait reçu une blessure. (17)Et il faut juger le semblable de toutes les autres perceptions de nos sens."
+                        }
                     ]
                 },
                 {
@@ -2868,7 +3100,9 @@
                 },
                 {
                     "lines": [
-                        " (28)Ainsi, par exemple,"
+                        {
+                            "text": " (28)Ainsi, par exemple,"
+                        }
                     ]
                 }
             ]
@@ -2878,7 +3112,9 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "lorsque les nerfs qui sont dans le pied sont remués fortement, et plus qu’à l’ordinaire, (2)leur mouvement, passant par la moelle de l’épine du dos jusqu’au cerveau, (3)fait une impression à l’esprit qui lui fait sentir quelque chose, (4)à savoir de la douleur, comme étant dans le pied (5)par laquelle l’esprit est averti et excité à faire son possibie pour en chasser la cause, comme très dangereuse et nuisible au pied."
+                        {
+                            "text": "lorsque les nerfs qui sont dans le pied sont remués fortement, et plus qu’à l’ordinaire, (2)leur mouvement, passant par la moelle de l’épine du dos jusqu’au cerveau, (3)fait une impression à l’esprit qui lui fait sentir quelque chose, (4)à savoir de la douleur, comme étant dans le pied (5)par laquelle l’esprit est averti et excité à faire son possibie pour en chasser la cause, comme très dangereuse et nuisible au pied."
+                        }
                     ]
                 },
                 {
@@ -2896,12 +3132,16 @@
                 },
                 {
                     "lines": [
-                        " (13)De même, lorsque nous avons besoin de boire, (13a)il naît de là une certaine sécheresse dans le gosier, (14)qui remue ses nerfs, et par leur moyen les parties intérieures du cerveau; (15)et ce mouvement fait ressentir à l’esprit le sentiment de la soif, (16)parce qu’en cette occasion-là il n’y a rien qui nous soit plus utile que de savoir (17) que nous avons besoin de boire, pour la conservation de notre santé; (18) et ainsi des autres."
+                        {
+                            "text": " (13)De même, lorsque nous avons besoin de boire, (13a)il naît de là une certaine sécheresse dans le gosier, (14)qui remue ses nerfs, et par leur moyen les parties intérieures du cerveau; (15)et ce mouvement fait ressentir à l’esprit le sentiment de la soif, (16)parce qu’en cette occasion-là il n’y a rien qui nous soit plus utile que de savoir (17) que nous avons besoin de boire, pour la conservation de notre santé; (18) et ainsi des autres."
+                        }
                     ]
                 },
                 {
                     "lines": [
-                        " (19)D’où il est entièrement manifeste que, (19a)nonobstant la souveraine bonté de Dieu, (20)la nature de l’homme, en tant qu’il est composé de l’esprit et du corps, (21)ne peut qu’elle ne soit quelquefois fautive et trompeuse."
+                        {
+                            "text": " (19)D’où il est entièrement manifeste que, (19a)nonobstant la souveraine bonté de Dieu, (20)la nature de l’homme, en tant qu’il est composé de l’esprit et du corps, (21)ne peut qu’elle ne soit quelquefois fautive et trompeuse."
+                        }
                     ]
                 },
                 {
@@ -2987,17 +3227,23 @@
                 {
                     "type": "h1",
                     "lines": [
-                        "LE LIBRAIRE AU LECTEUR"
+                        {
+                            "text": "LE LIBRAIRE AU LECTEUR"
+                        }
                     ]
                 },
                 {
                     "lines": [
-                        " (1)La satisfaction que je puis promettre (2)à toutes les personnes d’esprit dans la lecture de ce livre, (3)pour ce qui regarde l’auteur et les traducteurs, (4)m’oblige à prendre garde plus soigneusement (5)à contenter aussi le lecteur de ma part, (6)de peur que toute sa disgrâce ne tombe sur moi seul. (7)Je tâche donc à le satisfaire, et par mon soin dans toute cette impression, (8)et par ce petit éclaircissement (9)dans lequel je le dois ici avertir de trois choses, (10)qui sont de ma connaissance particulière, (11)et qui serviront à la leur. (12)La première est, quel a été le dessein de l’auteur, (13)lorsqu’il a publié cet ouvrage en latin. (14)La seconde, comment et pour quoi il (15)paraît aujourd’hui traduit en français; (16)et la troisième quelle est la qualité de cette version."
+                        {
+                            "text": " (1)La satisfaction que je puis promettre (2)à toutes les personnes d’esprit dans la lecture de ce livre, (3)pour ce qui regarde l’auteur et les traducteurs, (4)m’oblige à prendre garde plus soigneusement (5)à contenter aussi le lecteur de ma part, (6)de peur que toute sa disgrâce ne tombe sur moi seul. (7)Je tâche donc à le satisfaire, et par mon soin dans toute cette impression, (8)et par ce petit éclaircissement (9)dans lequel je le dois ici avertir de trois choses, (10)qui sont de ma connaissance particulière, (11)et qui serviront à la leur. (12)La première est, quel a été le dessein de l’auteur, (13)lorsqu’il a publié cet ouvrage en latin. (14)La seconde, comment et pour quoi il (15)paraît aujourd’hui traduit en français; (16)et la troisième quelle est la qualité de cette version."
+                        }
                     ]
                 },
                 {
                     "lines": [
-                        " (17)I. Lorsque l’auteur, après avoir conçu ces Méditations dans son esprit, (18)résolut d’en faire part au public, (19)ce fut autant par la crainte d’étouffer la voix de la vérité, (20)qu’à dessein de la soumettre à l’épreuve de tous les doctes; (21)à cet effet il leur voulut parler en leur langue, (22)et à leur mode, (23)et renferma toutes ses pensées dans le latin, (24)et les termes de l’École. (25)Son intention n’a point été frustrée, (26)et son livre a été mis à la question (27)dans tous les tribunaux de la philosophie. (28)Les objections jointes à ces Méditations (29)le témoignent assez; (30)et montrent bien que les savants du siècle (31)se sont donné la peine d’examiner ses propositions avec rigueur. (32)Ce n’est pas à moi de juger avec quel succès, (33)puisque c’est moi qui les présente aux autres (34)pour les en faire juges. (35)Il me suffit de croire pour moi, et d’assurer les autres, (36)que tant de grands hommes n’ont pu se choquer sans produire beaucoup de lumière."
+                        {
+                            "text": " (17)I. Lorsque l’auteur, après avoir conçu ces Méditations dans son esprit, (18)résolut d’en faire part au public, (19)ce fut autant par la crainte d’étouffer la voix de la vérité, (20)qu’à dessein de la soumettre à l’épreuve de tous les doctes; (21)à cet effet il leur voulut parler en leur langue, (22)et à leur mode, (23)et renferma toutes ses pensées dans le latin, (24)et les termes de l’École. (25)Son intention n’a point été frustrée, (26)et son livre a été mis à la question (27)dans tous les tribunaux de la philosophie. (28)Les objections jointes à ces Méditations (29)le témoignent assez; (30)et montrent bien que les savants du siècle (31)se sont donné la peine d’examiner ses propositions avec rigueur. (32)Ce n’est pas à moi de juger avec quel succès, (33)puisque c’est moi qui les présente aux autres (34)pour les en faire juges. (35)Il me suffit de croire pour moi, et d’assurer les autres, (36)que tant de grands hommes n’ont pu se choquer sans produire beaucoup de lumière."
+                        }
                     ]
                 }
             ]
@@ -3007,12 +3253,16 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "(1)II. Cependant ce livre passe des universités dans les palais des grands, (2)et tombe entre les mains d’une personne d’une condition très éminente. (3)Après en avoir lu les Méditations, (4)et les avoir jugées dignes de sa mémoire, (5)il prit la peine de les traduire en français; (6)soit que par ce moyen il se voulut (7)rendre plus propres et plus familières ces notions assez nouvelles; (8)soit qu’il n’eut autre dessein que d’honorer l’auteur (9)par une si bonne marque de son estime. (10)Depuis une autre personne aussi de mérite (11)n’a pas voulu laisser imparfait cet ouvrage si parfait, (12)et marchant sur les traces de ce seigneur, (13)a mis en notre langue les objections qui suivent les Méditations avec les réponses qui les accompagnent; (14)jugeant bien que, pour plusieurs personnes, le français (15)ne rendrait pas ses Méditations plus intelligibles que le latin, (16)si elles n’étaient accompagnées des objections, et de leurs réponses, (17)qui en sont comme les commentaires. (18)L’auteur ayant été averti de la bonne fortune des unes et des autres, a non seulement consenti, (19)mais aussi désiré, et prié ces messieurs, de trouver bon que leurs versions fussent imprimées; (20)parce qu’il avait remarqué que ses Méditations avaient été (21)accueillies et reçues avec quelque satisfaction, par un plus grand nombre de ceux (22)qui ne s’appliquent point à la philosophie de l’École, (23)que de ceux qui s’y appliquent. (24)Ainsi, comme il avait donné sa première impression latine au désir de trouver des contredisants, (25)il a cru devoir cette seconde française (26)au favorable accueil de tant de personnes, (27)qui goûtant déjà ses nouvelles pensées, (28)semblaient désirer (29)qu’on leur ôtât la langue et le goût de l’École, (30)pour les accommoder au leur."
+                        {
+                            "text": "(1)II. Cependant ce livre passe des universités dans les palais des grands, (2)et tombe entre les mains d’une personne d’une condition très éminente. (3)Après en avoir lu les Méditations, (4)et les avoir jugées dignes de sa mémoire, (5)il prit la peine de les traduire en français; (6)soit que par ce moyen il se voulut (7)rendre plus propres et plus familières ces notions assez nouvelles; (8)soit qu’il n’eut autre dessein que d’honorer l’auteur (9)par une si bonne marque de son estime. (10)Depuis une autre personne aussi de mérite (11)n’a pas voulu laisser imparfait cet ouvrage si parfait, (12)et marchant sur les traces de ce seigneur, (13)a mis en notre langue les objections qui suivent les Méditations avec les réponses qui les accompagnent; (14)jugeant bien que, pour plusieurs personnes, le français (15)ne rendrait pas ses Méditations plus intelligibles que le latin, (16)si elles n’étaient accompagnées des objections, et de leurs réponses, (17)qui en sont comme les commentaires. (18)L’auteur ayant été averti de la bonne fortune des unes et des autres, a non seulement consenti, (19)mais aussi désiré, et prié ces messieurs, de trouver bon que leurs versions fussent imprimées; (20)parce qu’il avait remarqué que ses Méditations avaient été (21)accueillies et reçues avec quelque satisfaction, par un plus grand nombre de ceux (22)qui ne s’appliquent point à la philosophie de l’École, (23)que de ceux qui s’y appliquent. (24)Ainsi, comme il avait donné sa première impression latine au désir de trouver des contredisants, (25)il a cru devoir cette seconde française (26)au favorable accueil de tant de personnes, (27)qui goûtant déjà ses nouvelles pensées, (28)semblaient désirer (29)qu’on leur ôtât la langue et le goût de l’École, (30)pour les accommoder au leur."
+                        }
                     ]
                 },
                 {
                     "lines": [
-                        " (31)III. On trouvera partout cette version assez juste, et si religieuse, (32)que jamais elle ne s’est écartée du sens de l’auteur. (33)Je le pourrais assurer sur la seule connaissance que j’ai (34)de la lumière de l’esprit des traducteurs, (35)qui facilement n’auront pas pris le change. (36)Mais j’en ai encore une autre certitude plus authentique, (38)qui est qu’ils ont (comme il était juste) réservé (38)à l’auteur le droit de revue et de correction. (39)Il en a usé, mais pour se corriger plutôt qu’eux, (40)et pour éclaircir seulement ses propres pensées. (41)Je veux dire, que trouvant quelques endroits (42)où il lui a semblé qu’il ne les avait pas rendues assez claires dans le latin (43)pour toutes sortes de personnes, (44)il les a voulu ici éclaircir par"
+                        {
+                            "text": " (31)III. On trouvera partout cette version assez juste, et si religieuse, (32)que jamais elle ne s’est écartée du sens de l’auteur. (33)Je le pourrais assurer sur la seule connaissance que j’ai (34)de la lumière de l’esprit des traducteurs, (35)qui facilement n’auront pas pris le change. (36)Mais j’en ai encore une autre certitude plus authentique, (38)qui est qu’ils ont (comme il était juste) réservé (38)à l’auteur le droit de revue et de correction. (39)Il en a usé, mais pour se corriger plutôt qu’eux, (40)et pour éclaircir seulement ses propres pensées. (41)Je veux dire, que trouvant quelques endroits (42)où il lui a semblé qu’il ne les avait pas rendues assez claires dans le latin (43)pour toutes sortes de personnes, (44)il les a voulu ici éclaircir par"
+                        }
                     ]
                 }
             ]
@@ -3022,12 +3272,16 @@
             "paragraphs": [
                 {
                     "lines": [
-                        "quelque petit changement, (1)que l’on reconnaîtra bientôt (2)en conférant le français avec le latin. (3)Ce qui a donné le plus de peine aux traducteurs dans tout cet ouvrage, (4)a été la rencontre de quantité de mots de l’art, (5)qui étant rudes et barbares dans le latin même, (6)le sont beaucoup plus dans le français, (7)qui est moins libre, moins hardi, et moins accoutumé à ces termes de l’École; (8) ils n’ont osé pourtant les omettre, (9)parce qu’il eût fallu changer le sens, (10)ce que leur défendait la qualité d’interprètes (11)qu’ils avaient prise. (12)D’autre part, lorsque cette version a passé sous les yeux de l’auteur, (13)il l’a trouvée si bonne, (14)qu’il n’en a jamais voulu changer le style (15)et s’en est toujours défendu par sa modestie, (16)et l’estime qu’il fait de ses traducteurs; (17)de sorte que par une déférence réciproque, (18)personne ne les ayant ôtés, (19)ils sont demeurés dans cet ouvrage."
+                        {
+                            "text": "quelque petit changement, (1)que l’on reconnaîtra bientôt (2)en conférant le français avec le latin. (3)Ce qui a donné le plus de peine aux traducteurs dans tout cet ouvrage, (4)a été la rencontre de quantité de mots de l’art, (5)qui étant rudes et barbares dans le latin même, (6)le sont beaucoup plus dans le français, (7)qui est moins libre, moins hardi, et moins accoutumé à ces termes de l’École; (8) ils n’ont osé pourtant les omettre, (9)parce qu’il eût fallu changer le sens, (10)ce que leur défendait la qualité d’interprètes (11)qu’ils avaient prise. (12)D’autre part, lorsque cette version a passé sous les yeux de l’auteur, (13)il l’a trouvée si bonne, (14)qu’il n’en a jamais voulu changer le style (15)et s’en est toujours défendu par sa modestie, (16)et l’estime qu’il fait de ses traducteurs; (17)de sorte que par une déférence réciproque, (18)personne ne les ayant ôtés, (19)ils sont demeurés dans cet ouvrage."
+                        }
                     ]
                 },
                 {
                     "lines": [
-                        " (20)J’ajouterais maintenant, s’il m’était permis, (21)que ce livre contenant des méditations fort libres, (22)et qui peuvent même sembler extravagantes à ceux (23)qui ne sont pas accoutumés aux spéculations de la métaphysique, (24)il ne sera ni utile, ni agréable aux lecteurs (25)qui ne pourront appliquer leur esprit avec beaucoup d’attention à ce qu’ils lisent, (26)ni s’abstenir d’en juger avant (27)que de l’avoir assez examiné. (28)Mais j’ai peur qu’on ne me reproche (29)que je passe les bornes de mon métier, (30)ou plutôt que je ne le sais guère, (31)de mettre un si grand obstacle au débit de mon livre, (32)par cette large exception de tant de personnes (33)à qui je ne l’estime pas propre. (34) Je me tais donc, (35)et n’effarouche plus le monde. (36)Mais auparavant, je me sens encore obligé d’avertir les lecteurs (37)d’apporter beaucoup d’équité et de docilité à la lecture de ce livre; (38) car s’ils y viennent avec cette mauvaise humeur, (39)et cet esprit contrariant de quantité de personnes (40)qui ne lisent que pour disputer, (41)et qui faisant profession de chercher la vérité, (42) semblent avoir peur de la trouver, (43)puisqu’au même moment qu’il leur en paraît quelque ombre, (44)ils tâchent de la combattre, et de la détruire, (45)ils n’en feront jamais ni profit, ni jugement raisonnable. (46)Il le faut lire sans prévention, sans précipitation, (47)et à dessein de s’instruire; (48) donnant d’abord à son auteur l’esprit d’Écolier, (49)pour prendre par après celui de Censeur. (50) Cette méthode est si nécessaire pour cette lecture, (51)que je la puis nommer la clef du livre, (52)sans laquelle personne ne le saurait bien entendre."
+                        {
+                            "text": " (20)J’ajouterais maintenant, s’il m’était permis, (21)que ce livre contenant des méditations fort libres, (22)et qui peuvent même sembler extravagantes à ceux (23)qui ne sont pas accoutumés aux spéculations de la métaphysique, (24)il ne sera ni utile, ni agréable aux lecteurs (25)qui ne pourront appliquer leur esprit avec beaucoup d’attention à ce qu’ils lisent, (26)ni s’abstenir d’en juger avant (27)que de l’avoir assez examiné. (28)Mais j’ai peur qu’on ne me reproche (29)que je passe les bornes de mon métier, (30)ou plutôt que je ne le sais guère, (31)de mettre un si grand obstacle au débit de mon livre, (32)par cette large exception de tant de personnes (33)à qui je ne l’estime pas propre. (34) Je me tais donc, (35)et n’effarouche plus le monde. (36)Mais auparavant, je me sens encore obligé d’avertir les lecteurs (37)d’apporter beaucoup d’équité et de docilité à la lecture de ce livre; (38) car s’ils y viennent avec cette mauvaise humeur, (39)et cet esprit contrariant de quantité de personnes (40)qui ne lisent que pour disputer, (41)et qui faisant profession de chercher la vérité, (42) semblent avoir peur de la trouver, (43)puisqu’au même moment qu’il leur en paraît quelque ombre, (44)ils tâchent de la combattre, et de la détruire, (45)ils n’en feront jamais ni profit, ni jugement raisonnable. (46)Il le faut lire sans prévention, sans précipitation, (47)et à dessein de s’instruire; (48) donnant d’abord à son auteur l’esprit d’Écolier, (49)pour prendre par après celui de Censeur. (50) Cette méthode est si nécessaire pour cette lecture, (51)que je la puis nommer la clef du livre, (52)sans laquelle personne ne le saurait bien entendre."
+                        }
                     ]
                 }
             ]

@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { findSegmentsForLine } from '../../src/utils/text-lookup';
 import { ParagraphText } from '../../src/components/Reader/ParagraphText';
-import type { Page, TextData, TextLine } from '../../src/types/text';
+import type { Page, TextData } from '../../src/types/text';
 
 Object.assign(globalThis, { React });
 
@@ -28,13 +28,6 @@ const legacy = { pageNumber: 1, paragraphs: [{type: 'h1', lines: [{text: 'Title'
 assert.deepEqual(findSegmentsForLine({pages: [legacy]}, 1, 1), ['1']);
 const starred = { pages: [{ pageNumber: 1, paragraphs: [{ lines: [{text: '(5)Earlier'}, {text: ' *(6)Next (6a)More'}] }] }] };
 assert.deepEqual(findSegmentsForLine(starred, 1, 2), ['6', '6a'], 'A leading asterisk must not include the previous segment');
-const rawLatinText: TextData<string | TextLine> = JSON.parse(readFileSync('public/meditations/text/la.json', 'utf8'));
-const latinText: TextData = { pages: rawLatinText.pages.map(page => ({
-    ...page,
-    paragraphs: page.paragraphs.map(paragraph => ({
-        ...paragraph,
-        lines: paragraph.lines.map(line => typeof line === 'string' ? { text: line } : line)
-    }))
-})) };
+const latinText: TextData = JSON.parse(readFileSync('public/meditations/text/la.json', 'utf8'));
 assert.deepEqual(new Set(findSegmentsForLine(latinText, 17, 13)), new Set(['12', '13']), 'Page 17 line 13 must include the passage containing mentem');
 console.log('Printed heading rows, subsequent body lookup, subtitle segments and legacy numbering verified.');

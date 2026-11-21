@@ -1,4 +1,4 @@
-import { TextData, TextLine } from '../types/text';
+import { TextData } from '../types/text';
 import { IndexData, TermEntry } from '../types/termIndex';
 import { AVAILABLE_LANGUAGES, INDEX_LANGUAGES, LanguageCode } from '../constants/languages';
 
@@ -15,16 +15,7 @@ export async function loadAllTexts(): Promise<Record<LanguageCode, TextData>> {
         if (!response.ok) {
           throw new Error(`Failed to load ${code}: ${response.statusText}`);
         }
-        const data: TextData<string | TextLine> = await response.json();
-        results[code] = {
-          pages: data.pages.map(page => ({
-            ...page,
-            paragraphs: page.paragraphs.map(paragraph => ({
-              ...paragraph,
-              lines: paragraph.lines.map(line => typeof line === 'string' ? { text: line } : line)
-            }))
-          }))
-        };
+        results[code] = await response.json();
       } catch (error) {
         console.error(`Error loading ${code}:`, error);
       }
