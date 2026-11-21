@@ -87,8 +87,8 @@ test('preserves stars, title references, and the source multiplicity while count
   assert.match(pensee, />\(31\*\)<\/button>/);
   assert.match(pensee, /<span>69\* <\/span>/);
   assert.doesNotMatch(pensee, />tit<\/button>/);
-  assert.match(concevoir, /concevoir \[115\]/);
-  assert.match(concevoir, /SY \[9\]/);
+  assert.match(concevoir, /<strong>concevoir<\/strong> \[115\]/);
+  assert.match(concevoir, /<em>SY<\/em> \[9\]/);
   assert.match(concevoir, />\(10\)<\/button><sub>x10<\/sub>/);
   assert.match(concevoir, />\(30\*\)<\/button>/);
 
@@ -96,6 +96,23 @@ test('preserves stars, title references, and the source multiplicity while count
     .find(reference => reference.location.page === 13 && reference.location.segment === '10');
   assert.equal(usage?.usage.tokenCount, 2);
   assert.equal(usage?.usage.reportedTokenCount, 10);
+});
+
+test('indents translation lines and wrapped references for both index languages', () => {
+  for (const [language, lemma, translatedLanguage] of [
+    [IndexLanguage.French, 'concevoir', IndexLanguage.Latin],
+    [IndexLanguage.Latin, 'anima', IndexLanguage.French],
+  ] as const) {
+    const html = renderTerm(language, lemma);
+    for (const target of [translatedLanguage, IndexLanguage.Ukrainian]) {
+      assert.match(html, new RegExp(`<div lang="${target}" class="pl-\\[3\\.25rem\\] -indent-7">`));
+    }
+    assert.match(html, /<div class="pl-9 -indent-9"><span><em>/);
+  }
+
+  const concevoir = renderTerm(IndexLanguage.French, 'concevoir');
+  assert.match(concevoir, /<div lang="la" class="pl-6 -indent-4">/);
+  assert.match(concevoir, /<div lang="uk" class="pl-6 -indent-4">/);
 });
 
 test('counts and renders numbered GT subentries independently of their parent', () => {
@@ -197,8 +214,8 @@ test('recovers source references omitted or misread by the original import', () 
   assert.ok(!getUsages(graph, percipere.id).some(reference =>
     reference.location.page === 26 && (reference.location.line === 19 || reference.location.line === 28),
   ));
-  assert.match(renderTerm(IndexLanguage.Latin, 'percipere'), /II \[10\]/);
-  assert.match(renderTerm(IndexLanguage.Latin, 'percipere'), /III \[17\]/);
+  assert.match(renderTerm(IndexLanguage.Latin, 'percipere'), /<em>II<\/em> \[10\]/);
+  assert.match(renderTerm(IndexLanguage.Latin, 'percipere'), /<em>III<\/em> \[17\]/);
 });
 
 test('retains printed pages while linking to verified locations', () => {

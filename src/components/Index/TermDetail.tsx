@@ -72,10 +72,11 @@ function mappingCount(graph: IndexData, mappings: MappingNode[]): ReactNode {
   return `[${parts.join(' + ')}]`;
 }
 
-function MappingLines({ graph, sourceId, sourceLanguage }: {
+function MappingLines({ graph, sourceId, sourceLanguage, isSubentry = false }: {
   graph: IndexData;
   sourceId: string;
   sourceLanguage: IndexSourceLanguage;
+  isSubentry?: boolean;
 }) {
   const mappings = getMappings(graph, sourceId);
   const crossLanguage = sourceLanguage === IndexLanguage.Latin ? IndexLanguage.French : IndexLanguage.Latin;
@@ -105,7 +106,11 @@ function MappingLines({ graph, sourceId, sourceLanguage }: {
         else groups.push({ rank: mapping.rank, mappings: [mapping] });
       }
 
-      return <div key={row.language}>
+      return <div
+        key={row.language}
+        lang={row.language}
+        className={isSubentry ? 'pl-6 -indent-4' : 'pl-[3.25rem] -indent-7'}
+      >
         {groups.map((group, groupIndex) => {
           const targets = group.mappings.flatMap(mapping => getMappingTargets(graph, mapping.id));
           const uniqueTargets = targets.filter((target, index) =>
@@ -216,8 +221,8 @@ function ReferenceGroups({ graph, sourceId, subentryId }: {
       const sectionCount = sectionReferences.reduce((sum, reference) => sum + reference.usage.tokenCount, 0);
       let previousPage: string | undefined;
 
-      return <div key={code}>
-        <span>{code} {displayCount(sectionCount, false)} </span>
+      return <div key={code} className="pl-9 -indent-9">
+        <span><em>{code}</em> {displayCount(sectionCount, false)} </span>
         {sectionReferences.map((reference, index) => {
           const page = `${reference.usage.printedPage ?? reference.location.page}${reference.usage.pageHasAsterisk ? '*' : ''}`;
           const startsPage = page !== previousPage;
@@ -248,7 +253,7 @@ function SubentryDetail({ graph, subentry, sourceLanguage }: {
   return <div className="mt-2 pl-7">
     <div className="text-sm font-serif">{subentry.code}{subentry.number ?? ''} {displayCount(count, subentry.countDisplay === CountDisplay.Empty)}</div>
     <div className="text-sm font-serif italic">{subentry.phrase}</div>
-    <MappingLines graph={graph} sourceId={subentry.id} sourceLanguage={sourceLanguage} />
+    <MappingLines graph={graph} sourceId={subentry.id} sourceLanguage={sourceLanguage} isSubentry />
     <ReferenceGroups graph={graph} sourceId={subentry.id} subentryId={subentry.id} />
   </div>;
 }
@@ -259,7 +264,7 @@ export function TermDetail({ graph, term }: { graph: IndexData; term: SourceTerm
 
   return <article className="mb-6 pb-4 border-b border-gray-100 last:border-0">
     <h3 className="text-lg font-serif mb-2">
-      {term.lemma} {displayCount(count, term.countDisplay === CountDisplay.Empty)}
+      <strong>{term.lemma}</strong> {displayCount(count, term.countDisplay === CountDisplay.Empty)}
       {graph.notes[sourceLanguage].map(note =>
         note.kind === IndexNoteKind.Footnote && note.termId === term.id
           ? <sup key={note.number} title={note.text}>{note.number}</sup>
