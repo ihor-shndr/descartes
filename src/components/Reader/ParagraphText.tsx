@@ -5,9 +5,10 @@ import { getSourceWidth, SEGMENT_MARKER_REGEX, isSegmentMarker, extractSegmentId
 import { ParagraphHeading, isHeading } from './ParagraphHeading';
 import { SegmentedText } from './SegmentedText';
 import clsx from 'clsx';
-import { IndexData } from '../../types/termIndex';
-import { BookOpen } from 'lucide-react';
+import { IndexData, IndexLanguage, IndexNodeType, TITLE_LINE_NUMBER } from '../../types/termIndex';
 import { HIGHLIGHT_COLORS } from '../../constants/highlights';
+import { getLocationTermIds } from '../../utils/index-graph';
+import { IndexLineButton } from './IndexLineButton';
 
 interface TextUnit {
     text: string;
@@ -28,37 +29,21 @@ interface ParagraphTextProps {
 function buildTermsByLineMap(indexData: IndexData, page: number): Map<number, string[]> {
     const map = new Map<number, string[]>();
 
-    indexData.latin.forEach((entry) => {
-        entry.occurrences.forEach((occurrence) => {
-            occurrence.pages.forEach((pageOccurrence) => {
-                if (pageOccurrence.page !== page) return;
-
-                pageOccurrence.lines.forEach((lineRef) => {
-                    const current = map.get(lineRef.line) ?? [];
-                    if (!current.includes(entry.id)) {
-                        map.set(lineRef.line, [...current, entry.id]);
-                    }
-                });
-            });
-        });
-    });
+    for (const location of indexData.nodes) {
+        if (location.type !== IndexNodeType.Location || location.page !== page || location.segment || location.line === undefined) continue;
+        const terms = getLocationTermIds(indexData, IndexLanguage.Latin, page, location.line);
+        if (terms.length) map.set(location.line, terms);
+    }
 
     return map;
 }
 
 function buildTermsBySegmentMap(indexData: IndexData, page: number): Map<string, string[]> {
     const map = new Map<string, string[]>();
-    for (const entry of indexData.french) {
-        for (const occurrence of entry.occurrences) {
-            for (const pageOccurrence of occurrence.pages) {
-                if (pageOccurrence.page !== page) continue;
-                for (const { segment } of pageOccurrence.lines) {
-                    if (!segment) continue;
-                    const terms = map.get(segment) ?? [];
-                    if (!terms.includes(entry.id)) map.set(segment, [...terms, entry.id]);
-                }
-            }
-        }
+    for (const location of indexData.nodes) {
+        if (location.type !== IndexNodeType.Location || location.page !== page || !location.segment) continue;
+        const terms = getLocationTermIds(indexData, IndexLanguage.French, page, location.segment);
+        if (terms.length) map.set(location.segment, terms);
     }
     return map;
 }
@@ -201,9 +186,8 @@ export function ParagraphText({
     const currentPage = useAppStore((state) => state.currentPage);
     const indexData = useAppStore((state) => state.indexData);
     const indexLoading = useAppStore((state) => state.indexLoading);
+    const indexError = useAppStore((state) => state.indexError);
     const loadIndexData = useAppStore((state) => state.loadIndexData);
-    const setIndexFilter = useAppStore((state) => state.setIndexFilter);
-    const toggleIndexModal = useAppStore((state) => state.toggleIndexModal);
     const showIndexHighlights = useAppStore((state) => state.showIndexHighlights);
     const highlightColor = useAppStore((state) => state.highlightColor);
     const highlightWholeLine = highlightedLocation?.segmentGroups.length === 0;
@@ -218,30 +202,30 @@ export function ParagraphText({
 
     // Preload index data when line markers are requested
     useEffect(() => {
-        if ((language === 'la' || language === 'fr') && showIndexHighlights && !indexData && !indexLoading) {
+        if ((language === IndexLanguage.Latin || language === IndexLanguage.French) && showIndexHighlights && !indexData && !indexLoading && !indexError) {
             loadIndexData();
         }
-    }, [language, showIndexHighlights, indexData, indexLoading, loadIndexData]);
+    }, [language, showIndexHighlights, indexData, indexLoading, indexError, loadIndexData]);
 
     const termsByLine = useMemo(() => {
-        if (!indexData || language !== 'la' || !showIndexHighlights) return new Map<number, string[]>();
+        if (!indexData || language !== IndexLanguage.Latin || !showIndexHighlights) return new Map<number, string[]>();
         return buildTermsByLineMap(indexData, currentPage);
     }, [indexData, currentPage, language, showIndexHighlights]);
 
     const termsBySegment = useMemo(() => {
-        if (!indexData || language !== 'fr' || !showIndexHighlights) return undefined;
+        if (!indexData || language !== IndexLanguage.French || !showIndexHighlights) return undefined;
         return buildTermsBySegmentMap(indexData, currentPage);
     }, [indexData, currentPage, language, showIndexHighlights]);
 
     useEffect(() => {
         if (!shouldScroll || !containerRef.current || !highlightedLocation) return;
 
-        if (highlightedLocation.segment && language === 'fr') {
+        if (highlightedLocation.segment && language === IndexLanguage.French) {
             const markers = containerRef.current.querySelectorAll('[data-segment-id]');
             const marker = Array.from(markers).find(element => element.getAttribute('data-segment-id') === highlightedLocation.segment);
             marker?.scrollIntoView({ behavior: 'smooth', block: 'center' });
         } else if (!highlightedLocation.segment && highlightedLocation.line !== null && verbatim) {
-            if (highlightedLocation.line === 0) {
+            if (highlightedLocation.line === TITLE_LINE_NUMBER) {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             } else {
                 document.getElementById(`line-${highlightedLocation.line}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -270,14 +254,14 @@ export function ParagraphText({
         >
             <div
                 className={clsx(
-                    verbatim ? "pl-16 pr-16" : language === 'fr' && "pr-16"
+                    verbatim ? "pl-16 pr-16" : language === IndexLanguage.French && "pr-16"
                 )}
                 style={verbatim ? { width: `calc(${containerWidth} + 6rem)` } : undefined}
             >
                 {paragraphs.map((paragraph, pIdx) => {
                     // Headers
                     if (isHeading(paragraph.type)) {
-                        return <ParagraphHeading key={pIdx} paragraph={paragraph} termsBySegment={termsBySegment} showEditionMarkers={language === 'la' || language === 'fr'} />;
+                        return <ParagraphHeading key={pIdx} paragraph={paragraph} termsBySegment={termsBySegment} termsByLine={termsByLine} showEditionMarkers={language === IndexLanguage.Latin || language === IndexLanguage.French} />;
                     }
 
                     const units = getUnitsForParagraph(pIdx);
@@ -285,9 +269,8 @@ export function ParagraphText({
                     return (
                         <div key={pIdx} className={verbatim ? "mb-0 w-full" : ""}>
                             {units.map((unit, uIdx) => {
-                                const isLatinWithHighlights = verbatim && language === 'la' && showIndexHighlights;
+                                const isLatinWithHighlights = verbatim && language === IndexLanguage.Latin && showIndexHighlights;
                                 const lineTermIds = isLatinWithHighlights && unit.lineNumber ? termsByLine.get(unit.lineNumber) : undefined;
-                                const hasIndexTerms = !!lineTermIds?.length;
 
                                 return (
                                     <div
@@ -318,27 +301,12 @@ export function ParagraphText({
                                             text={unit.text}
                                             initialSegmentId={unit.initialSegmentId}
                                             termsBySegment={termsBySegment}
-                                            editionMarkers={language === 'la' || language === 'fr' ? unit.editionMarkers : undefined}
+                                            editionMarkers={language === IndexLanguage.Latin || language === IndexLanguage.French ? unit.editionMarkers : undefined}
                                         />
 
-                                        {isLatinWithHighlights && hasIndexTerms && (
-                                            <button
-                                                type="button"
-                                                className="absolute -left-16 top-1/2 -translate-y-1/2 flex h-7 w-7 items-center justify-center rounded-full bg-blue-100 text-blue-700 shadow-sm transition-colors hover:bg-blue-200"
-                                                onClick={(e) => {
-                                                    e.stopPropagation();
-                                                    setIndexFilter({ language: 'latin', termIds: lineTermIds!, sourceLine: unit.lineNumber! });
-                                                    toggleIndexModal(true);
-                                                    if (!indexData && !indexLoading) {
-                                                        loadIndexData();
-                                                    }
-                                                }}
-                                                aria-label="Показати терміни з цього рядка"
-                                                title="Показати терміни з цього рядка"
-                                            >
-                                                <BookOpen size={14} />
-                                            </button>
-                                        )}
+                                        {lineTermIds?.length && unit.lineNumber !== undefined ? (
+                                            <IndexLineButton lineNumber={unit.lineNumber} termIds={lineTermIds} />
+                                        ) : null}
                                     </div>
                                 );
                             })}

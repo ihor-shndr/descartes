@@ -18,11 +18,10 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["src-gemini-version/*"]
+      "@/*": ["./src/*"]
     }
   },
-  "include": ["src-gemini-version"],
+  "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -13,6 +13,8 @@ npm run build
 
 The importer writes both JSON files in `public/meditations/index`. The build copies them to `docs/meditations/index` for publishing. `--check` regenerates in memory and checks exact equality with the checked-in JSON.
 
+These Latin and French files are source-preserving import snapshots. The reader loads the unified `graph.json` instead; its typed schema and validation command are described in the [project README](../../README.md#term-index).
+
 ## Data and verification
 
 `bookHeading`, `bookLines` and `bookIntroduction` preserve the source wording, superscripts, subscripts, italics and bold text. The importer asserts that every extracted body row is represented exactly once and that adding destinations changes no characters. Only running page numbers are excluded. Physical PDF lines are retained for comparison; browser wrapping may add more lines.

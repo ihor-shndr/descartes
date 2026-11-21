@@ -5,12 +5,12 @@ import { LanguageCode, AVAILABLE_LANGUAGES } from '../constants/languages';
 import { loadAllTexts, loadIndexData as fetchIndexData } from '../services/text-loader';
 import { findSegmentsForLine } from '../utils/text-lookup';
 import { segmentGroupId } from '../utils/text-rendering';
-import { IndexData } from '../types/termIndex';
+import { IndexData, IndexFilterLanguage } from '../types/termIndex';
 import { HighlightColor } from '../constants/highlights';
 
 type IndexFilter =
-  | { language: 'latin'; termIds: string[]; sourceLine: number }
-  | { language: 'french'; termIds: string[]; segment: string };
+  | { language: typeof IndexFilterLanguage.Latin; termIds: string[]; sourceLine: number }
+  | { language: typeof IndexFilterLanguage.French; termIds: string[]; segment: string };
 
 /**
  * Application store interface

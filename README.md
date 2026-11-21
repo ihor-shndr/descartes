@@ -43,6 +43,29 @@ Build for production:
 npm run build
 ```
 
+### Term Index
+
+The reader uses the unified graph in `public/meditations/index/graph.json`.
+`src/types/termIndex.ts` defines its shared constants and derived literal-union
+types for languages, nodes, edges, mapping resolutions, notations and markers.
+Use those constants in application logic rather than repeating serialized
+strings. The JSON values remain unchanged.
+
+The loader validates the schema before exposing typed graph data, including
+node fields, edge endpoints and ownership, notes, duplicate IDs and dangling references.
+Language-level editorial notes may reference terms as numbered footnotes.
+Counts come from linked usages, with GT subentries counted separately. When
+the printed index differs from the imported text, the graph can retain the
+printed reference or reported multiplicity alongside the corrected location
+or actual occurrence count. References without a verifiable text location
+remain disabled.
+Verify the types and index behavior with:
+
+```bash
+npm run type-check
+node --import tsx --test src/services/text-loader.test.ts src/components/Index/IndexModal.test.tsx src/components/Index/TermDetail.test.tsx src/components/Reader/ParagraphHeading.test.tsx
+```
+
 ## Project Structure
 
 - `texts/` - Source markdown files with segment markers

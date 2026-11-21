@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import { HIGHLIGHT_COLORS } from '../../constants/highlights';
 import { BookOpen } from 'lucide-react';
 import { EditionMarker } from '../../types/text';
+import { IndexFilterLanguage } from '../../types/termIndex';
 
 interface SegmentedTextProps {
     text: string;
@@ -93,7 +94,7 @@ export function SegmentedText({ text, initialSegmentId, onSegmentIdChange, terms
                         <SegmentMarker id={id} />
                         {termIds && <button type="button" className="inline-flex align-super mx-0.5 items-center justify-center rounded-full bg-blue-100 p-1 text-blue-700 hover:bg-blue-200" aria-label={`Показати терміни французького фрагмента ${id}`} title={`Показати терміни французького фрагмента ${id}`} onClick={event => {
                             event.stopPropagation();
-                            useAppStore.getState().setIndexFilter({ language: 'french', termIds, segment: id });
+                            useAppStore.getState().setIndexFilter({ language: IndexFilterLanguage.French, termIds, segment: id });
                             useAppStore.getState().toggleIndexModal(true);
                         }}><BookOpen size={12} /></button>}
                     </span>;
