@@ -75,9 +75,9 @@ export default function SettingsSidebar() {
                 }}
               />
               <div>
-                <div className="text-sm font-semibold text-gray-900">Позначати рядки з термінами</div>
+                <div className="text-sm font-semibold text-gray-900">Позначати терміни з покажчика</div>
                 <p className="text-sm text-gray-600">
-                  Показувати позначку біля латинських рядків із термінами з покажчика.
+                  Показувати позначки біля латинських рядків і французьких фрагментів із термінами з покажчика.
                 </p>
               </div>
             </label>

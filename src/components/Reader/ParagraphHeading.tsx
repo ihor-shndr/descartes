@@ -8,6 +8,7 @@ import { SEGMENT_MARKER_REGEX, extractSegmentId } from '../../utils/text-renderi
 interface ParagraphHeadingProps {
     paragraph: Paragraph;
     className?: string;
+    termsBySegment?: Map<string, string[]>;
 }
 
 /**
@@ -30,7 +31,7 @@ export function isHeading(type: string | undefined): type is keyof typeof HEADIN
  * Shared heading component for VerbatimText and SegmentFlow
  * Renders h1, h2, h3 headings with consistent styling
  */
-export function ParagraphHeading({ paragraph, className }: ParagraphHeadingProps) {
+export function ParagraphHeading({ paragraph, className, termsBySegment }: ParagraphHeadingProps) {
     const highlightedLocation = useAppStore(state => state.highlightedLocation);
     const currentPage = useAppStore(state => state.currentPage);
     const highlightColor = useAppStore(state => state.highlightColor);
@@ -44,7 +45,7 @@ export function ParagraphHeading({ paragraph, className }: ParagraphHeadingProps
     return (
         <div className={clsx(HEADING_STYLES[paragraph.type], className)}>
             {startLine === undefined ? (
-                <SegmentedText text={paragraph.lines.join(' ')} initialSegmentId={null} />
+                <SegmentedText text={paragraph.lines.join(' ')} initialSegmentId={null} termsBySegment={termsBySegment} />
             ) : paragraph.lines.map((line, index) => {
                 const initialSegmentId = segmentId;
                 const markers = [...line.matchAll(SEGMENT_MARKER_REGEX)];
@@ -56,7 +57,7 @@ export function ParagraphHeading({ paragraph, className }: ParagraphHeadingProps
                         highlightWholeLine && highlightedLocation?.page === currentPage && highlightedLocation.line === lineNumber && HIGHLIGHT_COLORS[highlightColor].line
                     )}>
                         {lineNumber % 5 === 0 && <span className="absolute -left-8 text-xs text-stone-400 select-none font-normal">{lineNumber}</span>}
-                        <SegmentedText text={line} initialSegmentId={initialSegmentId} />
+                        <SegmentedText text={line} initialSegmentId={initialSegmentId} termsBySegment={termsBySegment} />
                     </div>
                 );
             })}

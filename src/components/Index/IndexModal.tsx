@@ -23,7 +23,7 @@ export const IndexModal: React.FC = () => {
                 loadIndexData();
             }
             if (indexFilter) {
-                setActiveTab('latin');
+                setActiveTab(indexFilter.language);
             }
             setSearchQuery('');
         }
@@ -71,13 +71,13 @@ export const IndexModal: React.FC = () => {
                     {/* Tabs */}
                     <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg w-fit">
                         <button
-                            onClick={() => setActiveTab('latin')}
+                            onClick={() => { setActiveTab('latin'); if (indexFilter?.language === 'french') setIndexFilter(null); }}
                             className={`px-4 py-1.5 text-sm font-medium rounded-md transition-all ${activeTab === 'latin' ? 'bg-white text-blue-700 shadow-sm' : 'text-gray-600 hover:text-gray-900'}`}
                         >
                             Латинські терміни
                         </button>
                         <button
-                            onClick={() => setActiveTab('french')}
+                            onClick={() => { setActiveTab('french'); if (indexFilter?.language === 'latin') setIndexFilter(null); }}
                             className={`px-4 py-1.5 text-sm font-medium rounded-md transition-all ${activeTab === 'french' ? 'bg-white text-blue-700 shadow-sm' : 'text-gray-600 hover:text-gray-900'}`}
                         >
                             Французькі терміни
@@ -96,7 +96,7 @@ export const IndexModal: React.FC = () => {
                     {indexFilter && (
                         <div className="flex items-center justify-between rounded-md border border-blue-100 bg-blue-50 px-3 py-2 text-sm text-blue-800">
                             <div>
-                                Терміни латинського рядка {indexFilter.sourceLine ?? '—'}
+                                {indexFilter.language === 'latin' ? `Терміни латинського рядка ${indexFilter.sourceLine}` : `Терміни французького фрагмента ${indexFilter.segment}`}
                             </div>
                             <button
                                 className="text-blue-700 hover:text-blue-900 font-semibold"

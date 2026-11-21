@@ -45,6 +45,23 @@ function buildTermsByLineMap(indexData: IndexData, page: number): Map<number, st
     return map;
 }
 
+function buildTermsBySegmentMap(indexData: IndexData, page: number): Map<string, string[]> {
+    const map = new Map<string, string[]>();
+    for (const entry of indexData.french) {
+        for (const occurrence of entry.occurrences) {
+            for (const pageOccurrence of occurrence.pages) {
+                if (pageOccurrence.page !== page) continue;
+                for (const { segment } of pageOccurrence.lines) {
+                    if (!segment) continue;
+                    const terms = map.get(segment) ?? [];
+                    if (!terms.includes(entry.id)) map.set(segment, [...terms, entry.id]);
+                }
+            }
+        }
+    }
+    return map;
+}
+
 /**
  * Compute the final segment ID after processing text.
  * Used to track segment IDs across lines.
@@ -189,7 +206,7 @@ export function ParagraphText({
 
     // Preload index data when line markers are requested
     useEffect(() => {
-        if (language === 'la' && showIndexHighlights && !indexData && !indexLoading) {
+        if ((language === 'la' || language === 'fr') && showIndexHighlights && !indexData && !indexLoading) {
             loadIndexData();
         }
     }, [language, showIndexHighlights, indexData, indexLoading, loadIndexData]);
@@ -197,6 +214,11 @@ export function ParagraphText({
     const termsByLine = useMemo(() => {
         if (!indexData || language !== 'la' || !showIndexHighlights) return new Map<number, string[]>();
         return buildTermsByLineMap(indexData, currentPage);
+    }, [indexData, currentPage, language, showIndexHighlights]);
+
+    const termsBySegment = useMemo(() => {
+        if (!indexData || language !== 'fr' || !showIndexHighlights) return undefined;
+        return buildTermsBySegmentMap(indexData, currentPage);
     }, [indexData, currentPage, language, showIndexHighlights]);
 
     useEffect(() => {
@@ -243,7 +265,7 @@ export function ParagraphText({
                 {paragraphs.map((paragraph, pIdx) => {
                     // Headers
                     if (isHeading(paragraph.type)) {
-                        return <ParagraphHeading key={pIdx} paragraph={paragraph} />;
+                        return <ParagraphHeading key={pIdx} paragraph={paragraph} termsBySegment={termsBySegment} />;
                     }
 
                     const units = getUnitsForParagraph(pIdx);
@@ -283,6 +305,7 @@ export function ParagraphText({
                                         <SegmentedText
                                             text={unit.text}
                                             initialSegmentId={unit.initialSegmentId}
+                                            termsBySegment={termsBySegment}
                                         />
 
                                         {isLatinWithHighlights && hasIndexTerms && (
@@ -291,7 +314,7 @@ export function ParagraphText({
                                                 className="absolute -right-9 top-1/2 -translate-y-1/2 flex h-7 w-7 items-center justify-center rounded-full bg-blue-100 text-blue-700 shadow-sm transition-colors hover:bg-blue-200"
                                                 onClick={(e) => {
                                                     e.stopPropagation();
-                                                    setIndexFilter({ termIds: lineTermIds!, sourceLine: unit.lineNumber });
+                                                    setIndexFilter({ language: 'latin', termIds: lineTermIds!, sourceLine: unit.lineNumber! });
                                                     toggleIndexModal(true);
                                                     if (!indexData && !indexLoading) {
                                                         loadIndexData();

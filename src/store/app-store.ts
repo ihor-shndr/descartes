@@ -8,10 +8,9 @@ import { segmentGroupId } from '../utils/text-rendering';
 import { IndexData } from '../types/termIndex';
 import { HighlightColor } from '../constants/highlights';
 
-interface IndexFilter {
-  termIds: string[];
-  sourceLine?: number;
-}
+type IndexFilter =
+  | { language: 'latin'; termIds: string[]; sourceLine: number }
+  | { language: 'french'; termIds: string[]; segment: string };
 
 /**
  * Application store interface

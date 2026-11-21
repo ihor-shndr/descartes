@@ -3,11 +3,13 @@ import { SEGMENT_MARKER_REGEX, isSegmentMarker, extractSegmentId, segmentGroupId
 import { SegmentMarker } from '../SegmentMarker';
 import clsx from 'clsx';
 import { HIGHLIGHT_COLORS } from '../../constants/highlights';
+import { BookOpen } from 'lucide-react';
 
 interface SegmentedTextProps {
     text: string;
     initialSegmentId: string | null;
     onSegmentIdChange?: (id: string | null) => void;
+    termsBySegment?: Map<string, string[]>;
 }
 
 interface ProcessedPart {
@@ -49,7 +51,7 @@ function processText(text: string, initialSegmentId: string | null): { parts: Pr
  * - Highlighting on hover
  * - Highlighting on navigation (from index)
  */
-export function SegmentedText({ text, initialSegmentId, onSegmentIdChange }: SegmentedTextProps) {
+export function SegmentedText({ text, initialSegmentId, onSegmentIdChange, termsBySegment }: SegmentedTextProps) {
     const hoveredSegmentId = useAppStore((state) => state.hoveredSegmentId);
     const setHoveredSegment = useAppStore((state) => state.setHoveredSegment);
     const highlightedLocation = useAppStore((state) => state.highlightedLocation);
@@ -69,7 +71,16 @@ export function SegmentedText({ text, initialSegmentId, onSegmentIdChange }: Seg
         <>
             {parts.map((part, partIdx) => {
                 if (part.type === 'marker') {
-                    return <SegmentMarker key={partIdx} id={part.segmentId!} />;
+                    const id = part.segmentId!;
+                    const termIds = termsBySegment?.get(id);
+                    return <span key={partIdx} className="inline">
+                        <SegmentMarker id={id} />
+                        {termIds && <button type="button" className="inline-flex align-super mx-0.5 items-center justify-center rounded-full bg-blue-100 p-1 text-blue-700 hover:bg-blue-200" aria-label={`Показати терміни французького фрагмента ${id}`} title={`Показати терміни французького фрагмента ${id}`} onClick={event => {
+                            event.stopPropagation();
+                            useAppStore.getState().setIndexFilter({ language: 'french', termIds, segment: id });
+                            useAppStore.getState().toggleIndexModal(true);
+                        }}><BookOpen size={12} /></button>}
+                    </span>;
                 }
 
                 const segmentId = part.segmentId;
