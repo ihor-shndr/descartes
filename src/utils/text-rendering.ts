@@ -26,6 +26,10 @@ export function extractSegmentId(marker: string): string {
   return marker.slice(1, -1);
 }
 
+export function segmentGroupId(id: string): string {
+  return id.replace(/[a-zа-я]$/i, '');
+}
+
 /**
  * Get container width for Latin text (only language using VerbatimText)
  */

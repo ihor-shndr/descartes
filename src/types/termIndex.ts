@@ -7,6 +7,8 @@ export interface IndexTarget {
     page: number;
     line: number;
     segment?: string;
+    printedLine?: number;
+    alignedSegment?: string;
 }
 
 export interface BookSpan {

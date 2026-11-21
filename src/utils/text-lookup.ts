@@ -59,7 +59,7 @@ export function findSegmentsForLine(
                 if (isSegmentMarker(part)) {
                     lineStartsWithNewSegment = true;
                     break;
-                } else if (part.trim()) {
+                } else if (part.replace(/^[\s*]+/, '').length > 0) {
                     // Text content before any marker - line doesn't start with segment
                     break;
                 }

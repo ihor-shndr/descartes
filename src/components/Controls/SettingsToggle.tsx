@@ -10,8 +10,8 @@ export default function SettingsToggle() {
     <button
       onClick={toggleSettingsSidebar}
       className="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
-      aria-label="Settings"
-      title="Settings"
+      aria-label="Налаштування"
+      title="Налаштування"
     >
       <svg
         className="w-6 h-6"

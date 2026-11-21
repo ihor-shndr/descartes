@@ -34,6 +34,7 @@ export function ParagraphHeading({ paragraph, className }: ParagraphHeadingProps
     const highlightedLocation = useAppStore(state => state.highlightedLocation);
     const currentPage = useAppStore(state => state.currentPage);
     const highlightColor = useAppStore(state => state.highlightColor);
+    const highlightWholeLine = highlightedLocation?.segmentGroups.length === 0;
     if (!isHeading(paragraph.type)) {
         return null;
     }
@@ -52,7 +53,7 @@ export function ParagraphHeading({ paragraph, className }: ParagraphHeadingProps
                 return (
                     <div key={lineNumber} id={`line-${lineNumber}`} className={clsx(
                         'relative',
-                        highlightedLocation?.page === currentPage && highlightedLocation.line === lineNumber && HIGHLIGHT_COLORS[highlightColor].line
+                        highlightWholeLine && highlightedLocation?.page === currentPage && highlightedLocation.line === lineNumber && HIGHLIGHT_COLORS[highlightColor].line
                     )}>
                         {lineNumber % 5 === 0 && <span className="absolute -left-8 text-xs text-stone-400 select-none font-normal">{lineNumber}</span>}
                         <SegmentedText text={line} initialSegmentId={initialSegmentId} />

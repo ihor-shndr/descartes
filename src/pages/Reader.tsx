@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useAppStore } from '../store/app-store';
 import { processPageData } from '../utils/text-processor';
@@ -12,18 +12,22 @@ import TextGrid from '../components/Reader/TextGrid';
  */
 export default function Reader() {
   const [searchParams, setSearchParams] = useSearchParams();
+  const initialized = useRef(false);
 
   // Get state and actions from Zustand store
   const {
     allTexts,
     currentPage,
-    totalPages,
     languageLayout,
     loading,
     error,
     loadAllTexts,
     setCurrentPage
   } = useAppStore();
+  const availablePages = useMemo(() => {
+    const numbers = Object.values(allTexts ?? {}).flatMap(text => text.pages.map(page => page.pageNumber));
+    return [...new Set(numbers)].sort((a, b) => a - b);
+  }, [allTexts]);
 
   // Load all texts on mount
   useEffect(() => {
@@ -32,28 +36,22 @@ export default function Reader() {
     }
   }, [allTexts, loadAllTexts]);
 
-  // Sync URL with store (bidirectional)
+  // Resolve the initial URL after the available page numbers are known.
   useEffect(() => {
+    if (!availablePages.length) return;
     const pageParam = searchParams.get('page');
-    const urlPage = pageParam ? parseInt(pageParam, 10) : 1;
-
-    // If URL page is different from store, update URL to match store
-    if (urlPage !== currentPage && currentPage > 0) {
-      setSearchParams({ page: String(currentPage) });
+    const requestedPage = !initialized.current && pageParam !== null ? Number(pageParam) : currentPage;
+    initialized.current = true;
+    const resolvedPage = availablePages.find(page => page >= requestedPage)
+      ?? (Number.isFinite(requestedPage) ? availablePages[availablePages.length - 1] : availablePages[0]);
+    if (resolvedPage !== currentPage) {
+      setCurrentPage(resolvedPage);
+      return;
     }
-  }, [currentPage, searchParams, setSearchParams]);
-
-  // Initialize from URL on mount
-  useEffect(() => {
-    const pageParam = searchParams.get('page');
-    if (pageParam) {
-      const pageNum = parseInt(pageParam, 10);
-      if (pageNum !== currentPage) {
-        setCurrentPage(pageNum);
-      }
+    if (pageParam !== String(currentPage)) {
+      setSearchParams({ page: String(currentPage) }, { replace: true });
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [availablePages, currentPage, searchParams, setCurrentPage, setSearchParams]);
 
   // Update URL when page changes
   const handlePageChange = (newPage: number) => {
@@ -67,7 +65,7 @@ export default function Reader() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="text-lg text-gray-600">Loading texts...</div>
+        <div className="text-lg text-gray-600">Завантаження текстів...</div>
       </div>
     );
   }
@@ -77,7 +75,7 @@ export default function Reader() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <div className="text-lg text-red-600 mb-2">Error loading texts</div>
+          <div className="text-lg text-red-600 mb-2">Не вдалося завантажити тексти</div>
           <div className="text-sm text-gray-600">{error}</div>
         </div>
       </div>
@@ -97,10 +95,10 @@ export default function Reader() {
   console.log(pageData);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#f7f6f3]">
       <ReaderHeader
         page={currentPage}
-        totalPages={totalPages}
+        availablePages={availablePages}
         onPageChange={handlePageChange}
       />
 

@@ -177,6 +177,7 @@ export function ParagraphText({
     const toggleIndexModal = useAppStore((state) => state.toggleIndexModal);
     const showIndexHighlights = useAppStore((state) => state.showIndexHighlights);
     const highlightColor = useAppStore((state) => state.highlightColor);
+    const highlightWholeLine = highlightedLocation?.segmentGroups.length === 0;
 
     const shouldScroll = highlightedLocation && highlightedLocation.page === currentPage;
 
@@ -198,20 +199,21 @@ export function ParagraphText({
         return buildTermsByLineMap(indexData, currentPage);
     }, [indexData, currentPage, language, showIndexHighlights]);
 
-    // Scroll to highlighted location - only in verbatim (Latin) view
-    // Since index references are line-based for Latin, we scroll Latin into view
-    // and let the user see translations naturally in their grid position
     useEffect(() => {
-        if (!shouldScroll || !containerRef.current || !verbatim) return;
+        if (!shouldScroll || !containerRef.current || !highlightedLocation) return;
 
-        if (highlightedLocation?.line) {
-            // Latin: scroll to line number
-            const element = document.getElementById(`line-${highlightedLocation.line}`);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        if (highlightedLocation.segment && language === 'fr') {
+            const markers = containerRef.current.querySelectorAll('[data-segment-id]');
+            const marker = Array.from(markers).find(element => element.getAttribute('data-segment-id') === highlightedLocation.segment);
+            marker?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else if (!highlightedLocation.segment && highlightedLocation.line !== null && verbatim) {
+            if (highlightedLocation.line === 0) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                document.getElementById(`line-${highlightedLocation.line}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
         }
-    }, [shouldScroll, highlightedLocation, verbatim]);
+    }, [shouldScroll, highlightedLocation, verbatim, language]);
 
     const containerWidth = verbatim ? getSourceWidth(language) : undefined;
 
@@ -263,7 +265,7 @@ export function ParagraphText({
                                                     "relative whitespace-pre-wrap transition-colors duration-1000",
                                                     unit.isLastInParagraph ? "justified-line-last" : "justified-line",
                                                     unit.shouldIndent && "indent-[1.5em]",
-                                                    shouldScroll && highlightedLocation?.line === unit.lineNumber && `${HIGHLIGHT_COLORS[highlightColor].line} shadow-sm`
+                                                    shouldScroll && highlightWholeLine && highlightedLocation?.line === unit.lineNumber && `${HIGHLIGHT_COLORS[highlightColor].line} shadow-sm`
                                                 )
                                                 : clsx(
                                                     "mb-4 w-full justified-text",
@@ -295,8 +297,8 @@ export function ParagraphText({
                                                         loadIndexData();
                                                     }
                                                 }}
-                                                aria-label="Show index terms on this line"
-                                                title="Show index terms on this line"
+                                                aria-label="Показати терміни з цього рядка"
+                                                title="Показати терміни з цього рядка"
                                             >
                                                 <BookOpen size={14} />
                                             </button>

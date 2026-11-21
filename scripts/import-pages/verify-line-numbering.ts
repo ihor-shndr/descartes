@@ -1,9 +1,12 @@
 import assert from 'node:assert/strict';
-import { createElement } from 'react';
+import React, { createElement } from 'react';
+import { readFileSync } from 'node:fs';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { findSegmentsForLine } from '../../src/utils/text-lookup';
 import { ParagraphText } from '../../src/components/Reader/ParagraphText';
 import type { Page } from '../../src/types/text';
+
+Object.assign(globalThis, { React });
 
 // A title and two subtitle rows interrupt the body at the actual printed row numbers.
 const page: Page = { pageNumber: 23, paragraphs: [
@@ -23,4 +26,8 @@ for (let n = 1; n <= 24; n++) assert.ok(html.includes(`id="line-${n}"`), `Printe
 assert.ok(html.includes('data-segment-id="20"'), 'Subtitle marker must render as an interactive segment');
 const legacy = { pageNumber: 1, paragraphs: [{type: 'h1', lines: ['Title']}, {lines: ['(1)Body']}] } satisfies Page;
 assert.deepEqual(findSegmentsForLine({pages: [legacy]}, 1, 1), ['1']);
+const starred = { pages: [{ pageNumber: 1, paragraphs: [{ lines: ['(5)Earlier', ' *(6)Next (6a)More'] }] }] };
+assert.deepEqual(findSegmentsForLine(starred, 1, 2), ['6', '6a'], 'A leading asterisk must not include the previous segment');
+const latinText = JSON.parse(readFileSync('public/meditations/text/la.json', 'utf8'));
+assert.deepEqual(new Set(findSegmentsForLine(latinText, 17, 13)), new Set(['12', '13']), 'Page 17 line 13 must include the passage containing mentem');
 console.log('Printed heading rows, subsequent body lookup, subtitle segments and legacy numbering verified.');

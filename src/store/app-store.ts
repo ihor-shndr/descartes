@@ -4,6 +4,7 @@ import { TextData } from '../types/text';
 import { LanguageCode, AVAILABLE_LANGUAGES } from '../constants/languages';
 import { loadAllTexts, loadIndexData as fetchIndexData } from '../services/text-loader';
 import { findSegmentsForLine } from '../utils/text-lookup';
+import { segmentGroupId } from '../utils/text-rendering';
 import { IndexData } from '../types/termIndex';
 import { HighlightColor } from '../constants/highlights';
 
@@ -41,14 +42,10 @@ interface AppStore {
   highlightColor: HighlightColor;
 
   /**
-   * Highlighted location from index navigation.
-   * - `line`: The Latin line number (used for verbatim Latin view)
-   * - `segments`: All segments that intersect with this line (used for non-Latin flowing text)
-   * 
-   * Latin index is line-based, not segment-based. A line may be part of a segment
-   * that started earlier, so we highlight all segments that include this line.
+   * Index navigation can also specify a scroll target. Clicking a marker
+   * selects its group in place.
    */
-  highlightedLocation: { page: number; line: number; segments: string[] } | null;
+  highlightedLocation: { page: number; line: number | null; segmentGroups: string[]; segment?: string } | null;
 
   // Actions
   loadAllTexts: () => Promise<void>;
@@ -56,6 +53,7 @@ interface AppStore {
   updateLanguageLayout: (layout: LanguageCode[]) => void;
   toggleSettingsSidebar: () => void;
   setHoveredSegment: (id: string | null) => void;
+  selectSegmentGroup: (id: string) => void;
 
   // Index Actions
   loadIndexData: () => Promise<void>;
@@ -63,7 +61,7 @@ interface AppStore {
   setIndexFilter: (filter: IndexFilter | null) => void;
   setShowIndexHighlights: (value: boolean) => void;
   setHighlightColor: (color: HighlightColor) => void;
-  navigateToLocation: (page: number, line: number, segment?: string) => void;
+  navigateToLocation: (page: number, line: number, segment?: string, alignedSegment?: string) => void;
   clearHighlight: () => void;
 }
 
@@ -125,6 +123,9 @@ export const useAppStore = create<AppStore>()(
         })),
 
       setHoveredSegment: (id) => set({ hoveredSegmentId: id }),
+      selectSegmentGroup: (id) => set(state => ({
+        highlightedLocation: { page: state.currentPage, line: null, segmentGroups: [segmentGroupId(id)] }
+      })),
 
       loadIndexData: async () => {
         const { indexData, indexLoading } = get();
@@ -150,7 +151,7 @@ export const useAppStore = create<AppStore>()(
       setShowIndexHighlights: (value) => set({ showIndexHighlights: value }),
       setHighlightColor: (color) => set({ highlightColor: color }),
 
-      navigateToLocation: (page, line, segment) => {
+      navigateToLocation: (page, line, segment, alignedSegment) => {
         const { totalPages, allTexts } = get();
         const validPage = Math.max(1, Math.min(page, totalPages || 1));
 
@@ -159,6 +160,8 @@ export const useAppStore = create<AppStore>()(
         if (segment) {
           // If a specific segment is provided (e.g., from French index), use it directly
           targetSegments = [segment];
+        } else if (alignedSegment) {
+          targetSegments = [alignedSegment];
         } else if (allTexts && allTexts['la']) {
           // Latin index: line-based reference - find ALL segments that include this line
           targetSegments = findSegmentsForLine(allTexts['la'], validPage, line);
@@ -166,7 +169,12 @@ export const useAppStore = create<AppStore>()(
 
         set({
           currentPage: validPage,
-          highlightedLocation: { page: validPage, line, segments: targetSegments },
+          highlightedLocation: {
+            page: validPage,
+            line,
+            segmentGroups: [...new Set(targetSegments.map(segmentGroupId))],
+            segment
+          },
           indexModalOpen: false // Close index when navigating
         });
       },

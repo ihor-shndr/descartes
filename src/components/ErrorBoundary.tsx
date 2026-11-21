@@ -32,16 +32,16 @@ export default class ErrorBoundary extends React.Component<Props, State> {
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="text-center max-w-md p-8">
             <h1 className="text-2xl font-bold text-red-600 mb-4">
-              Something went wrong
+              Щось пішло не так
             </h1>
             <p className="text-gray-600 mb-6">
-              {this.state.error?.message || 'An unexpected error occurred'}
+              {this.state.error?.message || 'Сталася несподівана помилка'}
             </p>
             <button
               onClick={() => window.location.reload()}
               className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >
-              Reload Page
+              Перезавантажити сторінку
             </button>
           </div>
         </div>

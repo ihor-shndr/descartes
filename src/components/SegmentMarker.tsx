@@ -1,6 +1,7 @@
 import { useAppStore } from '../store/app-store';
 import clsx from 'clsx';
 import { HIGHLIGHT_COLORS } from '../constants/highlights';
+import { segmentGroupId } from '../utils/text-rendering';
 
 interface SegmentMarkerProps {
   id: string;
@@ -14,13 +15,14 @@ interface SegmentMarkerProps {
 export function SegmentMarker({ id }: SegmentMarkerProps) {
   const hoveredSegmentId = useAppStore((state) => state.hoveredSegmentId);
   const setHoveredSegment = useAppStore((state) => state.setHoveredSegment);
+  const selectSegmentGroup = useAppStore((state) => state.selectSegmentGroup);
   const highlightedLocation = useAppStore((state) => state.highlightedLocation);
   const currentPage = useAppStore((state) => state.currentPage);
   const highlightColor = useAppStore((state) => state.highlightColor);
 
   const isHighlighted =
     hoveredSegmentId === id ||
-    (highlightedLocation?.segments.includes(id) && highlightedLocation.page === currentPage);
+    (highlightedLocation?.segmentGroups.includes(segmentGroupId(id)) && highlightedLocation.page === currentPage);
 
   return (
     <sup
@@ -32,7 +34,14 @@ export function SegmentMarker({ id }: SegmentMarkerProps) {
       onMouseEnter={() => setHoveredSegment(id)}
       onMouseLeave={() => setHoveredSegment(null)}
     >
-      ⁽{id}⁾
+      <button
+        type="button"
+        aria-label={`Підсвітити групу фрагментів ${segmentGroupId(id)}`}
+        onClick={event => {
+          event.stopPropagation();
+          selectSegmentGroup(id);
+        }}
+      >⁽{id}⁾</button>
     </sup>
   );
 }

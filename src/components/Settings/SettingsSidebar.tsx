@@ -36,11 +36,11 @@ export default function SettingsSidebar() {
         <div className="p-6">
           {/* Header */}
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-xl font-bold">Settings</h2>
+            <h2 className="text-xl font-bold">Налаштування</h2>
             <button
               onClick={toggleSettingsSidebar}
               className="text-gray-500 hover:text-gray-700 p-1 rounded hover:bg-gray-100"
-              aria-label="Close settings"
+              aria-label="Закрити налаштування"
             >
               <svg
                 className="w-6 h-6"
@@ -75,15 +75,15 @@ export default function SettingsSidebar() {
                 }}
               />
               <div>
-                <div className="text-sm font-semibold text-gray-900">Highlight Latin index lines</div>
+                <div className="text-sm font-semibold text-gray-900">Позначати рядки з термінами</div>
                 <p className="text-sm text-gray-600">
-                  Show a marker on Latin lines that contain indexed terms and open the index from that line.
+                  Показувати позначку біля латинських рядків із термінами з покажчика.
                 </p>
               </div>
             </label>
 
             <div className="space-y-1">
-              <div className="text-sm font-semibold text-gray-900">Highlight color</div>
+              <div className="text-sm font-semibold text-gray-900">Колір підсвічування</div>
               <select
                 value={highlightColor}
                 onChange={(e) => setHighlightColor(e.target.value as HighlightColor)}
@@ -96,7 +96,7 @@ export default function SettingsSidebar() {
                 ))}
               </select>
               <p className="text-sm text-gray-600">
-                Applied to hover and navigation highlights.
+                Застосовується до підсвічування при наведенні та переході.
               </p>
             </div>
           </div>

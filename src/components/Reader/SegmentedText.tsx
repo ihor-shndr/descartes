@@ -1,5 +1,5 @@
 import { useAppStore } from '../../store/app-store';
-import { SEGMENT_MARKER_REGEX, isSegmentMarker, extractSegmentId } from '../../utils/text-rendering';
+import { SEGMENT_MARKER_REGEX, isSegmentMarker, extractSegmentId, segmentGroupId } from '../../utils/text-rendering';
 import { SegmentMarker } from '../SegmentMarker';
 import clsx from 'clsx';
 import { HIGHLIGHT_COLORS } from '../../constants/highlights';
@@ -81,7 +81,7 @@ export function SegmentedText({ text, initialSegmentId, onSegmentIdChange }: Seg
                             "transition-colors duration-200 rounded-sm py-0.5 box-decoration-clone",
                             segmentId && (
                                 hoveredSegmentId === segmentId ||
-                                (highlightedLocation?.segments.includes(segmentId) && highlightedLocation.page === currentPage)
+                                (highlightedLocation?.segmentGroups.includes(segmentGroupId(segmentId)) && highlightedLocation.page === currentPage)
                             ) && HIGHLIGHT_COLORS[highlightColor].segment
                         )}
                         onMouseEnter={() => segmentId && setHoveredSegment(segmentId)}

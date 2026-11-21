@@ -2,13 +2,18 @@ import { Link } from 'react-router-dom';
 
 const AUTHORS = [
   {
-    name: 'René Descartes',
+    name: 'Рене Декарт',
     years: '1596–1650',
     texts: [
-      { title: 'Meditationes de Prima Philosophia', link: '/descartes/meditations' },
-      { title: 'Discours de la méthode' },
-      { title: 'Principia Philosophiae' },
-      { title: 'Regulae ad directionem ingenii' },
+      {
+        title: 'Meditationes de Prima Philosophia',
+        year: '1641',
+        link: '/descartes/meditations',
+      },
+      {
+        title: "Les Passions de l'âme",
+        year: '1649',
+      },
     ],
   },
 ];
@@ -16,7 +21,7 @@ const AUTHORS = [
 export default function Home() {
   return (
     <div className="min-h-screen flex items-center justify-center p-8">
-      <div className="max-w-lg">
+      <div className="max-w-xl">
         {AUTHORS.map((author) => (
           <div key={author.name} className="flex gap-8">
             <img
@@ -29,7 +34,13 @@ export default function Home() {
               <p className="text-stone-400 text-sm mb-6">{author.years}</p>
               <ul className="space-y-3">
                 {author.texts.map((text) => (
-                  <li key={text.title} className="font-serif">
+                  <li
+                    key={text.title}
+                    className="flex items-baseline gap-2 font-serif whitespace-nowrap"
+                  >
+                    <span className="text-stone-400" aria-hidden="true">
+                      •
+                    </span>
                     {text.link ? (
                       <Link
                         to={text.link}
@@ -40,6 +51,7 @@ export default function Home() {
                     ) : (
                       <span className="text-stone-400">{text.title}</span>
                     )}
+                    <span className="text-sm text-stone-400">· {text.year}</span>
                   </li>
                 ))}
               </ul>

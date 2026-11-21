@@ -99,18 +99,31 @@ def parse_references(row, language, context):
     links = {}
     refs = []
     if language == 'la':
-        pattern = re.compile(r'(?P<page>\d+)\s*:|(?P<line>tit|\d+)')
+        # On printed p. 385, a semicolon stands in for the colon in "70; ⁷".
+        semicolon_page = r'|(?<=;)\s*(?P<semicolon_page>70)\s*;' if row['sourcePage'] == 385 else ''
+        pattern = re.compile(r'(?P<page>\d+)\s*:' + semicolon_page + r'|(?P<line>tit|\d+)')
     else:
-        pattern = re.compile(r'(?P<page>\d+\*?)\s*(?=\()|\((?P<segment>\d+[a-z]?\*?)\)')
+        # A page starts a reference group. The first fragment may follow on
+        # the next printed row, and a TL/PN label can straddle font sizes.
+        pattern = re.compile(
+            r'(?:^\s*|(?<=[;\]])\s*|(?<=,)\s*(?=\d{2}))(?P<page>\d+\*?)\s*(?:[A-Z0-9]+\s*)?(?=\(|$)'
+            r'|\((?P<segment>\d+[a-z]?\*?)\)'
+        )
     for match in pattern.finditer(normalized, start):
-        if match.groupdict().get('page'):
-            context['page'] = int(match['page'].rstrip('*'))
+        page = match.groupdict().get('page') or match.groupdict().get('semicolon_page')
+        if page:
+            context['page'] = int(page.rstrip('*'))
             continue
         if context.get('page') is None:
             raise ValueError(f"Reference without a page: {plain(row)}")
         if language == 'la':
             line = 0 if match['line'] == 'tit' else int(match['line'])
             target = {'page': context['page'], 'line': line}
+            # Index p. 384 points to the start of (6a). Anima itself is on
+            # the following printed row (book p. 116).
+            if context['term'] == 'anima' and row['sourcePage'] == 384 and context['page'] == 1 and line == 7:
+                line = 8
+                target.update(line=line, printedLine=7, alignedSegment='6a')
             begin, end = match.span('line')
         else:
             segment = match['segment'].rstrip('*')
@@ -158,7 +171,7 @@ def import_index(source):
                      'sourcePage': row['sourcePage'], 'bookHeading': row['spans'], 'bookLines': [],
                      'occurrences': []}
             indexes[language].append(entry)
-            context = {'active': False, 'occurrences': entry['occurrences']}
+            context = {'active': False, 'occurrences': entry['occurrences'], 'term': term}
         else:
             if entry is not None:
                 parse_references(row, language, context)

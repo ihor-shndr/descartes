@@ -7,7 +7,7 @@ export const HIGHLIGHT_COLORS: Record<HighlightColor, { segment: string; line: s
 };
 
 export const HIGHLIGHT_OPTIONS: { value: HighlightColor; label: string }[] = [
-  { value: 'gold', label: '🟡 Gold' },
-  { value: 'sky', label: '🔵 Sky' },
-  { value: 'mint', label: '🟢 Mint' }
+  { value: 'gold', label: '🟡 Золотий' },
+  { value: 'sky', label: '🔵 Блакитний' },
+  { value: 'mint', label: '🟢 М’ятний' }
 ];

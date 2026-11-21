@@ -46,7 +46,9 @@
             "text": "7",
             "target": {
               "page": 1,
-              "line": 7
+              "line": 8,
+              "printedLine": 7,
+              "alignedSegment": "6a"
             }
           },
           {
@@ -205,7 +207,7 @@
             "page": 1,
             "lines": [
               {
-                "line": 7
+                "line": 8
               },
               {
                 "line": 10
@@ -2541,17 +2543,7 @@
             }
           },
           {
-            "text": ";   "
-          },
-          {
-            "text": "70",
-            "target": {
-              "page": 69,
-              "line": 70
-            }
-          },
-          {
-            "text": "; "
+            "text": ";   70; "
           },
           {
             "text": "2",
@@ -2560,7 +2552,7 @@
           {
             "text": "7",
             "target": {
-              "page": 69,
+              "page": 70,
               "line": 7
             }
           },
@@ -2654,10 +2646,12 @@
             "lines": [
               {
                 "line": 27
-              },
-              {
-                "line": 70
-              },
+              }
+            ]
+          },
+          {
+            "page": 70,
+            "lines": [
               {
                 "line": 7
               }

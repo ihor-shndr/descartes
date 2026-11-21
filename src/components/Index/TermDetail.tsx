@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import { BookLine, BookSpan, TermEntry } from '../../types/termIndex';
 import { useAppStore } from '../../store/app-store';
+import { extractSegmentId, SEGMENT_MARKER_REGEX } from '../../utils/text-rendering';
 
 const BookText = ({ spans }: { spans: BookSpan[] }) => {
     const navigate = useAppStore(state => state.navigateToLocation);
@@ -13,14 +14,20 @@ const BookText = ({ spans }: { spans: BookSpan[] }) => {
         if (span.position === 'sup') content = <sup>{content}</sup>;
         if (span.position === 'sub') content = <sub>{content}</sub>;
         if (span.target) {
-            const { page, line, segment } = span.target;
-            const available = allTexts?.[segment ? 'fr' : 'la']?.pages.some(p => p.pageNumber === page) ?? false;
-            const destination = segment ? `fragment ${segment}` : line === 0 ? 'title' : `line ${line}`;
+            const { page, line, segment, printedLine, alignedSegment } = span.target;
+            const source = allTexts?.[segment ? 'fr' : 'la']?.pages.find(p => p.pageNumber === page);
+            const available = !!source && (!segment || source.paragraphs.some(p =>
+                p.lines.some(text => Array.from(text.matchAll(SEGMENT_MARKER_REGEX))
+                    .some(([marker]) => extractSegmentId(marker) === segment))
+            ));
+            const destination = segment ? `фрагмент ${segment}` : line === 0 ? 'заголовок' : `рядок ${line}`;
+            const unavailable = source ? ' — фрагмент відсутній у французькому тексті' : ' — текст ще не імпортовано';
+            const printedReference = printedLine === undefined ? '' : ` (у друкованому покажчику: рядок ${printedLine})`;
             return <button
                 key={index}
                 disabled={!available}
-                title={`Page ${page}, ${destination}${available ? '' : ' — text not imported yet'}`}
-                onClick={() => navigate(page, line, segment)}
+                title={`Сторінка ${page}, ${destination}${printedReference}${available ? '' : unavailable}`}
+                onClick={() => navigate(page, line, segment, alignedSegment)}
                 className="text-blue-600 hover:underline disabled:text-gray-500 disabled:cursor-help disabled:no-underline"
             >{content}</button>;
         }
@@ -45,6 +52,6 @@ export const TermDetail = ({ term }: { term: TermEntry }) => (
             target="_blank"
             rel="noreferrer"
             className="inline-block mt-2 text-xs text-gray-500 hover:underline"
-        >Book, p. {term.sourcePage}</a>
+        >Книжка, с. {term.sourcePage}</a>
     </article>
 );
